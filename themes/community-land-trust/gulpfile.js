@@ -1,18 +1,18 @@
-const gulp = require('gulp');
-const prettyError = require('gulp-prettyerror');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const rename = require('gulp-rename');
-const cssnano = require('gulp-cssnano');
-const uglify = require('gulp-uglify');
-const eslint = require('gulp-eslint');
-const browserSync = require('browser-sync');
+const gulp = require('gulp'),
+  prettyError = require('gulp-prettyerror'),
+  sass = require('gulp-sass'),
+  autoprefixer = require('gulp-autoprefixer'),
+  rename = require('gulp-rename'),
+  cssnano = require('gulp-cssnano'),
+  uglify = require('gulp-uglify'),
+  eslint = require('gulp-eslint'),
+  browserSync = require('browser-sync');
 
 // Create basic Gulp tasks
 
 gulp.task('sass', function() {
   return gulp
-    .src('./sass/style.scss', { sourcemaps: true })
+    .src('./src/scss/style.scss', { sourcemaps: true })
     .pipe(prettyError())
     .pipe(sass())
     .pipe(
@@ -28,7 +28,7 @@ gulp.task('sass', function() {
 
 gulp.task('lint', function() {
   return gulp
-    .src(['./js/*.js'])
+    .src(['./src/js/*.js'])
     .pipe(prettyError())
     .pipe(eslint())
     .pipe(eslint.format())
@@ -39,7 +39,7 @@ gulp.task(
   'scripts',
   gulp.series('lint', function() {
     return gulp
-      .src('./js/*.js')
+      .src('./src/js/*.js')
       .pipe(uglify())
       .pipe(
         rename({
@@ -68,8 +68,8 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('js/*.js', gulp.series('scripts'));
-  gulp.watch('sass/*.scss', gulp.series('sass'));
+  gulp.watch('src/js/*.js', gulp.series('scripts'));
+  gulp.watch('src/scss/*.scss', gulp.series('scss'));
 });
 
 gulp.task('default', gulp.parallel('browser-sync', 'watch'));
