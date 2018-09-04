@@ -4,7 +4,7 @@
  *
  */
 
-class RF_General {
+class CLT_General {
 
    /**
     * Add actions and filters
@@ -140,4 +140,4 @@ class RF_General {
 
 }
 
-new RF_General();
+new CLT_General();
