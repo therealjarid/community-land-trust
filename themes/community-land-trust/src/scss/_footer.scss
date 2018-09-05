@@ -4,12 +4,25 @@
 .site-footer {
   background-color: #00354F;
   display: flex; 
+  max-width: 100%;
   .container {
     margin: 0 auto; 
+    width: 100%;
+  }
+  #custom_html-2 {
+    width: 300px;
   }
   .widget_media_image {
     img {
-      opacity: 0; 
+      display: none;
+    }
+  }
+  #custom_html-3 {
+    width: 33.3%;
+  }
+  .footer {
+    .contact-number {
+      display: inline; 
     }
   }
   @include desktop-size {

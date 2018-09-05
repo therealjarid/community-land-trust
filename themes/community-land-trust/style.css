@@ -821,11 +821,19 @@ object {
   background-color: #00354F;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  max-width: 100%; }
   .site-footer .container {
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 100%; }
+  .site-footer #custom_html-2 {
+    width: 300px; }
   .site-footer .widget_media_image img {
-    opacity: 0; }
+    display: none; }
+  .site-footer #custom_html-3 {
+    width: 33.3%; }
+  .site-footer .footer .contact-number {
+    display: inline; }
   @media screen and (min-width: 1080px) {
     .site-footer {
       -webkit-box-orient: horizontal;
