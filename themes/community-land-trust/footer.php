@@ -13,6 +13,9 @@
 				<div class="site-info">
 					<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>
 				</div><!-- .site-info -->
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer") ) : ?>
+				<?php endif;?>
+
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 
