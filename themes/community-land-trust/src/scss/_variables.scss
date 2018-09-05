@@ -1,5 +1,6 @@
 // Structure
 
+$mobile-min-width: 375px;
 $tablet-min-width: 620px;
 $desktop-min-width: 1080px;
 
@@ -22,26 +23,20 @@ $color__link: royalblue;
 $color__link-visited: purple;
 $color__link-hover: midnightblue;
 
-$color_button: #BED73D;
-$border_color: #15A9D1;
+$color_button: #bed73d;
+$border_color: #15a9d1;
 $timeline_font_color: #005671;
-$timeline_bg: #DCF2F8;
-$timeline_bg_numbers: #3E92AC;
+$timeline_bg: #dcf2f8;
+$timeline_bg_numbers: #3e92ac;
 $footer_darker_color: #002436;
-$media_lighter_bg: #F0FAFC;
-
-
-
-
+$media_lighter_bg: #f0fafc;
 
 // Typography
 
 $main_font_family: 'Roboto', sans-serif;
 $secondary_font_family: 'Raleway', sans-serif;
 
-
-
-$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__code: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+$font__pre: 'Courier 10 Pitch', Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
