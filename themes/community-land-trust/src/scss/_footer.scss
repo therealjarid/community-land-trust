@@ -4,6 +4,14 @@
 .site-footer {
   background-color: #00354F;
   display: flex; 
+  .container {
+    margin: 0 auto; 
+  }
+  .widget_media_image {
+    img {
+      opacity: 0; 
+    }
+  }
   @include desktop-size {
     flex-direction: row; 
     justify-content: space-between;
