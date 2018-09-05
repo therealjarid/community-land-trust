@@ -549,7 +549,6 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
   width: 100%; }
   .main-navigation ul {
     display: none;
@@ -581,17 +580,6 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none; }
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -847,3 +835,18 @@ object {
 /*--------------------------------------------------------------
 # Header 
 --------------------------------------------------------------*/
+.site-header {
+  height: 71px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 4px #15a9d1 solid; }
+  .site-header .site-branding .header-logo {
+    background: url(../../assets/images/logos/logo-horizontal.svg) no-repeat;
+    background-size: 100% 100%;
+    height: 50px;
+    width: 215px; }
