@@ -9,22 +9,44 @@
     margin: 0 auto; 
     width: 100%;
   }
-  #custom_html-2 {
-    width: 300px;
-  }
   .widget_media_image {
     img {
       display: none;
     }
   }
   #custom_html-3 {
+    order: 2; 
     width: 33.3%;
-  }
-  .footer {
-    .contact-number {
-      display: inline; 
+    p {
+      color: $color__background-body;
     }
   }
+  #custom_html-2 {
+      order: 1;
+      width: 300px;
+      p {
+        color: $color__background-body;
+      }
+  }
+  #custom_html-4 {
+    order: 3; 
+    p {
+      color: $color__background-body;
+    }
+  }
+    .contact-number {
+      display: inline; 
+      a {
+        text-decoration: none; 
+        color: $color__background-body;
+      }
+    }
+    .email {
+      a {
+        text-decoration: none; 
+        color: $color__background-body;
+      }
+    }
   @include desktop-size {
     flex-direction: row; 
     justify-content: space-between;
