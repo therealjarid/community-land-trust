@@ -1,5 +1,8 @@
 // Structure
 
+$tablet-min-width: 620px;
+$desktop-min-width: 1080px;
+
 $base__space-unit: 1.5rem;
 
 // Colors
@@ -19,9 +22,25 @@ $color__link: royalblue;
 $color__link-visited: purple;
 $color__link-hover: midnightblue;
 
+$color_button: #BED73D;
+$border_color: #15A9D1;
+$timeline_font_color: #005671;
+$timeline_bg: #DCF2F8;
+$timeline_bg_numbers: #3E92AC;
+$footer_darker_color: #002436;
+$media_lighter_bg: #F0FAFC;
+
+
+
+
+
 // Typography
 
-$font__main: sans-serif;
+$main_font_family: 'Roboto', sans-serif;
+$secondary_font_family: 'Raleway', sans-serif;
+
+
+
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;

@@ -1,3 +1,163 @@
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../assets/fonts/Roboto-Regular.eot');
+  src: url('../../assets/fonts/Roboto-Regular.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Roboto-Regular.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Roboto-Regular.svg#Roboto-Regular') format('../../assets/fonts/svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../assets/fonts/Raleway-LightItalic.eot');
+  src: url('../../assets/fonts/Raleway-LightItalic.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Raleway-LightItalic.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Raleway-LightItalic.svg#Raleway-LightItalic') format('../../assets/fonts/svg');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../assets/fonts/Raleway-Bold.eot');
+  src: url('../../assets/fonts/Raleway-Bold.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Raleway-Bold.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Raleway-Bold.svg#Raleway-Bold') format('../../assets/fonts/svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../assets/fonts/Roboto-BlackItalic.eot');
+  src: url('../../assets/fonts/Roboto-BlackItalic.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Roboto-BlackItalic.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Roboto-BlackItalic.svg#Roboto-BlackItalic') format('../../assets/fonts/svg');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../assets/fonts/Raleway-Light.eot');
+  src: url('../../assets/fonts/Raleway-Light.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Raleway-Light.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Raleway-Light.svg#Raleway-Light') format('../../assets/fonts/svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../assets/fonts/Roboto-Black.eot');
+  src: url('../../assets/fonts/Roboto-Black.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Roboto-Black.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Roboto-Black.svg#Roboto-Black') format('../../assets/fonts/svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../assets/fonts/Raleway-Regular.eot');
+  src: url('../../assets/fonts/Raleway-Regular.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Raleway-Regular.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Raleway-Regular.svg#Raleway-Regular') format('../../assets/fonts/svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../assets/fonts/Roboto-Thin.eot');
+  src: url('../../assets/fonts/Roboto-Thin.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Roboto-Thin.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Roboto-Thin.svg#Roboto-Thin') format('../../assets/fonts/svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../assets/fonts/Raleway-Thin.eot');
+  src: url('../../assets/fonts/Raleway-Thin.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Raleway-Thin.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Raleway-Thin.svg#Raleway-Thin') format('../../assets/fonts/svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../assets/fonts/Roboto-Light.eot');
+  src: url('../../assets/fonts/Roboto-Light.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Roboto-Light.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Roboto-Light.svg#Roboto-Light') format('../../assets/fonts/svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../assets/fonts/Roboto-Medium.eot');
+  src: url('../../assets/fonts/Roboto-Medium.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Roboto-Medium.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Roboto-Medium.svg#Roboto-Medium') format('../../assets/fonts/svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../assets/fonts/Raleway-Medium.eot');
+  src: url('../../assets/fonts/Raleway-Medium.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Raleway-Medium.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Raleway-Medium.svg#Raleway-Medium') format('../../assets/fonts/svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../assets/fonts/Roboto-Bold.eot');
+  src: url('../../assets/fonts/Roboto-Bold.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Roboto-Bold.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Roboto-Bold.svg#Roboto-Bold') format('../../assets/fonts/svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../assets/fonts/Raleway-Black.eot');
+  src: url('../../assets/fonts/Raleway-Black.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Raleway-Black.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Raleway-Black.svg#Raleway-Black') format('../../assets/fonts/svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../assets/fonts/Raleway-Italic.eot');
+  src: url('../../assets/fonts/Raleway-Italic.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Raleway-Italic.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Raleway-Italic.svg#Raleway-Italic') format('../../assets/fonts/svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../assets/fonts/Roboto-Italic.eot');
+  src: url('../../assets/fonts/Roboto-Italic.eot?#iefix') format('../../assets/fonts/embedded-opentype'),
+      url('../../assets/fonts/Roboto-Italic.woff') format('../../assets/fonts/woff'),
+      url('../../assets/fonts/Roboto-Italic.svg#Roboto-Italic') format('../../assets/fonts/svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
