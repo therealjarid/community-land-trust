@@ -1,6 +1,55 @@
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-.footer {
-  background-color: #00354F;
+.site-footer {
+  background-color: $footer_lighter_color;
+  display: flex; 
+  max-width: 100%;
+  .container {
+    margin: 0 auto; 
+    width: 100%;
+  }
+  .widget_media_image {
+    img {
+      display: none;
+    }
+  }
+  #custom_html-3 {
+    order: 2; 
+    width: 33.3%;
+    p {
+      color: $color__background-body;
+    }
+  }
+  #custom_html-2 {
+      order: 1;
+      width: 18.75rem;
+      p {
+        color: $color__background-body;
+      }
+  }
+  #custom_html-4 {
+    order: 3; 
+    color: $color__background-body;
+    p {
+      color: $color__background-body;
+    }
+  }
+    .contact-number {
+      display: inline; 
+      a {
+        text-decoration: none; 
+        color: $color__background-body;
+      }
+    }
+    .email {
+      a {
+        text-decoration: none; 
+        color: $color__background-body;
+      }
+    }
+  @include desktop-size {
+    flex-direction: row; 
+    justify-content: space-between;
+  }
 }
