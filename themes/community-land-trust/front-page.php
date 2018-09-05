@@ -38,9 +38,16 @@ get_header(); ?>
 
       </article>
 
-
 		<?php endwhile; ?>
     <!-- end of company mission section -->
+    
+
+    <?php 
+    $fields = CFS()->get( 'item' );
+    foreach ( $fields as $field ) {
+    echo $field['icon'];
+    }
+  ?>
 
 
     </main> <!-- end of .home-page main -->
