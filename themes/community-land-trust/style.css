@@ -806,7 +806,7 @@ object {
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-  background-color: #002436;
+  background-color: #00354F;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -827,13 +827,14 @@ object {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    width: 300px; }
+    width: 18.75rem; }
     .site-footer #custom_html-2 p {
       color: #fff; }
   .site-footer #custom_html-4 {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
-            order: 3; }
+            order: 3;
+    color: #fff; }
     .site-footer #custom_html-4 p {
       color: #fff; }
   .site-footer .contact-number {

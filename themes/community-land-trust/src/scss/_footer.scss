@@ -2,7 +2,7 @@
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-  background-color: #002436;
+  background-color: $footer_lighter_color;
   display: flex; 
   max-width: 100%;
   .container {
@@ -23,13 +23,14 @@
   }
   #custom_html-2 {
       order: 1;
-      width: 300px;
+      width: 18.75rem;
       p {
         color: $color__background-body;
       }
   }
   #custom_html-4 {
     order: 3; 
+    color: $color__background-body;
     p {
       color: $color__background-body;
     }
