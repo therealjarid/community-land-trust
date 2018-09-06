@@ -10,11 +10,6 @@
     color: $color__background-body;
   }
   .main-footer {
-    display: grid;
-    grid-template-columns: 40% 60%; 
-    padding-left: 0.5rem;
-  }
-  .main-footer {
     font-size: 1rem;
     display: grid;
     grid-template-columns: 45% 55%; 
@@ -73,6 +68,11 @@
     .address {
       top: 10px;
     }
+    @include desktop-size {
+      display: flex; 
+      flex-direction: row;
+      justify-content: space-between;
+      }
   }
   .sub-footer {
     display: none; 
@@ -82,10 +82,5 @@
         background-color: $footer_darker_color;
     }
   }
-  @include desktop-size {
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-    }
   }
 }

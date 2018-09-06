@@ -419,7 +419,8 @@ html {
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
-  min-width: 320px; }
+  min-width: 320px;
+  font-family: "Roboto", sans-serif; }
 
 blockquote,
 q {
@@ -826,11 +827,6 @@ object {
   color: #fff; }
 
 .site-footer .main-footer {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  padding-left: 0.5rem; }
-
-.site-footer .main-footer {
   font-size: 1rem;
   display: grid;
   grid-template-columns: 45% 55%;
@@ -877,15 +873,8 @@ object {
     margin-bottom: 0; }
   .site-footer .main-footer .address {
     top: 10px; }
-
-.site-footer .sub-footer {
-  display: none; }
   @media screen and (min-width: 1080px) {
-    .site-footer .sub-footer .sub-footer {
-      display: block;
-      background-color: #002436; } }
-  @media screen and (min-width: 1080px) {
-    .site-footer .sub-footer {
+    .site-footer .main-footer {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -896,6 +885,13 @@ object {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; } }
+
+.site-footer .sub-footer {
+  display: none; }
+  @media screen and (min-width: 1080px) {
+    .site-footer .sub-footer .sub-footer {
+      display: block;
+      background-color: #002436; } }
 
 /*--------------------------------------------------------------
 # Header 
