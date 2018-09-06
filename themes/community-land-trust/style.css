@@ -416,7 +416,7 @@ html {
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
-  min-width: 375px; }
+  min-width: 320px; }
 
 blockquote,
 q {
@@ -799,6 +799,16 @@ object {
 /*--------------------------------------------------------------
 # Single Portfolio View Page
 --------------------------------------------------------------*/
+.single-portfolio .main-carousel {
+  width: 50vw;
+  margin: 0 auto; }
+  .single-portfolio .main-carousel .flickity-page-dots {
+    color: red;
+    width: 50px; }
+    .single-portfolio .main-carousel .flickity-page-dots .dot {
+      background-color: red;
+      border-radius: 50%; }
+
 /*--------------------------------------------------------------
 # 404 Page
 --------------------------------------------------------------*/
@@ -809,7 +819,7 @@ object {
   margin: 0 auto; }
 
 .site-footer .light-footer {
-  background-color: #00354F;
+  background-color: #00354f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
