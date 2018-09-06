@@ -101,10 +101,10 @@ function clt_scripts() {
 	wp_enqueue_script( 'clt-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 	
 	//adding flickity styles via CDN
-	wp_enqueue_style( 'clt-style', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
+	wp_enqueue_style( 'clt-flickity', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
 	
 	// add font awesome via CDN 
-	wp_enqueue_style( 'font-awesome-icons', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css');
+	wp_enqueue_style( 'clt-font-awesome-icons', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css');
 
 	// adding flickity config 
 	wp_enqueue_script('flickity-config', get_template_directory_uri() . '/build/js/flickity-config.min.js', array( 'jquery' ), true);
