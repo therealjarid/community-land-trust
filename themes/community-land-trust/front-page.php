@@ -42,12 +42,18 @@ get_header(); ?>
     <!-- end of company mission section -->
     
 
-    <?php 
+    <!-- <?php 
     $fields = CFS()->get( 'item' );
     foreach ( $fields as $field ) {
     echo $field['icon'];
     }
-  ?>
+    ?> -->
+
+    <div class="main-carousel">
+        <div class="carousel-cell">...</div>
+        <div class="carousel-cell">...</div>
+        <div class="carousel-cell">...</div>
+    </div>
 
 
     </main> <!-- end of .home-page main -->

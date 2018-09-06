@@ -94,12 +94,24 @@ add_filter( 'stylesheet_uri', 'clt_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function clt_scripts() {
+
+	//adding flickity styles via CDN
+	wp_enqueue_style( 'clt-style', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
+
 	wp_enqueue_style( 'clt-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'clt-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
 	// add font awesome via CDN 
 	wp_enqueue_style( 'font-awesome-icons', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css');
+
+	// adding jquery dependency to js 
+	wp_enqueue_script('script', get_template_directory_uri() . '/build/js/scripts.min.js', array( 'jquery' ), true);
+
+	// adding flickity scripts via CDN
+	wp_register_script( 'flickity', '//cdnjs.cloudflare.com/ajax/libs/flickity/1.1.1/flickity.pkgd.min.js', array( 'jquery' ), null, true );
+	wp_enqueue_script( 'flickity' );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
