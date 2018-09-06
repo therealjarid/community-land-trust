@@ -75,24 +75,38 @@ get_header(); ?>
 
 
     <div class="main-carousel">
-            <?php
-		    $args = array(
+     <?php
+		    $portfolio_args = array (
     	        'post_type' => 'portfolio',
     	        'order' => 'DSC',
 		    );
-		    $clt_portfolio_posts = get_posts($args); // returns an array of posts
-	    ?>
-		<?php foreach ($clt_portfolio_posts as $clt_portfolio_post): setup_postdata($post);?>
+		    $clt_portfolio_posts = get_posts($portfolio_args); 
+        
+            foreach ($clt_portfolio_posts as $clt_portfolio_post): 
+                echo(get_the_post_thumbnail($clt_portfolio_post->ID));
+
+            endforeach;
+            wp_reset_postdata();
+    ?>
+    </div> 
+
+        <h2 class="front-page-headings">Our Partners</h2>
+
+        <?php
+		    $arguments = array (
+    	        'post_type' => 'partner',
+    	        'order' => 'DSC'
+            );
             
-            <?php	the_post_thumbnail();?>
+            $clt_partners_thumbnails = get_posts($arguments); 
+
+            foreach ($clt_partners_thumbnails as $clt_partners_thumbnail):
             
+                echo(get_the_post_thumbnail($clt_partners_thumbnail->ID));
 
-        <?php endforeach;?>
-        </div> 
-
-
-
-    <h2 class="front-page-headings">Our Partners</h2>
+            endforeach;
+            wp_reset_postdata();
+       ?>
 
 
     <h2 class="front-page-headings">Need More Information?</h2>
