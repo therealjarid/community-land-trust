@@ -49,11 +49,34 @@ get_header(); ?>
     }
     ?> -->
 
-    <div class="main-carousel">
-        <div class="carousel-cell">...</div>
-        <div class="carousel-cell">...</div>
-        <div class="carousel-cell">...</div>
-    </div>
+    <!-- <div class="main-carousel">
+
+        <div class="carousel-cell">
+            <h3>The Early Years</h3>   
+            <p>Co-op & non-profit housing investments into the CLT</p>
+        </div>
+
+        <div class="carousel-cell">
+            <h3>The Breakthrough</h3>   
+            <p>City of Vancouver's first partnership with CLT</p>
+        </div>
+
+        <div class="carousel-cell">
+            <h3>Solving Our Homes</h3>   
+            <p>Existing co-op homes transferred to the CLT</p>
+        </div>
+
+        <div class="carousel-cell">
+            <h3>Growth</h3>   
+            <p>Largest single investments by municipal & community partners </p>
+        </div>
+
+        <div class="carousel-cell">
+            <h3>The Future</h3>   
+            <p>Over 2,800 homes and growing </p>
+        </div>
+
+    </div> -->
 
 
     </main> <!-- end of .home-page main -->
