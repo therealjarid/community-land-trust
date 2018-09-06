@@ -44,58 +44,67 @@ get_header(); ?>
     <!-- end of company mission section -->
 
     
-    <button class="mixin-button">Contact Us</button>
 
-    <!-- <?php 
+    <h2 class="front-page-headings">Timeline</h2>
+
+        <!-- <?php 
     $fields = CFS()->get( 'item' );
     foreach ( $fields as $field ) {
     echo $field['icon'];
     }
     ?> -->
 
-    <!-- <div class="main-carousel">
+        <h3>The Early Years</h3>   
+        <p>Co-op & non-profit housing investments into the CLT</p>
+                    
+        <h3>Solving Our Homes</h3>   
+        <p>Existing co-op homes transferred to the CLT</p>
 
-        <div class="carousel-cell">
-            <h3>The Early Years</h3>   
-            <p>Co-op & non-profit housing investments into the CLT</p>
-        </div>
+        <h3>The Breakthrough</h3>   
+        <p>City of Vancouver's first partnership with CLT</p>
 
-        <div class="carousel-cell">
-            <h3>The Breakthrough</h3>   
-            <p>City of Vancouver's first partnership with CLT</p>
-        </div>
+        <h3>Growth</h3>   
+        <p>Largest single investments by municipal & community partners </p>
 
-        <div class="carousel-cell">
-            <h3>Solving Our Homes</h3>   
-            <p>Existing co-op homes transferred to the CLT</p>
-        </div>
+        <h3>The Future</h3>   
+        <p>Over 2,800 homes and growing </p>
 
-        <div class="carousel-cell">
-            <h3>Growth</h3>   
-            <p>Largest single investments by municipal & community partners </p>
-        </div>
 
-        <div class="carousel-cell">
-            <h3>The Future</h3>   
-            <p>Over 2,800 homes and growing </p>
-        </div>
 
-    </div> -->
+    <h2 class="front-page-headings">Our Work</h2>
 
-    <?php
-		$args = array(
-    	'post_type' => 'portfolio',
-    	'order' => 'DSC',
-		);
-		$clt_portfolio_posts = get_posts($args); // returns an array of posts
+
+    <div class="main-carousel">
+            <?php
+		    $args = array(
+    	        'post_type' => 'portfolio',
+    	        'order' => 'DSC',
+		    );
+		    $clt_portfolio_posts = get_posts($args); // returns an array of posts
 	    ?>
 		<?php foreach ($clt_portfolio_posts as $clt_portfolio_post): setup_postdata($post);?>
+            
+            <?php	the_post_thumbnail();?>
+            
 
-			<?php	the_post_thumbnail();?>
-
-		</div>
         <?php endforeach;?>
+        </div> 
 
+
+
+    <h2 class="front-page-headings">Our Partners</h2>
+
+    <?php
+
+    $partners_logos = CFS()->get( 'partners_logos' );
+    echo "<div class='carousel-cell'>
+            <img src='{$partners_logos}'>
+            </div>";
+    ?>
+
+    <h2 class="front-page-headings">Need More Information?</h2>
+    <button class="mixin-button">Contact Us</button>
+    
 
     </main> <!-- end of .home-page main -->
 
