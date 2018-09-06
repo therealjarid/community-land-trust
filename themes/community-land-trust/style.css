@@ -406,6 +406,9 @@ html {
   font-size: 16px;
   font-size: 1rem; }
 
+.site-content {
+  padding-top: 75px; }
+
 *,
 *:before,
 *:after {
@@ -799,6 +802,16 @@ object {
 /*--------------------------------------------------------------
 # Single Portfolio View Page
 --------------------------------------------------------------*/
+.single-portfolio .main-carousel {
+  width: 50vw;
+  margin: 0 auto; }
+  .single-portfolio .main-carousel .flickity-page-dots {
+    color: red;
+    width: 50px; }
+    .single-portfolio .main-carousel .flickity-page-dots .dot {
+      background-color: red;
+      border-radius: 50%; }
+
 /*--------------------------------------------------------------
 # 404 Page
 --------------------------------------------------------------*/
@@ -809,9 +822,18 @@ object {
   text-decoration: none;
   color: #fff; }
 
+.site-footer p {
+  color: #fff; }
+
 .site-footer .main-footer {
   display: grid;
   grid-template-columns: 40% 60%;
+  padding-left: 0.5rem; }
+
+.site-footer .main-footer {
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: 45% 55%;
   grid-template-rows: 30% 70%;
   grid-template-areas: "email-contact address" "social address";
   background-color: #00354f;
@@ -819,24 +841,35 @@ object {
   padding: 0.5rem; }
   .site-footer .main-footer .widget_media_image img {
     display: none; }
+    @media screen and (min-width: 1080px) {
+      .site-footer .main-footer .widget_media_image img {
+        display: block; } }
   .site-footer .main-footer #custom_html-3 {
     grid-area: social;
     width: 33.3%;
     height: 100%; }
     .site-footer .main-footer #custom_html-3 p {
-      color: #fff; }
+      text-align: center;
+      width: 6.25rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding-left: 1rem; }
   .site-footer .main-footer #custom_html-2 {
     grid-area: email-contact;
     width: 9.3rem; }
     .site-footer .main-footer #custom_html-2 p {
-      color: #fff; }
+      margin: 0; }
   .site-footer .main-footer #custom_html-4 {
     grid-area: address;
     color: #fff;
     width: 10rem; }
     .site-footer .main-footer #custom_html-4 p {
-      color: #fff;
-      display: inline; }
+      display: inline;
+      padding-left: 0.5rem; }
   .site-footer .main-footer .contact-number {
     display: inline; }
   .site-footer .main-footer .social-icons p {
@@ -847,27 +880,33 @@ object {
 
 .site-footer .sub-footer {
   display: none; }
-
-@media screen and (min-width: 1080px) {
-  .site-footer {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+  @media screen and (min-width: 1080px) {
+    .site-footer .sub-footer .sub-footer {
+      display: block;
+      background-color: #002436; } }
+  @media screen and (min-width: 1080px) {
     .site-footer .sub-footer {
-      background-color: #002436; }
-      .site-footer .sub-footer .copyright {
-        text-align: center;
-        color: #fff; } }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
 
 /*--------------------------------------------------------------
 # Header 
 --------------------------------------------------------------*/
+.logged-in .site-header {
+  top: 46px; }
+
 .site-header {
-  height: 71px;
+  position: fixed;
+  top: 0;
+  height: 75px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -875,9 +914,24 @@ object {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 4px #15a9d1 solid; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 4px #15a9d1 solid;
+  background: white; }
   .site-header .site-branding .header-logo {
     background: url(../../assets/images/logos/logo-horizontal.svg) no-repeat;
     background-size: 100% 100%;
     height: 50px;
     width: 215px; }
+  .site-header .menu-wrapper .fas {
+    font-size: 35px;
+    display: block; }
+    .site-header .menu-wrapper .fas::before {
+      width: 100%;
+      display: inline-block;
+      text-align: right;
+      padding-right: 25px; }
+
+.site-header.toggle .main-navigation ul {
+  position: fixed; }

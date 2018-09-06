@@ -6,9 +6,18 @@
     text-decoration: none;
     color: $color__background-body;
   }
+  p {
+    color: $color__background-body;
+  }
   .main-footer {
     display: grid;
     grid-template-columns: 40% 60%; 
+    padding-left: 0.5rem;
+  }
+  .main-footer {
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: 45% 55%; 
     grid-template-rows: 30% 70%;
     grid-template-areas: 
     "email-contact address"
@@ -19,6 +28,9 @@
     .widget_media_image {
       img {
         display: none;
+        @include desktop-size {
+          display: block;
+        }
       }
     }
     #custom_html-3 {
@@ -26,14 +38,18 @@
       width: 33.3%;
       height: 100%;
       p {
-        color: $color__background-body;
+        text-align: center;
+        width: 6.25rem;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 1rem;
       }
     }
     #custom_html-2 {
       grid-area: email-contact;
       width: 9.3rem;
       p {
-        color: $color__background-body;
+        margin: 0;
       }
     }
     #custom_html-4 {
@@ -41,8 +57,8 @@
       color: $color__background-body;
       width: 10rem;
       p {
-        color: $color__background-body;
         display: inline;
+        padding-left: 0.5rem;
       }
     }
     .contact-number {
@@ -60,16 +76,16 @@
   }
   .sub-footer {
     display: none; 
+    @include desktop-size {
+      .sub-footer {
+        display: block;
+        background-color: $footer_darker_color;
+    }
   }
   @include desktop-size {
+    display: flex; 
     flex-direction: row;
     justify-content: space-between;
-    .sub-footer {
-      background-color: $footer_darker_color;
-      .copyright {
-        text-align: center;
-        color: $color__background-body;
-      }
     }
   }
 }
