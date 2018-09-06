@@ -5,6 +5,10 @@
   a {
     text-decoration: none;
     color: $color__background-body;
+  }
+  .main-footer {
+    display: grid;
+    grid-template-columns: 40% 60%; 
     padding-left: 0.5rem;
   }
   .main-footer {

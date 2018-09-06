@@ -802,6 +802,16 @@ object {
 /*--------------------------------------------------------------
 # Single Portfolio View Page
 --------------------------------------------------------------*/
+.single-portfolio .main-carousel {
+  width: 50vw;
+  margin: 0 auto; }
+  .single-portfolio .main-carousel .flickity-page-dots {
+    color: red;
+    width: 50px; }
+    .single-portfolio .main-carousel .flickity-page-dots .dot {
+      background-color: red;
+      border-radius: 50%; }
+
 /*--------------------------------------------------------------
 # 404 Page
 --------------------------------------------------------------*/
@@ -810,7 +820,11 @@ object {
 --------------------------------------------------------------*/
 .site-footer a {
   text-decoration: none;
-  color: #fff;
+  color: #fff; }
+
+.site-footer .main-footer {
+  display: grid;
+  grid-template-columns: 40% 60%;
   padding-left: 0.5rem; }
 
 .site-footer .main-footer {

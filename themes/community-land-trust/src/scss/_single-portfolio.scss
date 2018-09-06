@@ -1,3 +1,27 @@
 /*--------------------------------------------------------------
 # Single Portfolio View Page
 --------------------------------------------------------------*/
+
+.single-portfolio {
+
+  .main-carousel {
+    width: 50vw;
+    margin: 0 auto;
+
+
+    .flickity-page-dots {
+      color: red;
+      width: 50px;
+
+      .dot {
+        background-color: red;
+        border-radius: 50%;
+      }
+      
+    }
+  }
+
+
+
+}
+

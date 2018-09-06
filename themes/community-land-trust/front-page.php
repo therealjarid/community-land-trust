@@ -20,6 +20,8 @@ get_header(); ?>
                 <p class="slogan"><?php echo CFS()->get( 'slogan' ); ?></p>
             </div>
 
+            <button class="mixin-button">find a home</button>
+
         </section> <!-- end of .hero-banner section -->
 
      <!-- COMPANY MISSION SECTION BEGINS -->
@@ -40,7 +42,9 @@ get_header(); ?>
 
 		<?php endwhile; ?>
     <!-- end of company mission section -->
+
     
+    <button class="mixin-button">Contact Us</button>
 
     <!-- <?php 
     $fields = CFS()->get( 'item' );
