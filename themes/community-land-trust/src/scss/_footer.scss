@@ -1,14 +1,19 @@
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-.container {
-  margin: 0 auto;
-}
 .site-footer {
-  .light-footer {
+  a {
+    text-decoration: none;
+    color: $color__background-body;
+  }
+  .main-footer {
+    display: grid;
+    grid-template-columns: 40% 60%; 
+    grid-template-rows: 30% 70%;
+    grid-template-areas: 
+    "email-contact address"
+    "social address";
     background-color: $footer_lighter_color;
-    display: flex;
-    flex-direction: row;
     max-width: 100%;
     padding: 0.5rem;
     .widget_media_image {
@@ -17,7 +22,7 @@
       }
     }
     #custom_html-3 {
-      order: 2;
+      grid-area: social; 
       width: 33.3%;
       height: 100%;
       p {
@@ -25,32 +30,23 @@
       }
     }
     #custom_html-2 {
-      order: 1;
+      grid-area: email-contact;
       width: 9.3rem;
       p {
         color: $color__background-body;
       }
     }
     #custom_html-4 {
-      order: 3;
+      grid-area: address; 
       color: $color__background-body;
       width: 10rem;
       p {
         color: $color__background-body;
+        display: inline;
       }
     }
     .contact-number {
       display: inline;
-      a {
-        text-decoration: none;
-        color: $color__background-body;
-      }
-    }
-    .email {
-      a {
-        text-decoration: none;
-        color: $color__background-body;
-      }
     }
     .social-icons {
       p {
@@ -61,21 +57,18 @@
     .address {
       top: 10px;
     }
-    .dark-footer {
-      display: none; 
+  }
+  .sub-footer {
+    display: none; 
+  }
+  @include desktop-size {
+    flex-direction: row;
+    justify-content: space-between;
+    .sub-footer {
+      background-color: $footer_darker_color;
       .copyright {
-        display: none;
-      }
-    }
-    @include desktop-size {
-      flex-direction: row;
-      justify-content: space-between;
-      .dark-footer {
-        background-color: $footer_darker_color;
-        .copyright {
-          text-align: center;
-          color: $color__background-body;
-        }
+        text-align: center;
+        color: $color__background-body;
       }
     }
   }

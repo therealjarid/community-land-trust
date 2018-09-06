@@ -7,6 +7,10 @@ html {
   @include font-size(1);
 }
 
+.site-content {
+  padding-top: 75px;
+}
+
 *,
 *:before,
 *:after {
