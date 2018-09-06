@@ -70,16 +70,16 @@
   }
   .sub-footer {
     display: none; 
+    @include desktop-size {
+      .sub-footer {
+        display: block;
+        background-color: $footer_darker_color;
+    }
   }
   @include desktop-size {
+    display: flex; 
     flex-direction: row;
     justify-content: space-between;
-    .sub-footer {
-      background-color: $footer_darker_color;
-      .copyright {
-        text-align: center;
-        color: $color__background-body;
-      }
     }
   }
 }

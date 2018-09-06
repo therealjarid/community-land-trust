@@ -864,21 +864,22 @@ object {
 
 .site-footer .sub-footer {
   display: none; }
-
-@media screen and (min-width: 1080px) {
-  .site-footer {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+  @media screen and (min-width: 1080px) {
+    .site-footer .sub-footer .sub-footer {
+      display: block;
+      background-color: #002436; } }
+  @media screen and (min-width: 1080px) {
     .site-footer .sub-footer {
-      background-color: #002436; }
-      .site-footer .sub-footer .copyright {
-        text-align: center;
-        color: #fff; } }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
 
 /*--------------------------------------------------------------
 # Header 
