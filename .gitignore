@@ -23,6 +23,7 @@ access_log
 /*
 !.gitignore
 !plugins/
+plugins/akismet/*
 !themes/
 !README.md
 
