@@ -2,12 +2,22 @@
 # Header 
 --------------------------------------------------------------*/
 
+.logged-in {
+  .site-header {
+    top: 46px;
+  }
+}
+
 .site-header {
-  height: 71px;
+  position: fixed;
+  top: 0;
+  height: 75px;
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 4px $border_color solid;
+  background: white;
   .site-branding {
     .header-logo {
       background: url(../../assets/images/logos/logo-horizontal.svg) no-repeat;
@@ -16,6 +26,22 @@
       width: 215px;
     }
   }
-  .main-navigation {
+  .menu-wrapper {
+    .fas {
+      font-size: 35px;
+      display: block;
+      &::before {
+        width: 100%;
+        display: inline-block;
+        text-align: right;
+        padding-right: 25px;
+      }
+    }
+  }
+}
+
+.site-header.toggle {
+  .main-navigation ul {
+    position: fixed;
   }
 }
