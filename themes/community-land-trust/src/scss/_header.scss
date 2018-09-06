@@ -55,6 +55,8 @@
         font-family: $font__accent;
         padding: 21.6px;
         text-align: center;
+        display: block;
+        text-decoration: none;
       }
       &.menu-item-has-children.toggle-sub-menu {
         > a {
