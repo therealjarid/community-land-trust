@@ -2,12 +2,6 @@
 # Header 
 --------------------------------------------------------------*/
 
-.logged-in {
-  .site-header {
-    top: 46px;
-  }
-}
-
 .site-header {
   position: fixed;
   top: 0;
@@ -40,8 +34,48 @@
   }
 }
 
-.site-header.toggle {
-  .main-navigation ul {
+.site-header.toggle-menu {
+  .main-navigation .menu {
     position: fixed;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+    > li {
+      border-bottom: 1px $color__border-abbr solid;
+      width: 100%;
+      a {
+        width: 100%;
+        color: black;
+        font-weight: 600;
+        font-family: $font__accent;
+        padding: 21px;
+        text-align: center;
+      }
+      &.menu-item-has-children.toggle-sub-menu {
+        > a {
+          border-bottom: 1px $color__border-abbr solid;
+        }
+        ul {
+          display: block;
+        }
+      }
+    }
+    .sub-menu.toggle-sub-menu {
+      display: flex;
+    }
+  }
+}
+
+.logged-in {
+  .site-header {
+    top: 46px;
+  }
+  .main-navigation .menu-clt-container .menu {
+    top: 120px;
   }
 }

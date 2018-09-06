@@ -106,12 +106,15 @@ function clt_scripts() {
 	// add font awesome via CDN 
 	wp_enqueue_style( 'font-awesome-icons', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css');
 
-	// adding jquery dependency to js 
-	wp_enqueue_script('script', get_template_directory_uri() . '/build/js/scripts.min.js', array( 'jquery' ), true);
+	// adding flickity config 
+	wp_enqueue_script('flickity-config', get_template_directory_uri() . '/build/js/flickity-config.min.js', array( 'jquery' ), true);
 
 	// adding flickity scripts via CDN
 	wp_register_script( 'flickity', '//cdnjs.cloudflare.com/ajax/libs/flickity/1.1.1/flickity.pkgd.min.js', array( 'jquery' ), null, true );
 	wp_enqueue_script( 'flickity' );
+	
+	// adding header functionality 
+	wp_enqueue_script('header-toggle', get_template_directory_uri() . '/build/js/header-toggle.min.js', array( 'jquery' ), true);
 }
 add_action( 'wp_enqueue_scripts', 'clt_scripts' );
 

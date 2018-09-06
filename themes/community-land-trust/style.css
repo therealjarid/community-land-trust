@@ -419,7 +419,8 @@ html {
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
-  min-width: 320px; }
+  min-width: 320px;
+  font-family: "Roboto", sans-serif; }
 
 blockquote,
 q {
@@ -559,49 +560,26 @@ a {
     margin: 0;
     padding-left: 0; }
     .main-navigation ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5rem;
       left: -999rem;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999rem;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
+      top: 0; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
+      left: 100%; }
+    .main-navigation ul a {
+      width: 200px; }
+  .main-navigation li:hover > ul,
+  .main-navigation li.focus > ul {
+    left: auto; }
+
+a {
+  display: block;
+  text-decoration: none; }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5rem;
   overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -900,9 +878,6 @@ object {
 /*--------------------------------------------------------------
 # Header 
 --------------------------------------------------------------*/
-.logged-in .site-header {
-  top: 46px; }
-
 .site-header {
   position: fixed;
   top: 0;
@@ -933,5 +908,44 @@ object {
       text-align: right;
       padding-right: 25px; }
 
-.site-header.toggle .main-navigation ul {
-  position: fixed; }
+.site-header.toggle-menu .main-navigation .menu {
+  position: fixed;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white; }
+  .site-header.toggle-menu .main-navigation .menu > li {
+    border-bottom: 1px #666 solid;
+    width: 100%; }
+    .site-header.toggle-menu .main-navigation .menu > li a {
+      width: 100%;
+      color: black;
+      font-weight: 600;
+      font-family: "Raleway", sans-serif;
+      padding: 21px;
+      text-align: center; }
+    .site-header.toggle-menu .main-navigation .menu > li.menu-item-has-children.toggle-sub-menu > a {
+      border-bottom: 1px #666 solid; }
+    .site-header.toggle-menu .main-navigation .menu > li.menu-item-has-children.toggle-sub-menu ul {
+      display: block; }
+  .site-header.toggle-menu .main-navigation .menu .sub-menu.toggle-sub-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.logged-in .site-header {
+  top: 46px; }
+
+.logged-in .main-navigation .menu-clt-container .menu {
+  top: 120px; }
