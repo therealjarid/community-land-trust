@@ -1,55 +1,82 @@
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+.container {
+  margin: 0 auto;
+}
 .site-footer {
-  background-color: $footer_lighter_color;
-  display: flex; 
-  max-width: 100%;
-  .container {
-    margin: 0 auto; 
-    width: 100%;
-  }
-  .widget_media_image {
-    img {
-      display: none;
+  .light-footer {
+    background-color: $footer_lighter_color;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    padding: 0.5rem;
+    .widget_media_image {
+      img {
+        display: none;
+      }
     }
-  }
-  #custom_html-3 {
-    order: 2; 
-    width: 33.3%;
-    p {
-      color: $color__background-body;
-    }
-  }
-  #custom_html-2 {
-      order: 1;
-      width: 18.75rem;
+    #custom_html-3 {
+      order: 2;
+      width: 33.3%;
+      height: 100%;
       p {
         color: $color__background-body;
       }
-  }
-  #custom_html-4 {
-    order: 3; 
-    color: $color__background-body;
-    p {
-      color: $color__background-body;
     }
-  }
+    #custom_html-2 {
+      order: 1;
+      width: 9.3rem;
+      p {
+        color: $color__background-body;
+      }
+    }
+    #custom_html-4 {
+      order: 3;
+      color: $color__background-body;
+      width: 10rem;
+      p {
+        color: $color__background-body;
+      }
+    }
     .contact-number {
-      display: inline; 
+      display: inline;
       a {
-        text-decoration: none; 
+        text-decoration: none;
         color: $color__background-body;
       }
     }
     .email {
       a {
-        text-decoration: none; 
+        text-decoration: none;
         color: $color__background-body;
       }
     }
-  @include desktop-size {
-    flex-direction: row; 
-    justify-content: space-between;
+    .social-icons {
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    .address {
+      top: 10px;
+    }
+    .dark-footer {
+      display: none; 
+      .copyright {
+        display: none;
+      }
+    }
+    @include desktop-size {
+      flex-direction: row;
+      justify-content: space-between;
+      .dark-footer {
+        background-color: $footer_darker_color;
+        .copyright {
+          text-align: center;
+          color: $color__background-body;
+        }
+      }
+    }
   }
 }
