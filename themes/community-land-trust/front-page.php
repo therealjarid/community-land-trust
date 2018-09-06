@@ -82,6 +82,20 @@ get_header(); ?>
 
     </div> -->
 
+    <?php
+		$args = array(
+    	'post_type' => 'portfolio',
+    	'order' => 'DSC',
+		);
+		$clt_portfolio_posts = get_posts($args); // returns an array of posts
+	    ?>
+		<?php foreach ($clt_portfolio_posts as $clt_portfolio_post): setup_postdata($post);?>
+
+			<?php	the_post_thumbnail();?>
+
+		</div>
+        <?php endforeach;?>
+
 
     </main> <!-- end of .home-page main -->
 
