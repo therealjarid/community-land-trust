@@ -406,6 +406,9 @@ html {
   font-size: 16px;
   font-size: 1rem; }
 
+.site-content {
+  padding-top: 75px; }
+
 *,
 *:before,
 *:after {
@@ -880,8 +883,13 @@ object {
 /*--------------------------------------------------------------
 # Header 
 --------------------------------------------------------------*/
+.logged-in .site-header {
+  top: 46px; }
+
 .site-header {
-  height: 71px;
+  position: fixed;
+  top: 0;
+  height: 75px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -889,9 +897,24 @@ object {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 4px #15a9d1 solid; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 4px #15a9d1 solid;
+  background: white; }
   .site-header .site-branding .header-logo {
     background: url(../../assets/images/logos/logo-horizontal.svg) no-repeat;
     background-size: 100% 100%;
     height: 50px;
     width: 215px; }
+  .site-header .menu-wrapper .fas {
+    font-size: 35px;
+    display: block; }
+    .site-header .menu-wrapper .fas::before {
+      width: 100%;
+      display: inline-block;
+      text-align: right;
+      padding-right: 25px; }
+
+.site-header.toggle .main-navigation ul {
+  position: fixed; }
