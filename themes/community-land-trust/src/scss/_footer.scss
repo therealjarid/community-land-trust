@@ -58,6 +58,15 @@
         margin-bottom: 0;
       }
     }
+    .address {
+      top: 10px;
+    }
+    .dark-footer {
+      display: none; 
+      .copyright {
+        display: none;
+      }
+    }
     @include desktop-size {
       flex-direction: row;
       justify-content: space-between;
@@ -68,9 +77,6 @@
           color: $color__background-body;
         }
       }
-    }
-    .address {
-      top: 10px;
     }
   }
 }

@@ -855,6 +855,12 @@ object {
   .site-footer .light-footer .social-icons p {
     margin-top: 0;
     margin-bottom: 0; }
+  .site-footer .light-footer .address {
+    top: 10px; }
+  .site-footer .light-footer .dark-footer {
+    display: none; }
+    .site-footer .light-footer .dark-footer .copyright {
+      display: none; }
   @media screen and (min-width: 1080px) {
     .site-footer .light-footer {
       -webkit-box-orient: horizontal;
@@ -869,8 +875,6 @@ object {
         .site-footer .light-footer .dark-footer .copyright {
           text-align: center;
           color: #fff; } }
-  .site-footer .light-footer .address {
-    top: 10px; }
 
 /*--------------------------------------------------------------
 # Header 
