@@ -13,11 +13,11 @@
   .main-footer {
     font-size: 1rem;
     display: grid;
-    grid-template-columns: 40% 60%; 
+    grid-template-columns: 40% 60%;
     grid-template-rows: 30% 70%;
-    grid-template-areas: 
-    "email-contact address"
-    "social address";
+    grid-template-areas:
+      'email-contact address'
+      'social address';
     background-color: $footer_lighter_color;
     max-width: 100%;
     padding: 0.5rem;
@@ -31,7 +31,7 @@
       }
     }
     #custom_html-3 {
-      grid-area: social; 
+      grid-area: social;
       width: 9.3rem;
       height: 100%;
       @include desktop-size {
@@ -51,7 +51,7 @@
           }
         }
         @include desktop-size {
-          padding-top: 5.4rem; 
+          padding-top: 5.4rem;
           padding-bottom: 6.6rem;
         }
         p {
@@ -78,7 +78,7 @@
       }
     }
     #custom_html-4 {
-      grid-area: address; 
+      grid-area: address;
       color: $color__background-body;
       width: 10rem;
       margin-left: 2rem;
@@ -109,17 +109,17 @@
       }
     }
     @include desktop-size {
-      display: flex; 
+      display: flex;
       flex-direction: row;
       justify-content: space-between;
-      padding-top: 1rem; 
-      }
+      padding-top: 1rem;
+    }
   }
   .sub-footer {
-    display: none; 
+    display: none;
     @include desktop-size {
-        display: block;
-        background-color: $footer_darker_color;
+      display: block;
+      background-color: $footer_darker_color;
     }
     .copyright {
       color: $color__background-body;
