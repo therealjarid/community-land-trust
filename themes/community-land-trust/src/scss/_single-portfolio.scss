@@ -5,17 +5,26 @@
 .single-portfolio {
 
   .main-carousel {
-    width: 50vw;
-    margin: 0 auto;
+    // width: 50vw;
+    // margin: 0 auto;
 
+
+    .carousel-cell {
+      width: 100%;
+    }
+
+    .flickity-prev-next-button {
+      position: absolute;
+    }
 
     .flickity-page-dots {
-      color: red;
-      width: 50px;
+      // color: red;
+      // width: 50px;
+      // margin: none;
 
       .dot {
-        background-color: red;
-        border-radius: 50%;
+        // background-color: red;
+        // border-radius: 50%;
       }
       
     }
