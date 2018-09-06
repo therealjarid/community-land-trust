@@ -94,13 +94,6 @@ get_header(); ?>
 
     <h2 class="front-page-headings">Our Partners</h2>
 
-    <?php
-
-    $partners_logos = CFS()->get( 'partners_logos' );
-    echo "<div class='carousel-cell'>
-            <img src='{$partners_logos}'>
-            </div>";
-    ?>
 
     <h2 class="front-page-headings">Need More Information?</h2>
     <button class="mixin-button">Contact Us</button>
