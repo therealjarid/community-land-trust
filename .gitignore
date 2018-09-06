@@ -44,3 +44,6 @@ themes/community-land-trust/node_modules/*
 # ================== #
 themes/community-land-trust/gulpfile.js
 themes/community-land-trust/build/*
+themes/community-land-trust/style.css
+themes/community-land-trust/package.json
+themes/community-land-trust/package-lock.json
