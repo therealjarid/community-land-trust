@@ -825,6 +825,12 @@ object {
 .site-footer .main-footer {
   display: grid;
   grid-template-columns: 40% 60%;
+  padding-left: 0.5rem; }
+
+.site-footer .main-footer {
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: 45% 55%;
   grid-template-rows: 30% 70%;
   grid-template-areas: "email-contact address" "social address";
   background-color: #00354f;
@@ -837,19 +843,31 @@ object {
     width: 33.3%;
     height: 100%; }
     .site-footer .main-footer #custom_html-3 p {
-      color: #fff; }
+      color: #fff;
+      font-size: 1.5rem;
+      text-align: center;
+      width: 6.25rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding-left: 1rem; }
   .site-footer .main-footer #custom_html-2 {
     grid-area: email-contact;
     width: 9.3rem; }
     .site-footer .main-footer #custom_html-2 p {
-      color: #fff; }
+      color: #fff;
+      margin: 0; }
   .site-footer .main-footer #custom_html-4 {
     grid-area: address;
     color: #fff;
     width: 10rem; }
     .site-footer .main-footer #custom_html-4 p {
       color: #fff;
-      display: inline; }
+      display: inline;
+      padding-left: 0.5rem; }
   .site-footer .main-footer .contact-number {
     display: inline; }
   .site-footer .main-footer .social-icons p {

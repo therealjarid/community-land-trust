@@ -9,6 +9,12 @@
   .main-footer {
     display: grid;
     grid-template-columns: 40% 60%; 
+    padding-left: 0.5rem;
+  }
+  .main-footer {
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: 45% 55%; 
     grid-template-rows: 30% 70%;
     grid-template-areas: 
     "email-contact address"
@@ -27,6 +33,12 @@
       height: 100%;
       p {
         color: $color__background-body;
+        font-size: 1.5rem;
+        text-align: center;
+        width: 6.25rem;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 1rem;
       }
     }
     #custom_html-2 {
@@ -34,6 +46,7 @@
       width: 9.3rem;
       p {
         color: $color__background-body;
+        margin: 0;
       }
     }
     #custom_html-4 {
@@ -43,6 +56,7 @@
       p {
         color: $color__background-body;
         display: inline;
+        padding-left: 0.5rem;
       }
     }
     .contact-number {
