@@ -61,12 +61,16 @@
     @include desktop-size {
       flex-direction: row;
       justify-content: space-between;
+      .dark-footer {
+        background-color: $footer_darker_color;
+        .copyright {
+          text-align: center;
+          color: $color__background-body;
+        }
+      }
     }
     .address {
       top: 10px;
     }
-  }
-  .dark-footer {
-    background-color: $footer_darker_color;
   }
 }

@@ -863,12 +863,14 @@ object {
               flex-direction: row;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
-              justify-content: space-between; } }
+              justify-content: space-between; }
+      .site-footer .light-footer .dark-footer {
+        background-color: #002436; }
+        .site-footer .light-footer .dark-footer .copyright {
+          text-align: center;
+          color: #fff; } }
   .site-footer .light-footer .address {
     top: 10px; }
-
-.site-footer .dark-footer {
-  background-color: #002436; }
 
 /*--------------------------------------------------------------
 # Header 
