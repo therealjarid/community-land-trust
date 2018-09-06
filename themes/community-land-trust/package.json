@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "A starter theme for RED students, based on Underscores.",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp-babel": "^8.0.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^4.0.0",
