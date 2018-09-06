@@ -21,6 +21,7 @@ html {
 body {
   background: $color__background-body; /* Fallback for when there is no custom background color defined. */
   min-width: $mobile-min-width;
+  font-family: $font__main;
 }
 
 blockquote,

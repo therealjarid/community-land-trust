@@ -784,6 +784,9 @@ object {
   text-decoration: none;
   color: #fff; }
 
+.site-footer p {
+  color: #fff; }
+
 .site-footer .main-footer {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -800,13 +803,14 @@ object {
   padding: 0.5rem; }
   .site-footer .main-footer .widget_media_image img {
     display: none; }
+    @media screen and (min-width: 1080px) {
+      .site-footer .main-footer .widget_media_image img {
+        display: block; } }
   .site-footer .main-footer #custom_html-3 {
     grid-area: social;
     width: 33.3%;
     height: 100%; }
     .site-footer .main-footer #custom_html-3 p {
-      color: #fff;
-      font-size: 1.5rem;
       text-align: center;
       width: 6.25rem;
       display: -webkit-box;
@@ -820,14 +824,12 @@ object {
     grid-area: email-contact;
     width: 9.3rem; }
     .site-footer .main-footer #custom_html-2 p {
-      color: #fff;
       margin: 0; }
   .site-footer .main-footer #custom_html-4 {
     grid-area: address;
     color: #fff;
     width: 10rem; }
     .site-footer .main-footer #custom_html-4 p {
-      color: #fff;
       display: inline;
       padding-left: 0.5rem; }
   .site-footer .main-footer .contact-number {
@@ -840,21 +842,22 @@ object {
 
 .site-footer .sub-footer {
   display: none; }
-
-@media screen and (min-width: 1080px) {
-  .site-footer {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+  @media screen and (min-width: 1080px) {
+    .site-footer .sub-footer .sub-footer {
+      display: block;
+      background-color: #002436; } }
+  @media screen and (min-width: 1080px) {
     .site-footer .sub-footer {
-      background-color: #002436; }
-      .site-footer .sub-footer .copyright {
-        text-align: center;
-        color: #fff; } }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
 
 /*--------------------------------------------------------------
 # Header 
