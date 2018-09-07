@@ -9,12 +9,21 @@ html {
 
 .site-content {
   padding-top: 75px;
+  @include desktop-size {
+    padding-top: 105px;
+  }
 }
 
 .logged-in {
   .site-content {
-    @media screen and (min-width: 783px) and (max-width: 1195px) {
+    @include logged-in-tablet-size {
       padding-top: 107px;
+    }
+    @include desktop-size {
+      padding-top: 137px;
+    }
+    @include logged-in-desktop-size {
+      padding-top: 105px;
     }
   }
 }
@@ -30,6 +39,15 @@ body {
   background: $color__background-body; /* Fallback for when there is no custom background color defined. */
   min-width: $mobile-min-width;
   font-family: $font__main;
+}
+
+.site-content {
+  max-width: $desktop-max-width;
+  margin: auto;
+}
+
+body.noScroll {
+  overflow: hidden;
 }
 
 blockquote,
