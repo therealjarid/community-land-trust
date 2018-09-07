@@ -8,7 +8,7 @@
 ?>
 
 </div><!-- #content -->
-<footer id="colophon" class="site-footer container" role="contentinfo">
+<footer id="colophon" class="site-footer" role="contentinfo">
     <div class="main-footer">
 		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( "footer" ) ) : ?>
 		<?php endif; ?>

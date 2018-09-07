@@ -2,7 +2,6 @@
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-  width: 100%;
   a {
     text-decoration: none;
     color: $color__background-body;
@@ -22,15 +21,12 @@
     background-color: $footer_lighter_color;
     max-width: 100%;
     padding: 0.5rem;
-    height: 189px;
     .widget_media_image {
       img {
         display: none;
         @include desktop-size {
           display: block;
-          margin-left: 2rem;
-          width: 278px;
-          padding-right: 1rem; 
+          width: 400px;
         }
       }
     }
@@ -38,6 +34,7 @@
       grid-area: social;
       width: 9.3rem;
       height: 100%;
+      margin-left: 1rem;
       @include desktop-size {
         margin-right: 3rem;
       }
@@ -47,9 +44,11 @@
         display: flex;
         justify-content: space-between;
         padding-left: 1rem;
+        font-size: 2.5rem;
       }
       .social-icons {
         .fa-twitter {
+          padding: 0 2rem;
           @include desktop-size {
             padding: 0 1rem;
           }
@@ -68,7 +67,9 @@
     }
     #custom_html-2 {
       grid-area: email-contact;
-      display: inline;
+      margin-left: 2.7rem;
+      width: 100%;
+      margin-top: 0.8rem;
       @include desktop-size {
         margin-top: 5rem;
         margin-right: 10rem;
@@ -76,6 +77,7 @@
       }
       p {
         margin: 0;
+        font-size: 1.1rem;
         @include desktop-size {
           margin: 1rem 0;
         }
@@ -84,15 +86,18 @@
     #custom_html-4 {
       grid-area: address;
       color: $color__background-body;
-      width: 10rem;
-      margin-left: 2rem;
+      width: 8rem;
+      margin-left: 7rem;
+      margin-right: 1rem;
+      margin-top: 0.8rem;
       @include desktop-size {
-        margin-right: 10rem;
+        margin-right: 20rem;
         margin-top: 2.75rem;
       }
       p {
         display: inline;
         padding-left: 0.5rem;
+        font-size: 1.1rem;
         @include desktop-size {
           padding: 0;
           font-size: 0.8rem;
@@ -125,7 +130,6 @@
     @include desktop-size {
       display: block;
       background-color: $footer_darker_color;
-      height: 3rem;
     }
     .copyright {
       color: $color__background-body;
