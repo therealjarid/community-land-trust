@@ -32,6 +32,11 @@ body {
   font-family: $font__main;
 }
 
+.site-content {
+  max-width: 1440px;
+  margin: auto;
+}
+
 body.noScroll {
   overflow: hidden;
 }

@@ -12,18 +12,29 @@
   justify-content: space-between;
   border-bottom: 4px $border_color solid;
   background: white;
+  @include desktop-size {
+    height: 105px;
+  }
   .site-branding {
     .header-logo {
       background: url(../../assets/images/logos/logo-horizontal.svg) no-repeat;
       background-size: 100% 100%;
       height: 50px;
       width: 215px;
+      @include desktop-size {
+        height: 68px;
+        width: 231px;
+        margin-left: 20px;
+      }
     }
   }
   .menu-wrapper {
     .fas {
       font-size: 35px;
       display: block;
+      @include desktop-size {
+        display: none;
+      }
       &::before {
         width: 100%;
         display: inline-block;
@@ -32,12 +43,23 @@
       }
     }
   }
+  .main-navigation .menu {
+    @include desktop-size {
+      display: flex;
+      margin: 0 40px;
+      li a {
+        text-decoration: none;
+        padding: 0 25px;
+        font-family: $font__accent;
+        font-size: 1.1rem;
+      }
+    }
+  }
 }
 
 .site-header.toggle-menu {
   .main-navigation .menu {
     position: fixed;
-    z-index: relative;
     top: 75px;
     left: 0;
     width: 100%;
@@ -92,7 +114,7 @@
     }
   }
   .main-navigation .menu-clt-container .menu {
-    top: 120px;
+    top: 121px;
     @include logged-in-tablet-size {
       top: 139px;
     }
