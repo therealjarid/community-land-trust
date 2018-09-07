@@ -84,18 +84,18 @@
         }
       }
     }
-    .current-menu-item a,
-    .current-menu-parent a,
-    .current-page-item {
+  }
+  .current-menu-item a,
+  .current-menu-parent a,
+  .current-page-item {
+    background: $color_button;
+  }
+  .sub-menu {
+    .current-menu-item {
       background: $color_button;
     }
-    .sub-menu {
-      .current-menu-item {
-        background: $color_button;
-      }
-      a {
-        background: none;
-      }
+    a {
+      background: none;
     }
   }
 }
