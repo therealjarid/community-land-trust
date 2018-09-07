@@ -2,7 +2,6 @@
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-  height: 14.6rem;
   width: 100%;
   a {
     text-decoration: none;
@@ -23,13 +22,14 @@
     background-color: $footer_lighter_color;
     max-width: 100%;
     padding: 0.5rem;
+    height: 189px;
     .widget_media_image {
       img {
         display: none;
         @include desktop-size {
           display: block;
           margin-left: 2rem;
-          width: 600px;
+          width: 278px;
           padding-right: 1rem; 
         }
       }
@@ -70,7 +70,7 @@
       grid-area: email-contact;
       display: inline;
       @include desktop-size {
-        margin-top: 8rem;
+        margin-top: 5rem;
         margin-right: 10rem;
         margin-left: 10rem;
       }
