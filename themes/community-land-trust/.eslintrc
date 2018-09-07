@@ -17,8 +17,10 @@
   },
   "globals": {
     "jQuery": false,
-    "$": true,
-    "_": false
+    "$": false,
+    "_": false,
+    "google": false,
+    "map": false
   },
   "env": {
     "es6": true,
