@@ -46,14 +46,7 @@
     position: relative;
 
     img {
-      object-fit: cover;
-      overflow: hidden;
-      height: 250px;
-
-      @include desktop-size {
-        object-fit: contain;
-        height: 100%;
-      }
+      @include banner-img;
     }
     .company-header-info {
       opacity: 0.75;
@@ -88,11 +81,6 @@
       @include main-cta;
       height: 40px;
       width: 130px;
-
-      &:hover {
-        background-color: #a8be39;
-        transition: 0.5s;
-      }
     }
 
     .mixin-button {
@@ -211,19 +199,28 @@
       width: 130px;
     }
     
-  }
+    }
 
-  .more-info {
-    text-align: center;
-    font-family: $font__accent;
-    font-weight: normal;
+  
+      .more-info {
+        text-align: center;
+        font-family: $font__accent;
+        font-weight: normal;
+    
+      }
+    
+      .mixin-button {
+        @include main-cta;
+        height: 40px;
+        width: 150px;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 50px;
+       
+    
+      }
 
-  }
+  
 
-  .mixin-button {
-    @include main-cta;
-    height: 40px;
-    width: 150px;
-
-  }
+  
 }

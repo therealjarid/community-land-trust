@@ -164,8 +164,10 @@ get_header(); ?>
         </div>
 
 
-        <h2 class="more-info">Need More Info?</h2>
-        <button class="mixin-button">Contact Us</button>
+       
+             <h2 class="more-info">Need More Info?</h2>
+            <button class="mixin-button">Contact Us</button>
+      
 
 
     </main> <!-- end of .home-page main -->

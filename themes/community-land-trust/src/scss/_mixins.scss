@@ -46,11 +46,16 @@
 @mixin main-cta {
   background-color: $color_button;
   border-radius: 10px;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
   text-transform: capitalize;
   font-family: 'Roboto';
   color: black;
   border: 0;
+
+  &:hover {
+    background-color: #a8be39;
+    transition: 0.5s;
+  }
 }
 
 @mixin banner-img {
