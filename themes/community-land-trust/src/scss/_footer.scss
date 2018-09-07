@@ -16,8 +16,8 @@
   .main-footer {
     font-size: 1rem;
     display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 30% 70%;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 20% 80%;
     grid-template-areas:
       'email-contact address'
       'social address';
@@ -30,7 +30,8 @@
         @include desktop-size {
           display: block; 
           padding-top: 0.5rem;
-          max-width: none; 
+          max-width: none;
+          width: 17.2rem;
         }
       }
       p {
@@ -40,10 +41,10 @@
     #custom_html-3 {
       grid-area: social;
       height: 100%;
-      padding-left: 5rem;
-      padding-top: 3rem;
+      padding-left: 2rem;
       @include desktop-size {
-
+      padding-left: 7rem;
+      padding-top: 4.5rem;
       }
       p {
         text-align: center;
@@ -65,7 +66,7 @@
       padding-top: 1.5rem; 
       padding-left: 3rem;
       @include desktop-size {
-        padding-top: 2rem; 
+        padding-top: 4rem; 
         padding-left: 9rem;
       }
       p {
@@ -80,6 +81,7 @@
       grid-area: address;
       color: $color__background-body;
       margin-left: 7rem;
+      padding-left: 2rem;
       @include desktop-size {
         margin: 0;
       }
