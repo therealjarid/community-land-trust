@@ -45,14 +45,9 @@ get_header(); ?>
         <!-- end of company mission section -->
 
 
-        <h2 class="front-page-headings">Timeline</h2>
+	<!-- TIMELINE SECTION BEGINS -->
 
-        <!-- <?php
-		$fields = CFS()->get( 'item' );
-		foreach ( $fields as $field ) {
-			echo $field['icon'];
-		}
-		?> -->
+        <h2 class="front-page-headings">Timeline</h2>
 
 		<div class="timeline-years-box">
 			<div class="year one">
@@ -71,7 +66,21 @@ get_header(); ?>
 				<span>2019</span>
 			</div>
 		</div>
+
+
+		<!-- foreach loop over the achievement numbers entered on the wp backend through CFS -->
+		<div class="timeline-growth">
+
+			<?php $timeline_fields = CFS()->get( 'item' );?>
+
+				<?php foreach ( $timeline_fields as $timeline_field ) {
+					echo "<div class='timeline-growth-numbers'>" . $timeline_field['achievements_numbers'] . "</div>";
+				}
+			?>
+
+		</div>
 		
+
 		<div class="timeline-upper-icons">
 
 			<div>
@@ -105,6 +114,8 @@ get_header(); ?>
 
 		</div>
 
+
+	 <!-- end of timeline section -->
 
         <h2 class="front-page-headings">Our Work</h2>
 

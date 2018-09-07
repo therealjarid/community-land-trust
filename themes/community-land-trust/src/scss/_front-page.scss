@@ -35,6 +35,24 @@
     }
   }
 
+  .timeline-growth {
+    display: flex;
+    justify-content: space-around;
+    
+
+    .timeline-growth-numbers {
+      background-image: url("../../assets/images/timeline/breakthrough.svg");
+      height: 180px;	
+      width: 180px;
+      text-align: center;
+      line-height: 300px; 
+      color: #ffffff;
+      font-weight: bold;
+
+    }
+  
+  }
+
   .timeline-upper-icons {
     display: flex;
     justify-content: space-around;
@@ -47,4 +65,19 @@
     justify-content: space-between;
     text-align: center;
   }
+}
+
+
+.main-carousel {
+  
+  .carousel-cell {
+    width: 100%;
+  }
+
+  .flickity-prev-next-button {
+    position: absolute;
+  }
+
+
+
 }
