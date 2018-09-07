@@ -10,6 +10,9 @@
     color: $color__background-body;
     font-size: 1.2rem;
   }
+  .widget {
+    margin: 0;
+  }
   .main-footer {
     font-size: 1rem;
     display: grid;
@@ -21,22 +24,26 @@
     background-color: $footer_lighter_color;
     max-width: 100%;
     padding: 0.5rem;
-    .widget_media_image {
-      img {
-        display: none;
+    .textwidget {
+      .wp-image-117 {
+        display: none; 
         @include desktop-size {
-          display: block;
-          width: 400px;
+          display: block; 
+          padding-top: 0.5rem;
+          max-width: none; 
         }
+      }
+      p {
+        margin: 0;
       }
     }
     #custom_html-3 {
       grid-area: social;
-      width: 9.3rem;
       height: 100%;
-      margin-left: 1rem;
+      padding-left: 5rem;
+      padding-top: 3rem;
       @include desktop-size {
-        margin-right: 3rem;
+
       }
       p {
         text-align: center;
@@ -49,58 +56,55 @@
       .social-icons {
         .fa-twitter {
           padding: 0 2rem;
-          @include desktop-size {
-            padding: 0 1rem;
-          }
-        }
-        @include desktop-size {
-          padding-top: 5.4rem;
-          padding-bottom: 6.6rem;
-        }
-        p {
-          @include desktop-size {
-            font-size: 3rem;
-            padding: 0.5rem;
-          }
         }
       }
     }
-    #custom_html-2 {
+    .contact-email {
       grid-area: email-contact;
-      margin-left: 2.7rem;
-      width: 100%;
-      margin-top: 0.8rem;
+      width: 300px;
+      padding-top: 1.5rem; 
+      padding-left: 3rem;
       @include desktop-size {
-        margin-top: 5rem;
-        margin-right: 10rem;
-        margin-left: 10rem;
+        padding-top: 2rem; 
+        padding-left: 9rem;
       }
       p {
-        margin: 0;
         font-size: 1.1rem;
         @include desktop-size {
-          margin: 1rem 0;
+          margin: 1.5rem  0;
+          font-size: 14px;
         }
       }
     }
-    #custom_html-4 {
+    .text-flex {
       grid-area: address;
       color: $color__background-body;
-      width: 8rem;
       margin-left: 7rem;
-      margin-right: 1rem;
-      margin-top: 0.8rem;
       @include desktop-size {
-        margin-right: 20rem;
-        margin-top: 2.75rem;
+        margin: 0;
+      }
+      .fas {
+        padding-right: 0.2rem;
+      }
+      @include desktop-size {
+        display: flex; 
       }
       p {
         display: inline;
         padding-left: 0.5rem;
         font-size: 1.1rem;
         @include desktop-size {
+          width: 100%;
           padding: 0;
-          font-size: 0.8rem;
+        }
+      }
+      .address {
+        @include desktop-size {
+          padding-left: 0.5rem;
+          padding-top: 4rem;
+          font-size: 14px;
+          font-weight: normal;
+          width: 100%;
         }
       }
       .fa-map-marker-alt {
@@ -119,10 +123,10 @@
       }
     }
     @include desktop-size {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding-top: 1rem;
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+      grid-template-areas:
+        'email-contact address social';
     }
   }
   .sub-footer {
