@@ -24,8 +24,8 @@ get_header(); ?>
 
         </section> <!-- end of .hero-banner section -->
 
-		<!-- COMPANY MISSION SECTION BEGINS -->
-		
+        <!-- COMPANY MISSION SECTION BEGINS -->
+
 		<?php while ( have_posts() ) : the_post(); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -45,77 +45,77 @@ get_header(); ?>
         <!-- end of company mission section -->
 
 
-	<!-- TIMELINE SECTION BEGINS -->
+        <!-- TIMELINE SECTION BEGINS -->
 
         <h2 class="front-page-headings">Timeline</h2>
 
-		<div class="timeline-years-box">
-			<div class="year one">
-				<span>1993 - 2000</span>
-			</div>
-			<div class="year two">
-				<span>2012</span>
-			</div>
-			<div class="year three">
-				<span>2017</span>
-			</div>
-			<div class="year four">
-				<span>2018</span>
-			</div>
-			<div class="year five">
-				<span>2019</span>
-			</div>
-		</div>
+        <div class="timeline-years-box">
+            <div class="year one">
+                <span>1993 - 2000</span>
+            </div>
+            <div class="year two">
+                <span>2012</span>
+            </div>
+            <div class="year three">
+                <span>2017</span>
+            </div>
+            <div class="year four">
+                <span>2018</span>
+            </div>
+            <div class="year five">
+                <span>2019</span>
+            </div>
+        </div>
 
 
-		<!-- foreach loop over the achievement numbers entered on the wp backend through CFS -->
-		<div class="timeline-growth">
+        <!-- foreach loop over the achievement numbers entered on the wp backend through CFS -->
+        <div class="timeline-growth">
 
-			<?php $timeline_fields = CFS()->get( 'item' );?>
+			<?php $timeline_fields = CFS()->get( 'item' ); ?>
 
-				<?php foreach ( $timeline_fields as $timeline_field ) {
-					echo "<div class='timeline-growth-numbers'>" . $timeline_field['achievements_numbers'] . "</div>";
-				}
+			<?php foreach ( $timeline_fields as $timeline_field ) {
+				echo "<div class='timeline-growth-numbers'>" . $timeline_field['achievements_numbers'] . "</div>";
+			}
 			?>
 
-		</div>
-		
-
-		<div class="timeline-upper-icons">
-
-			<div>
-				<h3>The Breakthrough</h3>
-				<p>City of Vancouver's first partnership with CLT</p>
-			</div>
-
-			<div>
-				<h3>Growth</h3>
-				<p>Largest single investments by municipal & community partners </p>
-			</div>
-			
-		</div>
-		
-		<div class="timeline-lower-icons">
-
-			<div>
-				<h3>The Early Years</h3>
-				<p>Co-op & non-profit housing investments into the CLT</p>
-			</div>
-
-			<div>
-				<h3>Solving Our Homes</h3>
-				<p>Existing co-op homes transferred to the CLT</p>
-			</div>
-
-			<div>
-				<h3>The Future</h3>
-				<p>Over 2,800 homes and growing </p>
-			</div>
-
-		</div>
+        </div>
 
 
-	 <!-- end of timeline section -->
+        <div class="timeline-upper-icons">
+
+            <div>
+                <h3>The Breakthrough</h3>
+                <p>City of Vancouver's first partnership with CLT</p>
+            </div>
+
+            <div>
+                <h3>Growth</h3>
+                <p>Largest single investments by municipal & community partners </p>
+            </div>
+
+        </div>
+
+        <div class="timeline-lower-icons">
+
+            <div>
+                <h3>The Early Years</h3>
+                <p>Co-op & non-profit housing investments into the CLT</p>
+            </div>
+
+            <div>
+                <h3>Solving Our Homes</h3>
+                <p>Existing co-op homes transferred to the CLT</p>
+            </div>
+
+            <div>
+                <h3>The Future</h3>
+                <p>Over 2,800 homes and growing </p>
+            </div>
+
+        </div>
+
+
+        <!-- end of timeline section -->
 
         <h2 class="front-page-headings">Our Work</h2>
 
@@ -156,7 +156,7 @@ get_header(); ?>
 
 
         <h2 class="front-page-headings">Need More Information?</h2>
-        <button class="mixin-button">Contact Us</button>
+        	<button class="mixin-button">Contact Us</button>
 
 
     </main> <!-- end of .home-page main -->
