@@ -83,14 +83,20 @@
   }
   .site-header {
     top: 46px;
-    @media screen and (min-width: 783px) {
+    @include logged-in-tablet-size {
       top: 64px;
     }
-    @media screen and (min-width: 1196px) {
+    @include logged-in-desktop-size {
       top: 32px;
     }
   }
   .main-navigation .menu-clt-container .menu {
     top: 120px;
+    @include logged-in-tablet-size {
+      top: 139px;
+    }
+    @include logged-in-desktop-size {
+      top: 107px;
+    }
   }
 }

@@ -24,6 +24,18 @@
   }
 }
 
+@mixin logged-in-tablet-size {
+  @media screen and (min-width: 783px) {
+    @content;
+  }
+}
+
+@mixin logged-in-desktop-size {
+  @media screen and (min-width: 1196px) {
+    @content;
+  }
+}
+
 // Green button mixin
 @mixin main-cta($length) {
 }
