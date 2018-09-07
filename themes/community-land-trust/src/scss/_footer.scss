@@ -29,7 +29,8 @@
         @include desktop-size {
           display: block;
           margin-left: 2rem;
-          width: 278px;
+          width: 600px;
+          padding-right: 1rem; 
         }
       }
     }
@@ -94,6 +95,7 @@
         padding-left: 0.5rem;
         @include desktop-size {
           padding: 0;
+          font-size: 0.8rem;
         }
       }
       .fa-map-marker-alt {
