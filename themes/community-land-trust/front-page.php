@@ -24,7 +24,8 @@ get_header(); ?>
 
         </section> <!-- end of .hero-banner section -->
 
-        <!-- COMPANY MISSION SECTION BEGINS -->
+		<!-- COMPANY MISSION SECTION BEGINS -->
+		
 		<?php while ( have_posts() ) : the_post(); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -53,20 +54,56 @@ get_header(); ?>
 		}
 		?> -->
 
-        <h3>The Early Years</h3>
-        <p>Co-op & non-profit housing investments into the CLT</p>
+		<div class="timeline-years-box">
+			<div class="year-one">
+				<span>1993 - 2000</span>
+			</div>
+			<div class="year-two">
+				<span>2012</span>
+			</div>
+			<div class="year-three">
+				<span>2017</span>
+			</div>
+			<div class="year1">
+				<span>2018</span>
+			</div>
+			<div class="year1">
+				<span>2019</span>
+			</div>
+		</div>
+		
+		<div class="timeline-upper-icons">
 
-        <h3>Solving Our Homes</h3>
-        <p>Existing co-op homes transferred to the CLT</p>
+			<div>
+				<h3>The Breakthrough</h3>
+				<p>City of Vancouver's first partnership with CLT</p>
+			</div>
 
-        <h3>The Breakthrough</h3>
-        <p>City of Vancouver's first partnership with CLT</p>
+			<div>
+				<h3>Growth</h3>
+				<p>Largest single investments by municipal & community partners </p>
+			</div>
+			
+		</div>
+		
+		<div class="timeline-lower-icons">
 
-        <h3>Growth</h3>
-        <p>Largest single investments by municipal & community partners </p>
+			<div>
+				<h3>The Early Years</h3>
+				<p>Co-op & non-profit housing investments into the CLT</p>
+			</div>
 
-        <h3>The Future</h3>
-        <p>Over 2,800 homes and growing </p>
+			<div>
+				<h3>Solving Our Homes</h3>
+				<p>Existing co-op homes transferred to the CLT</p>
+			</div>
+
+			<div>
+				<h3>The Future</h3>
+				<p>Over 2,800 homes and growing </p>
+			</div>
+
+		</div>
 
 
         <h2 class="front-page-headings">Our Work</h2>
