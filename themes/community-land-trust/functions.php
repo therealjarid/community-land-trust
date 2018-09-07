@@ -125,6 +125,13 @@ function clt_scripts() {
 
 		wp_enqueue_script( 'google-js', get_template_directory_uri() . '/build/js/google-map.min.js', array( 'jquery', 'google-map-cdn' ), null,false );
 	}
+
+	if ( is_front_page() ) {
+		
+		wp_enqueue_script( 'counter-up-plugin', 'http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js', array( 'jquery' ), null, true );
+
+	}
+
 }
 add_action( 'wp_enqueue_scripts', 'clt_scripts' );
 
