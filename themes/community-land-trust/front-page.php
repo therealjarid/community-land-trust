@@ -6,28 +6,31 @@
 
 get_header(); ?>
 
-        <!-- HEADER/HERO BANNER SECTION BEGINS -->
+    <!-- HEADER/HERO BANNER SECTION BEGINS -->
 
-        <section class="hero-banner">
+    <section class="hero-banner">
 
-			<?php the_post_thumbnail(); ?>
+		<?php the_post_thumbnail(); ?>
 
-            <div class="company-header-info">
-                <h1 class="company-name">Community Land Trust</h1>
-                <p class="slogan"><?php echo CFS()->get( 'slogan' ); ?></p>
-            </div>
+        <div class="company-header-info">
+            <h1 class="company-name">Community Land Trust</h1>
+            <p class="slogan"><?php echo CFS()->get( 'slogan' ); ?></p>
+        </div>
 
-            <button class="mixin-button">find a home</button>
+        <button class="mixin-button">find a home</button>
 
-        </section> <!-- end of .hero-banner section -->
+    </section> <!-- end of .hero-banner section -->
 
-				
 
-        <!-- COMPANY MISSION SECTION BEGINS -->
+    <!-- COMPANY MISSION SECTION BEGINS -->
 
-				<main class="home-page">
+    <main class="home-page">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+
+        <h2 class="front-page-headings">Our Mission</h2>
+
+
+		<?php while ( have_posts() ) : the_post(); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -50,22 +53,58 @@ get_header(); ?>
 
         <h2 class="front-page-headings">Timeline</h2>
 
-        <div class="timeline-years-box">
-            <div class="year one">
-                <span>1993 - 2000</span>
-            </div>
-            <div class="year two">
-                <span>2012</span>
-            </div>
-            <div class="year three">
-                <span>2017</span>
-            </div>
-            <div class="year four">
-                <span>2018</span>
-            </div>
-            <div class="year five">
-                <span>2019</span>
-            </div>
+        <section class="timeline-section-wrapper">
+
+        <div class="timeline-block">
+
+        <div class="year one">
+            <span>1993 - 2000</span>
+        </div>
+        
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/early.svg">
+        <h3>The Early Years</h3>
+        <p>Co-op & non-profit housing investments into the CLT</p>
+        </div>
+
+
+        <div class="timeline-block">
+        <div class="year two">
+            <span>2012</span>
+        </div>
+        
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/breakthrough.svg">
+        <h3>The Breakthrough</h3>
+        <p>City of Vancouver's first partnership with CLT</p>
+        </div>
+                    
+        <div class="timeline-block">
+        <div class="year three">
+            <span>2017</span>
+        </div>
+        
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/solving.svg">
+        <h3>Solving Our Homes</h3>
+        <p>Existing co-op homes transferred to the CLT</p>
+        </div>
+                    
+        <div class="timeline-block">
+        <div class="year four">
+            <span>2018</span>
+        </div>
+        
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/growth.svg">
+        <h3>Growth</h3>
+        <p>Largest single investments by municipal & community partners </p>
+        </div>
+                    
+        <div class="timeline-block">
+        <div class="year five">
+            <span>2019</span>
+        </div>
+      
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/future.svg">
+        <h3>The Future</h3>
+        <p>Over 2,800 homes and growing </p>
         </div>
 
 
@@ -81,42 +120,7 @@ get_header(); ?>
 
         </div>
 
-
-        <div class="timeline-upper-icons">
-
-            <div>
-                <h3>The Breakthrough</h3>
-                <p>City of Vancouver's first partnership with CLT</p>
-            </div>
-
-            <div>
-                <h3>Growth</h3>
-                <p>Largest single investments by municipal & community partners </p>
-            </div>
-
-        </div>
-
-        <div class="timeline-lower-icons">
-
-            <div>
-                <h3>The Early Years</h3>
-                <p>Co-op & non-profit housing investments into the CLT</p>
-            </div>
-
-            <div>
-                <h3>Solving Our Homes</h3>
-                <p>Existing co-op homes transferred to the CLT</p>
-            </div>
-
-            <div>
-                <h3>The Future</h3>
-                <p>Over 2,800 homes and growing </p>
-            </div>
-
-        </div>
-
-
-        <!-- end of timeline section -->
+        </section> <!-- end of timeline section -->
 
         <h2 class="front-page-headings">Our Work</h2>
 
@@ -156,8 +160,8 @@ get_header(); ?>
 		?>
 
 
-        <h2 class="front-page-headings">Need More Information?</h2>
-        	<button class="mixin-button">Contact Us</button>
+        <h2 class="more-">Need More Information?</h2>
+        <button class="mixin-button">Contact Us</button>
 
 
     </main> <!-- end of .home-page main -->

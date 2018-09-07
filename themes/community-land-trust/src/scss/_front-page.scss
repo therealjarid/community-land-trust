@@ -2,68 +2,140 @@
 # Front Page
 --------------------------------------------------------------*/
 
-.mixin-button {
-  @include main-cta;
+.main-carousel {
+  .carousel-cell {
+    width: 100%;
+  }
 
-  &:hover {
-    background-color: #a8be39;
-    transition: 0.5s;
+  .flickity-prev-next-button {
+    position: absolute;
   }
 }
 
-.hero-banner {
-  position: relative;
+.home {
+  .hero-banner {
+    position: relative;
 
-  .company-header-info {
-    height: 131px;
-    width: 650px;	
-    opacity: 0.75;	
-    border-radius: 10px;	
-    background-color: #ffffff;
-    position: absolute;
-    top: 50px;
-    text-align: center;
+    img {
+      object-fit: cover;
+      overflow: hidden;
+      height: 250px;
 
-    h1, p {
-      margin: 0;
-      color: #000;
+      @include desktop-size {
+        object-fit: contain;
+        height: 100%;
+      }
     }
-    
-  }
+    .company-header-info {
+      opacity: 0.75;
+      border-radius: 10px;
+      background-color: #ffffff;
+      position: absolute;
+      height: 70px;
+      width: 300px;
+      text-align: center;
+      top: 50%;
+      left: 15%;
 
-  .mixin-button {
-    position: absolute;
-    top:160px;
-    left: 220px;
-    border: 0;
+      h1 {
+        font-size: 20px;
+      }
 
-  }
+      @include desktop-size {
+        height: 131px;
+        width: 650px;
+      }
 
-}
-
-.home-page {
-  width: 70vw;
-  margin: 0 auto;
-
-  .front-page-headings {
-    text-align: center;
-  }
-
-  .timeline-years-box {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-bottom: 30px;
-
-    .year {
-      height: 95px;
-      width: 225px;
-      color: $timeline_font_color;
-      font-family: $font__accent;
-      font-weight: 600;
-      font-size: 20px;
-      padding: 30px 60px;
+      h1,
+      p {
+        margin: 0;
+        color: #000;
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: 1px;
+      }
     }
+
+    .mixin-button {
+      @include main-cta;
+      height: 40px;
+      width: 130px;
+
+      &:hover {
+        background-color: #a8be39;
+        transition: 0.5s;
+      }
+    }
+
+    .mixin-button {
+      position: absolute;
+      top: 73%;
+      left: 35%;
+    }
+  }
+
+  .home-page {
+    width: 90vw;
+    margin: 0 auto;
+
+    article p {
+      color: black;
+    }
+
+    .front-page-headings {
+      padding-top: 30px;
+      text-align: center;
+      position: relative;
+      border-bottom: 5px solid $border_color;
+      width: 180px;
+      margin: 0 auto;
+      font-family: 'Raleway', sans-serif;
+      color: black;
+      font-weight: normal;
+    }
+
+    .timeline-section-wrapper {
+      padding-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+
+      .timeline-block {
+        width: 50%;
+        text-align: center;
+
+        .year {
+          margin: 0 auto;
+          padding: 10px 30px;
+          height: 50px;
+          width: 150px;
+          color: $timeline_font_color;
+          font-family: $font__accent;
+          font-weight: 600;
+          position: relative;
+          &::before {
+            content: '';
+            width: 3px;
+            height: 5rem;
+            bottom: -50px;
+            left: 70px;
+            position: absolute;
+            background: $border_color;
+            z-index: -1;
+          }
+
+        }
+
+        img {
+          padding-top: 50px;    
+          width: 150px;
+          
+        }
+      }
+
+    }
+
+
 
     .one {
       background-color: #dcf2f8;
@@ -84,81 +156,5 @@
     .five {
       background-color: #56bfdc;
     }
-  }
-
-  .timeline-growth {
-    display: flex;
-    justify-content: space-around;
-  
-
-    .timeline-growth-numbers {
-      height: 180px;
-      width: 180px;
-      text-align: center;
-      line-height: 300px;
-      color: #ffffff;
-      font-weight: bold;
-
-      // &:nth-child(1) {
-      //   background-image: url('../../assets/images/timeline/breakthrough.svg');
-      // }
-
-      &:nth-child(2) {
-        background-image: url('../../assets/images/timeline/early.svg');
-      }
-      &:nth-child(3) {
-        background-image: url('../../assets/images/timeline/solving.svg');
-      }
-
-      &:nth-child(4) {
-        background-image: url('../../assets/images/timeline/growth.svg');
-      }
-
-      &:nth-child(5) {
-        background-image: url('../../assets/images/timeline/future.svg');
-      }
-    }
-  }
-
-  .timeline-upper-icons,
-  .timeline-lower-icons {
-    display: flex;
-    text-align: center;
-    
-    h3, p {
-      width: 100px;
-
-      // &:before.timeline-growth-numbers:nth-child(1) {
-      //   background-image: url('../../assets/images/timeline/breakthrough.svg');
-
-      // }
-
-    }
-
-    h3:before .timeline-growth-numbers:nth-child(1) {
-      background-image: url('../../assets/images/timeline/breakthrough.svg');
-
-    }
-    
-  }
-
-  .timeline-upper-icons { 
-    justify-content: space-around;
-    padding-bottom: 30px;
-  }
-
-  .timeline-lower-icons {
-    justify-content: space-between;
-   
-  }
-}
-
-.main-carousel {
-  .carousel-cell {
-    width: 100%;
-  }
-
-  .flickity-prev-next-button {
-    position: absolute;
   }
 }
