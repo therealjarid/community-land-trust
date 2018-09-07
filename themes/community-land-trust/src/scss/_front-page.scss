@@ -195,4 +195,35 @@
       background-color: #56bfdc;
     }
   }
+
+  .partners-logo-wrapper {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+    img:nth-of-type(2){
+      height: 50px;
+      width: 130px;
+    }
+    
+  }
+
+  .more-info {
+    text-align: center;
+    font-family: $font__accent;
+    font-weight: normal;
+
+  }
+
+  .mixin-button {
+    @include main-cta;
+    height: 40px;
+    width: 150px;
+
+  }
 }

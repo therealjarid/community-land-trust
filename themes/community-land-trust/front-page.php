@@ -143,24 +143,28 @@ get_header(); ?>
 
         <h2 class="front-page-headings">Our Partners</h2>
 
+        <div class="partners-logo-wrapper">
+
 		<?php
 		$arguments = array(
 			'post_type' => 'partner',
 			'order'     => 'DSC'
-		);
+        );
+        
+		$clt_partners_thumbnails = get_posts( $arguments );?>
 
-		$clt_partners_thumbnails = get_posts( $arguments );
-
+        <?php
 		foreach ( $clt_partners_thumbnails as $clt_partners_thumbnail ):
 
 			echo( get_the_post_thumbnail( $clt_partners_thumbnail->ID ) );
 
-		endforeach;
+        endforeach;
 		wp_reset_postdata();
-		?>
+        ?>
+        </div>
 
 
-        <h2 class="more-">Need More Information?</h2>
+        <h2 class="more-info">Need More Info?</h2>
         <button class="mixin-button">Contact Us</button>
 
 
