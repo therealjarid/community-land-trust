@@ -32,6 +32,10 @@ body {
   font-family: $font__main;
 }
 
+body.noScroll {
+  overflow: hidden;
+}
+
 blockquote,
 q {
   quotes: '' '';

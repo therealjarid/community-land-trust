@@ -37,6 +37,7 @@
 .site-header.toggle-menu {
   .main-navigation .menu {
     position: fixed;
+    z-index: relative;
     top: 75px;
     left: 0;
     width: 100%;
