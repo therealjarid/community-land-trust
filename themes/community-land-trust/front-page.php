@@ -24,10 +24,10 @@ get_header(); ?>
 
         </section> <!-- end of .hero-banner section -->
 
-     <!-- COMPANY MISSION SECTION BEGINS -->
+        <!-- COMPANY MISSION SECTION BEGINS -->
 		<?php while ( have_posts() ) : the_post(); ?>
 
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 				<?php the_content(); ?>
 
@@ -38,80 +38,78 @@ get_header(); ?>
 				) );
 				?>
 
-      </article>
+            </article>
 
 		<?php endwhile; ?>
-    <!-- end of company mission section -->
+        <!-- end of company mission section -->
 
-    
 
-    <h2 class="front-page-headings">Timeline</h2>
+        <h2 class="front-page-headings">Timeline</h2>
 
-        <!-- <?php 
-    $fields = CFS()->get( 'item' );
-    foreach ( $fields as $field ) {
-    echo $field['icon'];
-    }
-    ?> -->
+        <!-- <?php
+		$fields = CFS()->get( 'item' );
+		foreach ( $fields as $field ) {
+			echo $field['icon'];
+		}
+		?> -->
 
-        <h3>The Early Years</h3>   
+        <h3>The Early Years</h3>
         <p>Co-op & non-profit housing investments into the CLT</p>
-                    
-        <h3>Solving Our Homes</h3>   
+
+        <h3>Solving Our Homes</h3>
         <p>Existing co-op homes transferred to the CLT</p>
 
-        <h3>The Breakthrough</h3>   
+        <h3>The Breakthrough</h3>
         <p>City of Vancouver's first partnership with CLT</p>
 
-        <h3>Growth</h3>   
+        <h3>Growth</h3>
         <p>Largest single investments by municipal & community partners </p>
 
-        <h3>The Future</h3>   
+        <h3>The Future</h3>
         <p>Over 2,800 homes and growing </p>
 
 
+        <h2 class="front-page-headings">Our Work</h2>
 
-    <h2 class="front-page-headings">Our Work</h2>
 
+        <div class="main-carousel">
+			<?php
+			$portfolio_args      = array(
+				'post_type' => 'portfolio',
+				'order'     => 'DSC',
+			);
+			$clt_portfolio_posts = get_posts( $portfolio_args );
 
-    <div class="main-carousel">
-     <?php
-		    $portfolio_args = array (
-    	        'post_type' => 'portfolio',
-    	        'order' => 'DSC',
-		    );
-		    $clt_portfolio_posts = get_posts($portfolio_args); 
-        
-            foreach ($clt_portfolio_posts as $clt_portfolio_post): 
-                echo(get_the_post_thumbnail($clt_portfolio_post->ID));
+			foreach ( $clt_portfolio_posts as $clt_portfolio_post ):
+				echo( get_the_post_thumbnail( $clt_portfolio_post->ID ) );
 
-            endforeach;
-            wp_reset_postdata();
-    ?>
-    </div> 
+			endforeach;
+			wp_reset_postdata();
+			?>
+        </div>
 
         <h2 class="front-page-headings">Our Partners</h2>
 
-        <?php
-		    $arguments = array (
-    	        'post_type' => 'partner',
-    	        'order' => 'DSC'
-            );
-            
-            $clt_partners_thumbnails = get_posts($arguments); 
+		<?php
+		$arguments = array(
+			'post_type' => 'partner',
+			'order'     => 'DSC'
+		);
 
-            foreach ($clt_partners_thumbnails as $clt_partners_thumbnail):
-            
-                echo(get_the_post_thumbnail($clt_partners_thumbnail->ID));
+		$clt_partners_thumbnails = get_posts( $arguments );
 
-            endforeach;
-            wp_reset_postdata();
-       ?>
+		foreach ( $clt_partners_thumbnails as $clt_partners_thumbnail ):
+
+			echo( get_the_post_thumbnail( $clt_partners_thumbnail->ID ) );
+
+		endforeach;
+		wp_reset_postdata();
+		?>
 
 
-    <h2 class="front-page-headings">Need More Information?</h2>
-    <button class="mixin-button">Contact Us</button>
-    
+        <h2 class="front-page-headings">Need More Information?</h2>
+        <button class="mixin-button">Contact Us</button>
+
 
     </main> <!-- end of .home-page main -->
 
