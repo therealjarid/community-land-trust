@@ -113,11 +113,18 @@ function clt_scripts() {
 	wp_enqueue_script('flickity-config', get_template_directory_uri() . '/build/js/flickity-config.min.js', array( 'jquery' ), true);
 
 	// adding flickity scripts via CDN
-	wp_register_script( 'flickity', '//cdnjs.cloudflare.com/ajax/libs/flickity/1.1.1/flickity.pkgd.min.js', array( 'jquery' ), null, true );
-	wp_enqueue_script( 'flickity' );
+	wp_enqueue_script( 'flickity', '//cdnjs.cloudflare.com/ajax/libs/flickity/1.1.1/flickity.pkgd.min.js', array( 'jquery' ), null, true  );
 	
 	// adding header functionality 
-	wp_enqueue_script('header-toggle', get_template_directory_uri() . '/build/js/header-toggle.min.js', array( 'jquery' ), true);
+	wp_enqueue_script('header-toggle', get_template_directory_uri() . '/build/js/header-toggle.min.js', array( 'jquery' ), null, true);
+
+	// adding Google Map script via CDN
+	if ( is_page( 'find' ) ) {
+		
+		wp_enqueue_script( 'google-map-cdn', 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCSva0--zNZru1Uv8ykh8y9WnpqA64ivxk', array(), null, false );
+
+		wp_enqueue_script( 'google-js', get_template_directory_uri() . '/build/js/google-map.min.js', array( 'jquery', 'google-map-cdn' ), null,false );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'clt_scripts' );
 
