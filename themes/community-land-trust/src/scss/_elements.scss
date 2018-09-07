@@ -9,12 +9,21 @@ html {
 
 .site-content {
   padding-top: 75px;
+  @include desktop-size {
+    padding-top: 105px;
+  }
 }
 
 .logged-in {
   .site-content {
-    @media screen and (min-width: 783px) and (max-width: 1195px) {
+    @include logged-in-tablet-size {
       padding-top: 107px;
+    }
+    @include desktop-size {
+      padding-top: 137px;
+    }
+    @include logged-in-desktop-size {
+      padding-top: 105px;
     }
   }
 }
@@ -33,7 +42,7 @@ body {
 }
 
 .site-content {
-  max-width: 1440px;
+  max-width: $desktop-max-width;
   margin: auto;
 }
 
