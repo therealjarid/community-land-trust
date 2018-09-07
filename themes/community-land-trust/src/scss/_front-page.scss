@@ -3,12 +3,41 @@
 --------------------------------------------------------------*/
 
 .main-carousel {
+  padding-top: 30px;
+  margin-bottom: 30px;
+
   .carousel-cell {
     width: 100%;
   }
 
   .flickity-prev-next-button {
     position: absolute;
+  }
+
+  button {
+    display: none;
+  }
+
+  
+  img {
+      object-fit: cover;
+      overflow: hidden;
+      height: 250px;
+  }
+
+
+  .flickity-page-dots  {
+
+    .dot {
+      background: transparent;
+      border: 2px solid $border_color;
+    }
+
+    .is-selected {
+      background: $border_color;
+
+    }
+    
   }
 }
 
@@ -123,19 +152,28 @@
             background: $border_color;
             z-index: -1;
           }
-
         }
 
         img {
-          padding-top: 50px;    
+          padding-top: 50px;
           width: 150px;
-          
+          position: relative;
         }
       }
 
+      .timeline-growth {
+        position: absolute;
+      }
+
+      .timeline-growth:first-of-type {
+        top: 200px;
+        right: 75px;
+      }
+      .timeline-growth-numbers:nth-of-type(2) {
+        top: 200px;
+        left: 200px;
+      }
     }
-
-
 
     .one {
       background-color: #dcf2f8;
