@@ -51,19 +51,19 @@
     display: flex;
     margin: 0 40px;
     a {
-      padding: 38px 25px;
+      padding: 38.5px 25px;
       text-decoration: none;
       font-family: $font__accent;
-      font-size: 1.1rem;
+      font-size: 20px;
     }
     li {
       &:first-of-type {
         position: relative;
         &:hover > ul {
           position: absolute;
-          top: 70px;
-          left: -5px;
-          width: 155px;
+          top: 69px;
+          left: 0px;
+          width: 135px;
           background: white;
           display: flex;
           flex-direction: column;
@@ -78,10 +78,23 @@
             }
             a {
               font-size: 1rem;
-              padding: 20px;
+              padding: 19px 10px;
             }
           }
         }
+      }
+    }
+    .current-menu-item a,
+    .current-menu-parent a,
+    .current-page-item {
+      background: $color_button;
+    }
+    .sub-menu {
+      .current-menu-item {
+        background: $color_button;
+      }
+      a {
+        background: none;
       }
     }
   }
