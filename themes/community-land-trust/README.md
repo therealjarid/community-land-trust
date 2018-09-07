@@ -1,4 +1,4 @@
-# RED Starter
+# CLT
 
 A WordPress starter theme for RED Academy students, forked from Underscores.
 

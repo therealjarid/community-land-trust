@@ -69,8 +69,13 @@
           flex-direction: column;
           li {
             border-top: 1px $border_color solid;
+            border-left: 1px $border_color solid;
+            border-right: 1px $border_color solid;
             text-align: center;
             padding: 12px;
+            &:last-of-type {
+              border-bottom: 1px $border_color solid;
+            }
             a {
               font-size: 1rem;
               padding: 20px;
