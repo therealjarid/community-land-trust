@@ -16,14 +16,21 @@
   .main-footer {
     font-size: 1rem;
     display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 20% 80%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
       'email-contact address'
       'social address';
     background-color: $footer_lighter_color;
     max-width: 100%;
     padding: 0.5rem;
+    @include desktop-size {
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+      grid-template-areas:
+        'email-contact address social';
+      grid-template-rows: none;
+    }
     .textwidget {
       .wp-image-117 {
         display: none; 
@@ -41,7 +48,7 @@
     #custom_html-3 {
       grid-area: social;
       height: 100%;
-      padding-left: 2rem;
+      padding-left: 1rem;
       @include desktop-size {
       padding-left: 7rem;
       padding-top: 4.5rem;
@@ -60,11 +67,15 @@
         }
       }
     }
-    .contact-email {
+
+    #custom_html-2 {
       grid-area: email-contact;
+    }
+    .contact-email {
+      
       width: 300px;
       padding-top: 1.5rem; 
-      padding-left: 3rem;
+      padding-left: 2.5rem;
       @include desktop-size {
         padding-top: 4rem; 
         padding-left: 9rem;
@@ -77,10 +88,13 @@
         }
       }
     }
-    .text-flex {
+
+    #text-3 {
       grid-area: address;
+    }
+
+    .text-flex {
       color: $color__background-body;
-      margin-left: 7rem;
       padding-left: 2rem;
       @include desktop-size {
         margin: 0;
@@ -101,6 +115,7 @@
         }
       }
       .address {
+        width: 80%;
         @include desktop-size {
           padding-left: 0.5rem;
           padding-top: 4rem;
@@ -123,12 +138,6 @@
         margin-top: 0;
         margin-bottom: 0;
       }
-    }
-    @include desktop-size {
-      display: grid;
-      grid-template-columns: 33.33% 33.33% 33.33%;
-      grid-template-areas:
-        'email-contact address social';
     }
   }
   .sub-footer {
