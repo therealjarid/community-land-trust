@@ -55,19 +55,19 @@ get_header(); ?>
 		?> -->
 
 		<div class="timeline-years-box">
-			<div class="year-one">
+			<div class="year one">
 				<span>1993 - 2000</span>
 			</div>
-			<div class="year-two">
+			<div class="year two">
 				<span>2012</span>
 			</div>
-			<div class="year-three">
+			<div class="year three">
 				<span>2017</span>
 			</div>
-			<div class="year1">
+			<div class="year four">
 				<span>2018</span>
 			</div>
-			<div class="year1">
+			<div class="year five">
 				<span>2019</span>
 			</div>
 		</div>

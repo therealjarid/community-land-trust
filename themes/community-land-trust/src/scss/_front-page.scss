@@ -2,34 +2,49 @@
 # Front Page
 --------------------------------------------------------------*/
 
-.timeline-years-box {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
- 
-
-  .year-one{
-    background-color: #DCF2F8;
-    
-  }
-
-  .year-two{
-    background-color:  #C3ECF8;
-    
-  }
-
-  .year-three{
-    background-color:  #9CE0F3;
-    
-  }
-
- 
-
+.mixin-button {
+  @include main-cta;
 }
 
-.timeline-upper-icons,
-.timeline-lower-icons {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
+.home-page {
+
+  .timeline-years-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 30px;
+
+    .one {
+      background-color: #dcf2f8;
+    }
+
+    .two {
+      background-color: #c3ecf8;
+    }
+
+    .three {
+      background-color: #9ce0f3;
+    }
+
+    .four {
+      background-color: #74d1eb;
+    }
+
+    .five {
+      background-color: #56bfdc;
+    }
+  }
+
+  .timeline-upper-icons {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .timeline-lower-icons {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
 }
