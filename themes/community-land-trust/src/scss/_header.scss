@@ -4,6 +4,7 @@
 
 .site-header {
   position: fixed;
+  z-index: 999;
   top: 0;
   height: 75px;
   width: 100%;
@@ -43,15 +44,39 @@
       }
     }
   }
-  .main-navigation .menu {
-    @include desktop-size {
-      display: flex;
-      margin: 0 40px;
-      li a {
-        text-decoration: none;
-        padding: 0 25px;
-        font-family: $font__accent;
-        font-size: 1.1rem;
+}
+
+.main-navigation .menu {
+  @include desktop-size {
+    display: flex;
+    margin: 0 40px;
+    a {
+      padding: 38px 25px;
+      text-decoration: none;
+      font-family: $font__accent;
+      font-size: 1.1rem;
+    }
+    li {
+      &:first-of-type {
+        position: relative;
+        &:hover > ul {
+          position: absolute;
+          top: 55px;
+          left: -5px;
+          width: 155px;
+          background: white;
+          display: flex;
+          flex-direction: column;
+          li {
+            border-top: 1px $border_color solid;
+            text-align: center;
+            padding: 12px;
+            a {
+              font-size: 1rem;
+              padding: 20px;
+            }
+          }
+        }
       }
     }
   }
