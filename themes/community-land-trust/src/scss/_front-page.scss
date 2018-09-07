@@ -4,15 +4,66 @@
 
 .mixin-button {
   @include main-cta;
+
+  &:hover {
+    background-color: #a8be39;
+    transition: 0.5s;
+  }
+}
+
+.hero-banner {
+  position: relative;
+
+  .company-header-info {
+    height: 131px;
+    width: 650px;	
+    opacity: 0.75;	
+    border-radius: 10px;	
+    background-color: #ffffff;
+    position: absolute;
+    top: 50px;
+    text-align: center;
+
+    h1, p {
+      margin: 0;
+      color: #000;
+    }
+    
+  }
+
+  .mixin-button {
+    position: absolute;
+    top:160px;
+    left: 220px;
+    border: 0;
+
+  }
+
 }
 
 .home-page {
+  width: 70vw;
+  margin: 0 auto;
+
+  .front-page-headings {
+    text-align: center;
+  }
 
   .timeline-years-box {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-bottom: 30px;
+
+    .year {
+      height: 95px;
+      width: 225px;
+      color: $timeline_font_color;
+      font-family: $font__accent;
+      font-weight: 600;
+      font-size: 20px;
+      padding: 30px 60px;
+    }
 
     .one {
       background-color: #dcf2f8;
@@ -38,38 +89,71 @@
   .timeline-growth {
     display: flex;
     justify-content: space-around;
-    
+  
 
     .timeline-growth-numbers {
-      background-image: url("../../assets/images/timeline/breakthrough.svg");
-      height: 180px;	
+      height: 180px;
       width: 180px;
       text-align: center;
-      line-height: 300px; 
+      line-height: 300px;
       color: #ffffff;
       font-weight: bold;
 
+      // &:nth-child(1) {
+      //   background-image: url('../../assets/images/timeline/breakthrough.svg');
+      // }
+
+      &:nth-child(2) {
+        background-image: url('../../assets/images/timeline/early.svg');
+      }
+      &:nth-child(3) {
+        background-image: url('../../assets/images/timeline/solving.svg');
+      }
+
+      &:nth-child(4) {
+        background-image: url('../../assets/images/timeline/growth.svg');
+      }
+
+      &:nth-child(5) {
+        background-image: url('../../assets/images/timeline/future.svg');
+      }
     }
-  
   }
 
-  .timeline-upper-icons {
+  .timeline-upper-icons,
+  .timeline-lower-icons {
     display: flex;
-    justify-content: space-around;
     text-align: center;
+    
+    h3, p {
+      width: 100px;
+
+      // &:before.timeline-growth-numbers:nth-child(1) {
+      //   background-image: url('../../assets/images/timeline/breakthrough.svg');
+
+      // }
+
+    }
+
+    h3:before .timeline-growth-numbers:nth-child(1) {
+      background-image: url('../../assets/images/timeline/breakthrough.svg');
+
+    }
+    
+  }
+
+  .timeline-upper-icons { 
+    justify-content: space-around;
     padding-bottom: 30px;
   }
 
   .timeline-lower-icons {
-    display: flex;
     justify-content: space-between;
-    text-align: center;
+   
   }
 }
 
-
 .main-carousel {
-  
   .carousel-cell {
     width: 100%;
   }
@@ -77,7 +161,4 @@
   .flickity-prev-next-button {
     position: absolute;
   }
-
-
-
 }

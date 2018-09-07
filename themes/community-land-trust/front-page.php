@@ -6,9 +6,6 @@
 
 get_header(); ?>
 
-    <main class="home-page">
-
-
         <!-- HEADER/HERO BANNER SECTION BEGINS -->
 
         <section class="hero-banner">
@@ -24,9 +21,13 @@ get_header(); ?>
 
         </section> <!-- end of .hero-banner section -->
 
+				
+
         <!-- COMPANY MISSION SECTION BEGINS -->
 
-		<?php while ( have_posts() ) : the_post(); ?>
+				<main class="home-page">
+
+				<?php while ( have_posts() ) : the_post(); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
