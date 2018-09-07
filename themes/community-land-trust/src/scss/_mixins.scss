@@ -24,6 +24,12 @@
   }
 }
 
+@mixin large-desktop-size {
+  @media screen and (min-width: $large-desktop-min-width) {
+    @content;
+  }
+}
+
 @mixin logged-in-tablet-size {
   @media screen and (min-width: 783px) {
     @content;
@@ -40,9 +46,26 @@
 @mixin main-cta {
   background-color: $color_button;
   border-radius: 10px;
-  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.5);
   text-transform: capitalize;
   font-family: 'Roboto';
   color: black;
   border: 0;
+}
+
+@mixin banner-img {
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+  overflow: hidden;
+  margin: auto;
+  @include tablet-size {
+    height: 345px;
+  }
+  @include desktop-size {
+    height: 460px;
+  }
+  @include large-desktop-size {
+    height: 610px;
+  }
 }

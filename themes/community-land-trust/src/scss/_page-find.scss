@@ -4,7 +4,7 @@
 
 .find-page-container {
   img {
-    height: 200px;
+    @include banner-img;
   }
   #map-canvas {
     width: 100%;
