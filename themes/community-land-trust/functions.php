@@ -112,6 +112,9 @@ function clt_scripts() {
 	// adding flickity config 
 	wp_enqueue_script('flickity-config', get_template_directory_uri() . '/build/js/flickity-config.min.js', array( 'jquery' ), true);
 
+	// adding counter-up scripts
+	wp_enqueue_script('counter-up', get_template_directory_uri() . '/build/js/counter-up.min.js', array( 'jquery' ), true);
+
 	// adding flickity scripts via CDN
 	wp_enqueue_script( 'flickity', '//cdnjs.cloudflare.com/ajax/libs/flickity/1.1.1/flickity.pkgd.min.js', array( 'jquery' ), null, true  );
 	
@@ -126,9 +129,14 @@ function clt_scripts() {
 		wp_enqueue_script( 'google-js', get_template_directory_uri() . '/build/js/google-map.min.js', array( 'jquery', 'google-map-cdn' ), null,false );
 	}
 
+	// adding Counterup plugin script
+
 	if ( is_front_page() ) {
-		
-		wp_enqueue_script( 'counter-up-plugin', 'http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'counter-up-plugin', '//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js', array( 'jquery' ), null, true );
+	}
+
+	if ( is_front_page() ) {
+		wp_enqueue_script( 'counter-up-plugin', 'jquery.counterup.min.js', array( 'jquery' ), null, true );
 
 	}
 

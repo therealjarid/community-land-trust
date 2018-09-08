@@ -114,7 +114,7 @@ get_header(); ?>
 			<?php $timeline_fields = CFS()->get( 'item' ); ?>
 
 			<?php foreach ( $timeline_fields as $timeline_field ) {
-				echo "<div class='timeline-growth-numbers'>" . $timeline_field['achievements_numbers'] . "</div>";
+				echo "<div class='timeline-growth-numbers counter'>" . $timeline_field['achievements_numbers'] . "</div>";
 			}
 			?>
 
