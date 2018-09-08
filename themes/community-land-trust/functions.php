@@ -104,7 +104,7 @@ function clt_scripts() {
 	wp_enqueue_style( 'clt-flickity', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
 
 	//adding Google Fonts
-	wp_enqueue_style('clt-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,700');
+	wp_enqueue_style('clt-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,500,700');
 
 	// add font awesome via CDN 
 	wp_enqueue_style( 'clt-font-awesome-icons', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css');
