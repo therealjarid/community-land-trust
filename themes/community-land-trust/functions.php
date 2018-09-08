@@ -133,13 +133,9 @@ function clt_scripts() {
 
 	if ( is_front_page() ) {
 		wp_enqueue_script( 'counter-up-plugin', '//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js', array( 'jquery' ), null, true );
-	}
 
-	if ( is_front_page() ) {
 		wp_enqueue_script( 'counter-up-plugin', 'jquery.counterup.min.js', array( 'jquery' ), null, true );
-
 	}
-
 }
 add_action( 'wp_enqueue_scripts', 'clt_scripts' );
 
