@@ -1,6 +1,6 @@
 <?php 
 
-/* Template Name: Find-A-Home */
+/* Template Name: Find a Home */
 
 get_header(); ?>
 
