@@ -6,8 +6,16 @@
   padding-top: 30px;
   margin-bottom: 30px;
 
+  @include desktop-size {
+    width: 70vw;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+  }
+
   .carousel-cell {
     width: 100%;
+    
   }
 
   .flickity-prev-next-button {
@@ -16,13 +24,32 @@
 
   button {
     display: none;
-  }
 
+    @include desktop-size {
+      display: inline;
+      background: transparent;
+      border: 0;
+      margin: 0 -5rem;
+      width: 70px;
+
+      .arrow {
+        fill: $border_color;
+        height: 500px;
+        
+      }
+    }
+
+  }
   
   img {
       object-fit: cover;
       overflow: hidden;
       height: 250px;
+
+      @include desktop-size {
+      height: auto;
+  
+      }
   }
 
 
@@ -37,6 +64,7 @@
       background: $border_color;
 
     }
+
     
   }
 }
@@ -47,6 +75,10 @@
 
     img {
       @include banner-img;
+
+      @include desktop-size {
+        height: auto;
+      }
     }
     .company-header-info {
       opacity: 0.75;
@@ -54,26 +86,42 @@
       background-color: #ffffff;
       position: absolute;
       height: 70px;
-      width: 300px;
+      width: 270px;
+      padding-top: 10px;
       text-align: center;
-      top: 50%;
+      top: 45%;
       left: 15%;
-
-      h1 {
-        font-size: 20px;
-      }
+      
 
       @include desktop-size {
         height: 131px;
-        width: 650px;
+        width: 600px;
+        top: 15%;
+        left: -1%;
       }
 
       h1,
       p {
         margin: 0;
         color: #000;
-        font-family: 'Raleway', sans-serif;
-        letter-spacing: 1px;
+        font-family: 'Raleway', sans-serif;  
+        font-size: 16px;
+
+        @include desktop-size {
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+      }
+
+      h1 {
+        letter-spacing: 1.5px;
+
+        @include desktop-size {
+          font-size: 30px;
+          font-weight: 600;
+        }
+
       }
     }
 
@@ -81,21 +129,34 @@
       @include main-cta;
       height: 40px;
       width: 130px;
-    }
-
-    .mixin-button {
       position: absolute;
       top: 73%;
-      left: 35%;
+      left: 33%;
+
+      @include desktop-size {
+        height: 50px;
+        width: 230px;
+        top: 37%;
+        left: 12%;
+
+      }
     }
+
   }
 
   .home-page {
     width: 90vw;
     margin: 0 auto;
 
-    article p {
+    .post-58 {
       color: black;
+
+      @include desktop-size {
+        width: 800px;
+        margin: 0 auto;
+        font-size: 18px;
+        text-align: justify;
+      }
     }
 
     .front-page-headings {
@@ -117,9 +178,21 @@
       width: 100%;
       justify-content: center;
 
+      @include desktop-size {
+        flex-wrap: no-wrap;
+        width: 80vw;
+        margin: 0 auto;
+      }
+
       .timeline-block {
         width: 50%;
         text-align: center;
+
+        @include desktop-size {
+          display: flex;
+          flex-direction: column;
+          width: 20%;
+        }
 
         .year {
           margin: 0 auto;
@@ -139,28 +212,160 @@
             position: absolute;
             background: $border_color;
             z-index: -1;
+
+            @include desktop-size {
+              left: 110px;
+              height: 10rem;
+              bottom: -150px;
+            }
           }
+
+          @include desktop-size {
+            height: 90px;
+            width: 250px;
+            font-size: 30px;
+            padding: 20px 0;
+            font-weight: 500;
+
+          }
+        }
+
+        h3 {
+          color: $timeline_bg_numbers;
+          font-family: $font__accent;
+          font-weight: 500;
+          margin-bottom: 10px;
+          margin-top: 0;
+
+          @include desktop-size {
+            padding-top: 10px;
+            font-size: 25px;
+        
+          }
+        }
+
+        .lower-heading {
+          @include desktop-size {
+          margin-top: 100px; 
+          }
+        }
+
+      }
+
+        p {
+          font-family: $font__main;
+          line-height: 1.2;
+          font-size: 14px;
+          width: 130px;
+          margin: 0 auto;
+          margin-bottom: 20px;
+
+          @include desktop-size {
+            font-size: 18px;
+            width: 170px;
+        
+          }
+
         }
 
         img {
           padding-top: 50px;
           width: 150px;
           position: relative;
+
+          @include desktop-size {
+            left:30px;  
+            width: 180px;       
+          }
+        }
+
+        .lower {
+          @include desktop-size {
+            top: 100px;  
+          }
+
         }
       }
 
       .timeline-growth {
-        position: absolute;
+        color: white;
+        font-family: $font__accent;
+        font-weight: 500;
+        font-size: 25px;
+        letter-spacing: 1px;
+
+        .timeline-growth-numbers {
+          @include desktop-size {
+            font-size: 30px;
+            font-weight: bold;
+            font-family: $font__main;
+
+          }
+
+        }
+
+
+        .timeline-growth-numbers:first-of-type {
+          left: 90px;
+          position: absolute;
+          bottom: -230px;  
+          
+          @include desktop-size {
+            left: 240px;
+            bottom: -580px;  
+            
+          }
+        }
+
+        .timeline-growth-numbers:nth-of-type(2) {
+          left: 270px;
+          position: absolute;
+          bottom: -230px;      
+          
+          @include desktop-size {
+            left: 470px;
+            bottom: -490px; 
+            
+          }
+        }
+
+        .timeline-growth-numbers:nth-of-type(3) {
+          left: 90px;
+          position: absolute;
+          bottom: -590px;    
+          @include desktop-size {
+            left: 700px;
+            bottom: -580px;  
+            
+          }
+        }
+
+        .timeline-growth-numbers:nth-of-type(4) {
+          left: 260px;
+          position: absolute;
+          bottom: -590px;    
+
+          @include desktop-size {
+            left: 930px;
+            bottom: -490px;  
+            
+          }
+        }
+
+        .timeline-growth-numbers:nth-of-type(5) {
+          left: 170px;
+          position: absolute;
+          bottom: -970px; 
+
+          @include desktop-size {
+            left: 1150px;
+            bottom: -580px;  
+            
+          }
+        }
       }
 
-      .timeline-growth:first-of-type {
-        top: 200px;
-        right: 75px;
-      }
-      .timeline-growth-numbers:nth-of-type(2) {
-        top: 200px;
-        left: 200px;
-      }
+
     }
 
     .one {
@@ -184,43 +389,79 @@
     }
   }
 
+
+
   .partners-logo-wrapper {
     padding-top: 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 
+    @include desktop-size {
+      justify-content: center;
+      margin-left: 70px;
+    }
+
     img {
       width: 100px;
       height: 100px;
+
+      @include desktop-size {
+        width: 200px;
+        height: 200px;
+        margin-right: 50px;
+
+      }
     }
     img:nth-of-type(2){
       height: 50px;
       width: 130px;
+
+      @include desktop-size {
+        width: 300px;
+        height: 100px;
+        margin-left: 100px;
+
+      }
     }
     
     }
-
-  
       .more-info {
         text-align: center;
         font-family: $font__accent;
         font-weight: normal;
+        color: black;
+
+        @include desktop-size {
+          font-size: 30px;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
     
       }
     
       .mixin-button {
         @include main-cta;
         height: 40px;
-        width: 150px;
+        width: 130px;
         margin: 0 auto;
         display: block;
         margin-bottom: 50px;
-       
-    
+        box-shadow: none;
+        font-weight: 500;
+        letter-spacing: 1px;
+
+        @include desktop-size {
+          height: 50px;
+          width: 230px;
+          font-size: 18px;
+
+        }
+        
       }
 
-  
+  a {
+    text-decoration: none;
+  }
 
-  
-}
+

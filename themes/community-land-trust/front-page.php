@@ -17,7 +17,10 @@ get_header(); ?>
             <p class="slogan"><?php echo CFS()->get( 'slogan' ); ?></p>
         </div>
 
-        <button class="mixin-button">find a home</button>
+        <a href="<?php echo get_permalink( get_page_by_path( 'find' ) ) ?>">
+            <button class="mixin-button">Find a Home</button>
+        </a>
+
 
     </section> <!-- end of .hero-banner section -->
 
@@ -55,70 +58,71 @@ get_header(); ?>
 
         <section class="timeline-section-wrapper">
 
-        <div class="timeline-block">
+            <div class="timeline-block">
 
-        <div class="year one">
-            <span>1993 - 2000</span>
-        </div>
-        
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/early.svg">
-        <h3>The Early Years</h3>
-        <p>Co-op & non-profit housing investments into the CLT</p>
-        </div>
+                <div class="year one">
+                    <span>1993 - 2000</span>
+                </div>
+
+                <img class="lower" src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/early.svg">
+                <h3 class="lower-heading">The Early Years</h3>
+                <p>Co-op & non-profit housing investments into the CLT</p>
+            </div>
 
 
-        <div class="timeline-block">
-        <div class="year two">
-            <span>2012</span>
-        </div>
-        
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/breakthrough.svg">
-        <h3>The Breakthrough</h3>
-        <p>City of Vancouver's first partnership with CLT</p>
-        </div>
+            <div class="timeline-block">
+                <div class="year two">
+                    <span>2012</span>
+                </div>
+
+                <img class="upper" src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/breakthrough.svg">
+                <h3>The Breakthrough</h3>
+                <p>City of Vancouver's first partnership with CLT</p>
+            </div>
+
+            <div class="timeline-block">
+                <div class="year three">
+                    <span>2017</span>
+                </div>
+
+                <img class="lower" src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/solving.svg">
+                <h3 class="lower-heading">Solving Our Homes</h3>
+                <p>Existing co-op homes transferred to the CLT</p>
+            </div>
+
+            <div class="timeline-block">
+                <div class="year four">
+                    <span>2018</span>
+                </div>
+
+                <img class="upper" src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/growth.svg">
+                <h3>Growth</h3>
+                <p>Largest single investments by municipal & community partners </p>
+            </div>
+
+            <div class="timeline-block">
+                <div class="year five">
+                    <span>2019</span>
+                </div>
+
+                <img class="lower" src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/future.svg">
+                <h3 class="lower-heading">The Future</h3>
+                <p>Over 2,800 homes and growing </p>
+            </div>
+
+
+            <!-- foreach loop over the achievement numbers entered on the wp backend through CFS -->
+            <div class="timeline-growth">
+				<?php $timeline_fields = CFS()->get( 'item' ); ?>
                     
-        <div class="timeline-block">
-        <div class="year three">
-            <span>2017</span>
-        </div>
-        
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/solving.svg">
-        <h3>Solving Our Homes</h3>
-        <p>Existing co-op homes transferred to the CLT</p>
-        </div>
-                    
-        <div class="timeline-block">
-        <div class="year four">
-            <span>2018</span>
-        </div>
-        
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/growth.svg">
-        <h3>Growth</h3>
-        <p>Largest single investments by municipal & community partners </p>
-        </div>
-                    
-        <div class="timeline-block">
-        <div class="year five">
-            <span>2019</span>
-        </div>
-      
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/future.svg">
-        <h3>The Future</h3>
-        <p>Over 2,800 homes and growing </p>
-        </div>
+                
+				<?php foreach ( $timeline_fields as $timeline_field ) {
+					echo "<span class='timeline-growth-numbers'>" . $timeline_field['achievements_numbers'] . "</span>";
+				}
+                ?>
+                </div>
 
-
-        <!-- foreach loop over the achievement numbers entered on the wp backend through CFS -->
-        <div class="timeline-growth">
-
-			<?php $timeline_fields = CFS()->get( 'item' ); ?>
-
-			<?php foreach ( $timeline_fields as $timeline_field ) {
-				echo "<div class='timeline-growth-numbers counter'>" . $timeline_field['achievements_numbers'] . "</div>";
-			}
-			?>
-
-        </div>
+         
 
         </section> <!-- end of timeline section -->
 
@@ -145,29 +149,30 @@ get_header(); ?>
 
         <div class="partners-logo-wrapper">
 
-		<?php
-		$arguments = array(
-			'post_type' => 'partner',
-			'order'     => 'DSC'
-        );
-        
-		$clt_partners_thumbnails = get_posts( $arguments );?>
+			<?php
+			$arguments = array(
+				'post_type' => 'partner',
+				'order'     => 'DSC'
+			);
 
-        <?php
-		foreach ( $clt_partners_thumbnails as $clt_partners_thumbnail ):
+			$clt_partners_thumbnails = get_posts( $arguments ); ?>
 
-			echo( get_the_post_thumbnail( $clt_partners_thumbnail->ID ) );
+			<?php
+			foreach ( $clt_partners_thumbnails as $clt_partners_thumbnail ):
 
-        endforeach;
-		wp_reset_postdata();
-        ?>
+				echo( get_the_post_thumbnail( $clt_partners_thumbnail->ID ) );
+
+			endforeach;
+			wp_reset_postdata();
+			?>
         </div>
 
 
-       
-             <h2 class="more-info">Need More Info?</h2>
+        <h2 class="more-info">Need More Information?</h2>
+
+        <a href="<?php echo get_permalink( get_page_by_path( 'contact-us' ) ) ?>">
             <button class="mixin-button">Contact Us</button>
-      
+        </a>
 
 
     </main> <!-- end of .home-page main -->
