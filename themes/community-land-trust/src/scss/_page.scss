@@ -1,3 +1,21 @@
 /*--------------------------------------------------------------
 # Contact Us Page
 --------------------------------------------------------------*/
+.contact-us {
+  .entry-content {
+    border: 1px solid #E0F1F7;
+    border-radius: 10%;
+    padding: 0 1rem;
+    background-color: #E0F1F7;
+    .gform_title {
+      font-family: Raleway, serif; 
+      font-weight: 550;
+      text-align: center; 
+      padding-bottom: 2.5rem;
+    }
+    .gform_wrapper label.gfield_label {
+      font-weight: 200;
+      letter-spacing: 0.1rem;
+  }
+  }
+}
