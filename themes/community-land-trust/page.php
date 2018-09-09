@@ -7,6 +7,7 @@
 
 get_header(); ?>
 
+<section class="contact-us">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -18,6 +19,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+</section>
 
 
 <?php get_footer(); ?>

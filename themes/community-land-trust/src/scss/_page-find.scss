@@ -6,42 +6,58 @@
   img {
     @include banner-img;
   }
-  #map-canvas {
-    width: 100%;
-    height: 70vh;
-  }
-  .locations-menu {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    li {
-      width: 50%;
-      height: 55px;
-      border: 2px $color_button solid;
-      &:first-of-type {
-        border-bottom: 0.5px $color_button solid;
-        border-right: 0.5px $color_button solid;
-      }
-      &:nth-of-type(2) {
-        border-bottom: 0.5px $color_button solid;
-        border-left: 0.5px $color_button solid;
-      }
-      &:nth-of-type(3) {
-        border-top: 0.5px $color_button solid;
-        border-right: 0.5px $color_button solid;
-      }
-      &:last-of-type {
-        border-top: 0.5px $color_button solid;
-        border-left: 0.5px $color_button solid;
-      }
-      .fetch-property {
-        font-size: 0.8rem;
-        font-weight: 500;
-        width: 100%;
-        height: 100%;
+  .map-and-buttons {
+    @include desktop-size {
+      width: 800px;
+    }
+    .error-message {
+      color: red;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    #map-canvas {
+      width: 100%;
+      height: 70vh;
+    }
+    .locations-menu {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      li {
+        width: 50%;
+        height: 55px;
+        border: 2px $color_button solid;
+        &:first-of-type {
+          border-bottom: 0.5px $color_button solid;
+          border-right: 0.5px $color_button solid;
+        }
+        &:nth-of-type(2) {
+          border-bottom: 0.5px $color_button solid;
+          border-left: 0.5px $color_button solid;
+        }
+        &:nth-of-type(3) {
+          border-top: 0.5px $color_button solid;
+          border-right: 0.5px $color_button solid;
+        }
+        &:last-of-type {
+          border-top: 0.5px $color_button solid;
+          border-left: 0.5px $color_button solid;
+        }
+        .fetch-property {
+          font-size: 0.8rem;
+          font-weight: 500;
+          width: 100%;
+          height: 100%;
+          border: 0;
+          background: none;
+          line-height: 1.2;
+          &:focus {
+            outline: 0;
+          }
+        }
       }
     }
   }

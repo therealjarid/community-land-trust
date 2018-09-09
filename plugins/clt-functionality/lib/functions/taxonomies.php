@@ -51,6 +51,7 @@ function clt_register_taxonomies() {
 			'show_tagcloud'     => true,
 			'rewrite'           => $rewrite,
 			'show_in_rest'      => true,
+			'rest_base'         => str_replace( ' ', '_', strtolower( $tax_type ) )
 		);
 
 		register_taxonomy( $tax_type, array( $post_type ), $args );
