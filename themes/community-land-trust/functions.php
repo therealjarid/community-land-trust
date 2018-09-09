@@ -95,7 +95,6 @@ add_filter( 'stylesheet_uri', 'clt_minified_css', 10, 2 );
  */
 function clt_scripts() {
 
-	
 	wp_enqueue_style( 'clt-style', get_stylesheet_uri() );
 	
 	wp_enqueue_script( 'clt-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
@@ -155,5 +154,30 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
+/**
+ * The following makes CFS data available to the REST API
+ */
+add_action( 'rest_api_init', 'slug_register_zipcode' );
+function slug_register_zipcode() {
+    register_rest_field( 'portfolio',
+        'portfolio_zip',
+        array(
+            'get_callback'    => 'slug_get_zipcode',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
 
-
+/**
+ * Get the value of the "portfolio_zip" field
+ *
+ * @param array $object Details of current post.
+ * @param string $field_name Name of field.
+ * @param WP_REST_Request $request Current request
+ *
+ * @return string
+ */
+function slug_get_zipcode( $object, $field_name, $request ) {
+    return CFS()->get( $field_name, $object[ 'id' ] );
+}

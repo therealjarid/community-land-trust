@@ -10,6 +10,11 @@
     @include desktop-size {
       width: 800px;
     }
+    .error-message {
+      color: red;
+      text-align: center;
+      font-size: 0.8rem;
+    }
     #map-canvas {
       width: 100%;
       height: 70vh;
