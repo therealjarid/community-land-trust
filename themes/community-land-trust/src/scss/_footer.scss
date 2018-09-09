@@ -50,7 +50,6 @@
       height: 100%;
       padding-left: 1rem;
       @include desktop-size {
-      padding-left: 7rem;
       padding-top: 4.5rem;
       }
       p {
@@ -98,8 +97,8 @@
       padding-top: 1.5rem; 
       padding-left: 1.5rem;
       @include desktop-size {
-        padding-top: 4rem; 
-        padding-left: 9rem;
+        padding-top: 3.7rem; 
+        padding-left: 7rem;
       }
       p {
         font-size: 1.1rem;
@@ -131,6 +130,7 @@
       padding-left: 2rem;
       @include desktop-size {
         margin: 0;
+        padding-left:0; 
       }
       .fas {
         padding-right: 0.2rem;
@@ -151,7 +151,7 @@
         margin-right: 0;
         @include desktop-size {
           padding-left: 1rem;
-          margin-right: 1rem;
+          margin-right: 3rem;
           padding-top: 2.5rem;
           font-size: 12px;
           font-weight: 200;
