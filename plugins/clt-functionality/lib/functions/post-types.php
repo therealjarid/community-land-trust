@@ -64,7 +64,7 @@ function clt_register_post_types() {
 			'publicly_queryable'  => true,
 			'capability_type'     => 'post',
 			'show_in_rest'        => true,
-			'template_lock'       => 'all',
+			// 'template_lock'       => 'all',
 			'template'            => array(
 				array(
 					'core/paragraph',
