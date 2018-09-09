@@ -38,7 +38,7 @@
           display: block; 
           padding-top: 0.5rem;
           max-width: none;
-          width: 17.2rem;
+          width: 17rem;
         }
       }
       p {
@@ -78,12 +78,14 @@
         }
         .fa-twitter {
           color: $footer_lighter_color;
+          padding-top: 0.1rem;
         }
         .fa-facebook-f {
           color: $footer_lighter_color;
         }
         .fa-linkedin-in {
           color: $footer_lighter_color;
+          padding-left: 0.1rem;
         }
       }
     }
@@ -92,10 +94,9 @@
       grid-area: email-contact;
     }
     .contact-email {
-      
       width: 300px;
       padding-top: 1.5rem; 
-      padding-left: 2.5rem;
+      padding-left: 1.5rem;
       @include desktop-size {
         padding-top: 4rem; 
         padding-left: 9rem;
@@ -103,9 +104,21 @@
       p {
         font-size: 1.1rem;
         @include desktop-size {
-          margin: 1.5rem  0;
-          font-size: 14px;
+          margin: 1rem  0;
+          font-size: 12px;
+          font-weight: 200;
         }
+      }
+      a {
+        @include desktop-size {
+          padding-left: 0.5rem;
+        }
+      }
+      .fa-phone {
+        font-size: 1rem; 
+      }
+      .fa-envelope {
+        font-size: 1rem;
       }
     }
 
@@ -130,18 +143,18 @@
         padding-left: 0.5rem;
         font-size: 1.1rem;
         @include desktop-size {
-          width: 100%;
-          padding: 0;
+          padding:0;
         }
       }
       .address {
         width: 80%;
+        margin-right: 0;
         @include desktop-size {
-          padding-left: 0.5rem;
-          padding-top: 4rem;
-          font-size: 14px;
-          font-weight: normal;
-          width: 100%;
+          padding-left: 1rem;
+          margin-right: 1rem;
+          padding-top: 2.5rem;
+          font-size: 12px;
+          font-weight: 200;
         }
       }
       .fa-map-marker-alt {
@@ -165,11 +178,14 @@
     @include desktop-size {
       display: block;
       background-color: $footer_darker_color;
+      height: 2.9rem;
     }
     .copyright {
       color: $color__background-body;
       text-align: center;
-      padding-top: 1rem;
+      padding-top: 0.6rem;
+      font-size: 12px; 
+      font-weight: 200;
     }
   }
 }
