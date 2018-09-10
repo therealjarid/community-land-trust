@@ -121,7 +121,9 @@ function clt_scripts() {
 	wp_enqueue_script('header-toggle', get_template_directory_uri() . '/build/js/header-toggle.min.js', array( 'jquery' ), null, true);
 
 	// adding FAQ functionality 
+	if ( is_page( 'faqs' ) ) {
 	wp_enqueue_script('faq-page', get_template_directory_uri() . '/build/js/faq-page.min.js', array( 'jquery' ), null, true);
+	}
 
 	// adding Google Map script via CDN
 	if ( is_page( 'find' ) ) {
