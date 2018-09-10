@@ -13,7 +13,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
         <?php get_template_part( 'template-parts/content', 'page' ); ?>
-        <?php echo CFS()->get( 'Contact' );?>
+        <?php echo CFS()->get( 'contact_number', 'email', 'address' );?>
 
 			<?php endwhile; // End of the loop. ?>
 
