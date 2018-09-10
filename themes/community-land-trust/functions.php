@@ -116,12 +116,14 @@ function clt_scripts() {
 
 	// adding flickity scripts via CDN
 	wp_enqueue_script( 'flickity', '//cdnjs.cloudflare.com/ajax/libs/flickity/1.1.1/flickity.pkgd.min.js', array( 'jquery' ), null, true  );
+
+
 	
 	// adding header functionality 
 	wp_enqueue_script('header-toggle', get_template_directory_uri() . '/build/js/header-toggle.min.js', array( 'jquery' ), null, true);
 
 	// adding FAQ functionality 
-	if ( is_page( 'faqs' ) ) {
+	if ( is_page( 'faq' ) ) {
 	wp_enqueue_script('faq-page', get_template_directory_uri() . '/build/js/faq-page.min.js', array( 'jquery' ), null, true);
 	}
 
