@@ -42,9 +42,15 @@ get_header(); ?>
 				'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
 				'after'  => '</div>',
 			) );
-		?>
+    ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
+<div class="featured-person">
+    <img src="<?php echo CFS()->get( 'photo' );?>"/>
+    <h2 class="featured-person-name">Tiffany Duzita</h1>
+    <h3 class="featured-person-title">Director</h3>
+    <?php echo CFS()->get( 'feature_person' );?>
+  </div>
 
       <?php endwhile; // End of the loop. ?>
 
