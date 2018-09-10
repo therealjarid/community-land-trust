@@ -117,7 +117,7 @@ get_header(); ?>
                     
                 
 				<?php foreach ( $timeline_fields as $timeline_field ) {
-					echo "<span class='timeline-growth-numbers'>" . $timeline_field['achievements_numbers'] . "</span>";
+					echo "<span class='timeline-growth-numbers, counter'>" . $timeline_field['achievements_numbers'] . "</span>";
 				}
                 ?>
                 </div>
