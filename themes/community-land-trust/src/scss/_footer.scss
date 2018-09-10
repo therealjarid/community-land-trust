@@ -5,6 +5,8 @@
   a {
     text-decoration: none;
     color: $color__background-body;
+    padding-left: 0.2rem;
+    font-size: 0.8rem;
   }
   p {
     color: $color__background-body;
@@ -74,18 +76,32 @@
           align-items: center;
           border-radius: 50%;
           background-color: white; 
+          @include desktop-size {
+            height: 40px;
+            width: 40px;
+          }
         }
         .fa-twitter {
           color: $footer_lighter_color;
           padding-top: 0.1rem;
+          padding-right: 0.1rem;
+          @include desktop-size {
+            font-size: 1.3rem;
+          }
         }
         .fa-facebook-f {
           color: $footer_lighter_color;
-          padding-left: 0.1rem;
+          padding-right: 0.2rem;
+          @include desktop-size {
+            font-size: 1.3rem;
+          }
         }
         .fa-linkedin-in {
           color: $footer_lighter_color;
-          padding-left: 0.1rem;
+          padding-right: 0.1rem;
+          @include desktop-size {
+            font-size: 1.3rem;
+          }
         }
       }
     }
@@ -95,8 +111,8 @@
     }
     .contact-email {
       width: 300px;
-      padding-top: 1.5rem; 
-      padding-left: 1rem;
+      padding-top: 1.3rem; 
+      padding-left: 2rem;
       @include desktop-size {
         padding-top: 3.7rem; 
         padding-left: 7rem;
@@ -116,9 +132,15 @@
       }
       .fa-phone {
         font-size: 1rem; 
+        @include desktop-size {
+          font-size: 1.3rem;
+        }
       }
       .fa-envelope {
         font-size: 1rem;
+        @include desktop-size {
+          font-size: 1.3rem;
+        }
       }
     }
 
@@ -150,15 +172,17 @@
       .address {
         width: 80%;
         margin-right: 0;
+        display: flex; 
         @include desktop-size {
           padding-left: 1rem;
-          margin-right: 3rem;
-          padding-top: 2.5rem;
+          margin-right: 4.7rem;
+          padding-top: 3.5rem;
           font-size: 12px;
           font-weight: 200;
         }
       }
       .fa-map-marker-alt {
+        font-size: 0.8rem;
         @include desktop-size {
           display: none;
         }
