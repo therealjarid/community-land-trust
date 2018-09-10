@@ -1,15 +1,17 @@
 jQuery(document).ready(function($) {
 
-  console.log ("hello");
+  $('.faq_question, .faq-arrow-down').click(function() {
+ 
+    if ($(this).parent().is('.open')) {
+        $(this).closest('.faq').find('.faq_answer_container').animate({'height':'0'}, 500);
+        $(this).closest('.faq').removeClass('open');
 
+        } else {
+            var newHeight = $(this).closest('.faq').find('p').height();
+            $(this).closest('.faq').find('.faq_answer_container').animate({'height':newHeight}, 500);
+            $(this).closest('.faq').addClass('open');
+        }
 
-  // $('.fas.fa-bars').click(() => {
-  //   $('.site-header').toggleClass('toggle-menu');
-  //   $('body').toggleClass('noScroll');
-  //   // if sub menu is open when hamburger menu is closed, this resets
-  //   $('.menu-item-has-children').removeClass('toggle-sub-menu');
-  // });
-  // $('.menu-item-has-children > a').click(() => {
-  //   $('.menu-item-has-children').toggleClass('toggle-sub-menu');
-  // });
+      });
+
 });

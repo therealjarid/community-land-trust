@@ -123,7 +123,7 @@ function clt_scripts() {
 	wp_enqueue_script('header-toggle', get_template_directory_uri() . '/build/js/header-toggle.min.js', array( 'jquery' ), null, true);
 
 	// adding FAQ functionality 
-	if ( is_page( 'faq' ) ) {
+	if ( is_archive( 'faqs' ) ) {
 	wp_enqueue_script('faq-page', get_template_directory_uri() . '/build/js/faq-page.min.js', array( 'jquery' ), null, true);
 	}
 

@@ -8,11 +8,16 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
+	<div class="faq_container">
 
-		<?php the_title( '<h2>', '</h2>' ); ?>
+		<div class="faq">
 
-      <div class="faq-answers">
+		<?php the_title( '<h2 class="faq_question">', '</h2>' ); ?>
+		<img class="faq-arrow-down" src="<?php echo get_template_directory_uri() ?>/assets/images/icons/arrow-down.svg">
+
+      <div class="faq_answer_container">
 				
 					<?php the_content(); ?>
 
@@ -23,7 +28,11 @@
 					) );
 					?>
 
-      </div><!-- end of .faq-answers -->
+</div>
+
+</div>
+
+</div>
 
   </article>
 
