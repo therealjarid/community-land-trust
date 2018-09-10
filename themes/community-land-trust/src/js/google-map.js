@@ -1,3 +1,5 @@
+
+
 // map taxonomy names with their IDs
 const locationIndex = {
   'metro-vancouver-fraser-valley': 6,

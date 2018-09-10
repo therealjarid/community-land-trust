@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying all pages.
- * Template Name: Contact Us
+ * 
  * @package CLT_Theme
  */
 
