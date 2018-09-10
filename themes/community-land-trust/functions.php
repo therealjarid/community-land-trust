@@ -127,11 +127,13 @@ function clt_scripts() {
 	// adding Google Map script via CDN
 	if ( is_page( 'find' ) ) {
 		
-		wp_enqueue_script( 'google-map-cdn', 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDhvBO_mzcQWohzRiHKmgdfzPrOw3Bu6mE', array(), null, false );
+		wp_enqueue_script( 'google-map-cdn', 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDhvBO_mzcQWohzRiHKmgdfzPrOw3Bu6mE', array(), null, true );
 		
-		wp_enqueue_script( 'google-js', get_template_directory_uri() . '/build/js/google-map.min.js', array( 'jquery', 'google-map-cdn' ), null,false );
+		wp_enqueue_script( 'polyfill-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.0.0/polyfill.min.js', array(), null, true );
 		
-		wp_localize_script( 'google-js', 'apiVars', array(
+		wp_enqueue_script( 'map-functionality', get_template_directory_uri() . '/build/js/map-functionality.min.js', array(  'jquery', 'google-map-cdn', 'polyfill-cdn' ), null, false );
+		
+		wp_localize_script( 'map-functionality', 'apiVars', array(
 			'restUrl' => esc_url_raw( rest_url() ),
 			'nonce'   => wp_create_nonce( 'wp_rest' ),
 			'failure' => "There was a problem getting your locations, please refresh and try again."
