@@ -20,7 +20,8 @@
     "$": false,
     "_": false,
     "google": false,
-    "map": false
+    "map": false,
+    "apiVars": false
   },
   "env": {
     "es6": true,

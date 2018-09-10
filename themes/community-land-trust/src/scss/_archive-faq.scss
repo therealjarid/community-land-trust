@@ -10,7 +10,7 @@
     margin-bottom: 100px;
 
     i {
-      color: $border_color;
+      color: #5390a9;
       font-size: 200px;
       margin: 30px 0;
     
@@ -19,7 +19,7 @@
    h1 {
       text-align: center;
       border-bottom: 5px solid $border_color;
-      width: 65%;
+      width: 60%;
       margin: 0 auto;
       font-family: 'Raleway', sans-serif;
       color: black;
@@ -35,7 +35,7 @@
 
     display: flex;
     flex-wrap: wrap;
-    width: 80vw;
+    width: 100vw;
     margin: 0 auto;
 
     .faq_question {
@@ -48,13 +48,13 @@
       width: 80%;
       padding: 20px 20px;
 
-      border-top: 2px solid $border_color;
+      border-top: 2px solid #11344d;
     }
     
     .faq_answer_container {
-      height: 0;
-      overflow: hidden;
-      padding: 0;
+      // height: 0;
+      // overflow: hidden;
+      // padding: 0;
   
       .faq-answers {
         display: none;
@@ -65,16 +65,40 @@
     
   
     p {
-      height: 300px;
+      // hei ght: 300px;
     }
   
   
-    .faq-arrow-down {
-      width: 15%;
+    .faq-arrow-right {
+      width: 30px;
       cursor: pointer;
+      
     }
 
 
   }
+
+
+
+  // Faq show & hide answer
+  .faq_container {
+    .faq_answer_container {
+      display: none;
+    }
+    .faq-arrow-right {
+      transition: .5s;
+      transform: rotate(0);
+    }
+    &.open {
+      background: #e0f1f7;
+      .faq_answer_container {
+        display: block;
+      }
+      .faq-arrow-right {
+        transform: rotate(90deg);
+      }
+    }// end .open
+  }
+
 
 }

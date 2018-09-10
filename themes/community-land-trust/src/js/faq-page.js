@@ -1,17 +1,16 @@
 jQuery(document).ready(function($) {
-
-  $('.faq_question, .faq-arrow-down').click(function() {
+  
+  $('.faq_container').click(function() {
  
-    if ($(this).parent().is('.open')) {
-        $(this).closest('.faq').find('.faq_answer_container').animate({'height':'0'}, 500);
-        $(this).closest('.faq').removeClass('open');
+    if ($(this).hasClass('open')) {
+        $(this).removeClass('open');
+        
 
-        } else {
-            var newHeight = $(this).closest('.faq').find('p').height();
-            $(this).closest('.faq').find('.faq_answer_container').animate({'height':newHeight}, 500);
-            $(this).closest('.faq').addClass('open');
-        }
+      } else {
+        $(this).addClass('open');     
+      }
 
-      });
+  });
+
 
 });

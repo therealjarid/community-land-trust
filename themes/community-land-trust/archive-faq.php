@@ -2,7 +2,7 @@
 
     <div class="faq-header">
 			
-				<i class="fas fa-question-circle"></i>
+		<i class="fas fa-question-circle"></i>
 
         <h1>Frequently Asked Questions</h1>
 
@@ -16,20 +16,20 @@
 
             <div class="faq">
 
-								<?php the_title( '<h2 class="faq_question">', '</h2>' ); ?>
-                		<img class="faq-arrow-down"
-                     src="<?php echo get_template_directory_uri() ?>/assets/images/icons/arrow-down.svg">
+					<?php the_title( '<h2 class="faq_question">', '</h2>' ); ?>
+                	<img class="faq-arrow-right"
+                     src="<?php echo get_template_directory_uri() ?>/assets/images/icons/arrow-right.svg">
 
             	<div class="faq_answer_container">
 
-								<?php the_content(); ?>
+					<?php the_content(); ?>
 
-								<?php
-									wp_link_pages( array(
-										'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-										'after'  => '</div>',
-									) );
-								?>
+					<?php
+                        wp_link_pages( array(
+                        'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+                        'after'  => '</div>',
+                        ));
+					?>
 
               </div>
 
