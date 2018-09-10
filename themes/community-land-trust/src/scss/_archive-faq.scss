@@ -35,15 +35,12 @@
       color: black;
       font-weight: 500;
       font-size: 18px;
+      border-bottom: 5px solid $border_color;
 
       @include desktop-size {
         font-size: 25px;
         width: 25%;
-        paddi
-       
-
       }
-  
   
    }
 
@@ -56,12 +53,11 @@
     flex-wrap: wrap;
     width: 100vw;
     margin: 0 auto;
-    border-top: 1px solid #11344d;
+    border-top: 0.1px solid #11344d;
 
     @include desktop-size {
       justify-content: center;
-      border-top: 0.5px solid $timeline_font_color;
-
+      
     }
 
 
@@ -76,9 +72,15 @@
       padding: 20px 20px;
       margin-top: 0;
 
-      @include desktop-size {
-        width: 50%;
+ 
 
+      @include desktop-size {
+        width: 70%;
+        font-size: 20px;
+        padding-right: 50px;
+        padding-top: 50px;
+        height: 140px;
+        margin-bottom: 0;
       }
       
     }
@@ -98,6 +100,22 @@
       font-size: 14px;
       color: black;
       font-family: $font__main;
+
+      @include desktop-size {
+        font-size: 18px;
+        width: 55%;
+        margin-left: 17rem;
+
+        p {
+          margin-top: 0;
+
+
+
+        }
+        
+  
+
+      }
       
     }
     .faq-arrow-right {
@@ -106,14 +124,29 @@
     }
     &.open {
       background: #e0f1f7;
+      
+      @include desktop-size {
+        background: #F2FAFC;
+      }
       .faq_answer_container {
         display: block;
+
+        @include desktop-size {
+          height: 250px;
+          overflow: hidden;
+  
+        }
       }
       .faq-arrow-right {
         transform: rotate(90deg);
       }
     }// end .open
   }
-
+  .more-info {
+    border-top: 0.1px solid #11344d;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
 
 }
