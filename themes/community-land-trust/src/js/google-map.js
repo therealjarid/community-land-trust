@@ -6,9 +6,13 @@ const locationIndex = {
   'okanagan-interior-bc': 9
 };
 
+// container to keep track of open info windows on markers
+let lastOpenWindow = new google.maps.InfoWindow({
+  content: ''
+});
+
 // by default center on Vancouver
-let regionLng = 49.2699305,
-  regionLat = -123.0720043;
+const vancouver = { lng: 49.2699305, lat: -123.0720043 };
 
 // instantiate Google Maps
 let map = {};
@@ -16,7 +20,7 @@ let map = {};
 google.maps.event.addDomListener(window, 'load', () => {
   map = new google.maps.Map(document.getElementById('map-canvas'), {
     zoom: 9,
-    center: new google.maps.LatLng(regionLng, regionLat)
+    center: new google.maps.LatLng(vancouver.lng, vancouver.lat)
   });
 });
 
@@ -27,6 +31,7 @@ function ajaxFail() {
 }
 
 // start of main
+
 jQuery(document).ready(function($) {
   'use strict';
   $('.fetch-property').click(function() {
@@ -40,14 +45,20 @@ jQuery(document).ready(function($) {
       .replace(/\s+/g, '-')
       .toLowerCase();
 
+    // Clear old values and declare arrays
+    let postalCode = [],
+      markers = [],
+      infoWindows = [];
+
     // API call to decode address (portfolioLocation) to long/lat
+
     $.ajax({
       method: 'get',
       url: `https://maps.googleapis.com/maps/api/geocode/json?address=${portfolioLocation}`
     })
       .done(data => {
-        regionLng = data.results[0].geometry.location.lng;
-        regionLat = data.results[0].geometry.location.lat;
+        let regionLng = data.results[0].geometry.location.lng;
+        let regionLat = data.results[0].geometry.location.lat;
         // Set map on portfolioLocation
         map.setCenter({ lat: regionLat, lng: regionLng });
         map.setZoom(8);
@@ -64,11 +75,9 @@ jQuery(document).ready(function($) {
       }`,
       method: 'GET'
     })
-      .done(data => {
-        let postalCode = [],
-          marker = [];
-        for (let property in data) {
-          postalCode[property] = data[property].portfolio_zip.replace(
+      .done(restData => {
+        for (let property in restData) {
+          postalCode[property] = restData[property].portfolio_zip.replace(
             /\s+/g,
             ''
           );
@@ -78,16 +87,41 @@ jQuery(document).ready(function($) {
               postalCode[property]
             }`
           })
-            .done(data => {
+            .done(apiData => {
+              // @TODO: delete old markers on request
+              //   if (typeof markers !== 'undefined') {
+              //     for (let marker in markers) {
+              //       markers[marker].setMap(null);
+              //     }
+              //   }
+
               // Add markers of property locations
-              marker[property] = new google.maps.Marker({
+              markers[property] = new google.maps.Marker({
                 position: new google.maps.LatLng(
-                  data.results[0].geometry.location.lat,
-                  data.results[0].geometry.location.lng
+                  apiData.results[0].geometry.location.lat,
+                  apiData.results[0].geometry.location.lng
                 ),
-                map: map
+                map: map,
+                content: `<p class="marker-popup">${
+                  restData[property].title.rendered
+                }</p>`
               });
-              // @TODO: add information windows for each marker
+              infoWindows[property] = new google.maps.InfoWindow();
+              // Add listener to open infoWindows on click
+              google.maps.event.addListener(
+                markers[property],
+                'click',
+                (() => {
+                  return function() {
+                    lastOpenWindow.close();
+
+                    infoWindows[property].open(map, markers[property]);
+                    infoWindows[property].setContent(markers[property].content);
+
+                    lastOpenWindow = infoWindows[property];
+                  };
+                })(markers)
+              );
             })
             .fail(() => ajaxFail());
         }
@@ -96,6 +130,3 @@ jQuery(document).ready(function($) {
       .fail(() => ajaxFail());
   });
 });
-
-// REST API to fetch postal code
-// `https://maps.googleapis.com/maps/api/geocode/json?address=${postalCode}&key=AIzaSyDhvBO_mzcQWohzRiHKmgdfzPrOw3Bu6mE`
