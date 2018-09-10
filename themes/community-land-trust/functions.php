@@ -142,9 +142,9 @@ function clt_scripts() {
 		
 	// adding counter-up scripts
 	if ( is_front_page() ) {
-		wp_enqueue_script( 'counter-up-plugin', '//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'waypoints', '//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js', array( 'jquery' ), null, true );
 		
-		wp_enqueue_script( 'counter-up-plugin', 'jquery.counterup.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'counter-up-plugin',  get_template_directory_uri() .'/build/js/jquery.counterup.min.js', array( 'jquery' ), null, true );
 
 		wp_enqueue_script('counter-up', get_template_directory_uri() . '/build/js/counter-up.min.js', array( 'jquery' ), true);
 	}
