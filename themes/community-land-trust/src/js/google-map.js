@@ -65,7 +65,8 @@ jQuery(document).ready(function($) {
       method: 'GET'
     })
       .done(data => {
-        let postalCode = [];
+        let postalCode = [],
+          marker = [];
         for (let property in data) {
           postalCode[property] = data[property].portfolio_zip.replace(
             /\s+/g,
@@ -78,19 +79,21 @@ jQuery(document).ready(function($) {
             }`
           })
             .done(data => {
-              //   regionLng = data.results[0].geometry.location.lng;
-              //   regionLat = data.results[0].geometry.location.lat;
-              //   // Set map on portfolioLocation
-              //   map.setCenter({ lat: regionLat, lng: regionLng });
-              //   map.setZoom(8);
+              // Add markers of property locations
+              marker[property] = new google.maps.Marker({
+                position: new google.maps.LatLng(
+                  data.results[0].geometry.location.lat,
+                  data.results[0].geometry.location.lng
+                ),
+                map: map
+              });
+              // @TODO: add information windows for each marker
             })
             .fail(() => ajaxFail());
         }
       })
 
       .fail(() => ajaxFail());
-
-    // Add pins of property locations
   });
 });
 

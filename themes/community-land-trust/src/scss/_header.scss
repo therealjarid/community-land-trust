@@ -76,6 +76,9 @@
             &:last-of-type {
               border-bottom: 1px $border_color solid;
             }
+            &:first-of-type {
+              border-top-width: 2px;
+            }
             a {
               font-size: 1rem;
               padding: 19px 10px;
