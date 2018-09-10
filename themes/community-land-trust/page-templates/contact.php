@@ -15,14 +15,26 @@ get_header(); ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+    <div class="border-bottom"></div>
 	</header><!-- .entry-header -->
   <div class="contact-info">
-        <?php echo CFS()->get( 'contact_number' );?>
-        <?php echo CFS()->get( 'email' );?>
-        <?php echo CFS()->get( 'location' );?>
-       <img src="<?php echo CFS()->get( 'screenshot' );?>"/>
+  <p class="contact-number">
+<i class="fas fa-phone fa-rotate-180"></i>
+<?php echo CFS()->get( 'contact_number' );?>
+</p>
+<p class="email-address">
+<i class="fas fa-envelope"></i>
+<?php echo CFS()->get( 'email' );?>
+</p>
+<p class="address">
+<i class="fas fa-map-marker-alt"></i>
+<?php echo CFS()->get( 'location' );?>
+</p>
       </div>
+  <div class="map">
+  <img src="<?php echo CFS()->get( 'screenshot' );?>"/>
+  </div>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
