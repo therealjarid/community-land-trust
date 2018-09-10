@@ -1,40 +1,43 @@
 <?php get_header(); ?>
 
-<div class="faq-header">
+    <div class="faq-header">
+			
+				<i class="fas fa-question-circle"></i>
 
-	<h1>Frequently Asked Questions</h1>
+        <h1>Frequently Asked Questions</h1>
 
-</div>
+    </div>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
-	<div class="faq_container">
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<div class="faq">
+        <div class="faq_container">
 
-		<?php the_title( '<h2 class="faq_question">', '</h2>' ); ?>
-		<img class="faq-arrow-down" src="<?php echo get_template_directory_uri() ?>/assets/images/icons/arrow-down.svg">
+            <div class="faq">
 
-      <div class="faq_answer_container">
-				
-					<?php the_content(); ?>
+								<?php the_title( '<h2 class="faq_question">', '</h2>' ); ?>
+                		<img class="faq-arrow-down"
+                     src="<?php echo get_template_directory_uri() ?>/assets/images/icons/arrow-down.svg">
 
-					<?php
-					wp_link_pages( array(
-						'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-						'after'  => '</div>',
-					) );
-					?>
+            	<div class="faq_answer_container">
 
-</div>
+								<?php the_content(); ?>
 
-</div>
+								<?php
+									wp_link_pages( array(
+										'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+										'after'  => '</div>',
+									) );
+								?>
 
-</div>
+              </div>
 
-  </article>
+          </div>
+
+      </div>
+
+    </article>
 
 <?php endwhile; ?>
 
