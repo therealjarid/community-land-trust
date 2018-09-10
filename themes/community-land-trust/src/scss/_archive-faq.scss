@@ -9,8 +9,19 @@
     text-align: center;
     margin-bottom: 100px;
 
+    @include desktop-size {
+      background-image: url(../../assets/images/logo-banner.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      height: 380px;
+      margin-bottom: 0;
+    
+      
+    }
+
     i {
-      color: #5390a9;
+      color: #5390A9;
       font-size: 200px;
       margin: 30px 0;
     
@@ -18,13 +29,21 @@
 
    h1 {
       text-align: center;
-      border-bottom: 5px solid $border_color;
       width: 60%;
       margin: 0 auto;
       font-family: 'Raleway', sans-serif;
       color: black;
       font-weight: 500;
       font-size: 18px;
+
+      @include desktop-size {
+        font-size: 25px;
+        width: 25%;
+        paddi
+       
+
+      }
+  
   
    }
 
@@ -37,6 +56,14 @@
     flex-wrap: wrap;
     width: 100vw;
     margin: 0 auto;
+    border-top: 1px solid #11344d;
+
+    @include desktop-size {
+      justify-content: center;
+      border-top: 0.5px solid $timeline_font_color;
+
+    }
+
 
     .faq_question {
       display: inline-block;
@@ -47,43 +74,31 @@
       font-size: 18px;
       width: 80%;
       padding: 20px 20px;
+      margin-top: 0;
 
-      border-top: 2px solid #11344d;
-    }
-    
-    .faq_answer_container {
-      // height: 0;
-      // overflow: hidden;
-      // padding: 0;
-  
-      .faq-answers {
-        display: none;
+      @include desktop-size {
+        width: 50%;
+
       }
-  
-  
+      
     }
-    
-  
-    p {
-      // hei ght: 300px;
-    }
-  
-  
     .faq-arrow-right {
       width: 30px;
       cursor: pointer;
-      
     }
-
-
   }
-
-
 
   // Faq show & hide answer
   .faq_container {
     .faq_answer_container {
       display: none;
+      width: 90%;
+      margin: 0 auto;
+      text-align: justify;
+      font-size: 14px;
+      color: black;
+      font-family: $font__main;
+      
     }
     .faq-arrow-right {
       transition: .5s;
