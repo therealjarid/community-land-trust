@@ -11,9 +11,12 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
-
         <?php get_template_part( 'template-parts/content', 'page' ); ?>
-        <?php echo CFS()->get( 'contact_number', 'email', 'address' );?>
+      <div class="contact-info">
+        <?php echo CFS()->get( 'contact_number' );?>
+        <?php echo CFS()->get( 'email' );?>
+        <?php echo CFS()->get( 'location' );?>
+      </div>
 
 			<?php endwhile; // End of the loop. ?>
 
