@@ -17,7 +17,11 @@
     }
     #map-canvas {
       width: 100%;
-      height: 70vh;
+      height: 60vh;
+      .marker-popup {
+        margin: 0;
+        font-size: 1rem;
+      }
     }
     .locations-menu {
       list-style-type: none;
