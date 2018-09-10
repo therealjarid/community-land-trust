@@ -3,19 +3,47 @@
 --------------------------------------------------------------*/
 .contact-us {
   .entry-content {
-    border: 1px solid #e0f1f7;
+    border: 1px solid #F2FAFC;
     border-radius: 10%;
     padding: 0 1rem;
-    background-color: #e0f1f7;
+    background-color: #F2FAFC;
+    @include desktop-size {
+      margin: 0 auto;
+      width: 70%;
+      border-radius: 5%;
+    }
     .gform_title {
       font-family: Raleway, serif;
       font-weight: 550;
       text-align: center;
       padding-bottom: 1.5rem;
+      @include desktop-size {
+        font-size: 1.5rem;
+      }
     }
     .gform_wrapper label.gfield_label {
       font-weight: 200;
       letter-spacing: 0.1rem;
+      @include desktop-size {
+        font-weight: 450;
+        display: flex;
+        padding-left: 16.3rem;
+        letter-spacing: 0;
+      }
+    }
+    .gform_wrapper {
+      .medium {
+        @include desktop-size {
+          width: 40%;
+        }
+      }
+    }
+    .gform_body {
+      .gform_fields {
+        @include desktop-size {
+          text-align: center;
+        }
+      }
     }
     input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea {
       border: 1.3px solid black;
@@ -28,6 +56,10 @@
         border-radius: 10pt;
         font-weight: 500;
         letter-spacing: 0.1rem;
+        @include desktop-size {
+          width: 30%;
+          padding: 0.5rem 0;
+        }
       }
     }
   }
