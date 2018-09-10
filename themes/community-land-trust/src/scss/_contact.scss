@@ -7,32 +7,40 @@
     text-align: center; 
     font-size: 0.6rem;
     font-family: Raleway, serif;
+    padding-bottom: 3rem;
     .entry-title {
       font-weight: 500;
       display: block;
       margin: 0 auto; 
-      width: 50%; 
+      width: 33%; 
       padding-top: 20px; 
-      border-bottom: 1px solid blue;
+      border-bottom: 4px solid #4da7cd;
     }
   }
   .contact-info {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
+    font-family: Raleway, serif;
+    font-weight: 500;
+    padding-bottom: 1rem;
     i {
       display: inline;
     }
     p {
       margin: 0 1rem;
-      padding-bottom: 1rem;
+      padding-bottom: 0.8rem;
       padding-left: 2rem; 
-      text-indent: -2rem;
+      text-indent: -2.3rem;
+      font-size: 1.3rem;
+      line-height: 1.5rem;
     }
     a {
       padding-left: 1rem;
       font-size: 1rem;
     }
-
+  }
+  .map {
+    border-top: 4px solid #4da7cd;
   }
   .entry-content { //gravity form css
     border: 1px solid #F2FAFC;
