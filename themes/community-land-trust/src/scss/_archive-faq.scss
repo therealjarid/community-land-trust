@@ -9,8 +9,19 @@
     text-align: center;
     margin-bottom: 100px;
 
+    @include desktop-size {
+      background-image: url(../../assets/images/logo-banner.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      height: 380px;
+      margin-bottom: 0;
+    
+      
+    }
+
     i {
-      color: #5390a9;
+      color: #5390A9;
       font-size: 200px;
       margin: 30px 0;
     
@@ -18,13 +29,18 @@
 
    h1 {
       text-align: center;
-      border-bottom: 5px solid $border_color;
       width: 60%;
       margin: 0 auto;
       font-family: 'Raleway', sans-serif;
       color: black;
       font-weight: 500;
       font-size: 18px;
+      border-bottom: 5px solid $border_color;
+
+      @include desktop-size {
+        font-size: 25px;
+        width: 25%;
+      }
   
    }
 
@@ -37,6 +53,13 @@
     flex-wrap: wrap;
     width: 100vw;
     margin: 0 auto;
+    border-top: 0.1px solid #11344d;
+
+    @include desktop-size {
+      justify-content: center;
+      
+    }
+
 
     .faq_question {
       display: inline-block;
@@ -47,43 +70,53 @@
       font-size: 18px;
       width: 80%;
       padding: 20px 20px;
+      margin-top: 0;
 
-      border-top: 2px solid #11344d;
-    }
-    
-    .faq_answer_container {
-      // height: 0;
-      // overflow: hidden;
-      // padding: 0;
-  
-      .faq-answers {
-        display: none;
+ 
+
+      @include desktop-size {
+        width: 70%;
+        font-size: 20px;
+        padding-right: 50px;
+        padding-top: 50px;
+        height: 140px;
+        margin-bottom: 0;
       }
-  
-  
+      
     }
-    
-  
-    p {
-      // hei ght: 300px;
-    }
-  
-  
     .faq-arrow-right {
       width: 30px;
       cursor: pointer;
-      
     }
-
-
   }
-
-
 
   // Faq show & hide answer
   .faq_container {
     .faq_answer_container {
       display: none;
+      width: 90%;
+      margin: 0 auto;
+      text-align: justify;
+      font-size: 14px;
+      color: black;
+      font-family: $font__main;
+
+      @include desktop-size {
+        font-size: 18px;
+        width: 55%;
+        margin-left: 17rem;
+
+        p {
+          margin-top: 0;
+
+
+
+        }
+        
+  
+
+      }
+      
     }
     .faq-arrow-right {
       transition: .5s;
@@ -91,14 +124,29 @@
     }
     &.open {
       background: #e0f1f7;
+      
+      @include desktop-size {
+        background: #F2FAFC;
+      }
       .faq_answer_container {
         display: block;
+
+        @include desktop-size {
+          height: 250px;
+          overflow: hidden;
+  
+        }
       }
       .faq-arrow-right {
         transform: rotate(90deg);
       }
     }// end .open
   }
-
+  .more-info {
+    border-top: 0.1px solid #11344d;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
 
 }
