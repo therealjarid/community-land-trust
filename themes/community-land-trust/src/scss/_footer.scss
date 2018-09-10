@@ -67,8 +67,8 @@
         align-items: center;
         justify-content: center;
         .circle {
-          height: 40px;
-          width: 40px;
+          height: 32px;
+          width: 32px;
           margin: 0.5rem;
           padding: 0 1rem; 
           display: flex; 
@@ -76,6 +76,10 @@
           align-items: center;
           border-radius: 50%;
           background-color: white; 
+          @include desktop-size {
+            height: 40px;
+            width: 40px;
+          }
         }
         .fa-twitter {
           color: $footer_lighter_color;
