@@ -96,3 +96,15 @@
     padding-top: 5rem;
   }
 }
+
+@mixin texture-background {
+  @include desktop-size {
+      background-image: url(../../assets/images/logo-banner.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      height: 380px;
+      margin-bottom: 0;
+
+  }
+}
