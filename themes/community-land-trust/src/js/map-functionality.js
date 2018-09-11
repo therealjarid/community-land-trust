@@ -52,12 +52,15 @@ jQuery(document).ready(function($) {
       // get zip codes from REST api
       const restResult = await $.ajax({
         beforeSend: xhr => xhr.setRequestHeader('X-WP-Nonce', apiVars.nonce),
-        url: `${apiVars.restUrl}wp/v2/portfolio?portfolio_location=${termId}`,
+        url: `${
+          apiVars.restUrl
+        }wp/v2/portfolio?portfolio_location=${termId}&_embed`,
         method: 'GET'
       });
 
       // for each zip code
       for (let i = 0; i < restResult.length; i++) {
+        console.log(restResult[i]._embedded);
         let zipCode = restResult[i].portfolio_zip.replace(/\s+/g, '');
         // decode postal code into lng/lat
         const markerResult = await $.ajax({
@@ -73,14 +76,18 @@ jQuery(document).ready(function($) {
           position: new google.maps.LatLng(markerLat, markerLng),
           map: map,
           animation: google.maps.Animation.DROP,
-          content: `<a class="marker-popup" href="${restResult[i].link}" >${
+          content: `<a class="marker-link" href="${
+            restResult[i].link
+          }" ><div class="marker-popup">${
             restResult[i].title.rendered
-          }</p>`
+          }</div><img src="${
+            restResult[i]._links['wp:attachment'][0].href
+          }" ></img></a>`
         });
         // @TODO: add featured image to pin
 
         // create infoWindow for each marker
-        let infoWindow = new google.maps.InfoWindow();
+        let infoWindow = new google.maps.InfoWindow({ maxWidth: 180 });
 
         // store marker and infoWindow into global array
         gInfoWindows.push(infoWindow);
@@ -145,8 +152,6 @@ jQuery(document).ready(function($) {
   }
 
   function ajaxFail() {
-    $('.map-and-buttons').append(
-      '<p class="error-message">Please refresh the page and try again.</p>'
-    );
+    $('.error-message').addClass('ajax-error');
   }
 });
