@@ -127,19 +127,19 @@
 
     .mixin-button {
       @include main-cta;
-      height: 40px;
-      width: 130px;
-      position: absolute;
-      top: 73%;
-      left: 33%;
+      // height: 40px;
+      // width: 130px;
+      // position: absolute;
+      // top: 73%;
+      // left: 33%;
 
-      @include desktop-size {
-        height: 50px;
-        width: 230px;
-        top: 37%;
-        left: 12%;
+      // @include desktop-size {
+      //   height: 50px;
+      //   width: 230px;
+      //   top: 37%;
+      //   left: 12%;
 
-      }
+      // }
     }
 
   }
@@ -442,21 +442,21 @@
     
       .mixin-button {
         @include main-cta;
-        height: 40px;
-        width: 130px;
-        margin: 0 auto;
-        display: block;
-        margin-bottom: 50px;
-        box-shadow: none;
-        font-weight: 500;
-        letter-spacing: 1px;
+        // height: 40px;
+        // width: 130px;
+        // margin: 0 auto;
+        // display: block;
+        // margin-bottom: 50px;
+        // box-shadow: none;
+        // font-weight: 500;
+        // letter-spacing: 1px;
 
-        @include desktop-size {
-          height: 50px;
-          width: 230px;
-          font-size: 18px;
+        // @include desktop-size {
+        //   height: 50px;
+        //   width: 230px;
+        //   font-size: 18px;
 
-        }
+        // }
         
       }
 
