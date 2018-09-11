@@ -17,7 +17,8 @@ get_header(); ?>
 	<header class="entry-header">
     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
     <div class="border-bottom"></div>
-	</header><!-- .entry-header -->
+  </header><!-- .entry-header -->
+<section class="upper-content">
   <div class="contact-info">
   <p class="contact-number">
 <i class="fas fa-phone fa-rotate-180"></i>
@@ -35,6 +36,7 @@ get_header(); ?>
   <div class="map">
   <img src="<?php echo CFS()->get( 'screenshot' );?>"/>
   </div>
+</div>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php

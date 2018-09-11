@@ -15,34 +15,59 @@
       width: 33%; 
       padding-top: 20px; 
       border-bottom: 4px solid #4da7cd;
+      @include desktop-size {
+        border-bottom: 6px solid #4da7cd;
+        width: 10%; 
+        font-weight: 500;
+        font-size: 1.5rem;
+        padding-top: 5rem;
+      }
     }
   }
-  .contact-info {
-    width: 60%;
-    margin: 0 auto;
-    font-family: Raleway, serif;
-    font-weight: 500;
-    padding-bottom: 1rem;
-    i {
-      display: inline;
-      font-size: 1.5rem;
+  .upper-content {
+    @include desktop-size {
+      display: flex;
+      width: 75%;
+      margin: 0 auto;
+      padding-bottom: 5rem;
     }
-    p {
-      margin: 0 1rem;
-      padding-bottom: 0.8rem;
-      padding-left: 2rem; 
-      text-indent: -2.3rem;
-      font-size: 1.3rem;
-      line-height: 1.5rem;
+    .contact-info {
+      width: 60%;
+      margin: 0 auto;
+      font-family: Raleway, serif;
+      font-weight: 500;
+      padding-bottom: 1rem;
+      @include desktop-size {
+        width: 17%;
+      }
+      i {
+        display: inline;
+        font-size: 1.5rem;
+      }
+      p {
+        margin: 0 1rem;
+        padding-bottom: 0.8rem;
+        padding-left: 2rem; 
+        text-indent: -2.3rem;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+      }
+      a {
+        padding-left: 1rem;
+        font-size: 1rem;
+      }
     }
-    a {
-      padding-left: 1rem;
-      font-size: 1rem;
+    .map {
+      border-top: 4px solid #4da7cd;
+      @include desktop-size {
+        border-top: none;
+        width: 50%;
+        padding-left: 2rem;
+        border-left: 6px solid #4da7cd;
+      }
     }
   }
-  .map {
-    border-top: 4px solid #4da7cd;
-  }
+ 
   .entry-content { //gravity form css
     border: 1px solid #F2FAFC;
     border-radius: 10%;
@@ -68,7 +93,7 @@
       @include desktop-size {
         font-weight: 450;
         display: flex;
-        padding-left: 16.3rem;
+        padding-left: 18rem;
         letter-spacing: 0;
       }
     }
@@ -104,28 +129,55 @@
       }
     }
   }
-  .featured-person-photo {
-    border-bottom: 4px solid #4da7cd;
-    img {
-      width: 80%;
-      padding-left: 4rem; 
-      padding-bottom: 1rem;
-   }
-  }
-  .featured-person-content {
-    width: 90%;
-    margin: 0 auto;
-    .featured-person-name {
-      font-size: 1rem;
-      letter-spacing: 1px;
-      font-family: Raleway, serif;
-      line-height: 1px;
-      margin-bottom: 0;
-      margin-top: 1rem;
+  .featured-person {
+    @include desktop-size {
+      display: flex;
+      width: 55%;
+      margin: 0 auto;
+      padding: 5rem 0;
     }
-    p {
-      font-size: 0.8rem;
-      letter-spacing: 1px;
+    .featured-person-photo {
+      border-bottom: 4px solid #4da7cd;
+      @include desktop-size {
+        border-bottom: none;
+        border-right: 6px solid #4da7cd;
+        margin-right: 4rem;
+        padding-top: 2rem;
+      }
+      img {
+        width: 80%;
+        padding-left: 4rem; 
+        padding-bottom: 1rem;
+        @include desktop-size {
+          width: 100%;
+          padding-left: 0;
+          padding-bottom: 2rem;
+          padding-right: 4rem;
+        }
+     }
+    }
+    .featured-person-content {
+      width: 90%;
+      margin: 0 auto;
+      .featured-person-name {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        font-family: Raleway, serif;
+        line-height: 1px;
+        margin-bottom: 0;
+        margin-top: 1rem;
+        @include desktop-size {
+          font-size: 1.5rem;
+          margin-top: 2rem;
+        }
+      }
+      p {
+        font-size: 0.8rem;
+        @include desktop-size {
+          font-size: 1rem;
+          width: 100%;
+        }
+      }
     }
   }
 }
