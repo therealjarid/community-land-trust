@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-  // @TODO: hand off API to client, remove key from git repo on handoff
+  // @TODO: hand off API to client, remove key from git repo
   let googleKey = 'AIzaSyDhvBO_mzcQWohzRiHKmgdfzPrOw3Bu6mE';
 
   let map = {};
@@ -31,8 +31,8 @@ jQuery(document).ready(function($) {
     let termId = $(this).attr('data-id');
 
     // Clear old markers
-    for (let i in gMarkers) {
-      gMarkers[i].setMap(null);
+    for (let marker in gMarkers) {
+      gMarkers[marker].setMap(null);
     }
     gMarkers = [];
     gInfoWindows = [];
@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
     // get postal codes matching the taxonomy id
     const foundBounds = await placeMarkers(termId);
 
-    map.setCenter({
+    map.panTo({
       lat: getCenter(foundBounds.minLat, foundBounds.maxLat),
       lng: getCenter(foundBounds.minLng, foundBounds.maxLng)
     });
@@ -53,15 +53,15 @@ jQuery(document).ready(function($) {
     let bounds = { minLat: 90, maxLat: 0, minLng: 180, maxLng: 0 };
     try {
       // get zip codes from REST api
-      const result = await $.ajax({
+      const restResult = await $.ajax({
         beforeSend: xhr => xhr.setRequestHeader('X-WP-Nonce', apiVars.nonce),
         url: `${apiVars.restUrl}wp/v2/portfolio?portfolio_location=${termId}`,
         method: 'GET'
       });
 
       // for each zip code
-      for (let i = 0; i < result.length; i++) {
-        let zipCode = result[i].portfolio_zip.replace(/\s+/g, '');
+      for (let i = 0; i < restResult.length; i++) {
+        let zipCode = restResult[i].portfolio_zip.replace(/\s+/g, '');
         // decode postal code into lng/lat
         const markerResult = await $.ajax({
           method: 'get',
@@ -76,7 +76,9 @@ jQuery(document).ready(function($) {
           position: new google.maps.LatLng(markerLat, markerLng),
           map: map,
           animation: google.maps.Animation.DROP,
-          content: `<p class="marker-popup">${result[i].title.rendered}</p>`
+          content: `<a class="marker-popup" href="${restResult[i].link}" >${
+            restResult[i].title.rendered
+          }</p>`
         });
 
         // create infoWindow for each marker
@@ -124,8 +126,10 @@ jQuery(document).ready(function($) {
     const GLOBE_WIDTH = 256;
     let angle = bounds.maxLng - bounds.minLng;
     let angle2 = bounds.maxLat - bounds.minLat;
+    let delta = -1;
     if (angle2 > angle) {
       angle = angle2;
+      delta = 2;
     }
     if (angle < 0) {
       angle += 360;
@@ -134,7 +138,7 @@ jQuery(document).ready(function($) {
     return Math.floor(
       Math.log(($('#map-canvas').width() * 360) / angle / GLOBE_WIDTH) /
         Math.LN2 -
-        2
+        delta
     );
   }
 
