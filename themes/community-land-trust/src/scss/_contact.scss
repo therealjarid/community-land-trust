@@ -109,6 +109,23 @@
     img {
       width: 80%;
       padding-left: 4rem; 
+      padding-bottom: 1rem;
    }
+  }
+  .featured-person-content {
+    width: 90%;
+    margin: 0 auto;
+    .featured-person-name {
+      font-size: 1rem;
+      letter-spacing: 1px;
+      font-family: Raleway, serif;
+      line-height: 1px;
+      margin-bottom: 0;
+      margin-top: 1rem;
+    }
+    p {
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
   }
 }
