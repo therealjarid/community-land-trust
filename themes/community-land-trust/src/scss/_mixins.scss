@@ -62,6 +62,13 @@
   &:focus {
     outline: 0;
   }
+
+  @include desktop-size {
+    height: 50px;
+    width: 230px;
+    font-size: 18px;
+    font-weight: 500;
+  }
 }
 
 @mixin banner-img {
