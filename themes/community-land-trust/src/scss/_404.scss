@@ -1,3 +1,17 @@
 /*--------------------------------------------------------------
 # 404 Page
 --------------------------------------------------------------*/
+.error404 {
+  @include texture-background; 
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #E0F1F7;
+  }
+  .page-title {
+    text-align: center;
+  }
+  .page-content {
+    text-align: center;
+  }
+}
