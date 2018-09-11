@@ -1,5 +1,12 @@
+<?php
+/**
+ * The template for displaying about page.
+ * Template Name: FAQ
+ *
+ * @package CLT_Theme
+ */
 
-<?php get_header(); ?>
+ get_header(); ?>
 
     <div class="faq-header">
 
