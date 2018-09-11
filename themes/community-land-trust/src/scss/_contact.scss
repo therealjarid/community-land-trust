@@ -28,7 +28,7 @@
     @include desktop-size {
       display: flex;
       width: 65%;
-      margin: 0 auto;
+      margin: 0 15.3rem;
       padding-bottom: 5rem;
     }
     .contact-info {
@@ -38,11 +38,15 @@
       font-weight: 500;
       padding-bottom: 1rem;
       @include desktop-size {
-        width: 25%;
+        width: 35%;
+        padding-left: 5rem;
       }
       i {
         display: inline;
         font-size: 1.5rem;
+        @include desktop-size {
+          font-size: 2rem;
+        }
       }
       p {
         margin: 0 1rem;
@@ -66,7 +70,7 @@
       @include desktop-size {
         border-top: none;
         width: 50%;
-        padding-left: 4rem;
+        padding-left: 3rem;
         border-left: 6px solid #4da7cd;
       }
     }
@@ -137,7 +141,7 @@
     @include desktop-size {
       display: flex;
       width: 55%;
-      margin: 0 auto;
+      margin: 0 21.5rem;
       padding: 5rem 0;
     }
     .featured-person-photo {
