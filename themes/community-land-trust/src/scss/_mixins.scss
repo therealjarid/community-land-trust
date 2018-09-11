@@ -37,7 +37,7 @@
 }
 
 @mixin logged-in-desktop-size {
-  @media screen and (min-width: 1191px) {
+  @media screen and (min-width: 1147px) {
     @content;
   }
 }
