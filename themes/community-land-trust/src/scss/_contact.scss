@@ -3,26 +3,9 @@
 --------------------------------------------------------------*/
 
 .contact-us {
+  text-align: center;
   .entry-header {
-    text-align: center; 
-    font-size: 0.6rem;
-    font-family: Raleway, serif;
-    padding-bottom: 3rem;
-    .entry-title {
-      font-weight: 500;
-      display: block;
-      margin: 0 auto; 
-      width: 33%; 
-      padding-top: 20px; 
-      border-bottom: 4px solid #4da7cd;
-      @include desktop-size {
-        border-bottom: 6px solid #4da7cd;
-        width: 10%; 
-        font-weight: 500;
-        font-size: 1.5rem;
-        padding-top: 5rem;
-      }
-    }
+    @include page-title;
   }
   .upper-content {
     @include desktop-size {
