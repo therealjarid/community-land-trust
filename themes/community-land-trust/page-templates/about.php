@@ -35,7 +35,7 @@ get_header(); ?>
 
 		<?php $about_us_fields = CFS()->get( 'about_our_history_highlights' ); ?>
 
-		<div class='carousel-cell'>
+		
 
 			<?php foreach ( $about_us_fields as $about_us_field ) {
 				echo "<h3 class='about-cfs-years'>" . $about_us_field['about_page_history_year'] . "</h3>";
@@ -46,7 +46,7 @@ get_header(); ?>
 			
 		</div>
 
-	</div>
+	
 
 		<h2 class="more-info">Need More Information?</h2>
 
