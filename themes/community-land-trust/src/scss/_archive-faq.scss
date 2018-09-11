@@ -8,6 +8,8 @@
     height: 30vh;
     text-align: center;
     margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
 
     @include desktop-size {
       @include texture-background;
@@ -19,20 +21,8 @@
       margin: 30px 0;
     }
 
-    h1 {
-      text-align: center;
-      width: 60%;
-      margin: 0 auto;
-      font-family: 'Raleway', sans-serif;
-      color: black;
-      font-weight: 500;
-      font-size: 18px;
-      border-bottom: 5px solid $border_color;
-
-      @include desktop-size {
-        font-size: 25px;
-        width: 25%;
-      }
+    .header-container {
+      @include page-title;
     }
   }
 

@@ -12,7 +12,9 @@
 
         <i class="fas fa-question-circle"></i>
 
-        <h1>Frequently Asked Questions</h1>
+        <div class="header-container">
+            <h1>Frequently Asked Questions</h1>
+        </div>
 
     </div>
 
