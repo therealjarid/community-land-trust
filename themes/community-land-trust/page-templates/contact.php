@@ -46,7 +46,9 @@ get_header(); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
 <div class="featured-person">
+  <div class="featured-person-photo">
     <img src="<?php echo CFS()->get( 'photo' );?>"/>
+  </div>
     <h2 class="featured-person-name">Tiffany Duzita</h1>
     <h3 class="featured-person-title">Director</h3>
     <?php echo CFS()->get( 'feature_person' );?>
