@@ -24,10 +24,8 @@ jQuery(document).ready(function($) {
 
   // start of main
   $('.fetch-property').click(async function() {
-    // set background color of only the selected button
-    $('.fetch-property').css('background-color', 'white');
-    $(this).css('background-color', '#bed73d');
-
+    $('.fetch-property').removeClass('selected');
+    $(this).toggleClass('selected');
     let termId = $(this).attr('data-id');
 
     // Clear old markers
@@ -40,12 +38,11 @@ jQuery(document).ready(function($) {
     // get postal codes matching the taxonomy id
     const foundBounds = await placeMarkers(termId);
 
+    map.setZoom(calculateZoom(foundBounds));
     map.panTo({
       lat: getCenter(foundBounds.minLat, foundBounds.maxLat),
       lng: getCenter(foundBounds.minLng, foundBounds.maxLng)
     });
-
-    map.setZoom(getZoom(foundBounds));
   });
 
   async function placeMarkers(termId) {
@@ -123,14 +120,14 @@ jQuery(document).ready(function($) {
     );
   }
 
-  function getZoom(bounds) {
+  function calculateZoom(bounds) {
     const GLOBE_WIDTH = 256;
     let angle = bounds.maxLng - bounds.minLng;
     let angle2 = bounds.maxLat - bounds.minLat;
-    let delta = -1;
+    let delta = -0.5;
     if (angle2 > angle) {
       angle = angle2;
-      delta = 2;
+      delta = 2.5;
     }
     if (angle < 0) {
       angle += 360;

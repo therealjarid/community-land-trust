@@ -6,7 +6,22 @@
   img {
     @include banner-img;
   }
+  h1 {
+    @include page-title;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  p {
+    margin-top: 8px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    margin: 0 7%;
+  }
+  p:first-of-type {
+    margin-bottom: 20px;
+  }
   .map-and-buttons {
+    margin-top: 50px;
     @include desktop-size {
       width: 800px;
     }
@@ -59,12 +74,61 @@
           height: 100%;
           border: 0;
           background: none;
-          line-height: 1.2;
+          line-height: 1;
           &:focus {
             outline: 0;
           }
+          &.selected {
+            background-color: $color_button;
+          }
+          &:hover {
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.1),
+              0 17px 50px 0 rgba(0, 0, 0, 0.1);
+          }
         }
       }
+    }
+  }
+  .find-form-container {
+    height: 265px;
+    width: 100%;
+    background: #e0f1f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    padding: 0 18%;
+    font-family: $font__accent;
+    h2 {
+      margin: 20px 0 0 0;
+      font-size: 18px;
+    }
+    p {
+      margin: 0 0 10px 0;
+    }
+    .find-form {
+      height: 95px;
+      width: 100%;
+      background: white;
+    }
+    button {
+      @include main-cta();
+    }
+  }
+  .more-info {
+    margin: 50px 0 30px 0;
+    h2 {
+      margin: 20px 0 0 0;
+      font-size: 18px;
+      .contraction {
+        display: none;
+        @include tablet-size() {
+          display: inline;
+        }
+      }
+    }
+    button {
+      @include main-cta();
     }
   }
 }
