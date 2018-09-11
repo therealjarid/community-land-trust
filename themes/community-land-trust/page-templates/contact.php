@@ -34,7 +34,7 @@ get_header(); ?>
 </p>
       </div>
   <div class="map">
-  <img src="<?php echo CFS()->get( 'screenshot' );?>"/>
+  <a href="https://www.google.ca/maps?q=1651+commercial+drive&rlz=1C5CHFA_enJP803JP803&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiB2ca5h7TdAhWprlQKHZVOC6QQ_AUICigB" target="_blank"><img src="<?php echo CFS()->get( 'screenshot' );?>"/></a>
   </div>
 </div>
 	<div class="entry-content">
@@ -52,7 +52,7 @@ get_header(); ?>
     <img src="<?php echo CFS()->get( 'photo' );?>"/>
   </div>
   <div class="featured-person-content">
-    <h2 class="featured-person-name"><?php echo CFS()->get( 'name' );?></h2>
+    <a href="mailto:info@cltrust.ca"><h2 class="featured-person-name"><?php echo CFS()->get( 'name' );?></h2></a>
     <p class="featured-person-title"><?php echo CFS()->get( 'title' );?></p>
     <p><?php echo CFS()->get( 'description' );?></p>
   </div>
