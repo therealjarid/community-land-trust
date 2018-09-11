@@ -7,16 +7,22 @@
  */
 
 get_header(); ?>
-<?php while ( have_posts() ) : the_post(); ?>
 
-<?php the_post_thumbnail(); ?>
+ <?php
+        $args = array('page'=>array('posts', 'partners'));
+        query_posts($args);
+
+        while ( have_posts() ) : the_post(); ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
           <img class="logo" src="<?php echo CFS()->get( 'about_page_clt_logo' ); ?>"></img>
 
           <div class="entry-content">
+      
       <?php the_content(); ?>
+
+
       <?php
       wp_link_pages( array(
         'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
