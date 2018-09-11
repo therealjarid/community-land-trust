@@ -120,15 +120,7 @@
     .gform_footer{
       text-align: center;
       .gform_button {
-        background-color: $color_button;
-        width: 50%;
-        border-radius: 10pt;
-        font-weight: 500;
-        letter-spacing: 0.1rem;
-        @include desktop-size {
-          width: 30%;
-          padding: 0.5rem 0;
-        }
+        @include main-cta;
       }
     }
   }
