@@ -60,7 +60,15 @@ jQuery(document).ready(function($) {
 
       // for each zip code
       for (let i = 0; i < restResult.length; i++) {
-        console.log(restResult[i]._embedded);
+        // get image of property
+        let propertyImage = '';
+        if (typeof restResult[i]._embedded['wp:featuredmedia'] != 'undefined') {
+          propertyImage = `<img src="${
+            restResult[i]._embedded['wp:featuredmedia'][0].source_url
+          }" ></img>`;
+        }
+        console.log(propertyImage);
+
         let zipCode = restResult[i].portfolio_zip.replace(/\s+/g, '');
         // decode postal code into lng/lat
         const markerResult = await $.ajax({
@@ -80,11 +88,8 @@ jQuery(document).ready(function($) {
             restResult[i].link
           }" ><div class="marker-popup">${
             restResult[i].title.rendered
-          }</div><img src="${
-            restResult[i]._links['wp:attachment'][0].href
-          }" ></img></a>`
+          }${propertyImage}</div></a>`
         });
-        // @TODO: add featured image to pin
 
         // create infoWindow for each marker
         let infoWindow = new google.maps.InfoWindow({ maxWidth: 180 });
@@ -113,6 +118,7 @@ jQuery(document).ready(function($) {
   }
 
   function windowListener(marker, infoWindow) {
+    styleWindow(infoWindow);
     google.maps.event.addListener(
       marker,
       'click',
@@ -153,5 +159,30 @@ jQuery(document).ready(function($) {
 
   function ajaxFail() {
     $('.error-message').addClass('ajax-error');
+  }
+
+  /*
+  * The google.maps.event.addListener() event waits for
+  * the creation of the infowindow HTML structure 'domready'
+  * and before the opening of the infowindow defined styles
+  * are applied.
+  */
+  function styleWindow(infoWindow) {
+    google.maps.event.addListener(infoWindow, 'domready', function() {
+      // Reference to the DIV which receives the contents of the infowindow using jQuery
+      let iwOuter = $('.gm-style-iw');
+
+      /* The DIV we want to change is above the .gm-style-iw DIV.
+   * So, we use jQuery and create a iwBackground variable,
+   * and took advantage of the existing reference to .gm-style-iw for the previous DIV with .prev().
+   */
+      let iwBackground = iwOuter.prev();
+
+      // Remove the background shadow DIV
+      iwBackground.children(':nth-child(2)').css({ display: 'none' });
+
+      // Remove the white background DIV
+      iwBackground.children(':nth-child(4)').css({ display: 'none' });
+    });
   }
 });
