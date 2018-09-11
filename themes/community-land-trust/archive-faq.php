@@ -22,9 +22,9 @@
         $args = array('post_type'=>array('posts', 'faq'));
         query_posts($args);
 
-    while ( have_posts() ) : the_post(); ?>
+        while ( have_posts() ) : the_post(); ?>
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <div class="faq_container">
 
