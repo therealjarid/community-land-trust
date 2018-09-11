@@ -3,11 +3,8 @@
 --------------------------------------------------------------*/
 
 .contact-us {
+  text-align: center;
   .entry-header {
-    text-align: center; 
-    font-size: 0.6rem;
-    font-family: Raleway, serif;
-    padding-bottom: 3rem;
     @include page-title;
   }
   .upper-content {
