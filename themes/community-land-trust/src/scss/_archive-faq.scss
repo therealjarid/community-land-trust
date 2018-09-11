@@ -109,11 +109,7 @@
         p {
           margin-top: 0;
 
-
-
         }
-        
-  
 
       }
       
@@ -123,7 +119,8 @@
       transform: rotate(0);
     }
     &.open {
-      background: #e0f1f7;
+      background-color: #e0f1f7;
+      transition: background-color .3s ease-in;   
       
       @include desktop-size {
         background: #F2FAFC;
@@ -134,7 +131,6 @@
         @include desktop-size {
           height: 250px;
           overflow: hidden;
-  
         }
       }
       .faq-arrow-right {
@@ -142,11 +138,13 @@
       }
     }// end .open
   }
+  
   .more-info {
     border-top: 0.1px solid #11344d;
     margin: 0;
     padding-top: 50px;
     padding-bottom: 20px;
   }
+
 
 }
