@@ -135,9 +135,11 @@
   .featured-person {
     @include desktop-size {
       display: flex;
-      width: 55%;
-      margin: 0 20.5rem;
-      padding: 5rem 0;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      margin: 0 auto;
+      padding: 2rem 0;
     }
     .featured-person-photo {
       border-bottom: 4px solid #4da7cd;
@@ -149,9 +151,11 @@
       }
       img {
         padding: 1rem;
+        max-width: 320px;
+        height: auto;
         @include desktop-size {
           max-width: 356px;
-          max-height: 258px;
+          height: auto;
           padding-left: 0;
           padding-bottom: 2rem;
           padding-right: 4rem;

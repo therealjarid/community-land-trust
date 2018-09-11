@@ -177,6 +177,10 @@ jQuery(document).ready(function($) {
    */
       let iwBackground = iwOuter.prev();
 
+      // hide arrow
+      $('div:eq(0)', iwBackground).hide();
+      $('div:eq(2)', iwBackground).hide();
+
       // Remove the background shadow DIV
       iwBackground.children(':nth-child(2)').css({ display: 'none' });
 
