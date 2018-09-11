@@ -1,47 +1,40 @@
 /*--------------------------------------------------------------
 # FAQ Page
 --------------------------------------------------------------*/
-.post-type-archive-faq {
 
-  .faq-header {
-    width: 100%;
-    height: 30vh;
-    text-align: center;
-    margin-bottom: 100px;
+.faq-header {
+  width: 100%;
+  height: 30vh;
+  text-align: center;
+  margin-bottom: 100px;
 
-    @include desktop-size {
-      @include texture-background;
-    }
-
-    i {
-      color: #5390A9;
-      font-size: 200px;
-      margin: 30px 0;
-    
-    }
-
-   h1 {
-      text-align: center;
-      width: 60%;
-      margin: 0 auto;
-      font-family: 'Raleway', sans-serif;
-      color: black;
-      font-weight: 500;
-      font-size: 18px;
-      border-bottom: 5px solid $border_color;
-
-      @include desktop-size {
-        font-size: 25px;
-        width: 25%;
-      }
-  
-   }
-
+  @include desktop-size {
+    @include texture-background;
   }
 
+  i {
+    color: #5390a9;
+    font-size: 200px;
+    margin: 30px 0;
+  }
+
+  h1 {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    border-bottom: 5px solid $border_color;
+
+    @include desktop-size {
+      font-size: 25px;
+      width: 25%;
+    }
+  }
 
   .faq {
-
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
@@ -50,9 +43,7 @@
 
     @include desktop-size {
       justify-content: center;
-      
     }
-
 
     .faq_question {
       display: inline-block;
@@ -65,8 +56,6 @@
       padding: 20px 20px;
       margin-top: 0;
 
- 
-
       @include desktop-size {
         width: 70%;
         font-size: 20px;
@@ -75,7 +64,6 @@
         height: 140px;
         margin-bottom: 0;
       }
-      
     }
     .faq-arrow-right {
       width: 30px;
@@ -101,22 +89,19 @@
 
         p {
           margin-top: 0;
-
         }
-
       }
-      
     }
     .faq-arrow-right {
-      transition: .5s;
+      transition: 0.5s;
       transform: rotate(0);
     }
     &.open {
       background-color: #e0f1f7;
-      transition: background-color .3s ease-in;   
-      
+      transition: background-color 0.3s ease-in;
+
       @include desktop-size {
-        background: #F2FAFC;
+        background: #f2fafc;
       }
       .faq_answer_container {
         display: block;
@@ -129,15 +114,13 @@
       .faq-arrow-right {
         transform: rotate(90deg);
       }
-    }// end .open
+    } // end .open
   }
-  
+
   .more-info {
     border-top: 0.1px solid #11344d;
     margin: 0;
     padding-top: 50px;
     padding-bottom: 20px;
   }
-
-
 }
