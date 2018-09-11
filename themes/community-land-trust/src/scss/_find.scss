@@ -3,41 +3,61 @@
 --------------------------------------------------------------*/
 
 .find-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   img {
     @include banner-img;
   }
-  h1 {
+  .find-header-container {
     @include page-title;
-    font-size: 18px;
-    margin-bottom: 15px;
   }
   p {
-    margin-top: 8px;
     font-size: 14px;
-    margin-bottom: 15px;
-    margin: 0 7%;
+    max-width: 750px;
+    margin: inherit 30px;
+    @include tablet-size {
+      font-size: 16px;
+      line-height: 1.8;
+    }
   }
   p:first-of-type {
-    margin-bottom: 20px;
+    margin: 10px 35px 20px 35px;
+  }
+  p:nth-of-type(2) {
+    font-weight: 500;
+    margin: 0 35px;
+    @include desktop-size {
+    }
   }
   .map-and-buttons {
     margin-top: 50px;
-    @include desktop-size {
-      width: 800px;
-    }
+    max-width: 1000px;
+    width: 100%;
     .error-message {
       color: red;
       text-align: center;
       font-size: 0.8rem;
+      display: none;
+      padding-top: 20px;
+      &.ajax-error {
+        display: block;
+      }
     }
     #map-canvas {
       width: 100%;
       height: 60vh;
-      .marker-popup {
-        margin: 0;
-        font-size: 1rem;
+      .marker-link {
         display: flex;
         align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        max-height: 100px;
+        .marker-popup {
+          text-align: center;
+          margin: 0;
+          font-size: 1rem;
+        }
       }
     }
     .locations-menu {
@@ -51,22 +71,44 @@
         width: 50%;
         height: 55px;
         border: 2px $color_button solid;
+        @include tablet-size {
+          width: 25%;
+        }
         &:first-of-type {
           border-bottom: 0.5px $color_button solid;
           border-right: 0.5px $color_button solid;
+          @include tablet-size {
+            border: 2px $color_button solid;
+            border-right: 0.5px $color_button solid;
+          }
         }
         &:nth-of-type(2) {
           border-bottom: 0.5px $color_button solid;
           border-left: 0.5px $color_button solid;
+          @include tablet-size {
+            border: 2px $color_button solid;
+            border-left: 0.5px $color_button solid;
+            border-right: 0.5px $color_button solid;
+          }
         }
         &:nth-of-type(3) {
           border-top: 0.5px $color_button solid;
           border-right: 0.5px $color_button solid;
+          @include tablet-size {
+            border: 2px $color_button solid;
+            border-left: 0.5px $color_button solid;
+            border-right: 0.5px $color_button solid;
+          }
         }
         &:last-of-type {
           border-top: 0.5px $color_button solid;
           border-left: 0.5px $color_button solid;
+          @include tablet-size {
+            border: 2px $color_button solid;
+            border-left: 0.5px $color_button solid;
+          }
         }
+
         .fetch-property {
           font-size: 0.8rem;
           font-weight: 500;
@@ -78,12 +120,15 @@
           &:focus {
             outline: 0;
           }
+          &:hover {
+            box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1),
+              0 5px 10px 0 rgba(0, 0, 0, 0.1);
+            color: $color__link-hover;
+          }
           &.selected {
             background-color: $color_button;
-          }
-          &:hover {
-            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.1),
-              0 17px 50px 0 rgba(0, 0, 0, 0.1);
+            color: black;
+            box-shadow: none;
           }
         }
       }
@@ -92,6 +137,7 @@
   .find-form-container {
     height: 265px;
     width: 100%;
+    max-width: 1000px;
     background: #e0f1f7;
     display: flex;
     flex-direction: column;
@@ -104,21 +150,23 @@
       font-size: 18px;
     }
     p {
+      text-align: center;
       margin: 0 0 10px 0;
     }
     .find-form {
-      height: 95px;
+      height: 100px;
       width: 100%;
       background: white;
     }
     button {
       @include main-cta();
+      margin-bottom: 15px;
     }
   }
   .more-info {
-    margin: 50px 0 30px 0;
+    margin: 0px 0 30px 0;
     h2 {
-      margin: 20px 0 0 0;
+      margin: 0;
       font-size: 18px;
       .contraction {
         display: none;
@@ -129,6 +177,7 @@
     }
     button {
       @include main-cta();
+      font-weight: 200;
     }
   }
 }
