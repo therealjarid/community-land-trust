@@ -39,7 +39,8 @@
         @include desktop-size {
           display: block; 
           padding-top: 0.5rem;
-          max-width: none;
+          max-width: 272px;
+          height: auto;
           width: 17rem;
         }
       }
