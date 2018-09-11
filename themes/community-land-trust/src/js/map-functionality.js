@@ -80,6 +80,7 @@ jQuery(document).ready(function($) {
             restResult[i].title.rendered
           }</p>`
         });
+        // @TODO: add featured image to pin
 
         // create infoWindow for each marker
         let infoWindow = new google.maps.InfoWindow();

@@ -33,17 +33,14 @@ get_header(); ?>
 
 	</div>
 	
-	<div class="gravity-form">
+	<div class="find-form-container">
 
-		<?php //@TODO: this doesn't work with CFS
+		<?php 
 			echo '<h2>' . CFS()->get( 'sign_up_cta' ) . '</h2>';
 			echo '<p>' . CFS()->get( 'sign_up_copy' ) . '</p>';
 		?>
 
-		<h3>Which Best Describes You?</h3>
-
-		<button class="form-button">Looking for a Home</button>
-		<button class="form-button">Partner and Investor</button>
+		<div class="find-form"></div>
 
 		<button class="cta-button">Next</button>
 
