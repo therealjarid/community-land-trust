@@ -50,10 +50,17 @@
   font-family: 'Roboto';
   color: black;
   border: 0;
-
+  width: 120px;
+  font-size: 14px;
+  padding: 5px 0;
+  margin-top: 12px;
   &:hover {
     background-color: #a8be39;
     transition: 0.5s;
+    cursor: pointer;
+  }
+  &:focus {
+    outline: 0;
   }
 }
 
