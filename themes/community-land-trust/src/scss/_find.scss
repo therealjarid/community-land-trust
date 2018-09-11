@@ -180,6 +180,9 @@
       @include main-cta();
       margin-bottom: 15px;
     }
+    @include desktop-size {
+      height: 350px;
+    }
   }
   .more-info {
     margin: 0px 0 30px 0;
