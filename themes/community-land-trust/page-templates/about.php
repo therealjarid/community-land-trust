@@ -16,7 +16,7 @@ get_header(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-            <img class="logo" src="<?php echo CFS()->get( 'about_us_logo' ); ?>"></img>
+            <img class="logo" src="<?php echo CFS()->get( 'about_page_clt_logo' ); ?>"></img>
 
             <div class="entry-content">
 				<?php the_content(); ?>
@@ -33,14 +33,14 @@ get_header(); ?>
 
 	<div class="main-carousel">
 
-		<?php $about_us_fields = CFS()->get( 'about_us_loop' ); ?>
+		<?php $about_us_fields = CFS()->get( 'about_our_history_highlights' ); ?>
 
 		<div class='carousel-cell'>
 
 			<?php foreach ( $about_us_fields as $about_us_field ) {
-				echo "<h3 class='about-cfs-years'>" . $about_us_field['about_us_years'] . "</h3>";
-				echo "<p class='about-cfs-description'>" . $about_us_field['about_us_description'] . "</p>";
-				echo "<p class='about-cfs-extra-description'>" . $about_us_field['about_us_extra_description'] . "</p>";
+				echo "<h3 class='about-cfs-years'>" . $about_us_field['about_page_history_year'] . "</h3>";
+				echo "<p class='about-cfs-description'>" . $about_us_field['about_page_history_description'] . "</p>";
+				echo "<p class='about-cfs-extra-description'>" . $about_us_field['about_page_history_extra_description'] . "</p>";
 				}
 			?>
 			
@@ -50,7 +50,7 @@ get_header(); ?>
 
 		<h2 class="more-info">Need More Information?</h2>
 
-		<a href="<?php echo get_permalink( get_page_by_path( 'contact-us' ) ) ?>">
+		<a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>">
 			<button class="mixin-button">Contact Us</button>
 		</a>
 
