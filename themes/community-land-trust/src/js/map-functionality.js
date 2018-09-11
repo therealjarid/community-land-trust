@@ -44,6 +44,8 @@ jQuery(document).ready(function($) {
       lat: getCenter(foundBounds.minLat, foundBounds.maxLat),
       lng: getCenter(foundBounds.minLng, foundBounds.maxLng)
     });
+
+    map.setZoom(getZoom(foundBounds));
   });
 
   async function placeMarkers(termId) {
@@ -60,13 +62,11 @@ jQuery(document).ready(function($) {
       // for each zip code
       for (let i = 0; i < result.length; i++) {
         let zipCode = result[i].portfolio_zip.replace(/\s+/g, '');
-
         // decode postal code into lng/lat
         const markerResult = await $.ajax({
           method: 'get',
           url: `https://maps.googleapis.com/maps/api/geocode/json?address=${zipCode}&key=${googleKey}`
         });
-
         // get lng/lat for new marker
         let markerLat = markerResult.results[0].geometry.location.lat,
           markerLng = markerResult.results[0].geometry.location.lng;
@@ -117,6 +117,24 @@ jQuery(document).ready(function($) {
           lastOpenWindow = infoWindow;
         };
       })(marker)
+    );
+  }
+
+  function getZoom(bounds) {
+    const GLOBE_WIDTH = 256;
+    let angle = bounds.maxLng - bounds.minLng;
+    let angle2 = bounds.maxLat - bounds.minLat;
+    if (angle2 > angle) {
+      angle = angle2;
+    }
+    if (angle < 0) {
+      angle += 360;
+    }
+
+    return Math.floor(
+      Math.log(($('#map-canvas').width() * 360) / angle / GLOBE_WIDTH) /
+        Math.LN2 -
+        2
     );
   }
 

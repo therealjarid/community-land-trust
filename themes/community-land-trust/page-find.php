@@ -36,8 +36,8 @@ get_header(); ?>
 	<div class="gravity-form">
 
 		<?php //@TODO: this doesn't work with CFS
-		//	echo '<h2>' . CFS()->get( 'sign_up_cta' ) . '</h2>';
-		//	echo '<p>' . CFS()->get( 'sign_up_copy' ) . '</p>';
+			echo '<h2>' . CFS()->get( 'sign_up_cta' ) . '</h2>';
+			echo '<p>' . CFS()->get( 'sign_up_copy' ) . '</p>';
 		?>
 
 		<h3>Which Best Describes You?</h3>
