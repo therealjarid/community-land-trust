@@ -9,19 +9,28 @@
 
 get_header(); ?>
 
-<section class="contact-us">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<section class="about-us">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+    <?php the_post_thumbnail(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; // End of the loop. ?>
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      
+          <div class="entry-content">
+              <?php the_content(); ?>
+              <?php
+                wp_link_pages( array(
+                  'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+                  'after'  => '</div>',
+                ) );
+              ?>
+           </div><!-- .entry-content -->
+    </article><!-- #post-## -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</section>
+	<?php endwhile; // End of the loop. ?>
+
+</section><!-- .about-us -->
 
 
 <?php get_footer(); ?>
