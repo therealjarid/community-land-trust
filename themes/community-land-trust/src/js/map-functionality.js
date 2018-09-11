@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
   $('.fetch-property').click(async function() {
     $('.fetch-property').removeClass('selected');
     $(this).toggleClass('selected');
-    let termId = $(this).attr('data-id');
+    let termId = $(this).attr('id');
 
     // Clear old markers
     for (let marker in gMarkers) {

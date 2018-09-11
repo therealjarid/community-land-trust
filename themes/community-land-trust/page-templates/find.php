@@ -30,7 +30,7 @@ get_header(); ?>
 					if ( is_wp_error( $term_link ) ) {
 						continue;
 					}
-					echo '<li><button class="fetch-property" data-id="' . $term->term_id . '" >' . $term->name . '</button></li>';
+					echo '<li><button class="fetch-property" id="' . $term->term_id . '" >' . $term->name . '</button></li>';
 					echo ' ';
 				} ?>
             </ul>
