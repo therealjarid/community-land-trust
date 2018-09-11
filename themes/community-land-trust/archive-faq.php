@@ -1,15 +1,28 @@
+<?php
+/**
+ * The template for displaying about page.
+ * Template Name: FAQ
+ *
+ * @package CLT_Theme
+ */
 
-<?php get_header(); ?>
+ get_header(); ?>
 
     <div class="faq-header">
 
         <i class="fas fa-question-circle"></i>
 
-        <h1>Frequently Asked Questions</h1>
+        <div class="header-container">
+            <h1>Frequently Asked Questions</h1>
+        </div>
 
     </div>
 
-<?php while ( have_posts() ) : the_post(); ?>
+    <?php
+        $args = array('post_type'=>array('posts', 'faq'));
+        query_posts($args);
+
+    while ( have_posts() ) : the_post(); ?>
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
