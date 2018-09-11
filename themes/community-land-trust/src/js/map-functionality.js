@@ -67,7 +67,6 @@ jQuery(document).ready(function($) {
             restResult[i]._embedded['wp:featuredmedia'][0].source_url
           }" ></img>`;
         }
-        console.log(propertyImage);
 
         let zipCode = restResult[i].portfolio_zip.replace(/\s+/g, '');
         // decode postal code into lng/lat
