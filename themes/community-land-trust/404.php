@@ -21,6 +21,9 @@ get_header(); ?>
 				<div class="page-content">
 					<p><?php echo esc_html( "We're not sure what you're looking for, but we'll get you home safely!" ); ?></p>
 				</div><!-- .page-content -->
+				<a href="<?php echo get_permalink( get_page_by_path( 'find' ) ) ?>">
+            <button class="mixin-button-404">Back Home</button>
+        </a>
 				</div><!-- .container -->
 			</section><!-- .error-404 -->
 

@@ -14,4 +14,7 @@
   .page-content {
     text-align: center;
   }
+  .mixin-button-404 {
+    @include main-cta 
+  }
 }
