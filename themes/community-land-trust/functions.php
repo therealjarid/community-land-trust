@@ -120,7 +120,7 @@ function clt_scripts() {
 	}
 		
 	// adding FAQ functionality 
-	if ( is_archive( 'faqs' ) | is_page( 'faq' )) {
+	if ( is_archive( 'faqs' ) | is_page( 'faqs' )) {
 		wp_enqueue_script('faq-page', get_template_directory_uri() . '/build/js/faq-page.min.js', array( 'jquery' ), null, true);
 	}
 	
