@@ -49,10 +49,12 @@ get_header(); ?>
   <div class="featured-person-photo">
     <img src="<?php echo CFS()->get( 'photo' );?>"/>
   </div>
-    <h2 class="featured-person-name">Tiffany Duzita</h1>
-    <h3 class="featured-person-title">Director</h3>
-    <?php echo CFS()->get( 'feature_person' );?>
+  <div class="featured-person-content">
+    <h2 class="featured-person-name"><?php echo CFS()->get( 'name' );?></h2>
+    <p class="featured-person-title"><?php echo CFS()->get( 'title' );?></p>
+    <p><?php echo CFS()->get( 'description' );?></p>
   </div>
+</div>
 
       <?php endwhile; // End of the loop. ?>
 
