@@ -29,20 +29,30 @@ get_header(); ?>
             </div><!-- .entry-content -->
         </article><!-- #post-## -->
 
-    <div class="about-page-highlights">
+	<?php endwhile; // End of the loop. ?>
 
-			<?php $about_us_fields = CFS()->get( 'about_us_loop' ); ?>
+	<div class="main-carousel">
 
+		<?php $about_us_fields = CFS()->get( 'about_us_loop' ); ?>
+
+		<div class='carousel-cell'>
 
 			<?php foreach ( $about_us_fields as $about_us_field ) {
-            echo "<h3 class='about-cfs-years'>" . $about_us_field['about_us_years'] . "</h3>";
-            echo "<p class='about-cfs-description'>" . $about_us_field['about_us_description'] . "</p>";
-            echo "<p class='about-cfs-extra-description'>" . $about_us_field['about_us_extra_description'] . "</p>";
-			}
+				echo "<h3 class='about-cfs-years'>" . $about_us_field['about_us_years'] . "</h3>";
+				echo "<p class='about-cfs-description'>" . $about_us_field['about_us_description'] . "</p>";
+				echo "<p class='about-cfs-extra-description'>" . $about_us_field['about_us_extra_description'] . "</p>";
+				}
 			?>
-    </div>
+			
+		</div>
 
-	<?php endwhile; // End of the loop. ?>
+	</div>
+
+		<h2 class="more-info">Need More Information?</h2>
+
+		<a href="<?php echo get_permalink( get_page_by_path( 'contact-us' ) ) ?>">
+			<button class="mixin-button">Contact Us</button>
+		</a>
 
 </section><!-- .about-us -->
 
