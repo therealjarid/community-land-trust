@@ -46,10 +46,7 @@ get_header(); ?>
 			echo '<p>' . CFS()->get( 'sign_up_copy' ) . '</p>';
 			?>
 
-            <div class="find-form">
-            </div>
-
-            <button class="cta-button">Next</button>
+			<?php gravity_form( 2, false, false, false, null, false, null , true );?>
 
         </div>
 
