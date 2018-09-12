@@ -330,13 +330,13 @@
       font-size: 18px;
       .contraction {
         display: none;
-        @include tablet-size() {
+        @include tablet-size {
           display: inline;
         }
       }
     }
     button {
-      @include main-cta();
+      @include main-cta;
     }
   }
 }
