@@ -134,6 +134,8 @@ jQuery(document).ready(function($) {
   }
 
   function calculateZoom(bounds) {
+    // see https://stackoverflow.com/questions/6048975/google-maps-v3-how-to-calculate-the-zoom-level-for-a-given-bounds
+    // for more information
     const GLOBE_WIDTH = 256;
     let angle = bounds.maxLng - bounds.minLng;
     let angle2 = bounds.maxLat - bounds.minLat;
