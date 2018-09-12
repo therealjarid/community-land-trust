@@ -10,8 +10,15 @@
 </div><!-- #content -->
 <footer id="colophon" class="site-footer" role="contentinfo">
     <div class="main-footer">
-		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( "footer" ) ) : ?>
-		<?php endif; ?>
+    <div class="contact-info">
+        <p class="contact-number">
+        <i class="fas fa-phone fa-rotate-180"></i>
+	    <?php echo CFS()->get( 'contact_number' ); ?>
+        </p>
+        <p class="email-address">
+        <i class="fas fa-envelope"></i>
+		<?php echo CFS()->get( 'email' ); ?>
+        </p>
     </div>
     <div class="sub-footer">
         <div class="copyright">
