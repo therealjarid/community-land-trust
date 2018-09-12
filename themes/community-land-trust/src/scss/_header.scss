@@ -15,6 +15,7 @@
   background: white;
   @include desktop-size {
     height: 105px;
+    justify-content: space-around;
   }
   .site-branding {
     .header-logo {

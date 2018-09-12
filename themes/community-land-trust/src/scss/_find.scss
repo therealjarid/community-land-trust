@@ -35,10 +35,10 @@
     max-width: 1000px;
     width: 100%;
     @include large-desktop-size {
-      max-width: 1200px;
+      max-width: 1250px;
     }
     @include extra-large-desktop-size {
-      max-width: 1500px;
+      max-width: 1600px;
     }
     .error-message {
       color: red;
@@ -175,10 +175,10 @@
     font-family: $font__accent;
     position: relative;
     @include large-desktop-size {
-      max-width: 1200px;
+      max-width: 1260px;
     }
     @include extra-large-desktop-size {
-      max-width: 1500px;
+      max-width: 1600px;
     }
     h2 {
       margin: 20px 0 5px;
@@ -198,9 +198,13 @@
       }
     }
     #gf_2 {
-      position: relative;
-      top: -325px;
+      position: absolute;
+      top: -100px;
+      @include desktop-size {
+        top: -110px;
+      }
     }
+
     .gform_wrapper {
       margin: 0;
       width: 320px;
@@ -302,12 +306,21 @@
       }
     }
     .gform_confirmation_wrapper {
-      // @TODO: style confirmation
-      // text-align: center;
-      // position: absolute;
-      // top: 0;
-      // background: #e0f1f7;
-      // width: 100%;
+      width: 300px;
+      text-align: center;
+      padding: 20px 0 25px;
+      margin: 10px 25px 30px;
+      font-size: 14px;
+      border-top: 1px $footer_darker_color solid;
+      border-bottom: 1px $footer_darker_color solid;
+      @include tablet-size {
+        width: 450px;
+        font-size: 16px;
+      }
+      @include desktop-size {
+        font-size: 18px;
+        width: 600px;
+      }
     }
   }
   .more-info {
