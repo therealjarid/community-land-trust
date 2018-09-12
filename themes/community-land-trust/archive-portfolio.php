@@ -16,9 +16,9 @@
 
 		<button>All</button>
 		<?php foreach ($terms as $term) {
-			echo '<button>' . $term->name . '</button>';
+			echo '<button id="' . $term->term_id . '" >' . $term->name . '</button>';
 		} ?>
-		
+
 	</div>
 
 	<div class="portfolio-grid-container">
