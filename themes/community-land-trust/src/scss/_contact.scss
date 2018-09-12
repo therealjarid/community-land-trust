@@ -159,9 +159,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 50%;
+      width: 68%;
       margin: 0 auto;
       padding: 2rem 0;
+    }
+    @include large-desktop-size {
+      width: 50%;
+    }
+    @include extra-large-desktop-size {
+      width: 38%;
     }
     .featured-person-photo {
       border-bottom: 4px solid #4da7cd;
