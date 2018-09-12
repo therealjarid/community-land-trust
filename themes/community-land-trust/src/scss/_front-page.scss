@@ -211,6 +211,10 @@
         align-items: center;
         width: 50%;
         position: relative;
+
+        &:last-of-type {
+          width: 100%;
+        }
       
         @include desktop-size {
 
@@ -223,6 +227,7 @@
           width: 150px;
           height: 50px;
           background-color: $timeline_bg;
+          padding-top: 15px;
 
           @include desktop-size {
           }
@@ -249,6 +254,8 @@
           color: $timeline_bg_numbers;
           font-family: $font__accent;
           font-weight: 500;
+          margin: 0;
+          padding-top: 10px;
 
           @include desktop-size {
           }
@@ -266,7 +273,9 @@
           font-family: $font__main;
           line-height: 1.2;
           font-size: 14px;
-          width: 100px;
+          width: 150px;
+          margin: 5px 0 15px 0;
+      
 
           @include desktop-size {
 
@@ -277,72 +286,17 @@
       }
 
         .timeline-growth-numbers {
-          @include desktop-size {
-            font-size: 30px;
-            font-weight: bold;
-            font-family: $font__main;
-
-          }
-
-
-        .timeline-growth-numbers:first-of-type {
-          left: 90px;
           position: absolute;
-          bottom: -230px;  
-          
+          top: 200px;
+          color: #ffffff;
+          font-family: $font__accent;
+          font-size: 20px;
+          font-weight: 500;
           @include desktop-size {
-            left: 240px;
-            bottom: -580px;  
-            
+  
+
           }
-        }
 
-        .timeline-growth-numbers:nth-of-type(2) {
-          left: 270px;
-          position: absolute;
-          bottom: -230px;      
-          
-          @include desktop-size {
-            left: 470px;
-            bottom: -490px; 
-            
-          }
-        }
-
-        .timeline-growth-numbers:nth-of-type(3) {
-          left: 90px;
-          position: absolute;
-          bottom: -590px;    
-          @include desktop-size {
-            left: 700px;
-            bottom: -580px;  
-            
-          }
-        }
-
-        .timeline-growth-numbers:nth-of-type(4) {
-          left: 260px;
-          position: absolute;
-          bottom: -590px;    
-
-          @include desktop-size {
-            left: 930px;
-            bottom: -490px;  
-            
-          }
-        }
-
-        .timeline-growth-numbers:nth-of-type(5) {
-          left: 170px;
-          position: absolute;
-          bottom: -970px; 
-
-          @include desktop-size {
-            left: 1150px;
-            bottom: -580px;  
-            
-          }
-        }
       }
 
 
@@ -381,31 +335,18 @@
       justify-content: center;
       margin-left: 70px;
     }
-
     img {
-      width: 100px;
-      height: 100px;
+      height: auto;
+      width: auto;
 
       @include desktop-size {
-        width: 200px;
-        height: 200px;
-        margin-right: 50px;
-
-      }
-    }
-    img:nth-of-type(2){
-      height: 50px;
-      width: 130px;
-
-      @include desktop-size {
-        width: 300px;
         height: 100px;
-        margin-left: 100px;
+        width:200px;
 
       }
     }
-    
-    }
+
+  }
       .more-info {
         text-align: center;
         font-family: $font__accent;
@@ -422,17 +363,7 @@
     
       .mixin-button {
         @include main-cta;
-        // margin: 0 auto;
-        // display: block;
-        // font-weight: 500;
-        // letter-spacing: 1px;
-
-        // @include desktop-size {
-        //   height: 50px;
-        //   width: 230px;
-        //   font-size: 18px;
-
-        // }
+        margin: 0 auto;
         
       }
 
