@@ -13,11 +13,20 @@
       border: 2px $color_button solid;
       padding: 10px 0;
       margin-top: 5px;
+      margin-bottom: 5px; //temp
       @include button-hover;
       &:focus {
         outline: 0;
       }
+      &.selected {
+        background-color: $color_button;
+        color: black;
+        box-shadow: none;
+      }
     }
+  }
+  .error-message {
+    @include error-message;
   }
   .portfolio-grid-container {
     width: 100%;

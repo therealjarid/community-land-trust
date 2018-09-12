@@ -126,7 +126,15 @@ function clt_scripts() {
 
 	// adding Portfolio page functionality 
 	if ( is_page( 'portfolio' )) {
-		wp_enqueue_script('portfolio-page', get_template_directory_uri() . '/build/js/portfolio-page.min.js', array( 'jquery' ), null, false);
+		wp_enqueue_script('portfolio-page', get_template_directory_uri() . '/build/js/portfolio-page.min.js', array( 'jquery', 'polyfill-cdn' ), null, false);
+
+		wp_enqueue_script( 'polyfill-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.0.0/polyfill.min.js', array(), null, true );
+
+		wp_localize_script( 'portfolio-page', 'apiVars', array(
+			'restUrl' => esc_url_raw( rest_url() ),
+			'nonce'   => wp_create_nonce( 'wp_rest' ),
+			'failure' => "There was a problem getting your properties, please refresh and try again."
+			) );
 	}
 	
 	// adding Google Map script via CDN

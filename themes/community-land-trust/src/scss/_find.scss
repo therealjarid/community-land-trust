@@ -41,14 +41,7 @@
       max-width: 1600px;
     }
     .error-message {
-      color: red;
-      text-align: center;
-      font-size: 0.8rem;
-      display: none;
-      padding-top: 20px;
-      &.ajax-error {
-        display: block;
-      }
+      @include error-message;
     }
     #map-canvas {
       width: 100%;

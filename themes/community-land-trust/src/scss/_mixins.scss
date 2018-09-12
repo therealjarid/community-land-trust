@@ -116,7 +116,6 @@
 }
 
 @mixin texture-background {
-
   @include desktop-size {
     background-image: url(../../assets/images/logo-banner.svg);
     background-size: contain;
@@ -127,13 +126,10 @@
 
   @include large-desktop-size {
     height: 420px;
-    
-    
   }
 
   @include extra-large-desktop-size {
     height: 580px;
-
   }
 }
 
@@ -141,5 +137,16 @@
   &:hover {
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     color: $color__link-hover;
+  }
+}
+
+@mixin error-message {
+  color: red;
+  text-align: center;
+  font-size: 0.8rem;
+  display: none;
+  padding-top: 20px;
+  &.ajax-error {
+    display: block;
   }
 }
