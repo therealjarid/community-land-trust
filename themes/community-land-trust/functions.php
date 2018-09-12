@@ -141,6 +141,8 @@ function clt_scripts() {
 
 		add_filter("gform_pre_render_2", "populate_radio_8");
 
+		add_filter("gform_pre_render_2", "populate_radio_7");
+
 	}
 		
 	// adding counter-up scripts
@@ -216,6 +218,31 @@ function populate_radio_8( $form ) {
 		$i = 0;
 
 		if( $field[ 'id' ] == 8 ){
+			$field[ 'choices' ] = $radio_buttons;
+		}
+	}
+		
+	return $form;
+}
+
+function populate_radio_7( $form ) {
+
+	$terms = get_terms( array(
+		'taxonomy' => 'Portfolio Size',
+		'orderby'  => 'id'
+	) );
+
+	$radio_buttons = [];
+
+	foreach ( $terms as $term ) {
+		array_push( $radio_buttons, [ "text" => $term->name, "value" => $term->name ]);
+	}
+
+	foreach ( $form[ 'fields' ] as &$field ) {
+
+		$i = 0;
+
+		if( $field[ 'id' ] == 7 ){
 			$field[ 'choices' ] = $radio_buttons;
 		}
 	}
