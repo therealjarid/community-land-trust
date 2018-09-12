@@ -15,11 +15,14 @@
 	<div class="button-container">
 
 		<button>All</button>
+
 		<?php foreach ($terms as $term) {
 			echo '<button id="' . $term->term_id . '" >' . $term->name . '</button>';
 		} ?>
 
 	</div>
+
+	<p class="error-message">Please refresh the page and try again.</p>
 
 	<div class="portfolio-grid-container">
 
