@@ -57,6 +57,18 @@
           padding-left: 0.5rem;
         }
       }
+      .fa-phone {
+        font-size: 0.8rem;
+        @include tablet-size {
+          font-size: 1.3rem;
+        }
+      }
+      .fa-envelope {
+        font-size: 0.8rem;
+        @include tablet-size {
+          font-size: 1.3rem;
+        }
+      }
     }
     .social-media {
       grid-area: social;
@@ -152,6 +164,7 @@
         }
       }
       .fa-map-marker-alt {
+        font-size: 0.8rem;
         @include tablet-size {
           display: none;
         }
