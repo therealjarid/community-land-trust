@@ -110,15 +110,20 @@ get_header(); ?>
                 <p>Over 2,800 homes and growing </p>
             </div>
 
-
             <!-- foreach loop over the achievement numbers entered on the wp backend through CFS -->
             <div class="timeline-growth">
 				<?php $timeline_fields = CFS()->get( 'item' ); ?>
                     
-                
-				<?php foreach ( $timeline_fields as $timeline_field ) {
-					echo "<span class='timeline-growth-numbers counter'>" . $timeline_field['achievements_numbers'] . "</span>";
-				}
+				<?php foreach ( $timeline_fields as $timeline_field ) : ?>
+                    <div class="timeline-block">
+                        <h2><?php echo $timeline_field['achievement_title']; ?></h2>
+                    <?php
+                        // echo $timeline_field['achievement_title'];
+                        echo "<span class='timeline-growth-numbers counter'>" . $timeline_field['achievements_numbers'] . "</span>"; ?>
+                        
+                    </div>
+                <?php
+                endforeach;
                 ?>
                 </div>
 

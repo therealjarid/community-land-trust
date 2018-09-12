@@ -86,3 +86,33 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+.blog {
+
+	.media-page-headings {
+		@include page-title;
+
+	}
+
+	.carousel-cell {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.media-inquiries {
+		height: 300px;
+		width: 600px;
+		background: $timeline_bg;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+
+
+
+
+
+}

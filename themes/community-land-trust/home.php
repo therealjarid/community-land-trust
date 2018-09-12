@@ -8,78 +8,93 @@
 
 get_header(); ?>
 
-
 <main id="main" class="site-main" role="main">
 
     <header class="page-header">
 
-				<?php the_post_thumbnail(); ?>
+				<img src="<?php echo get_the_post_thumbnail_url(34); ?>"/>
 
-    </header><!-- .page-header -->
-
+		</header><!-- .page-header -->
+	
 								<!-- checking all the categories and their array positions
 										<?php
 										$categories = get_categories();
 										var_dump( $categories );
 								?>-->
 
-    <!-- "Press Releases" category title, and Loop through posts only from this category -->
-		<?php
-			$categories = get_categories();
-			if ( ! empty( $categories ) ) {
-				echo esc_html( $categories[1]->name );
-			}
-		?>
+		<!-- "Press Releases" category title, and Loop through posts only from this category -->	
+		<h1 class="media-page-headings">
+				<?php
+					$categories = get_categories();
+					if ( ! empty( $categories ) ) {
+						echo esc_html( $categories[1]->name );
+					}
+				?>
+		</h1>
 
-		<?php query_posts( 'cat=2' ); ?>
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php 
+		// Never use query_posts( 'cat=2' ); 
+		$press_args = array( 'cat' => '2' );
+		$press_posts = get_posts( $press_args );?> 
+		
+		<div class="main-carousel">
+			<?php foreach ( $press_posts as $post ) : setup_postdata( $post );?> 
+			
+				<div class="carousel-cell">
+						<?php 
+							$press_id = $post->ID;
+							echo get_the_post_thumbnail($press_id);
+						?>
 
-			<?php if ( has_post_thumbnail() ) : ?>
-				<?php the_post_thumbnail( 'large' ); ?>
-			<?php endif; ?>
+						<?php echo clt_posted_on();?>
+						<a href="<?php echo get_permalink() ?>">
+							<?php 	echo $post->post_title; ?>
+						</a>
+				</div>
+			<?php endforeach; wp_reset_postdata();?>
+		</div> 
+			
+
+	<!-- "CLT in the News" category title, and Loop through posts only from this category -->
+	<h1 class="media-page-headings">
+			<?php
+				$categories = get_categories();
+				if ( ! empty( $categories ) ) {
+					echo esc_html( $categories[0]->name );
+				}
+			?>
+	</h1>
+
+	<?php 
+		$press_args = array( 'cat' => '1' );
+		$press_posts = get_posts( $press_args );?>
+		
+		<div class="main-carousel">
+		<?php foreach ( $press_posts as $post ) : setup_postdata( $post );?> 
+		
+			<div class="carousel-cell">
+					<?php 
+						$press_id = $post->ID;
+						echo get_the_post_thumbnail($press_id);
+					?>
+
+					<?php echo clt_posted_on();?>
+					<a href="<?php echo get_permalink() ?>">
+						<?php 	echo $post->post_title; ?>
+					</a>
+			</div>
+		<?php endforeach; wp_reset_postdata();?>
+	</div> 
 
 
-			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-			<?php if ( 'post' === get_post_type() ) : ?>
-					<div class="entry-meta">
-				<?php clt_posted_on(); ?>
-					</div><!-- .entry-meta -->
-			<?php endif; ?>
-
-		<?php endwhile; endif; ?>
-
-  <!-- "CLT in the News" category title, and Loop through posts only from this category -->
-		<?php
-			$categories = get_categories();
-			if ( ! empty( $categories ) ) {
-				echo esc_html( $categories[0]->name );
-			}
-		?>
-
-		<?php query_posts( 'cat=1' ); ?>
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-			<?php if ( has_post_thumbnail() ) : ?>
-				<?php the_post_thumbnail( 'large' ); ?>
-			<?php endif; ?>
-
-
-			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-			<?php if ( 'post' === get_post_type() ) : ?>
-					<div class="entry-meta">
-				<?php clt_posted_on(); ?>
-					</div><!-- .entry-meta -->
-			<?php endif; ?>
-
-		<?php endwhile; endif; ?>
-
+	<div class="media-inquiries">
 		<span>
 			For Media Inquiries regarding
 			Community Land Trust, Please Contact:
 		</span>
 		<span><?php echo CFS()->get( 'email', 36 ); ?></span>
+</div>
 
 
 </main><!-- #main -->

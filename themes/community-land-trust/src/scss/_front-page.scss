@@ -91,6 +91,12 @@
       text-align: center;
       top: 45%;
       left: 15%;
+
+      @include tablet-size {
+        top: 60%;
+        left: 25%;
+
+      }
       
 
       @include desktop-size {
@@ -127,22 +133,31 @@
 
     .mixin-button {
       @include main-cta;
-      // height: 40px;
-      // width: 130px;
-      // position: absolute;
-      // top: 73%;
-      // left: 33%;
+      position: absolute;
+      top: 140px;
+      left: 130px;
 
-      // @include desktop-size {
-      //   height: 50px;
-      //   width: 230px;
-      //   top: 37%;
-      //   left: 12%;
+      @include tablet-size {
+        top: 260px;
+        left: 230px;
 
-      // }
+      }
+
+      @include desktop-size {
+        top: 160px;
+        left: 170px;
+
+      }
+
+      @include extra-large-desktop-size {
+        top: 190px;
+        left: 170px;
+
+      }
     }
-
   }
+
+  
 
   .home-page {
     width: 90vw;
