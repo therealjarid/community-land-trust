@@ -5,7 +5,6 @@
   a {
     text-decoration: none;
     color: $color__background-body;
-    padding-left: 0.2rem;
     font-size: 0.8rem;
   }
   p {
@@ -16,34 +15,150 @@
     margin: 0;
   }
   .main-footer {
-    display: grid; 
+    display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr; 
-    grid-template-areas: 
-    'a c'
-    'b c';
-    background-color: $footer_darker_color;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'contact address'
+      'social address';
+    background-color: $footer_lighter_color;
+    padding: 1rem;
+    @include tablet-size {
+      grid-template-columns: 33.333% 33.333% 33.333%;
+      grid-template-rows: none;
+      grid-template-areas: 'contact address social';
+    }
     .contact-info {
-      grid-area: a;
+      grid-area: contact;
       color: $color__background-body;
+      @include desktop-size {
+        padding-left: 4rem;
+        padding-top: 1rem;
+        margin: 0.5rem 0;
+      }
+      @include large-desktop-size {
+        padding-left: 6rem;
+        padding-top: 2rem;
+      }
+      @include extra-large-desktop-size {
+        padding-left: 8rem;
+        padding-top: 2rem;
+      }
+      p {
+        margin: 0;
+        text-align: center;
+        line-height: 1rem;
+        @include tablet-size {
+          text-align: left;
+          margin: 1rem 0;
+        }
+        .text {
+          padding-left: 0.5rem;
+        }
+      }
     }
     .social-media {
-      grid-area: b;
-      color: $color__background-body;
+      grid-area: social;
+      color: $footer_darker_color;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 0.5rem;
+      @include tablet-size {
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 5rem;
+        padding-top: 2rem;
+      }
+      @include desktop-size {
+        width: 80%;
+        padding-left: 8rem;
+        padding-top: 4rem;
+      }
+      @include large-desktop-size {
+        width: 80%;
+        padding-left: 12rem;
+      }
+      @include extra-large-desktop-size {
+        width: 70%;
+        padding-left: 16rem;
+      }
+      i {
+        height: 2rem;
+        width: 2rem;
+        padding: 0.4rem;
+        text-align: center;
+        border: 1px solid $color__background-body;
+        border-radius: 50%;
+        background-color: $color__background-body;
+      }
     }
     .address {
-      grid-area: c;
+      grid-area: address;
+      @include tablet-size {
+        display: flex;
+      }
       p {
         color: $color__background-body;
+        margin: 0;
+        max-width: 85%;
+        padding-left: 2rem;
+        @include tablet-size {
+          max-width: 45%;
+          padding-left: 1rem;
+          line-height: 1rem;
+          padding-top: 0.5rem;
+        }
+        @include desktop-size {
+          max-width: 27%;
+          padding-top: 2rem;
+        }
+        @include large-desktop-size {
+          max-width: 25%;
+          padding-top: 3.5rem;
+        }
+        @include extra-large-desktop-size {
+          max-width: 17%;
+          padding-top: 4.5rem;
+        }
+        .text {
+          padding-left: 0.5rem;
+          text-indent: -2rem;
+          @include tablet-size {
+            padding-left: 0;
+          }
+        }
       }
       .footer-image {
-        display: none; 
+        display: none;
+        @include tablet-size {
+          display: block;
+          max-width: 175px;
+          max-height: 125px;
+        }
+        @include desktop-size {
+          max-width: 250px;
+          max-height: 175px;
+        }
+        @include large-desktop-size {
+          max-width: 275px;
+          max-height: 150px;
+        }
+        @include extra-large-desktop-size {
+          max-width: 325px;
+          max-height: 175px;
+        }
+      }
+      .fa-map-marker-alt {
+        @include tablet-size {
+          display: none;
+        }
       }
     }
   }
   .sub-footer {
     display: none;
-    @include desktop-size {
+    @include tablet-size {
       display: block;
       background-color: $footer_darker_color;
       height: 2.9rem;

@@ -139,9 +139,7 @@ function clt_scripts() {
 			'failure' => "There was a problem getting your locations, please refresh and try again."
 			) );
 
-		add_filter("gform_pre_render_2", "populate_radio_8");
-
-		add_filter("gform_pre_render_2", "populate_radio_7");
+		add_filter("gform_pre_render_2", "populate_radio");
 
 	}
 		
@@ -197,53 +195,40 @@ function slug_get_zipcode( $object, $field_name, $request ) {
 }
 
 /**
- * Dynamically populate "Find a Home" buttons for "What area do you want to live?"
+ * Dynamically populate "Find a Home" buttons for "What area do you want to live?" and "What type of home?"
  */
 
-function populate_radio_8( $form ) {
+function populate_radio( $form ) {
 
-	$terms = get_terms( array(
+	$location_terms = get_terms( array(
 		'taxonomy' => 'Portfolio Location',
 		'orderby'  => 'id'
 	) );
 
-	$radio_buttons = [];
-
-	foreach ( $terms as $term ) {
-		array_push( $radio_buttons, [ "text" => $term->name, "value" => $term->name ]);
-	}
-
-	foreach ( $form[ 'fields' ] as &$field ) {
-
-		$i = 0;
-
-		if( $field[ 'id' ] == 8 ){
-			$field[ 'choices' ] = $radio_buttons;
-		}
-	}
-		
-	return $form;
-}
-
-function populate_radio_7( $form ) {
-
-	$terms = get_terms( array(
+	$size_terms = get_terms( array(
 		'taxonomy' => 'Portfolio Size',
 		'orderby'  => 'id'
 	) );
+	
+	$location_radio_buttons = [];
+	$size_radio_buttons = [];
 
-	$radio_buttons = [];
+	foreach ( $location_terms as $location_term ) {
+		array_push( $location_radio_buttons, [ "text" => $location_term->name, "value" => $location_term->name ]);
+	}
 
-	foreach ( $terms as $term ) {
-		array_push( $radio_buttons, [ "text" => $term->name, "value" => $term->name ]);
+	foreach ( $size_terms as $size_term ) {
+		array_push( $size_radio_buttons, [ "text" => $size_term->name, "value" => $size_term->name ]);
 	}
 
 	foreach ( $form[ 'fields' ] as &$field ) {
 
-		$i = 0;
+		if( $field[ 'id' ] == 8 ){
+			$field[ 'choices' ] = $location_radio_buttons;
+		}
 
 		if( $field[ 'id' ] == 7 ){
-			$field[ 'choices' ] = $radio_buttons;
+			$field[ 'choices' ] = $size_radio_buttons;
 		}
 	}
 		
