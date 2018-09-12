@@ -15,9 +15,15 @@
   .upper-content {
     @include desktop-size {
       display: flex;
-      width: 65%;
-      margin: 0 15.3rem;
+      width: 70%;
+      margin: 0 10rem;
       padding-bottom: 5rem;
+    }
+    @include large-desktop-size {
+      margin: 0 13rem;
+    }
+    @include extra-large-desktop-size {
+      margin: 0 17.5rem;
     }
     .contact-info {
       display: flex;
@@ -25,16 +31,25 @@
       justify-content: center;
       text-align: left;
       margin: 0 auto;
-      width: 65%;
+      max-width: 65%;
       font-family: Raleway, serif;
       font-weight: 500;
       padding-bottom: 1rem;
+      @include tablet-size {
+        max-width: 33%;
+      }
       @include desktop-size {
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: left;
-        width: 27%;
+        width: 35%;
+      }
+      @include large-desktop-size {
+        width: 25%;
+      }
+      @include extra-large-desktop-size {
+        width: 20%;
       }
       i {
         display: inline;
@@ -64,9 +79,10 @@
       border-top: 4px solid #4da7cd;
       @include desktop-size {
         border-top: none;
-        width: 50%;
+        max-width: 50%;
         padding-left: 3rem;
-        border-left: 6px solid #4da7cd;
+        padding-top: 1rem;
+        border-left: 4px solid #4da7cd;
       }
     }
   }
@@ -98,8 +114,14 @@
       @include desktop-size {
         font-weight: 450;
         display: flex;
-        padding-left: 18rem;
+        padding-left: 13.3rem;
         letter-spacing: 0;
+      }
+      @include large-desktop-size {
+        padding-left: 18rem;
+      }
+      @include extra-large-desktop-size {
+        padding-left: 24.3rem;
       }
     }
     .gform_wrapper {
@@ -144,7 +166,7 @@
       border-bottom: 4px solid #4da7cd;
       @include desktop-size {
         border-bottom: none;
-        border-right: 6px solid #4da7cd;
+        border-right: 4px solid #4da7cd;
         margin-right: 4rem;
         padding-top: 2rem;
       }
