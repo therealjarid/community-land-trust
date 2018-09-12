@@ -138,7 +138,10 @@ function clt_scripts() {
 			'nonce'   => wp_create_nonce( 'wp_rest' ),
 			'failure' => "There was a problem getting your locations, please refresh and try again."
 			) );
-		}
+
+		add_filter("gform_pre_render_2", "populate_radio_8");
+
+	}
 		
 	// adding counter-up scripts
 	if ( is_front_page() ) {
@@ -164,7 +167,7 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * The following makes CFS data available to the REST API
  */
-add_action( 'rest_api_init', 'slug_register_zipcode' );
+
 function slug_register_zipcode() {
     register_rest_field( 'portfolio',
         'portfolio_zip',
@@ -175,6 +178,8 @@ function slug_register_zipcode() {
         )
     );
 }
+
+add_action( 'rest_api_init', 'slug_register_zipcode' );
 
 /**
  * Get the value of the "portfolio_zip" field
@@ -217,5 +222,3 @@ function populate_radio_8( $form ) {
 		
 	return $form;
 }
-
-add_filter("gform_pre_render_2", "populate_radio_8");
