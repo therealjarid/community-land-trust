@@ -58,7 +58,7 @@ get_header(); ?>
 
         <section class="timeline-section-wrapper">
 
-            <div class="timeline-block">
+            <!-- <div class="timeline-block">
 
                 <div class="year one">
                     <span>1993 - 2000</span>
@@ -108,28 +108,40 @@ get_header(); ?>
                 <img class="lower" src="<?php echo get_template_directory_uri() ?>/assets/images/timeline/future.svg">
                 <h3 class="lower-heading">The Future</h3>
                 <p>Over 2,800 homes and growing </p>
-            </div>
+            </div> --> 
 
             <!-- foreach loop over the achievement numbers entered on the wp backend through CFS -->
-            <div class="timeline-growth">
-				<?php $timeline_fields = CFS()->get( 'item' ); ?>
+           
+				<?php $timeline_fields = CFS()->get( 'achievements_loop' ); ?>
                     
 				<?php foreach ( $timeline_fields as $timeline_field ) : ?>
                     <div class="timeline-block">
-                        <h2><?php echo $timeline_field['achievement_title']; ?></h2>
-                    <?php
-                        // echo $timeline_field['achievement_title'];
-                        echo "<span class='timeline-growth-numbers counter'>" . $timeline_field['achievements_numbers'] . "</span>"; ?>
-                        
+                    
+
+                        <div class="year">
+                            <span><?php echo $timeline_field['achievements_year']; ?></span>
+                        </div>
+
+                    <div class="timeline-line"></div>
+                        <img class="lower" src="<?php echo $timeline_field['achievements_icon']; ?>">
+
+                        <span class="timeline-growth-numbers">
+                            <?php echo $timeline_field['achievements_numbers']; ?>
+                        </span>
+
+                        <h3><?php echo $timeline_field['achievements_title']; ?></h3>
+
+                        <p class="timeline-description">
+                            <?php echo $timeline_field['achievements_description']; ?>
+                        </p>
+
                     </div>
                 <?php
                 endforeach;
                 ?>
-                </div>
+        
 
-         
-
-        </section> <!-- end of timeline section -->
+                </section>
 
         <h2 class="front-page-headings">Our Work</h2>
 
