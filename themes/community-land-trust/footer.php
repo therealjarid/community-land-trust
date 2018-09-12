@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying the footer.
- *
+ * Template Name: Footer
  * @package CLT_Theme
  */
 
