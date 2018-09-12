@@ -30,6 +30,12 @@
   }
 }
 
+@mixin extra-large-desktop-size {
+  @media screen and (min-width: $desktop-max-width) {
+    @content;
+  }
+}
+
 @mixin logged-in-tablet-size {
   @media screen and (min-width: 783px) {
     @content;
@@ -119,9 +125,14 @@
   }
 
   @include large-desktop-size {
-    height: 510px;
-    // background-position: center;
+    height: 420px;
     
+    
+  }
+
+  @include extra-large-desktop-size {
+    height: 580px;
+
   }
 }
 
