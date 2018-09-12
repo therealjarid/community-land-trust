@@ -24,6 +24,7 @@ get_header(); ?>
 					'taxonomy' => 'Portfolio Location',
 					'orderby'  => 'id'
 				) );
+
 				foreach ( $terms as $term ) {
 					$term_link = get_term_link( $term );
 					// If there was an error, continue to the next term.

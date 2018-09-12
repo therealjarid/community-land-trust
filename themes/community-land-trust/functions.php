@@ -188,3 +188,30 @@ function slug_register_zipcode() {
 function slug_get_zipcode( $object, $field_name, $request ) {
     return CFS()->get( $field_name, $object[ 'id' ] );
 }
+
+function populate_radio_8( $form ) {
+
+	$terms = get_terms( array(
+		'taxonomy' => 'Portfolio Location',
+		'orderby'  => 'id'
+	) );
+
+	$radio_buttons = [];
+
+	foreach ( $terms as $term ) {
+		array_push( $radio_buttons, [ "text" => $term->name, "value" => $term->name ]);
+	}
+
+	foreach ( $form[ 'fields' ] as &$field ) {
+
+		$i = 0;
+
+		if( $field[ 'id' ] == 8 ){
+			$field[ 'choices' ] = $radio_buttons;
+		}
+	}
+		
+	return $form;
+}
+
+add_filter("gform_pre_render_2", "populate_radio_8");
