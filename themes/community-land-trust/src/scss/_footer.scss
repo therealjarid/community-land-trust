@@ -6,6 +6,7 @@
     text-decoration: none;
     color: $color__background-body;
     font-size: 0.8rem;
+    height: 2rem;
   }
   p {
     color: $color__background-body;
@@ -86,7 +87,7 @@
       i {
         height: 2rem;
         width: 2rem;
-        padding: 0.4rem;
+        padding: 0.6rem;
         text-align: center;
         border: 1px solid $color__background-body;
         border-radius: 50%;
