@@ -5,7 +5,6 @@
   a {
     text-decoration: none;
     color: $color__background-body;
-    padding-left: 0.2rem;
     font-size: 0.8rem;
   }
   p {
@@ -16,19 +15,18 @@
     margin: 0;
   }
   .main-footer {
-    display: grid; 
+    display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto; 
-    grid-template-areas: 
-          "contact address"
-          "social address";
+    grid-template-rows: auto;
+    grid-template-areas:
+      'contact address'
+      'social address';
     background-color: $footer_lighter_color;
     padding: 1rem;
     @include tablet-size {
-      grid-template-columns: 33.333% 33.333% 33.333%; 
-      grid-template-rows: none; 
-      grid-template-areas: 
-          "contact address social"; 
+      grid-template-columns: 33.333% 33.333% 33.333%;
+      grid-template-rows: none;
+      grid-template-areas: 'contact address social';
     }
     .contact-info {
       grid-area: contact;
@@ -44,7 +42,7 @@
       }
       @include extra-large-desktop-size {
         padding-left: 8rem;
-        padding-top: 2rem; 
+        padding-top: 2rem;
       }
       p {
         margin: 0;
@@ -62,14 +60,14 @@
     .social-media {
       grid-area: social;
       color: $footer_darker_color;
-      display: flex; 
+      display: flex;
       flex-direction: row;
       justify-content: space-between;
       padding-left: 0.5rem;
       @include tablet-size {
         justify-content: space-between;
-        width: 90%;
-        padding-left: 4rem;
+        width: 100%;
+        padding-left: 5rem;
         padding-top: 2rem;
       }
       @include desktop-size {
@@ -91,7 +89,7 @@
         padding: 0.4rem;
         text-align: center;
         border: 1px solid $color__background-body;
-        border-radius: 50%; 
+        border-radius: 50%;
         background-color: $color__background-body;
       }
     }
@@ -106,14 +104,14 @@
         max-width: 85%;
         padding-left: 2rem;
         @include tablet-size {
-          max-width: 60%;
+          max-width: 45%;
           padding-left: 1rem;
           line-height: 1rem;
-          padding-top: 1rem;
+          padding-top: 0.5rem;
         }
         @include desktop-size {
-          max-width: 35%;
-          padding-top: 2.5rem;
+          max-width: 27%;
+          padding-top: 2rem;
         }
         @include large-desktop-size {
           max-width: 25%;
@@ -132,15 +130,15 @@
         }
       }
       .footer-image {
-        display: none; 
+        display: none;
         @include tablet-size {
           display: block;
-          max-width: 150px;
-          max-height: 100px;
+          max-width: 175px;
+          max-height: 125px;
         }
         @include desktop-size {
-          max-width: 200px;
-          max-height: 125px;
+          max-width: 250px;
+          max-height: 175px;
         }
         @include large-desktop-size {
           max-width: 275px;
@@ -148,10 +146,10 @@
         }
         @include extra-large-desktop-size {
           max-width: 325px;
-          max-height: 175px; 
+          max-height: 175px;
         }
       }
-      .fa-map-marker-alt{
+      .fa-map-marker-alt {
         @include tablet-size {
           display: none;
         }
