@@ -189,6 +189,10 @@ function slug_get_zipcode( $object, $field_name, $request ) {
     return CFS()->get( $field_name, $object[ 'id' ] );
 }
 
+/**
+ * Dynamically populate "Find a Home" buttons for "What area do you want to live?"
+ */
+
 function populate_radio_8( $form ) {
 
 	$terms = get_terms( array(
