@@ -1,43 +1,89 @@
 <?php
 /**
  * The template for displaying archive pages.
+ * Template Name: Media
  *
  * @package CLT_Theme
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+<main id="main" class="site-main" role="main">
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+    <header class="page-header">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+				<?php the_post_thumbnail(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+    </header><!-- .page-header -->
 
-			<?php endwhile; ?>
+								<!-- checking all the categories and their array positions
+										<?php
+										$categories = get_categories();
+										var_dump( $categories );
+								?>-->
 
-			<?php the_posts_navigation(); ?>
+    <!-- "Press Releases" category title, and Loop through posts only from this category -->
+		<?php
+			$categories = get_categories();
+			if ( ! empty( $categories ) ) {
+				echo esc_html( $categories[1]->name );
+			}
+		?>
 
-		<?php else : ?>
+		<?php query_posts( 'cat=2' ); ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			<?php if ( has_post_thumbnail() ) : ?>
+				<?php the_post_thumbnail( 'large' ); ?>
+			<?php endif; ?>
 
-		<?php endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
+			<?php if ( 'post' === get_post_type() ) : ?>
+					<div class="entry-meta">
+				<?php clt_posted_on(); ?>
+					</div><!-- .entry-meta -->
+			<?php endif; ?>
+
+		<?php endwhile; endif; ?>
+
+  <!-- "CLT in the News" category title, and Loop through posts only from this category -->
+		<?php
+			$categories = get_categories();
+			if ( ! empty( $categories ) ) {
+				echo esc_html( $categories[0]->name );
+			}
+		?>
+
+		<?php query_posts( 'cat=1' ); ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+			<?php if ( has_post_thumbnail() ) : ?>
+				<?php the_post_thumbnail( 'large' ); ?>
+			<?php endif; ?>
+
+
+			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
+			<?php if ( 'post' === get_post_type() ) : ?>
+					<div class="entry-meta">
+				<?php clt_posted_on(); ?>
+					</div><!-- .entry-meta -->
+			<?php endif; ?>
+
+		<?php endwhile; endif; ?>
+
+		<span>
+			For Media Inquiries regarding
+			Community Land Trust, Please Contact:
+		</span>
+		<span><?php echo CFS()->get( 'email', 36 ); ?></span>
+
+
+</main><!-- #main -->
+
 
 
 <?php get_footer(); ?>
