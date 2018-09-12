@@ -16,179 +16,30 @@
     margin: 0;
   }
   .main-footer {
-    font-size: 1rem;
-    display: grid;
+    display: grid; 
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      'email-contact address'
-      'social address';
-    background-color: $footer_lighter_color;
-    padding: 0.5rem;
-    @include desktop-size {
-      display: grid;
-      grid-template-columns: 33.33% 33.33% 33.33%;
-      grid-template-areas: 'email-contact address social';
-      grid-template-rows: none;
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas: 
+    'a c'
+    'b c';
+    background-color: $footer_darker_color;
+    .contact-info {
+      grid-area: a;
+      color: $color__background-body;
     }
-    .textwidget {
-      .wp-image-117 {
-        display: none;
-        @include desktop-size {
-          display: block;
-          padding-top: 0.5rem;
-          max-width: none;
-          width: 17rem;
-        }
-      }
+    .social-media {
+      grid-area: b;
+      color: $color__background-body;
+    }
+    .address {
+      grid-area: c;
       p {
-        margin: 0;
+        color: $color__background-body;
+      }
+      .footer-image {
+        display: none; 
       }
     }
-    #custom_html-3 {
-      grid-area: social;
-      height: 100%;
-      padding-left: 1rem;
-      @include desktop-size {
-        padding-top: 4.5rem;
-      }
-      p {
-        text-align: center;
-        width: 6.25rem;
-        display: flex;
-        flex-direction: row;
-        padding-left: 1rem;
-        font-size: 2.5rem;
-      }
-      .social-icons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .circle {
-          height: 32px;
-          width: 32px;
-          margin: 0.5rem;
-          padding: 0 1rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          background-color: white;
-          @include desktop-size {
-            height: 40px;
-            width: 40px;
-          }
-        }
-        .fa-twitter {
-          color: $footer_lighter_color;
-          padding-top: 0.1rem;
-          padding-right: 0.1rem;
-          @include desktop-size {
-            font-size: 1rem;
-          }
-        }
-        .fa-facebook-f {
-          color: $footer_lighter_color;
-          padding-right: 0.2rem;
-          @include desktop-size {
-            font-size: 1rem;
-          }
-        }
-        .fa-linkedin-in {
-          color: $footer_lighter_color;
-          padding-right: 0.1rem;
-          @include desktop-size {
-            font-size: 1rem;
-          }
-        }
-      }
-    }
-
-    #custom_html-2 {
-      grid-area: email-contact;
-    }
-    .contact-email {
-      width: 300px;
-      padding-top: 1.3rem;
-      padding-left: 2rem;
-      @include desktop-size {
-        padding-top: 3.7rem;
-        padding-left: 7rem;
-      }
-      p {
-        font-size: 1.1rem;
-        @include desktop-size {
-          margin: 1rem 0;
-          font-size: 12px;
-          font-weight: 200;
-        }
-      }
-      a {
-        @include desktop-size {
-          padding-left: 0.5rem;
-        }
-      }
-      .fa-phone {
-        font-size: 1rem;
-        @include desktop-size {
-          font-size: 1.3rem;
-        }
-      }
-      .fa-envelope {
-        font-size: 1rem;
-        @include desktop-size {
-          font-size: 1.3rem;
-        }
-      }
-    }
-
-    #text-3 {
-      grid-area: address;
-      .textwidget {
-        .fas {
-          padding-right: 0.2rem;
-        }
-        @include desktop-size {
-          display: flex;
-        }
-        p {
-          display: inline;
-          padding-left: 0.5rem;
-          font-size: 1.1rem;
-          @include desktop-size {
-            padding-top: 2rem;
-            font-size: 0.8rem;
-            width: 45%;
-          }
-        }
-        .address {
-          width: 80%;
-          margin-right: 0;
-          @include desktop-size {
-            font-size: 12px;
-            font-weight: 200;
-            display: flex;
-            color: $color__background-body;
-       
-          }
-        }
-        .fa-map-marker-alt {
-          font-size: 0.8rem;
-          @include desktop-size {
-            display: none;
-          }
-        }
-        .contact-number {
-          display: inline;
-        }
-        .social-icons {
-          p {
-            margin-top: 0;
-            margin-bottom: 0;
-          }
-        }
-      }
-    } 
   }
   .sub-footer {
     display: none;
