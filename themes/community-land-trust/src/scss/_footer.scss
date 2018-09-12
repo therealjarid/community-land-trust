@@ -6,6 +6,7 @@
     text-decoration: none;
     color: $color__background-body;
     font-size: 0.8rem;
+    height: 2rem;
   }
   p {
     color: $color__background-body;
@@ -56,6 +57,18 @@
           padding-left: 0.5rem;
         }
       }
+      .fa-phone {
+        font-size: 0.8rem;
+        @include tablet-size {
+          font-size: 1.3rem;
+        }
+      }
+      .fa-envelope {
+        font-size: 0.8rem;
+        @include tablet-size {
+          font-size: 1.3rem;
+        }
+      }
     }
     .social-media {
       grid-area: social;
@@ -86,11 +99,12 @@
       i {
         height: 2rem;
         width: 2rem;
-        padding: 0.4rem;
+        padding: 0.6rem;
         text-align: center;
         border: 1px solid $color__background-body;
         border-radius: 50%;
         background-color: $color__background-body;
+        color: $footer_lighter_color;
       }
     }
     .address {
@@ -150,6 +164,7 @@
         }
       }
       .fa-map-marker-alt {
+        font-size: 0.8rem;
         @include tablet-size {
           display: none;
         }

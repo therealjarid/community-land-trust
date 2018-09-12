@@ -1,3 +1,52 @@
 /*--------------------------------------------------------------
 # Portfolio Archive Page
 --------------------------------------------------------------*/
+
+.portfolio-page-container {
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    button {
+      background: white;
+      width: 32%;
+      border: 2px $color_button solid;
+      padding: 10px 0;
+      margin-top: 5px;
+      margin-bottom: 5px; //temp
+      @include button-hover;
+      &:focus {
+        outline: 0;
+      }
+      &.selected {
+        background-color: $color_button;
+        color: black;
+        box-shadow: none;
+      }
+    }
+  }
+  .error-message {
+    @include error-message;
+  }
+  .portfolio-grid-container {
+    width: 100%;
+    height: 100vh; //temp
+    background-color: $color_button; //temp
+  }
+  .more-info {
+    margin: 30px 0 30px 0;
+    h2 {
+      margin: 0;
+      font-size: 18px;
+      .contraction {
+        display: none;
+        @include tablet-size {
+          display: inline;
+        }
+      }
+    }
+    button {
+      @include main-cta;
+    }
+  }
+}

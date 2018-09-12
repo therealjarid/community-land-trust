@@ -21,9 +21,12 @@
         </p>
     </div>
     <div class="social-media">
-    <i class="fab fa-facebook-f"></i><?php echo CFS()->get( 'facebook', 36 );?>
-    <i class="fab fa-twitter"></i><?php echo CFS()->get( 'twitter', 36 );?>
-    <i class="fab fa-linkedin-in"></i><?php echo CFS()->get( 'linkedin', 36 );?>
+    <?php $fblink = CFS()->get( 'facebook', 36 ) ;?>
+    <?php $twlink = CFS()->get( 'twitter', 36 ) ;?>
+    <?php $lilink = CFS()->get( 'linkedin', 36 ) ;?>
+    <a href="<?php echo $fblink['url'];?>" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="<?php echo $twlink['url'];?>" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="<?php echo $lilink['url'];?>" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     </div>
 
     <div class="address">
