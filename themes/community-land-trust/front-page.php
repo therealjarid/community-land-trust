@@ -175,7 +175,7 @@ get_header(); ?>
 
         <h2 class="more-info">Need More Information?</h2>
 
-        <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>">
+        <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
             <button class="mixin-button">Contact Us</button>
         </a>
 

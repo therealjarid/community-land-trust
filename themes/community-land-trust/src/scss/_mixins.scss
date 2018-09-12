@@ -109,13 +109,19 @@
 }
 
 @mixin texture-background {
+
   @include desktop-size {
     background-image: url(../../assets/images/logo-banner.svg);
     background-size: contain;
     background-repeat: no-repeat;
-
     height: 380px;
     margin-bottom: 0;
+  }
+
+  @include large-desktop-size {
+    height: 510px;
+    // background-position: center;
+    
   }
 }
 
