@@ -3,16 +3,21 @@
 --------------------------------------------------------------*/
 .error404 {
   @include texture-background; 
+  text-align: center;
   .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 5rem auto;
     background-color: #E0F1F7;
+    padding: 1.5rem;
   }
   .page-title {
     text-align: center;
+    font-family: Raleway, serif;
+    font-weight: 500;
   }
   .page-content {
-    text-align: center;
+    text-align: left;
+    font-size: 0.8rem;
   }
   .mixin-button-404 {
     @include main-cta 
