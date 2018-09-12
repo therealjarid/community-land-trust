@@ -157,12 +157,17 @@ get_header(); ?>
 
 			$clt_partners_thumbnails = get_posts( $arguments ); ?>
 
-			<?php
-			foreach ( $clt_partners_thumbnails as $clt_partners_thumbnail ):
+		
+                <?php foreach ( $clt_partners_thumbnails as $clt_partners_thumbnail ):?>
 
-				echo( get_the_post_thumbnail( $clt_partners_thumbnail->ID ) );
+                 <a href="<?php echo get_permalink( get_page_by_path( 'partners' ) ) ?>">
 
-			endforeach;
+                
+                <?php echo( get_the_post_thumbnail( $clt_partners_thumbnail->ID ) );?>
+                
+                    </a>
+
+                <?php endforeach;
 			wp_reset_postdata();
 			?>
         </div>
