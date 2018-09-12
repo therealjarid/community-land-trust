@@ -33,6 +33,19 @@
     .contact-info {
       grid-area: contact;
       color: $color__background-body;
+      @include desktop-size {
+        padding-left: 4rem;
+        padding-top: 1rem;
+        margin: 0.5rem 0;
+      }
+      @include large-desktop-size {
+        padding-left: 6rem;
+        padding-top: 2rem;
+      }
+      @include extra-large-desktop-size {
+        padding-left: 8rem;
+        padding-top: 2rem; 
+      }
       p {
         margin: 0;
         text-align: center;
@@ -58,6 +71,19 @@
         width: 90%;
         padding-left: 4rem;
         padding-top: 2rem;
+      }
+      @include desktop-size {
+        width: 80%;
+        padding-left: 8rem;
+        padding-top: 4rem;
+      }
+      @include large-desktop-size {
+        width: 80%;
+        padding-left: 12rem;
+      }
+      @include extra-large-desktop-size {
+        width: 70%;
+        padding-left: 16rem;
       }
       i {
         height: 2rem;
@@ -85,6 +111,18 @@
           line-height: 1rem;
           padding-top: 1rem;
         }
+        @include desktop-size {
+          max-width: 35%;
+          padding-top: 2.5rem;
+        }
+        @include large-desktop-size {
+          max-width: 25%;
+          padding-top: 3.5rem;
+        }
+        @include extra-large-desktop-size {
+          max-width: 17%;
+          padding-top: 4.5rem;
+        }
         .text {
           padding-left: 0.5rem;
           text-indent: -2rem;
@@ -99,6 +137,18 @@
           display: block;
           max-width: 150px;
           max-height: 100px;
+        }
+        @include desktop-size {
+          max-width: 200px;
+          max-height: 125px;
+        }
+        @include large-desktop-size {
+          max-width: 275px;
+          max-height: 150px;
+        }
+        @include extra-large-desktop-size {
+          max-width: 325px;
+          max-height: 175px; 
         }
       }
       .fa-map-marker-alt{
