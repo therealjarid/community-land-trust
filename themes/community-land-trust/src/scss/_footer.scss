@@ -18,32 +18,99 @@
   .main-footer {
     display: grid; 
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr; 
+    grid-template-rows: auto; 
     grid-template-areas: 
-    'a c'
-    'b c';
-    background-color: $footer_darker_color;
+          "contact address"
+          "social address";
+    background-color: $footer_lighter_color;
+    padding: 1rem;
+    @include tablet-size {
+      grid-template-columns: 33.333% 33.333% 33.333%; 
+      grid-template-rows: none; 
+      grid-template-areas: 
+          "contact address social"; 
+    }
     .contact-info {
-      grid-area: a;
+      grid-area: contact;
       color: $color__background-body;
+      p {
+        margin: 0;
+        text-align: center;
+        line-height: 1rem;
+        @include tablet-size {
+          text-align: left;
+          margin: 1rem 0;
+        }
+        .text {
+          padding-left: 0.5rem;
+        }
+      }
     }
     .social-media {
-      grid-area: b;
-      color: $color__background-body;
+      grid-area: social;
+      color: $footer_darker_color;
+      display: flex; 
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 0.5rem;
+      @include tablet-size {
+        justify-content: space-between;
+        width: 90%;
+        padding-left: 4rem;
+        padding-top: 2rem;
+      }
+      i {
+        height: 2rem;
+        width: 2rem;
+        padding: 0.4rem;
+        text-align: center;
+        border: 1px solid $color__background-body;
+        border-radius: 50%; 
+        background-color: $color__background-body;
+      }
     }
     .address {
-      grid-area: c;
+      grid-area: address;
+      @include tablet-size {
+        display: flex;
+      }
       p {
         color: $color__background-body;
+        margin: 0;
+        max-width: 85%;
+        padding-left: 2rem;
+        @include tablet-size {
+          max-width: 60%;
+          padding-left: 1rem;
+          line-height: 1rem;
+          padding-top: 1rem;
+        }
+        .text {
+          padding-left: 0.5rem;
+          text-indent: -2rem;
+          @include tablet-size {
+            padding-left: 0;
+          }
+        }
       }
       .footer-image {
         display: none; 
+        @include tablet-size {
+          display: block;
+          max-width: 150px;
+          max-height: 100px;
+        }
+      }
+      .fa-map-marker-alt{
+        @include tablet-size {
+          display: none;
+        }
       }
     }
   }
   .sub-footer {
     display: none;
-    @include desktop-size {
+    @include tablet-size {
       display: block;
       background-color: $footer_darker_color;
       height: 2.9rem;

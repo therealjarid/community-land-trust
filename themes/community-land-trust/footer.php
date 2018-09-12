@@ -12,7 +12,7 @@
     <div class="main-footer">
     <div class="contact-info">
         <p class="contact-number">
-        <i class="fas fa-phone fa-rotate-180"></i>
+        <i class="fas fa-phone"></i>
 	    <?php echo CFS()->get( 'contact_number', 36 ); ?>
         </p>
         <p class="email-address">
@@ -21,19 +21,16 @@
         </p>
     </div>
     <div class="social-media">
-    <?php echo CFS()->get( 'facebook' );?>
-    <?php echo CFS()->get( 'twitter' );?>
-    <?php echo CFS()->get( 'linkedin' );?>
+    <i class="fab fa-facebook-f"></i><?php echo CFS()->get( 'facebook', 36 );?>
+    <i class="fab fa-twitter"></i><?php echo CFS()->get( 'twitter', 36 );?>
+    <i class="fab fa-linkedin-in"></i><?php echo CFS()->get( 'linkedin', 36 );?>
     </div>
 
     <div class="address">
-    <img class="footer-image" <?php echo CFS()->get( 'footer_map_image' );?>>
+    <img class="footer-image" src="<?php echo CFS()->get( 'footer_map_image' );?>">
     <p><i class="fas fa-map-marker-alt"></i><?php echo CFS()->get( 'location' );?></p>
-
     </div>
-
-
-
+    </div>
     <div class="sub-footer">
         <div class="copyright">
 			<?php $current_year = date( "Y" );
