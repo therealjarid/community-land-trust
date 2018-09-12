@@ -121,7 +121,12 @@ function clt_scripts() {
 		
 	// adding FAQ functionality 
 	if ( is_archive( 'faqs' ) | is_page( 'faqs' )) {
-		wp_enqueue_script('faq-page', get_template_directory_uri() . '/build/js/faq-page.min.js', array( 'jquery' ), null, true);
+		wp_enqueue_script('faq-page', get_template_directory_uri() . '/build/js/faq-page.min.js', array( 'jquery' ), null, false);
+	}
+
+	// adding Portfolio page functionality 
+	if ( is_page( 'portfolio' )) {
+		wp_enqueue_script('portfolio-page', get_template_directory_uri() . '/build/js/portfolio-page.min.js', array( 'jquery' ), null, false);
 	}
 	
 	// adding Google Map script via CDN
