@@ -53,7 +53,7 @@ get_header(); ?>
 
         <div class="more-info">
             <h2>Need More Info<span class="contraction">rmation</span>?</h2>
-            <a href="<?php echo get_permalink( get_page_by_title( 'Contact Us' ) ) ?>">
+            <a href="<?php echo get_permalink( get_page_by_title( 'Contact Us' ) ) . "#contact-container" ?>">
                 <button class="cta-button">Contact Us</button>
             </a>
         </div>
