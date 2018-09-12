@@ -135,13 +135,9 @@
           border: 0;
           background: none;
           line-height: 1;
+          @include button-hover;
           &:focus {
             outline: 0;
-          }
-          &:hover {
-            box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1),
-              0 5px 10px 0 rgba(0, 0, 0, 0.1);
-            color: $color__link-hover;
           }
           &.selected {
             background-color: $color_button;
@@ -153,7 +149,7 @@
     }
   }
   .find-form-container {
-    height: 265px;
+    // height: 315px;
     width: 100%;
     max-width: 1000px;
     background: #e0f1f7;
@@ -164,24 +160,93 @@
     padding: 0 18%;
     font-family: $font__accent;
     h2 {
-      margin: 20px 0 0 0;
+      margin: 20px 0 5px 0;
       font-size: 18px;
     }
     p {
       text-align: center;
-      margin: 0 0 10px 0;
+      margin: 0;
+      max-width: 300px;
     }
-    .find-form {
-      height: 100px;
-      width: 100%;
-      background: white;
-    }
-    button {
-      @include main-cta();
-      margin-bottom: 15px;
+    .gform_wrapper {
+      margin: 0;
+      width: 280px;
+      .gfield {
+        margin-top: 0;
+        width: 280px;
+      }
+      .gfield_label {
+        font-size: 14px;
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .ginput_container {
+        margin: 2px auto 25px;
+      }
+      .gform_button,
+      .gform_next_button,
+      .gform_previous_button {
+        @include main-cta;
+        margin: 0 auto;
+        display: block;
+      }
+      .gform_fields input {
+        height: 40px;
+      }
+      .gform_footer,
+      .gform_page_footer {
+        margin: 0 0 25px;
+        padding: 0;
+        border-top: 0;
+        text-align: center;
+        display: flex;
+      }
+      #input_2_1 {
+        height: 40px;
+      }
+      .gfield_radio {
+        margin: 0;
+        input[type='radio'] {
+          display: none;
+          &:checked + label {
+            background-color: $color_button;
+            box-shadow: none;
+          }
+        }
+        label {
+          display: inline-block;
+          background-color: white;
+          padding: 10px 20px;
+          font-size: 16px;
+          border: 1px $color_button solid;
+          width: 300px;
+          margin: 0;
+          @include button-hover;
+        }
+        li {
+          margin: 0;
+          text-align: center;
+        }
+      }
+      .validation_error {
+        display: none;
+      }
+      .validation_message {
+        padding: 0;
+        font-size: 12px;
+      }
+      .gfield_error {
+        padding: 15px 0;
+        border: 0;
+        margin-bottom: 25px;
+        .ginput_container {
+          margin: 5px 0 !important;
+        }
+      }
     }
     @include desktop-size {
-      height: 350px;
+      // height: 350px;
     }
   }
   .more-info {
@@ -198,7 +263,6 @@
     }
     button {
       @include main-cta();
-      font-weight: 200;
     }
   }
 }
