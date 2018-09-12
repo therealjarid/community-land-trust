@@ -64,7 +64,8 @@ jQuery(document).ready(function($) {
         let propertyImage = '';
         if (typeof restResult[i]._embedded['wp:featuredmedia'] != 'undefined') {
           propertyImage = `<img src="${
-            restResult[i]._embedded['wp:featuredmedia'][0].source_url
+            restResult[i]._embedded['wp:featuredmedia'][0].media_details.sizes
+              .medium_large.source_url
           }" ></img>`;
         }
 
