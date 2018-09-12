@@ -9,15 +9,36 @@
     margin: 5rem auto;
     background-color: #E0F1F7;
     padding: 1.5rem;
+    @include desktop-size {
+      width: 60%; 
+      background-color: #F2FAFC;
+    }
+  }
+  .text-wrap {
+    width: 80%;
+    margin: 0 auto;
+    @include desktop-size {
+      width: 50%;
+      margin: 7rem auto;
+    }
   }
   .page-title {
+    color: black;
     text-align: center;
     font-family: Raleway, serif;
     font-weight: 500;
+    @include desktop-size {
+      font-size: 5rem;
+      font-weight: 700;
+    }
   }
   .page-content {
     text-align: left;
     font-size: 0.8rem;
+    @include desktop-size {
+      text-align: center; 
+      font-size: 1.5rem;
+    }
   }
   .mixin-button-404 {
     @include main-cta 
