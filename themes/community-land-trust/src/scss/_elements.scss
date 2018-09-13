@@ -51,6 +51,10 @@ body.noScroll {
   overflow: hidden;
 }
 
+.hfeed.site.body-container {
+  overflow-x: hidden;
+}
+
 blockquote,
 q {
   quotes: '' '';
