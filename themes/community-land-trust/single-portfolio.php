@@ -8,23 +8,20 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div class="single-portfolio-container">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
           
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header class="entry-header">
+
+        <div class="hero-container">
           <?php if ( has_post_thumbnail() ) : ?>
-            <?php the_post_thumbnail( 'large' ); ?>
+            <?php the_post_thumbnail(); ?>
           <?php endif; ?>
 
-          <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+          <?php the_title( '<h1 class="portfolio-title">', '</h1>' ); ?>
 
-          <div class="entry-meta">
-            <?php clt_posted_on(); ?> / <?php clt_comment_count(); ?> / <?php clt_posted_by(); ?>
-          </div><!-- .entry-meta -->
         </header><!-- .entry-header -->
 
         <div class="entry-content">
@@ -38,25 +35,25 @@ get_header(); ?>
       
             
             <div class="main-carousel">
+
             <?php
             $portfolio_gallery = CFS()->get( 'portfolio_gallery' );
-            foreach ( $portfolio_gallery as $gallery_image ) {
-              
-              $image = $gallery_image['portfolio_gallery_image'];
-                echo "<div class='carousel-cell'>
-                      <img src='{$image}'>
-                      </div>";
-              }
-            ?>
+
+              foreach ( $portfolio_gallery as $gallery_image ) {
+                
+                $image = $gallery_image['portfolio_gallery_image'];
+                  echo "<div class='carousel-cell'>
+                        <img src='{$image}'>
+                        </div>";
+                }
+
+              ?>
+
             </div> 
 
               
 
         </div><!-- .entry-content -->
-
-        <footer class="entry-footer">
-          <?php clt_entry_footer(); ?>
-        </footer><!-- .entry-footer -->
       </article><!-- #post-## -->
 
 			<?php the_post_navigation(); ?>
@@ -64,7 +61,6 @@ get_header(); ?>
 
 		<?php endwhile; // End of the loop. ?>
 
-		</main><!-- #main -->
 	</div><!-- #primary -->
 
 
