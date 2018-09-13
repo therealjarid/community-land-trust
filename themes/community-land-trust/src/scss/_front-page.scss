@@ -2,11 +2,7 @@
 # Front Page
 --------------------------------------------------------------*/
 
-.timeline-description {
-  color:black;
-}
-
-
+// flickity carousel global to all partials 
 .main-carousel {
   padding-top: 30px;
   margin-bottom: 30px;
@@ -15,12 +11,10 @@
     width: 70vw;
     margin: 0 auto;
     margin-bottom: 50px;
-
   }
 
   .carousel-cell {
-    width: 100%;
-    
+    width: 100%;  
   }
 
   .flickity-prev-next-button {
@@ -39,11 +33,9 @@
 
       .arrow {
         fill: $border_color;
-        height: 500px;
-        
+        height: 500px;      
       }
     }
-
   }
   
   img {
@@ -53,29 +45,26 @@
 
       @include desktop-size {
       height: auto;
-  
       }
   }
 
-
   .flickity-page-dots  {
-
     .dot {
       background: transparent;
       border: 2px solid $border_color;
     }
-
     .is-selected {
       background: $border_color;
 
     }
-
-    
   }
 }
 
+
+// styles applied only to front-page.php
 .home {
 
+  //header styles begin
   .hero-banner {
     position: relative;
 
@@ -101,9 +90,7 @@
       @include tablet-size {
         top: 60%;
         left: 25%;
-
       }
-      
 
       @include desktop-size {
         height: 131px;
@@ -163,8 +150,6 @@
     }
   }
 
-  
-
   .home-page {
     width: 90vw;
     margin: 0 auto;
@@ -192,6 +177,8 @@
       font-weight: normal;
     }
 
+    //timeline section styles
+
     .timeline-section-wrapper {
       padding-top: 30px;
       width: 100%;   
@@ -218,15 +205,11 @@
 
           @include desktop-size {
             width: 20%;
-  
-  
           }
         }
       
         @include desktop-size {
           width: 20%;
-
-
         }
 
         .year {
@@ -235,18 +218,38 @@
           font-weight: 600;
           width: 150px;
           height: 50px;
-          background-color: $timeline_bg;
-          padding-top: 15px;
 
           @include desktop-size {
             width: 250px;
             height: 70px;
-            padding-top: 20px;
             font-size: 25px;
-          }
+          }     
         }
 
-  
+        .year-entry-1 {
+          background-color: #dcf2f8;
+          
+        }
+      
+        .year-entry-2 {
+          background-color: #c3ecf8;
+          
+        }
+      
+        .year-entry-3 {
+          background-color: #9ce0f3;
+          
+        }
+      
+        .year-entry-4 {
+          background-color: #74d1eb;
+          
+        }
+      
+        .year-entry-5 {
+          background-color: #56bfdc;
+          
+        }
 
         .timeline-line{
           content: '';
@@ -284,28 +287,16 @@
 
       }
 
-        p {
-          font-family: $font__main;
-          line-height: 1.2;
-          font-size: 14px;
-          width: 150px;
-          margin: 5px 0 15px 0;
-      
-          @include desktop-size {
-
-        
-          }
-
-        }
       }
 
         .timeline-growth-numbers {
           position: absolute;
-          top: 200px;
+          top: 180px;
           color: #ffffff;
           font-family: $font__accent;
           font-size: 20px;
           font-weight: 500;
+
           @include desktop-size {
   
 
@@ -316,26 +307,8 @@
 
     }
 
-    .one {
-      background-color: #dcf2f8;
-    }
-
-    .two {
-      background-color: #c3ecf8;
-    }
-
-    .three {
-      background-color: #9ce0f3;
-    }
-
-    .four {
-      background-color: #74d1eb;
-    }
-
-    .five {
-      background-color: #56bfdc;
-    }
   }
+
 
 
 
