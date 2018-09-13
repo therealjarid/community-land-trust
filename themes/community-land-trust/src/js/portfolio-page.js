@@ -41,14 +41,16 @@ jQuery(document).ready(function($) {
               .medium_large.source_url;
         }
 
-        $('.portfolio-grid-container').append(`<a href="${restResult[i].link}">
-													<div class="portfolio-grid-item">
-														<img src="${propertyImage}">
-                            <div class="title-container">
-                              <p>${restResult[i].title.rendered}</p>
-                            </div>
-													</div>
-												</a>`);
+        $('.portfolio-grid-container').append(
+          `<a href="${restResult[i].link}">
+              <div class="portfolio-grid-item">
+                <img src="${propertyImage}">
+                <div class="title-container">
+                  <p>${restResult[i].title.rendered}</p>
+                </div>
+              </div>
+            </a>`
+        );
       }
     } catch (e) {
       ajaxFail();

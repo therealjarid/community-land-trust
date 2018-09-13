@@ -59,23 +59,26 @@ get_header(); ?>
     <section class="timeline-section-wrapper">
 
         <!-- foreach loop over the achievement numbers entered on the wp backend through CFS -->      
-        <?php $timeline_fields = CFS()->get( 'achievements_loop' ); ?>
+        <?php $timeline_fields = CFS()->get( 'achievements_loop' ); 
     
-				<?php foreach ( $timeline_fields as $timeline_field ) : ?>
+                $i = 1;
+
+				foreach ( $timeline_fields as $timeline_field ) : ?>
                     <div class="timeline-block">
                     
                         <div class="year">
-                            <span>
-                              <?php echo $timeline_field['achievements_year'];?></span>
+                            <span class="year-entry-<?php echo $i; $i++; ?>">
+                              <?php echo $timeline_field['achievements_year'];?>
+                            </span>
                         </div>
 
                         <div class="timeline-line"></div>
 
                         <img class="lower" src="<?php echo $timeline_field['achievements_icon']; ?>">
 
-                        <span class="timeline-growth-numbers">
+                        <p class="timeline-growth-numbers">
                             <?php echo $timeline_field['achievements_numbers']; ?>
-                        </span>
+                        </p>
 
                         <h3><?php echo $timeline_field['achievements_title']; ?></h3>
 
