@@ -5,7 +5,12 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package CLT_Theme
+ * 
+ * 
  */
+
+// @TODO: hand off API to client, remove key from git repo
+$google_key = 'AIzaSyDhvBO_mzcQWohzRiHKmgdfzPrOw3Bu6mE';
 
 if ( ! function_exists( 'clt_setup' ) ) :
 	/**
@@ -122,6 +127,16 @@ function clt_scripts() {
 		wp_enqueue_script( 'flickity', '//cdnjs.cloudflare.com/ajax/libs/flickity/1.1.1/flickity.pkgd.min.js', array( 'jquery' ), null, true );
 	}
 
+	// contact page map
+	if ( is_page( 'contact' ) ) {
+		wp_enqueue_script( 'google-map-cdn', "https://maps.googleapis.com/maps/api/js?v=3.exp&key={$google_key}" , array(), null, true );
+
+		wp_enqueue_script( 'contact-map', get_template_directory_uri() . '/build/js/contact-map.min.js', array(
+			'jquery',
+			'google-map-cdn'
+		), null, false );
+	}
+
 	// adding FAQ functionality 
 	if ( is_archive( 'faqs' ) | is_page( 'faqs' ) ) {
 		wp_enqueue_script( 'faq-page', get_template_directory_uri() . '/build/js/faq-page.min.js', array( 'jquery' ), null, false );
@@ -146,7 +161,7 @@ function clt_scripts() {
 	// adding Google Map script via CDN
 	if ( is_page( 'find' ) ) {
 
-		wp_enqueue_script( 'google-map-cdn', 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDhvBO_mzcQWohzRiHKmgdfzPrOw3Bu6mE', array(), null, true );
+		wp_enqueue_script( 'google-map-cdn', "https://maps.googleapis.com/maps/api/js?v=3.exp&key={$google_key}" , array(), null, true );
 
 		wp_enqueue_script( 'polyfill-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.0.0/polyfill.min.js', array(), null, true );
 
