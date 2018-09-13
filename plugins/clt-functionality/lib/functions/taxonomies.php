@@ -8,10 +8,11 @@
 // Register Custom 'Product Type' Taxonomy
 function clt_register_taxonomies() {
 
-	$tax_types = array( "Portfolio Type" => "portfolio", 
-						"Portfolio Location" => "portfolio",
-						"Portfolio Size" => "portfolio"
-				);
+	$tax_types = array(
+		"Portfolio Type"     => "portfolio",
+		"Portfolio Location" => "portfolio",
+		"Portfolio Size"     => "portfolio"
+	);
 
 	foreach ( $tax_types as $tax_type => $post_type ) {
 

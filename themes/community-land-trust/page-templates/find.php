@@ -9,8 +9,8 @@ get_header(); ?>
 		<?php the_post_thumbnail(); ?>
 
         <div class="find-header-container">
-			<h1><?php the_title(); ?></h1>
-		</div>
+            <h1><?php the_title(); ?></h1>
+        </div>
 
 		<?php echo get_post_field( 'post_content', $post->ID ) ?>
 
@@ -47,17 +47,18 @@ get_header(); ?>
 			echo '<p>' . CFS()->get( 'sign_up_copy' ) . '</p>';
 			?>
 
-			<?php gravity_form( 2, false, false, false, null, false, null , true );?>
+			<?php gravity_form( 2, false, false, false, null, false, null, true ); ?>
 
         </div>
 
         <div class="more-info">
             <h2>Need More Info<span class="contraction">rmation</span>?</h2>
-            
+
             <button class="cta-button">
-				<a href="<?php echo get_permalink( get_page_by_title( 'Contact Us' ) ) . "#contact-container" ?>">Contact Us</a>
-			</button>
-            
+                <a href="<?php echo get_permalink( get_page_by_title( 'Contact Us' ) ) . "#contact-container" ?>">Contact
+                    Us</a>
+            </button>
+
         </div>
 
     </section>
