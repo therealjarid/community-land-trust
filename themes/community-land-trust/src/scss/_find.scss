@@ -105,11 +105,11 @@
           height: 65px;
         }
         &:first-of-type {
-          border-bottom: 0.5px $color_button solid;
-          border-right: 0.5px $color_button solid;
+          border-bottom: 1px $color_button solid;
+          border-right: 1px $color_button solid;
           @include tablet-size {
             border: 2px $color_button solid;
-            border-right: 0.5px $color_button solid;
+            border-right: 1px $color_button solid;
           }
           @include large-desktop-size {
             border-top-left-radius: 6px;
@@ -117,29 +117,29 @@
           }
         }
         &:nth-of-type(2) {
-          border-bottom: 0.5px $color_button solid;
-          border-left: 0.5px $color_button solid;
+          border-bottom: 1px $color_button solid;
+          border-left: 1px $color_button solid;
           @include tablet-size {
             border: 2px $color_button solid;
-            border-left: 0.5px $color_button solid;
-            border-right: 0.5px $color_button solid;
+            border-left: 1px $color_button solid;
+            border-right: 1px $color_button solid;
           }
         }
         &:nth-of-type(3) {
-          border-top: 0.5px $color_button solid;
-          border-right: 0.5px $color_button solid;
+          border-top: 1px $color_button solid;
+          border-right: 1px $color_button solid;
           @include tablet-size {
             border: 2px $color_button solid;
-            border-left: 0.5px $color_button solid;
-            border-right: 0.5px $color_button solid;
+            border-left: 1px $color_button solid;
+            border-right: 1px $color_button solid;
           }
         }
         &:last-of-type {
-          border-top: 0.5px $color_button solid;
-          border-left: 0.5px $color_button solid;
+          border-top: 1px $color_button solid;
+          border-left: 1px $color_button solid;
           @include tablet-size {
             border: 2px $color_button solid;
-            border-left: 0.5px $color_button solid;
+            border-left: 1px $color_button solid;
           }
           @include large-desktop-size {
             border-top-right-radius: 6px;
