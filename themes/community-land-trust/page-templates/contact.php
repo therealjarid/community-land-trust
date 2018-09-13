@@ -20,44 +20,44 @@ get_header(); ?>
                 <div class="contact-info">
                     <p class="contact-number">
                         <i class="fas fa-phone fa-rotate-180"></i>
-                        <?php echo CFS()->get( 'contact_number' ); ?>
+						<?php echo CFS()->get( 'contact_number' ); ?>
                     </p>
                     <p class="email-address">
                         <i class="fas fa-envelope"></i>
-                        <?php echo CFS()->get( 'email' ); ?>
+						<?php echo CFS()->get( 'email' ); ?>
                     </p>
                     <p class="address">
                         <i class="fas fa-map-marker-alt"></i>
-                        <?php echo CFS()->get( 'location' ); ?>
+						<?php echo CFS()->get( 'location' ); ?>
                     </p>
                 </div>
                 <div class="map">
                     <a href="https://www.google.ca/maps?q=1651+commercial+drive&rlz=1C5CHFA_enJP803JP803&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiB2ca5h7TdAhWprlQKHZVOC6QQ_AUICigB"
-                        target="_blank"><img src="<?php echo CFS()->get( 'screenshot' ); ?>"/></a>
+                       target="_blank"><img src="<?php echo CFS()->get( 'screenshot' ); ?>"/></a>
                 </div>
             </section>
         </article><!-- #post-## -->
 
     </div>
-    
-    <div class="contact-container">    
+
+    <div class="contact-container">
         <a id="contact-container"></a>
 
-        <?php while ( have_posts() ) :
-        the_post(); ?>
+		<?php while ( have_posts() ) :
+			the_post(); ?>
 
-            <?php the_content(); ?>
-            <?php
-                wp_link_pages( array(
-                    'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-                    'after'  => '</div>',
-                ) );
-            ?>
+			<?php the_content(); ?>
+			<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+				'after'  => '</div>',
+			) );
+			?>
 
-        <?php endwhile; // End of the loop. ?>
-        
+		<?php endwhile; // End of the loop. ?>
+
     </div><!-- .contact-container -->
-    
+
     <div class="featured-person">
         <div class="featured-person-photo">
             <img src="<?php echo CFS()->get( 'photo' ); ?>"/>

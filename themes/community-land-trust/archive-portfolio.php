@@ -14,7 +14,7 @@
 
 	<div class="button-container">
 
-		<button>All</button>
+		<button id="0" class="selected">All</button>
 
 		<?php foreach ($terms as $term) {
 			echo '<button id="' . $term->term_id . '" >' . $term->name . '</button>';
@@ -26,32 +26,7 @@
 
 	<div class="portfolio-grid-container">
 
-		<?php // fill in container here ?>
-		<div class="portfolio-grid-item">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
-			<p>This is sample text</p>
-		</div>
-		<div class="portfolio-grid-item">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
-			<p>This is sample text</p>
-		</div>
-		<div class="portfolio-grid-item">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
-			<p>This is sample text</p>
-		</div>
-		<div class="portfolio-grid-item">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
-			<p>This is sample text</p>
-		</div>
-		<div class="portfolio-grid-item">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
-			<p>This is sample text</p>
-		</div>
-		<div class="portfolio-grid-item">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
-			<p>This is sample text</p>
-		</div>
-		
+		<?php // fill in containers here ?>	
 
 	</div>
 
