@@ -163,6 +163,8 @@
   h2 {
     margin: 0;
     font-size: 18px;
+    font-family: $font__accent;
+    
     @include desktop-size {
       font-size: 32px;
     }
