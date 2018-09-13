@@ -19,7 +19,7 @@ get_header(); ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="partner-container">
+	<div class="single-content-container">
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php the_content(); ?>
 		<?php
@@ -31,8 +31,10 @@ get_header(); ?>
 	</div><!-- end partner-container -->
 	<?php endwhile; // End of the loop. ?>
 </article><!-- #post-## -->
-
-			<?php the_post_navigation(); ?>
+	<div class="navigation-links">
+			<?php previous_post_link( '&laquo; %link', 'Previous Property', true ); ?>
+			<?php next_post_link( '%link &raquo;', 'Next Property', true ); ?>
+	</div>
 
 
 	</div><!-- #primary -->
