@@ -344,6 +344,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    max-width: 300px;
+
 
     @include desktop-size {
       justify-content: center;
