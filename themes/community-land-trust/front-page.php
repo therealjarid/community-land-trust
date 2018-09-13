@@ -59,16 +59,18 @@ get_header(); ?>
     <section class="timeline-section-wrapper">
 
         <!-- foreach loop over the achievement numbers entered on the wp backend through CFS -->      
-	    <?php $timeline_fields = CFS()->get( 'achievements_loop' ); ?>
-                    
+        <?php $timeline_fields = CFS()->get( 'achievements_loop' ); ?>
+    
 				<?php foreach ( $timeline_fields as $timeline_field ) : ?>
                     <div class="timeline-block">
                     
                         <div class="year">
-                            <span><?php echo $timeline_field['achievements_year']; ?></span>
+                            <span>
+                              <?php echo $timeline_field['achievements_year'];?></span>
                         </div>
 
-                    <div class="timeline-line"></div>
+                        <div class="timeline-line"></div>
+
                         <img class="lower" src="<?php echo $timeline_field['achievements_icon']; ?>">
 
                         <span class="timeline-growth-numbers">
@@ -118,12 +120,11 @@ get_header(); ?>
 
 			$clt_partners_thumbnails = get_posts( $arguments ); ?>
 
-		
                 <?php foreach ( $clt_partners_thumbnails as $clt_partners_thumbnail ):?>
 
                     <a href="<?php echo get_permalink( get_page_by_path( 'partners' ) ) ?>">
 
-                    <?php echo( get_the_post_thumbnail( $clt_partners_thumbnail->ID) );?>
+                         <?php echo( get_the_post_thumbnail( $clt_partners_thumbnail->ID) );?>
                 
                     </a>
 

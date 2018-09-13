@@ -203,6 +203,7 @@
       @include desktop-size {
         width: 80vw;
         margin: 0 auto;
+        flex-wrap: no-wrap;
       }
 
       .timeline-block {
@@ -214,9 +215,17 @@
 
         &:last-of-type {
           width: 100%;
+
+          @include desktop-size {
+            width: 20%;
+  
+  
+          }
         }
       
         @include desktop-size {
+          width: 20%;
+
 
         }
 
@@ -230,8 +239,14 @@
           padding-top: 15px;
 
           @include desktop-size {
+            width: 250px;
+            height: 70px;
+            padding-top: 20px;
+            font-size: 25px;
           }
         }
+
+  
 
         .timeline-line{
           content: '';
@@ -240,7 +255,7 @@
           background-color: $timeline_bg_numbers;
 
           @include desktop-size {
-
+            
           }
 
         }
@@ -276,7 +291,6 @@
           width: 150px;
           margin: 5px 0 15px 0;
       
-
           @include desktop-size {
 
         
@@ -335,9 +349,11 @@
       justify-content: center;
       margin-left: 70px;
     }
+
     img {
       height: auto;
       width: auto;
+      margin-right: 50px;
 
       @include desktop-size {
         height: 100px;
@@ -379,5 +395,7 @@
   a {
     text-decoration: none;
   }
+
+
 
 
