@@ -46,6 +46,7 @@
     }
   }
   .single-content-container {
+    @include texture-background;
     padding: 1rem;
     h2 {
       display: none;
@@ -66,7 +67,7 @@
     p {
       font-size: 1rem;
       @include desktop-size {
-        width: 70%;
+        width: 55%;
         margin: 0 auto;
       }
     }
@@ -75,7 +76,7 @@
     padding: 1rem;
     @include desktop-size {
       margin: 0 auto;
-      width: 70%;
+      width: 55%;
     }
     .share {
       display: flex;
