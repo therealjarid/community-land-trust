@@ -29,11 +29,13 @@ get_header(); ?>
 			) );
 			?>
         </div><!-- end partner-container -->
-    </article><!-- #post-## -->
-    <div class="navigation-links">
-		<?php previous_post_link( '&laquo; %link', 'Previous Property', true ); ?>
-		<?php next_post_link( '%link &raquo;', 'Next Property', true ); ?>
-    </div>
+		</article><!-- #post-## -->
+		
+		<div class="navigation-links">
+			<button><?php previous_post_link( '%link', '&larr;' ); ?></button>
+			<button><a href="<?php echo get_permalink( get_page_by_title( 'Portfolio' ) ) ?>">Portfolio</a></button>
+			<button><?php next_post_link( '%link', '&rarr;' ); ?></button>
+		</div>
 
 
 </div><!-- #primary -->

@@ -115,20 +115,33 @@
       @include desktop-size {
         font-weight: 450;
         display: flex;
-        padding-left: 13.3rem;
         letter-spacing: 0;
-      }
-      @include large-desktop-size {
-        padding-left: 18rem;
-      }
-      @include extra-large-desktop-size {
-        padding-left: 24.3rem;
       }
     }
     .gform_wrapper {
-      .medium {
-        @include desktop-size {
-          width: 40%;
+      display: flex; 
+      justify-content: center;
+      .validation_error {
+        display: none;
+      }
+      .validation_message {
+        padding: 0;
+        font-size: 12px;
+        text-align: left;
+      }
+      input[type='text'].medium {
+        width: 100%;
+      }
+      .gfield_error {
+        padding: 0;
+        border: 0;
+        margin-bottom: 25px;
+        width: 100%;
+        .ginput_container {
+          margin: 5px 0 !important;
+          input {
+            width: 100%;
+          }
         }
       }
     }
