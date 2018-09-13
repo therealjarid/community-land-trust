@@ -9,7 +9,7 @@
     img {
       @include banner-img;
       width: 100%;
-      position: relative; 
+      position: relative;
     }
     .title-date {
       border-bottom: 4px solid $border_color;
@@ -19,7 +19,7 @@
       }
       .entry-title {
         padding: 1rem;
-        font-family: Raleway; 
+        font-family: Raleway;
         font-size: 1.5rem;
         font-weight: 600;
         @include desktop-size {
@@ -35,11 +35,11 @@
         }
       }
       @include desktop-size {
-        position: absolute; 
+        position: absolute;
         top: 0;
         left: 0;
         margin-top: 25rem;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         opacity: 0.75;
         color: #000000;
       }
@@ -56,11 +56,11 @@
       }
     }
     .wp-block-separator {
-      display: none; 
+      display: none;
       @include desktop-size {
-        display: block; 
+        display: block;
         width: 50%;
-        height: 4px; 
+        height: 4px;
         background-color: $border_color;
       }
     }
@@ -111,7 +111,7 @@
       color: $color__background-body;
     }
   }
-  .navigation-links {
-    @include nav-links;
-  }
+}
+.navigation-links {
+  @include nav-links;
 }
