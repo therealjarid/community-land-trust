@@ -3,10 +3,10 @@
 --------------------------------------------------------------*/
 
 .single-portfolio-container {
-  .more-info {
-    @include more-info;
-  }
   .navigation-links {
     @include nav-links;
+  }
+  .more-info {
+    @include more-info;
   }
 }
