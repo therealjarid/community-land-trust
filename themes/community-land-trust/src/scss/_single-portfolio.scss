@@ -6,4 +6,7 @@
   .more-info {
     @include more-info;
   }
+  .navigation-links {
+    @include nav-links;
+  }
 }

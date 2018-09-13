@@ -25,7 +25,9 @@ get_header(); ?>
 
       <div class="entry-content">
 
-        <?php the_content(); ?>
+        <?php while ( have_posts() ) : the_post();
+            the_content();
+        endwhile; ?>
 
       </div><!-- .entry-content -->
 
@@ -38,21 +40,22 @@ get_header(); ?>
             $location = CFS()->get( 'location' );
             $budget = CFS()->get( 'budget' );
             $partners = CFS()->get( 'partners' );
+            $link = CFS()->get( 'property_link' );
 
             if ( !empty( $year ) ) {
-              echo '<p><span class="field-title">Year Completed:</span> ' . $year . '</p>';
+              echo '<p><span class="field-title year">Year Completed:</span> ' . $year . '</p>';
             }
             
             if ( !empty( $size ) ) {
-              echo '<p><span class="field-title">Property Size:</span> ' . $size . '</p>';
+              echo '<p><span class="field-title size">Property Size:</span> ' . $size . '</p>';
             }
 
             if ( !empty( $location ) ) {
-              echo '<p><span class="field-title">Location:</span> ' . $location . '</p>';
+              echo '<p><span class="field-title location">Location:</span> ' . $location . '</p>';
             }
 
             if ( !empty( $budget ) ) {
-              echo '<p><span class="field-title">Budget:</span> ' . $budget . '</p>';
+              echo '<p><span class="field-title budget">Budget:</span> ' . $budget . '</p>';
             }
 
             // check if any partners have been entered, if they have we print field-title
@@ -61,7 +64,7 @@ get_header(); ?>
               // if more than one term print the plural
               if (count( $partners ) > 1) {
                 $last_partner = end($partners);
-                echo '<p><span class="field-title">Partners:</span> ';
+                echo '<p><span class="field-title partners partner">Partners:</span> ';
               
                 foreach ($partners as $partner) {
                     echo $partner['partner'];
@@ -80,9 +83,15 @@ get_header(); ?>
                 // so we have to grab the last element of this array even
                 // if the length is 1
                 $partner = end( $partners );
-                echo '<p><span class="field-title">Partner:</span> ' . $partner[ 'partner' ] . '</p>';
+                echo '<p><span class="field-title partner">Partner:</span> ' . $partner[ 'partner' ] . '</p>';
               }
-            }         
+            }   
+            
+            if ( !empty( $link ) ) {
+              echo '<a href="' . $link[ 'url' ] . '" >';
+              echo the_title('<p><span class="field-title link">Visit ', '') . '\'s Site' ;
+              echo '</p></a>';
+            }
           ?>
 
       </div>
@@ -127,8 +136,7 @@ get_header(); ?>
       <h2>Need More Info<span class="contraction">rmation</span>?</h2>
 
       <button class="cta-button">
-          <a href="<?php echo get_permalink( get_page_by_title( 'Contact Us' ) ) . "#contact-container" ?>">Contact
-        Us</a>
+          <a href="<?php echo get_permalink( get_page_by_title( 'Contact Us' ) ) . "#contact-container"; ?>">Contact Us</a>
       </button>
 
     </div>

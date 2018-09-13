@@ -12,7 +12,7 @@
 }
 
 //Media queries
-@mixin iphone-5-size {
+@mixin phone-size {
   @media screen and (min-width: $mobile-min-width) {
     @content;
   }
@@ -63,8 +63,6 @@
 // Green button mixin
 @mixin main-cta {
   background-color: $color_button;
-  border-radius: 10px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
   font-family: 'Roboto';
   color: black;
   border: 0;
@@ -165,12 +163,12 @@
 }
 
 @mixin more-info {
-  margin: 30px 0 30px 0;
+  margin: 30px 0;
+  text-align: center;
   h2 {
     margin: 0;
     font-size: 18px;
     font-family: $font__accent;
-
     @include desktop-size {
       font-size: 32px;
     }
@@ -181,16 +179,19 @@
       }
     }
   }
-  button {
+  .cta-button {
     @include main-cta;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
   }
 }
+
 @mixin nav-links {
-  display: flex; 
+  display: flex;
   justify-content: center;
   width: 100%;
+  @include main-cta;
   a {
-    @include main-cta;
     width: 20%;
     text-align: center;
     padding: 10px 0;
