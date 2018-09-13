@@ -1,22 +1,53 @@
 jQuery(document).ready(function($) {
-  $('.button-container button:first-of-type').addClass('selected');
-  let queryString = '?_embed';
-  getPosts(queryString);
+  // get all posts, id="0", on start; the 'All' button has class 'selected' by default
+  getPosts(0);
 
-  //@TODO:
-  // 1. set 'all' as default - DONE
-  // 2. REST call to fill grid with all portfolio types
-  // 3. on button 'select' event, take in value and filter portfolio types with REST call
+  $('.button-container button').click(async function() {
+    // clear all buttons of 'selected' class then add to current one pressed
+    $('.button-container button').removeClass('selected');
+    $(this).addClass('selected');
 
-  async function getPosts(queryString) {
+    // id from button will let us filter the taxonomy in the REST call
+    let termId = String($(this).attr('id'));
+    getPosts(termId);
+  });
+
+  async function getPosts(termId) {
     try {
+      // check if we need to filter the taxonomy, here we need 'var' to hoist the variable
+      if (termId != '0') {
+        var queryString = `?portfolio_type=${termId}&_embed`;
+      } else {
+        var queryString = `?_embed`;
+      }
+
+      // clear the grid container from previous call
+      $('.portfolio-grid-container').empty();
+
       // get portfolio posts from REST api
       const restResult = await $.ajax({
         beforeSend: xhr => xhr.setRequestHeader('X-WP-Nonce', apiVars.nonce),
         url: `${apiVars.restUrl}wp/v2/portfolio${queryString}`,
         method: 'GET'
       });
-      console.log(restResult);
+
+      let propertyImage = '';
+
+      for (let i = 0; i < restResult.length; i++) {
+        // check if property has image
+        if (typeof restResult[i]._embedded['wp:featuredmedia'] != 'undefined') {
+          propertyImage =
+            restResult[i]._embedded['wp:featuredmedia'][0].media_details.sizes
+              .medium_large.source_url;
+        }
+
+        $('.portfolio-grid-container').append(`<a href="${restResult[i].link}">
+													<div class="portfolio-grid-item">
+														<img src="${propertyImage}">
+														<p>${restResult[i].title.rendered}</p>
+													</div>
+												</a>`);
+      }
     } catch (e) {
       ajaxFail();
     }
@@ -26,9 +57,3 @@ jQuery(document).ready(function($) {
     $('.error-message').addClass('ajax-error');
   }
 });
-
-// Output to page is in format of :
-// <div class="portfolio-grid-item">
-// 	<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
-// 	<p>This is sample text</p>
-// </div>
