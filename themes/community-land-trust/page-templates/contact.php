@@ -31,7 +31,8 @@ get_header(); ?>
 						<?php echo CFS()->get( 'location' ); ?>
                     </p>
                 </div>
-                <div class="map">
+                <div class="map-container">
+                    <div id="map-canvas"></div>
                 </div>
             </section>
         </article><!-- #post-## -->
