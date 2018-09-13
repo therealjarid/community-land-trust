@@ -55,19 +55,27 @@
     @include error-message;
   }
   .portfolio-grid-container {
-    padding: 15px 15px;
+    padding: 15px;
     margin: 0 auto 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
     max-width: 1000px;
+    @include tablet-size {
+      grid-gap: 25px;
+      padding: 25px;
+    }
     @include desktop-size {
       grid-template-columns: repeat(3, 1fr);
       margin-bottom: 60px;
+      padding: 30px;
+      grid-gap: 30px;
     }
     @include large-desktop-size {
       grid-template-columns: repeat(4, 1fr);
-      max-width: 1250px;
+      max-width: 1350px;
+      grid-gap: 35px;
+      padding: 35px;
     }
     .portfolio-grid-item {
       position: relative;
@@ -75,11 +83,8 @@
       @include phablet-size {
         height: 270px;
       }
-      @include tablet-size {
-        height: 320px;
-      }
       @include large-desktop-size {
-        height: 350px;
+        height: 310px;
       }
       img {
         position: absolute;
