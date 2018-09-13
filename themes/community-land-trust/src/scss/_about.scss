@@ -1,3 +1,62 @@
 /*--------------------------------------------------------------
 # About Page
 --------------------------------------------------------------*/
+
+.page-template-about {
+
+  .about-header {
+    @include banner-img;
+  }
+
+  .about-clt-logo {
+    width: 50vw;
+    margin: 0 auto;
+
+    img {
+      width: 200px;
+      height: 150px;
+
+    }
+  }
+
+  .post-26 {
+    width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+
+    @include desktop-size {
+      display: flex;
+    }
+    h2 {
+      @include page-title;
+      font-family: $font__accent;
+
+      // @include desktop-size {
+      //  &:nth-last-of-type(1) {
+      //    width: 100%;
+      //  }
+  
+  
+      // }
+      
+    }
+
+    p {
+      text-align: justify;
+      font-family: $font__main;
+      letter-spacing: 1px;
+    }
+  }
+
+  .button-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+
+
+    .mixin-button {
+      @include main-cta;
+    }
+
+  }
+}
