@@ -330,19 +330,7 @@
     }
   }
   .more-info {
-    margin: 0px 0 30px 0;
-    h2 {
-      margin: 0;
-      font-size: 18px;
-      .contraction {
-        display: none;
-        @include tablet-size {
-          display: inline;
-        }
-      }
-    }
-    button {
-      @include main-cta;
-    }
+    @include more-info;
+    margin-top: 0;
   }
 }

@@ -136,10 +136,10 @@ get_header(); ?>
 			?>
         </div>
 
-
-    <h2 class="more-info">Need More Information?</h2>
     
     <div class="button-container">
+         <h2 class="more-info">Need More Information?</h2>
+
         <button class="mixin-button">
             <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
                 Contact Us

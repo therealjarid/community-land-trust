@@ -2,6 +2,8 @@
 # Front Page
 --------------------------------------------------------------*/
 
+
+
 // flickity carousel global to all partials 
 .main-carousel {
   padding-top: 30px;
@@ -89,7 +91,7 @@
 
       @include tablet-size {
         top: 60%;
-        left: 25%;
+        left: 30%;
       }
 
       @include desktop-size {
@@ -132,20 +134,17 @@
 
       @include tablet-size {
         top: 260px;
-        left: 230px;
-
+        left: 260px;
       }
 
       @include desktop-size {
         top: 160px;
         left: 170px;
-
       }
 
       @include extra-large-desktop-size {
         top: 190px;
         left: 170px;
-
       }
     }
   }
@@ -207,7 +206,7 @@
             width: 20%;
           }
         }
-      
+
         @include desktop-size {
           width: 20%;
         }
@@ -219,10 +218,21 @@
           width: 150px;
           height: 50px;
 
+          p {
+            margin: 0;
+            padding-top: 15px;
+
+            @include desktop-size {
+              padding-top: 20px;
+            }
+          }
+
           @include desktop-size {
             width: 250px;
             height: 70px;
             font-size: 25px;
+            margin-bottom: 0;
+     
           }     
         }
 
@@ -255,17 +265,19 @@
           content: '';
           width: 3px;
           height: 50px;
-          background-color: $timeline_bg_numbers;
-
-          @include desktop-size {
-            
-          }
+          background-color:#56BFDC;;
 
         }
 
         img {
           width: 150px;
           height: 150px;
+
+          @include desktop-size {
+            width: 180px;
+            height: 180px;
+            
+          }
         }
 
         h3 {
@@ -276,15 +288,35 @@
           padding-top: 10px;
 
           @include desktop-size {
+            font-size: 25px;
           }
         }
+      }
 
-        .lower-heading {
+      .timeline-block:nth-of-type(2),
+      .timeline-block:nth-of-type(4) {
+      .timeline-line {
           @include desktop-size {
-    
-          }
+            height: 2rem;
+          }    
+        }
+      }
+
+      .timeline-block:nth-of-type(1),
+      .timeline-block:nth-of-type(3),
+      .timeline-block:nth-of-type(5) {
+        .timeline-line {
+          @include desktop-size {
+            height: 8rem;
+          }    
         }
 
+        .timeline-growth-numbers {
+          @include desktop-size {
+            top: 290px;
+          } 
+
+        }
       }
 
       }
@@ -298,19 +330,14 @@
           font-weight: 500;
 
           @include desktop-size {
-  
-
+            top: 200px;
+            font-size: 25px;
           }
 
       }
-
-
     }
 
   }
-
-
-
 
   .partners-logo-wrapper {
     padding-top: 30px;
@@ -336,38 +363,17 @@
     }
 
   }
-      .more-info {
-        text-align: center;
-        font-family: $font__accent;
-        font-weight: normal;
-        color: black;
-        margin-top: 50px;
-        margin-bottom: 0;
-
-        @include desktop-size {
-          font-size: 30px;
-          font-weight: bold;
-          letter-spacing: 1px;
-        }
-    
-      }
-      
-      .button-container {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 50px;
-    
-
-        .mixin-button {
-          @include main-cta;
-        }
-
-      }
-
-
+  
+  .button-container {
+    @include more-info;
+    text-align: center;
+    margin-top: 5rem;
+  }
+  
   a {
     text-decoration: none;
   }
+
 
 
 
