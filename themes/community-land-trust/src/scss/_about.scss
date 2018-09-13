@@ -4,50 +4,89 @@
 
 .page-template-about {
 
-  @include tablet-size  {
+  @include desktop-size  {
     h1, h2, h3, h4, h5, h6  {
       clear: none;
     }
-  
     p {
       margin-bottom: 4rem;
     }
   }
 
-
   .about-header {
-    @include banner-img;
-    height: 400px;
-    object-fit: contain;
+    @include banner-img; 
   }
 
   .about-page-box{
-    width: 80vw;
+    width: 85vw;
     margin: 0 auto;
+    text-align: center;
 
+    @include desktop-size {
+      margin-top: 70px;
+      width: 60vw;
+    }
 
     .about-clt-logo {
+      width: 200px;
+      margin: 2rem auto;
 
-      @include tablet-size {
+      @include desktop-size {
         float: left;
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        margin-right: 50px;
+        margin-top: 50px;
 
       }
     }
-    
-  }
 
+    h2 {
+      @include page-title;
+
+      @include desktop-size {
+        &:nth-of-type(1) {
+          margin-right: 360px;
+        }
+      }
+ 
+    }
+
+    p {
+      font-family: $font__main;
+      text-align: left;
+      letter-spacing: 1px;
+      
+    }
+  }
     .main-carousel {
+      width: 85vw;
+      margin: 0 auto;
       clear: both;           
       height: 400px;
-      background-color: #D6E9FE;
       
       .carousel-cell {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+        min-height: 350px;
+        background-size: cover; 	
+        background-position: center;
+
+        .about-cfs-years {
+          font-family: $font__accent;
+          font-weight: 500;
+          font-size: 25px;
+          margin-bottom: 0;
+          margin-top: 80px;
+          color: black;
+        }
+
+        p {
+          margin: 10px 10px;
+          text-align: center;
+          color: black;
+          overflow: hidden;
+        }
       }
 
     }

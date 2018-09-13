@@ -6,72 +6,75 @@
  * @package CLT_Theme
  */
 
-get_header(); ?>
+get_header();?>
 
 <section class="about-us">
 
 	<div class="about-header">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail();?>
 	</div>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+	<?php while (have_posts()): the_post();?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				
-					<div class="about-page-box">
+					<article id="post-<?php the_ID();?>" <?php post_class();?>>
 
-						<div class="about-clt-logo">
-								<img src="<?php echo CFS()->get( 'about_page_clt_logo' ); ?>"></img>
+						<div class="about-page-box">
+
+							<div class="about-clt-logo">
+									<img src="<?php echo CFS()->get('about_page_clt_logo'); ?>"></img>
+							</div>
+
+							<?php the_content();?>
+
 						</div>
 
-						<?php the_content(); ?>
+	      </article><!-- #post-## -->
 
-					</div>
-
-      </article><!-- #post-## -->
-
-	<?php endwhile; // End of the loop. ?>
+		<?php endwhile; // End of the loop. ?>
 
 	<div class="main-carousel">
 
-		<?php $about_us_fields = CFS()->get( 'about_our_history_highlights' ); ?>
+		<?php $about_us_fields = CFS()->get('about_our_history_highlights');?>
 
-			<?php foreach ( $about_us_fields as $about_us_field ) : ?>
-				
-				<div class="carousel-cell">
+			<?php foreach ($about_us_fields as $about_us_field):
 
-						<h3 class='about-cfs-years'> 
-							<?php echo $about_us_field['about_page_history_year']; ?> 
-						</h3>
+						$background_image = $about_us_field['about_page_background_image'];
+						?>
+					<div 	class="carousel-cell" 
+								style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(225, 225, 225, 0.7)), url('<?php echo $background_image; ?>');">
 
-						<p class='about-cfs-description'>
-							<?php echo $about_us_field['about_page_history_description']; ?>
-						</p>
+							<h3 class='about-cfs-years'>
+								<?php echo $about_us_field['about_page_history_year']; ?>
+							</h3>
 
-						<p class='about-cfs-extra-description'> 
-							<?php echo $about_us_field['about_page_history_extra_description']; ?>
-						</p>
+							<p class='about-cfs-description'>
+								<?php echo $about_us_field['about_page_history_description']; ?>
+							</p>
 
-				</div>	
+							<p class='about-cfs-extra-description'>
+								<?php echo $about_us_field['about_page_history_extra_description']; ?>
+							</p>
 
-			<?php
-      	endforeach;
-      ?>
-			
+					</div>
+
+				<?php
+endforeach;
+?>
+
 		</div>
 
     <div class="button-container">
          <h2 class="more-info">Need More Information?</h2>
 
-        <button class="mixin-button">
-            <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
+        <button class="mixin-button cta-button">
+            <a href="<?php echo get_permalink(get_page_by_path('contact')) . "#contact-container"; ?>">
                 Contact Us
             </a>
         </button>
     </div>
-		
+
 
 </section><!-- .about-us -->
 
 
-<?php get_footer(); ?>
+<?php get_footer();?>
