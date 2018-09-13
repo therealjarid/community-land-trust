@@ -7,6 +7,7 @@
   }
   .entry-header {
     img {
+      @include banner-img;
       width: 100%;
       position: relative; 
     }
@@ -36,7 +37,7 @@
         position: absolute; 
         top: 0;
         left: 0;
-        margin-top: 30rem;
+        margin-top: 25rem;
         background-color: #FFFFFF;
         opacity: 0.75;
         color: #000000;
@@ -89,6 +90,12 @@
       }
       @include desktop-size {
         width: 25%;
+      }
+      @include large-desktop-size {
+        width: 20%;
+      }
+      @include extra-large-desktop-size {
+        width: 15%;
       }
     }
     i {

@@ -42,9 +42,15 @@ get_header(); ?>
 			</div><!-- end of social-links -->
 			
 		<div class="navigation-links">
-			<?php previous_post_link( '%link', '<span class="arrow">&larr;</span>' ); ?>
-			<a href="<?php echo get_permalink( get_page_by_title( 'Portfolio' ) ) ?>">Portfolio</a>
-			<?php next_post_link( '%link', '<span class="arrow">&rarr;</span>' ); ?>
+		<div class="left">
+              <?php previous_post_link( '%link', '<i class="fas fa-arrow-left"></i>' ); ?>
+            </div>
+            <div class="middle">
+              <a href="<?php echo get_permalink( get_page_by_title( 'Portfolio' ) ) ?>">Portfolio</a>
+            </div>
+            <div class="right">
+              <?php next_post_link( '%link', '<i class="fas fa-arrow-right"></i>' ); ?>
+            </div>
 		</div>
 		</div> <!-- end of media-container --> 
 
