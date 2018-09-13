@@ -1,3 +1,46 @@
 /*--------------------------------------------------------------
-# Single Partners View Page
+# Single Media View Page
 --------------------------------------------------------------*/
+.media-container {
+  .entry-header {
+    img {
+      width: 100%;
+      position: relative; 
+    }
+    .title-date {
+      border-bottom: 4px solid $border_color;
+      .entry-title {
+        padding: 1rem;
+      }
+      .entry-date {
+        display: none;
+      }
+      @include desktop-size {
+        position: absolute; 
+        top: 0;
+        left: 0;
+        margin-top: 30rem;
+        background-color: #FFFFFF;
+        opacity: 0.75;
+        color: #000000;
+      }
+    }
+  }
+  .single-content-container {
+    padding: 1rem;
+    h2 {
+      display: none;
+    }
+  }
+  .navigation-links {
+    display: flex; 
+    justify-content: center;
+    width: 100%;
+    a {
+      @include main-cta;
+      width: 20%;
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+}
