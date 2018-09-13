@@ -2,6 +2,9 @@
 # Single Media View Page
 --------------------------------------------------------------*/
 .media-container {
+  .hentry {
+    margin: 0;
+  }
   .entry-header {
     img {
       width: 100%;
@@ -9,11 +12,25 @@
     }
     .title-date {
       border-bottom: 4px solid $border_color;
+      @include desktop-size {
+        border-bottom: none;
+        padding: 1rem;
+      }
       .entry-title {
         padding: 1rem;
+        font-family: Raleway; 
+        font-size: 1.5rem;
+        font-weight: 600;
+        @include desktop-size {
+          margin: 0;
+        }
       }
       .entry-date {
         display: none;
+        @include desktop-size {
+          display: block;
+          padding-left: 1rem;
+        }
       }
       @include desktop-size {
         position: absolute; 
@@ -30,17 +47,61 @@
     padding: 1rem;
     h2 {
       display: none;
+      @include desktop-size {
+        display: block;
+        text-align: center;
+      }
+    }
+    .wp-block-separator {
+      display: none; 
+      @include desktop-size {
+        display: block; 
+        width: 50%;
+        height: 4px; 
+        background-color: $border_color;
+      }
+    }
+    p {
+      font-size: 1rem;
+      @include desktop-size {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+  }
+  .social-links {
+    padding: 1rem;
+    @include desktop-size {
+      margin: 0 auto;
+      width: 70%;
+    }
+    .share {
+      display: flex;
+      line-height: 2rem;
+      justify-content: space-between;
+      width: 55%;
+      @include phablet-size {
+        width: 45%;
+      }
+      @include tablet-size {
+        width: 30%;
+      }
+      @include desktop-size {
+        width: 25%;
+      }
+    }
+    i {
+      height: 2rem;
+      width: 2rem;
+      padding: 0.4rem;
+      text-align: center;
+      border: 1px solid #000;
+      border-radius: 50%;
+      background-color: #000;
+      color: $color__background-body;
     }
   }
   .navigation-links {
-    display: flex; 
-    justify-content: center;
-    width: 100%;
-    a {
-      @include main-cta;
-      width: 20%;
-      text-align: center;
-      padding: 10px 0;
-    }
+    @include nav-links;
   }
 }

@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying all single posts.
- *
+ * Template Name: Single Media
  * @package CLT_Theme
  */
 
@@ -31,13 +31,20 @@ get_header(); ?>
 				'after'  => '</div>',
 			) );
 			?>
-        </div><!-- end single-content-container -->
+				</div><!-- end single-content-container -->
 		</article><!-- #post-## -->
-		
+
+		<div class="social-links">
+			<p class="share">Share:<a href="<?php echo $fblink['url']; ?>" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="<?php echo $twlink['url']; ?>" target="_blank"><i class="fab fa-twitter"></i></a><a href="<?php echo $lilink['url']; ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a></p>
+				<?php $fblink = CFS()->get( 'facebook', 36 ); ?>
+				<?php $twlink = CFS()->get( 'twitter', 36 ); ?>
+				<?php $lilink = CFS()->get( 'linkedin', 36 ); ?>
+			</div><!-- end of social-links -->
+			
 		<div class="navigation-links">
-			<?php previous_post_link( '%link', '&larr;' ); ?>
+			<?php previous_post_link( '%link', '<span class="arrow">&larr;</span>' ); ?>
 			<a href="<?php echo get_permalink( get_page_by_title( 'Portfolio' ) ) ?>">Portfolio</a>
-			<?php next_post_link( '%link', '&rarr;' ); ?>
+			<?php next_post_link( '%link', '<span class="arrow">&rarr;</span>' ); ?>
 		</div>
 		</div> <!-- end of media-container --> 
 
