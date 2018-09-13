@@ -192,12 +192,42 @@
 
 @mixin nav-links {
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
-  @include main-cta;
-  a {
-    width: 20%;
+  max-width: 400px;
+  padding-top: 40px;
+  margin: 0 auto 60px;
+  @include desktop-size {
+    max-width: 500px;
+  }
+  .left,
+  .middle,
+  .right {
+    @include button-hover;
     text-align: center;
-    padding: 10px 0;
+    background-color: $color_button;
+    padding: 8px 0;
+    width: 30%;
+    @include tablet-size {
+      padding: 12px 0;
+    }
+    @include desktop-size {
+      padding: 15px 0;
+    }
+    &:first-child {
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      margin: 0 4px 0 10px;
+    }
+    &:last-child {
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      margin: 0 10px 0 4px;
+    }
+    &:empty {
+      background-color: white;
+      box-shadow: none;
+    }
   }
 }

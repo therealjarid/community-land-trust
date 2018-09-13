@@ -31,9 +31,8 @@ get_header(); ?>
 						<?php echo CFS()->get( 'location' ); ?>
                     </p>
                 </div>
-                <div class="map">
-                    <a href="https://www.google.ca/maps?q=1651+commercial+drive&rlz=1C5CHFA_enJP803JP803&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiB2ca5h7TdAhWprlQKHZVOC6QQ_AUICigB"
-                       target="_blank"><img src="<?php echo CFS()->get( 'screenshot' ); ?>"/></a>
+                <div class="map-container">
+                    <div id="map-canvas"></div>
                 </div>
             </section>
         </article><!-- #post-## -->

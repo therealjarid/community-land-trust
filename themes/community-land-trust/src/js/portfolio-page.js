@@ -15,10 +15,11 @@ jQuery(document).ready(function($) {
   async function getPosts(termId) {
     try {
       // check if we need to filter the taxonomy, here we need 'var' to hoist the variable
+      var queryString;
       if (termId != '0') {
-        var queryString = `?portfolio_type=${termId}&_embed`;
+        queryString = `?portfolio_type=${termId}&_embed`;
       } else {
-        var queryString = `?_embed`;
+        queryString = `?_embed`;
       }
 
       // clear the grid container from previous call
