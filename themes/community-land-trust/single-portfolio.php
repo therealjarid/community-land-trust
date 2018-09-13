@@ -31,7 +31,59 @@ get_header(); ?>
 
       <div class="fields-container">
 
-          <!-- insert custom fields here -->
+          <!-- custom fields only print if they're not empty -->
+          <?php 
+            $year = substr(CFS()->get( 'year_completed' ), 0, 4);
+            $size = CFS()->get( 'property_size' );
+            $location = CFS()->get( 'location' );
+            $budget = CFS()->get( 'budget' );
+            $partners = CFS()->get( 'partners' );
+
+            if ( !empty( $year ) ) {
+              echo '<p><span class="field-title">Year Completed:</span> ' . $year . '</p>';
+            }
+            
+            if ( !empty( $size ) ) {
+              echo '<p><span class="field-title">Property Size:</span> ' . $size . '</p>';
+            }
+
+            if ( !empty( $location ) ) {
+              echo '<p><span class="field-title">Location:</span> ' . $location . '</p>';
+            }
+
+            if ( !empty( $budget ) ) {
+              echo '<p><span class="field-title">Budget:</span> ' . $budget . '</p>';
+            }
+
+            // check if any partners have been entered, if they have we print field-title
+            if ( !empty( $partners ) ) {
+
+              // if more than one term print the plural
+              if (count( $partners ) > 1) {
+                $last_partner = end($partners);
+                echo '<p><span class="field-title">Partners:</span> ';
+              
+                foreach ($partners as $partner) {
+                    echo $partner['partner'];
+                    if ($partner !== $last_partner) {
+                      echo ', ';
+                    }
+                }
+
+                echo '</p>';
+
+              // otherwise print singular
+              } else {
+                // each partner gets pushed onto an array in the database, 
+                // even if the user deletes that field, its position in the
+                // array will continue to grow,
+                // so we have to grab the last element of this array even
+                // if the length is 1
+                $partner = end( $partners );
+                echo '<p><span class="field-title">Partner:</span> ' . $partner[ 'partner' ] . '</p>';
+              }
+            }         
+          ?>
 
       </div>
 
@@ -59,7 +111,14 @@ get_header(); ?>
           ?>  
         </div>   
 
-        <?php the_post_navigation(); ?>
+        <div class="navigation-links">
+
+            <?php previous_post_link( '%link', '&larr;' ); ?>
+            <a href="<?php echo get_permalink( get_page_by_title( 'Portfolio' ) ) ?>">Portfolio</a>
+            <?php next_post_link( '%link', '&rarr;' ); ?>
+          
+        </div>
+
 
     </article><!-- #post-## -->
 
