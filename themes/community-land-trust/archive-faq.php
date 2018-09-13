@@ -57,8 +57,12 @@
 
     <h2 class="more-info">Need More Information?</h2>
 
-    <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
-        <button class="mixin-button">Contact Us</button>
-    </a>
+    <div class="button-container">              
+        <button class="mixin-button">
+            <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
+                Contact Us
+            </a>
+        </button>
+    </div>
 
 <?php get_footer(); ?>
