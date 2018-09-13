@@ -26,3 +26,9 @@ jQuery(document).ready(function($) {
     $('.error-message').addClass('ajax-error');
   }
 });
+
+// Output to page is in format of :
+// <div class="portfolio-grid-item">
+// 	<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
+// 	<p>This is sample text</p>
+// </div>

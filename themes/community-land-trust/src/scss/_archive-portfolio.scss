@@ -4,15 +4,36 @@
 
 .portfolio-page-container {
   .button-container {
+    margin: 0 auto;
     width: 100%;
+    max-width: 450px;
     display: flex;
     justify-content: space-around;
+    @include phablet-size {
+      margin-top: 50px;
+    }
     button {
       background: white;
       width: 32%;
       border: 2px $color_button solid;
       padding: 12px 0;
       margin-top: 5px;
+      @include phablet-size {
+        width: 150px;
+        &:first-of-type {
+          border-right: 0;
+          border-top-left-radius: 6px;
+          border-bottom-left-radius: 6px;
+        }
+        &:last-of-type {
+          border-left: 0;
+          border-top-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+        }
+      }
+      @include desktop-size {
+        padding: 18px 0;
+      }
       @include button-hover;
       &:focus {
         outline: 0;
@@ -29,13 +50,31 @@
   }
   .portfolio-grid-container {
     padding: 15px 15px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
+    max-width: 1000px;
+    @include desktop-size {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 60px;
+    }
+    @include large-desktop-size {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1250px;
+    }
     .portfolio-grid-item {
       position: relative;
-      height: 290px;
+      height: 220px;
+      @include phablet-size {
+        height: 270px;
+      }
+      @include tablet-size {
+        height: 320px;
+      }
+      @include large-desktop-size {
+        height: 350px;
+      }
       img {
         position: absolute;
         top: 0;
@@ -52,8 +91,11 @@
         text-align: center;
         display: block;
         width: 100%;
-        background-color: rgba(134, 133, 133, 0.15);
+        background-color: #f0fafc;
         min-height: 60px;
+        @include desktop-size {
+          font-size: 1.1rem;
+        }
       }
     }
   }
@@ -62,6 +104,9 @@
     h2 {
       margin: 0;
       font-size: 18px;
+      @include desktop-size {
+        font-size: 32px;
+      }
       .contraction {
         display: none;
         @include tablet-size {
