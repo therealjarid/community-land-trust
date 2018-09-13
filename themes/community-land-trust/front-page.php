@@ -134,12 +134,14 @@ get_header(); ?>
 
 
     <h2 class="more-info">Need More Information?</h2>
-        
-    <button class="mixin-button">
-        <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
-            Contact Us
-        </a>
-    </button>
+    
+    <div class="button-container">
+        <button class="mixin-button">
+            <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
+                Contact Us
+            </a>
+        </button>
+    </div>
         
     </main> <!-- end of .home-page main -->
 

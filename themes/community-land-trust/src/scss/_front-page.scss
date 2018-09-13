@@ -352,6 +352,8 @@
         font-family: $font__accent;
         font-weight: normal;
         color: black;
+        margin-top: 50px;
+        margin-bottom: 0;
 
         @include desktop-size {
           font-size: 30px;
@@ -360,12 +362,19 @@
         }
     
       }
+      
+      .button-container {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
     
-      .mixin-button {
-        @include main-cta;
-        margin: 0 auto;
-        
+
+        .mixin-button {
+          @include main-cta;
+        }
+
       }
+
 
   a {
     text-decoration: none;
