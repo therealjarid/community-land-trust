@@ -29,6 +29,7 @@
       .entry-date {
         display: none;
         @include desktop-size {
+          font-family: Raleway;
           display: block;
           padding-left: 1rem;
         }
