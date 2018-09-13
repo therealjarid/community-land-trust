@@ -76,7 +76,7 @@
         }
       }
     }
-    .map {
+    #map-canvas {
       border-top: 4px solid #4da7cd;
       @include desktop-size {
         border-top: none;
