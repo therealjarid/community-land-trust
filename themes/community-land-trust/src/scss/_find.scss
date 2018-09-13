@@ -90,6 +90,9 @@
       margin: 0;
       padding: 0;
       justify-content: center;
+      @include large-desktop-size {
+        margin-top: 20px;
+      }
       li {
         width: 50%;
         height: 55px;
@@ -106,6 +109,10 @@
           @include tablet-size {
             border: 2px $color_button solid;
             border-right: 0.5px $color_button solid;
+          }
+          @include large-desktop-size {
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
           }
         }
         &:nth-of-type(2) {
@@ -132,6 +139,10 @@
           @include tablet-size {
             border: 2px $color_button solid;
             border-left: 0.5px $color_button solid;
+          }
+          @include large-desktop-size {
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
           }
         }
 
