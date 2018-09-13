@@ -12,6 +12,12 @@
 }
 
 //Media queries
+@mixin iphone-5-size {
+  @media screen and (min-width: $mobile-min-width) {
+    @content;
+  }
+}
+
 @mixin phablet-size {
   @media screen and (min-width: $phablet-min-width) {
     @content;
@@ -164,7 +170,7 @@
     margin: 0;
     font-size: 18px;
     font-family: $font__accent;
-    
+
     @include desktop-size {
       font-size: 32px;
     }

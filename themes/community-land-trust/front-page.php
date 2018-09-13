@@ -11,15 +11,17 @@ get_header(); ?>
     <section class="hero-banner">
 
 		<?php the_post_thumbnail(); ?>
+        
+        <div class="header-info-box">
+            <div class="company-header-info">
+                <h1 class="company-name">Community Land Trust</h1>
+                <p class="slogan"><?php echo CFS()->get( 'slogan' ); ?></p>
+            </div>
 
-        <div class="company-header-info">
-            <h1 class="company-name">Community Land Trust</h1>
-            <p class="slogan"><?php echo CFS()->get( 'slogan' ); ?></p>
+            <a href="<?php echo get_permalink( get_page_by_path( 'find' ) ) ?>">
+                <button class="mixin-button">Find a Home</button>
+            </a>
         </div>
-
-        <a href="<?php echo get_permalink( get_page_by_path( 'find' ) ) ?>">
-            <button class="mixin-button">Find a Home</button>
-        </a>
 
 
     </section> <!-- end of .hero-banner section -->

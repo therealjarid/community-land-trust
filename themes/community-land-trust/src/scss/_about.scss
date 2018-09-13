@@ -8,55 +8,84 @@
     @include banner-img;
   }
 
-  .about-clt-logo {
-    width: 50vw;
+  .about-page-box{
+    width: 80vw;
     margin: 0 auto;
 
-    img {
-      width: 200px;
-      height: 150px;
+    .about-clt-logo {
+      // width: 200px;              
+      // height: 200px;
+      // background-color: #F09A9D;
+      // float: left;  
+
+      background-color: #F09A9D;
+      float: left;
+      width: 300px;
+      height: 200px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+   
 
     }
-  }
-
-  .post-26 {
-    width: 90vw;
-    margin: 0 auto;
-    text-align: center;
-
-    @include desktop-size {
-      display: flex;
-    }
-    h2 {
-      @include page-title;
-      font-family: $font__accent;
-
-      // @include desktop-size {
-      //  &:nth-last-of-type(1) {
-      //    width: 100%;
-      //  }
   
-  
-      // }
+    .entry-content {
+      float: left;                 
+      width: 650px;
+      height: 500px;
+      background-color: #F5CF8E;
+      margin-top: 0;
       
     }
-
-    p {
-      text-align: justify;
-      font-family: $font__main;
-      letter-spacing: 1px;
-    }
   }
 
-  .button-container {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 50px;
-
-
-    .mixin-button {
-      @include main-cta;
-    }
-
+  .main-carousel {
+  clear: both;            /* Add this */
+  height: 200px;
+  background-color: #D6E9FE;
   }
+
+
+
+  // .about-clt-logo {
+  //   width: 50vw;
+  //   margin: 0 auto;
+
+  //   img {
+  //     width: 200px;
+  //     height: 150px;
+
+  //   }
+  // }
+
+  // .post-26 {
+  //   width: 90vw;
+  //   margin: 0 auto;
+  //   text-align: center;
+
+  //   @include desktop-size {
+  //     display: flex;
+  //   }
+  //   h2 {
+  //     @include page-title;
+  //     font-family: $font__accent;
+  //   }
+
+  //   p {
+  //     text-align: justify;
+  //     font-family: $font__main;
+  //     letter-spacing: 1px;
+  //   }
+  // }
+
+  // .button-container {
+  //   width: 100%;
+  //   text-align: center;
+  //   margin-bottom: 50px;
+
+
+  //   .mixin-button {
+  //     @include main-cta;
+  //   }
+
+  // }
 }

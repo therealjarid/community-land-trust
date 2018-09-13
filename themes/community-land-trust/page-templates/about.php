@@ -16,7 +16,9 @@ get_header(); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				
+					<div class="about-page-box">
 
 						<div class="about-clt-logo">
 								<img src="<?php echo CFS()->get( 'about_page_clt_logo' ); ?>"></img>
@@ -30,8 +32,11 @@ get_header(); ?>
 								'after'  => '</div>',
 							) );
 							?>
-        	</div><!-- .entry-content -->
-      	</article><!-- #post-## -->
+						</div><!-- .entry-content -->
+
+					</div>
+
+      </article><!-- #post-## -->
 
 	<?php endwhile; // End of the loop. ?>
 
