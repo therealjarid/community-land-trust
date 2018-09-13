@@ -62,6 +62,8 @@
 
 // Green button mixin
 @mixin main-cta {
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
   background-color: $color_button;
   font-family: 'Roboto';
   color: black;
@@ -181,8 +183,6 @@
   }
   .cta-button {
     @include main-cta;
-    border-radius: 10px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
   }
 }
 
