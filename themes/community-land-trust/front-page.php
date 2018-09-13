@@ -67,9 +67,9 @@ get_header(); ?>
                     <div class="timeline-block">
                     
                         <div class="year">
-                            <span class="year-entry-<?php echo $i; $i++; ?>">
+                            <p class="year-entry-<?php echo $i; $i++; ?>">
                               <?php echo $timeline_field['achievements_year'];?>
-                            </span>
+                            </p>
                         </div>
 
                         <div class="timeline-line"></div>
