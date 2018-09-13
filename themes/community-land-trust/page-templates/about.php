@@ -24,15 +24,7 @@ get_header(); ?>
 								<img src="<?php echo CFS()->get( 'about_page_clt_logo' ); ?>"></img>
 						</div>
 
-        		<div class="entry-content">
-							<?php the_content(); ?>
-							<?php
-							wp_link_pages( array(
-								'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-								'after'  => '</div>',
-							) );
-							?>
-						</div><!-- .entry-content -->
+						<?php the_content(); ?>
 
 					</div>
 
@@ -45,34 +37,38 @@ get_header(); ?>
 		<?php $about_us_fields = CFS()->get( 'about_our_history_highlights' ); ?>
 
 			<?php foreach ( $about_us_fields as $about_us_field ) : ?>
+				
+				<div class="carousel-cell">
 
-					<h3 class='about-cfs-years'> 
-						<?php echo $about_us_field['about_page_history_year']; ?> 
-					</h3>
+						<h3 class='about-cfs-years'> 
+							<?php echo $about_us_field['about_page_history_year']; ?> 
+						</h3>
 
-					<p class='about-cfs-description'>
-						<?php echo $about_us_field['about_page_history_description']; ?>
-					</p>
+						<p class='about-cfs-description'>
+							<?php echo $about_us_field['about_page_history_description']; ?>
+						</p>
 
-					<p class='about-cfs-extra-description'> 
-						<?php echo $about_us_field['about_page_history_extra_description']; ?>
-					</p>
-					
+						<p class='about-cfs-extra-description'> 
+							<?php echo $about_us_field['about_page_history_extra_description']; ?>
+						</p>
+
+				</div>	
+
 			<?php
       	endforeach;
       ?>
 			
 		</div>
 
-		<h2 class="more-info">Need More Information?</h2>
+    <div class="button-container">
+         <h2 class="more-info">Need More Information?</h2>
 
-		<div class="button-container">
-			<button class="mixin-button">
-				<a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
-						Contact Us
-				</a>
-			</button>
-		</div>
+        <button class="mixin-button">
+            <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
+                Contact Us
+            </a>
+        </button>
+    </div>
 		
 
 </section><!-- .about-us -->

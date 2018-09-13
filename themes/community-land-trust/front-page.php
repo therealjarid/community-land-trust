@@ -140,9 +140,9 @@ get_header(); ?>
 
     
     <div class="button-container">
-         <h2 class="more-info">Need More Information?</h2>
+        <h2 class="more-info">Need More Info<span class="contraction">rmation</span>?</h2>
 
-        <button class="mixin-button">
+        <button class="mixin-button cta-button">
             <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
                 Contact Us
             </a>
