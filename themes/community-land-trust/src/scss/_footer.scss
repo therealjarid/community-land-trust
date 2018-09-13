@@ -77,6 +77,10 @@
       flex-direction: row;
       justify-content: space-between;
       padding-left: 0.5rem;
+      @include phablet-size {
+        width: 70%;
+        margin: 0 auto;
+      }
       @include tablet-size {
         justify-content: space-between;
         width: 100%;
@@ -117,6 +121,10 @@
         margin: 0;
         max-width: 85%;
         padding-left: 2rem;
+        @include phablet-size {
+          max-width: 80%;
+          padding-left: 4rem;
+        }
         @include tablet-size {
           max-width: 45%;
           padding-left: 1rem;
