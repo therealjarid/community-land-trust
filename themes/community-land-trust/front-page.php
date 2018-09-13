@@ -66,8 +66,8 @@ get_header(); ?>
 				foreach ( $timeline_fields as $timeline_field ) : ?>
                     <div class="timeline-block">
                     
-                        <div class="year">
-                            <p class="year-entry-<?php echo $i; $i++; ?>">
+                        <div class="year year-entry-<?php echo $i; $i++; ?>">
+                            <p>
                               <?php echo $timeline_field['achievements_year'];?>
                             </p>
                         </div>
@@ -150,3 +150,4 @@ get_header(); ?>
     </main> <!-- end of .home-page main -->
 
 <?php get_footer() ?>
+
