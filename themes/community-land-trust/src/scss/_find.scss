@@ -102,6 +102,7 @@
         }
         @include large-desktop-size {
           max-width: 250px;
+          height: 65px;
         }
         &:first-of-type {
           border-bottom: 0.5px $color_button solid;
@@ -154,6 +155,7 @@
           border: 0;
           background: none;
           line-height: 1;
+          padding: 0 10px;
           @include button-hover;
           &:focus {
             outline: 0;
