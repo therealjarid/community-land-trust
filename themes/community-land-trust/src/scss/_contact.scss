@@ -121,11 +121,6 @@
     .gform_wrapper {
       display: flex; 
       justify-content: center;
-      .medium {
-        @include desktop-size {
-          width: 40%;
-        }
-      }
       .validation_error {
         display: none;
       }
