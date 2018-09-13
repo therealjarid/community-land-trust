@@ -27,6 +27,31 @@
 	<div class="portfolio-grid-container">
 
 		<?php // fill in container here ?>
+		<div class="portfolio-grid-item">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
+			<p>This is sample text</p>
+		</div>
+		<div class="portfolio-grid-item">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
+			<p>This is sample text</p>
+		</div>
+		<div class="portfolio-grid-item">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
+			<p>This is sample text</p>
+		</div>
+		<div class="portfolio-grid-item">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
+			<p>This is sample text</p>
+		</div>
+		<div class="portfolio-grid-item">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
+			<p>This is sample text</p>
+		</div>
+		<div class="portfolio-grid-item">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/cowichan.png">
+			<p>This is sample text</p>
+		</div>
+		
 
 	</div>
 
