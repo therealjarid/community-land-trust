@@ -37,6 +37,10 @@
         margin-right: 50px;
         margin-top: 50px;
 
+        @include extra-large-desktop-size {
+          margin-right: 0;
+        }
+
       }
     }
 
