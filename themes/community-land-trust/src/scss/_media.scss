@@ -90,39 +90,86 @@ object {
 //Media page styles
 .blog {
 
-	img {
-		object-fit: cover;
-		height: 300px;
+	.page-header {
 
-		@include tablet-size {
-			@include banner-img;
+		img {
+			object-fit: cover;
+			height: 300px;
+	
+			@include tablet-size {
+				@include banner-img;
+			}
 		}
+
 	}
 
 	.media-heading-box {
 		@include page-title;
-		display: block;
+		text-align: center;
+		width: 200px;
+		font-size: 20px;
+
+		h1 {
+			display: inline-block;
+			font-weight: bold;
+			letter-spacing: 1px;
+			font-size: 20px;
+		}
+		
+
 	}
 
+	.main-carousel {
+		width: 80vw;
+		margin: 0 auto;
+		margin-bottom: 4rem;
+
+	}
 
 	.carousel-cell {
 		display: flex;
 		flex-direction: column;
 	}
 
-	.media-inquiries {
-		height: 300px;
-		width: 600px;
-		background: $timeline_bg;
-		margin: 0 auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+	.media-page-info {
+		height: 130px;
+		background: $media_lighter_bg;
+
+
+		p {
+			width: 70vw;
+			margin: 10px auto;		
+			font-size: 16px;
+			line-height: 25px;
+
+		}
+
+		.media-posted-on {
+			text-align: right;
+			font-family: $font__accent;
+			letter-spacing: 2px;
+			font-size: 14px;
+		}
+
 	}
 
+	.media-inquiries {
+		height: 150px;
+		width: 100vw;
+		background: $timeline_bg;
+		text-align: center;
+		padding: 50px 50px;
+		
+		span {
+			width: 90vw;
+			font-size: 14px;
+		}
 
-
-
+		.media-inquiries-email {
+			font-weight: 500;
+			text-decoration: underline;
+		}
+	}
 
 
 
