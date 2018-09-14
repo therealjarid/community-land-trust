@@ -43,8 +43,8 @@ get_header(); ?>
         <div class="find-form-container">
 
 			<?php
-			echo '<h2>' . CFS()->get( 'sign_up_cta' ) . '</h2>';
-			echo '<p>' . CFS()->get( 'sign_up_copy' ) . '</p>';
+			echo '<h2>' . esc_html(CFS()->get( 'sign_up_cta' )) . '</h2>';
+			echo '<p>' . esc_html(CFS()->get( 'sign_up_copy' )) . '</p>';
 			?>
 
 			<?php gravity_form( 2, false, false, false, null, false, null, true ); ?>
@@ -55,7 +55,7 @@ get_header(); ?>
             <h2>Need More Info<span class="contraction">rmation</span>?</h2>
 
             <button class="cta-button">
-                <a href="<?php echo get_permalink( get_page_by_title( 'Contact Us' ) ) . "#contact-container" ?>">Contact
+                <a href="<?php echo esc_url(get_permalink( get_page_by_title( 'Contact Us' ) )) . "#contact-container" ?>">Contact
                     Us</a>
             </button>
 
