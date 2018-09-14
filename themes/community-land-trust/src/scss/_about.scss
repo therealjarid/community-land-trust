@@ -38,7 +38,7 @@
         margin-top: 50px;
 
         @include extra-large-desktop-size {
-          margin-right: 0;
+          margin-top: 0;
         }
 
       }
@@ -52,6 +52,13 @@
           margin-right: 360px;
         }
       }
+
+      @include extra-large-desktop-size {
+        &:nth-of-type(1) {
+          margin-right: 650px;
+        }
+        
+      }
  
     }
 
@@ -59,6 +66,10 @@
       font-family: $font__main;
       text-align: left;
       letter-spacing: 1px;
+
+      @include extra-large-desktop-size {
+        font-size: 18px;  
+      }
       
     }
   }
@@ -116,6 +127,10 @@
             }
 
 
+          }
+
+          @include extra-large-desktop-size {
+            font-size: 20px;               
           }
         }
       }
