@@ -7,6 +7,15 @@
   padding-top: 30px;
   margin-bottom: 30px;
 
+  .flickity-page-dots:empty {
+    & + .previous {
+      display: none;
+      & + .next {
+        display: none;
+      }
+    }
+  }
+
   @include desktop-size {
     width: 70vw;
     margin: 0 auto;
@@ -66,48 +75,30 @@
 
   //header styles begin
   .hero-banner {
+
     position: relative;
+
+    img {
+			object-fit: cover;
+      height: 200px;
+		}
+   
 
     .header-info-box {
       position: absolute;
-      top: 30px;
-      left: 60px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-20%);
 
-      @include desktop-size {
-        top: 80px;
-      }
-      
-
-      img {
-        @include banner-img;
-  
-        @include desktop-size {
-          height: auto;
-        }
-      }
       .company-header-info {
         opacity: 0.75;
         border-radius: 10px;
         background-color: #ffffff;
-        position: absolute;
         height: 70px;
         width: 270px;
         padding-top: 10px;
         text-align: center;
-        top: 45%;
-        left: 15%;
-  
-        @include tablet-size {
-          top: 60%;
-          left: 30%;
-        }
-  
-        @include desktop-size {
-          height: 131px;
-          width: 600px;
-          top: 15%;
-          left: -1%;
-        }
+
   
         h1,
         p {
@@ -136,25 +127,8 @@
   
       .mixin-button {
         @include main-cta;
-        position: absolute;
-        top: 45px;
-        left: 75px;
-        height: 30px;
-  
-        @include tablet-size {
-          top: 260px;
-          left: 260px;
-        }
-  
-        @include desktop-size {
-          top: 160px;
-          left: 170px;
-        }
-  
-        @include extra-large-desktop-size {
-          top: 190px;
-          left: 170px;
-        }
+        position: relative;
+        transform: translate(50%,-50%);
       }
 
     }
@@ -210,7 +184,7 @@
         flex-direction: column;
         align-items: center;
         width: 50%;
-        position: relative;
+  
 
         &:last-of-type {
           width: 100%;
@@ -282,9 +256,26 @@
 
         }
 
+        .home-timeline-icon-box {
+          position: relative;
+
+          .timeline-growth-numbers {
+            position: absolute;  
+            color: #ffffff;
+            font-family: $font__accent;
+            font-size: 20px;
+            font-weight: 500;
+            bottom:30px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+
+        }
+
         img {
           width: 150px;
           height: 150px;
+          
 
           @include desktop-size {
             width: 180px;
@@ -293,6 +284,8 @@
           }
         }
 
+      }
+        
         h3 {
           color: $timeline_bg_numbers;
           font-family: $font__accent;
@@ -323,31 +316,8 @@
             height: 8rem;
           }    
         }
-
-        .timeline-growth-numbers {
-          @include desktop-size {
-            top: 290px;
-          } 
-
-        }
       }
-
-      }
-
-        .timeline-growth-numbers {
-          position: absolute;
-          top: 180px;
-          color: #ffffff;
-          font-family: $font__accent;
-          font-size: 20px;
-          font-weight: 500;
-
-          @include desktop-size {
-            top: 200px;
-            font-size: 25px;
-          }
-
-      }
+    }
     }
 
   }
@@ -355,20 +325,17 @@
   .partners-logo-wrapper {
     padding-top: 30px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    max-width: 300px;
-
 
     @include desktop-size {
       justify-content: center;
-      margin-left: 70px;
+      margin-left: 50px;
     }
 
     img {
       height: auto;
       width: auto;
-      margin-right: 50px;
 
       @include desktop-size {
         height: 100px;
