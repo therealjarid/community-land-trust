@@ -121,6 +121,8 @@
         margin: 0;
         max-width: 85%;
         padding-left: 2rem;
+        line-height: 1rem;
+        text-indent: -0.5rem;
         @include phablet-size {
           max-width: 80%;
           padding-left: 4rem;
@@ -130,6 +132,7 @@
           padding-left: 1rem;
           line-height: 1rem;
           padding-top: 0.5rem;
+          text-indent: 0.1rem;;
         }
         @include desktop-size {
           max-width: 27%;
@@ -156,19 +159,15 @@
         @include tablet-size {
           display: block;
           max-width: 175px;
-          max-height: 125px;
         }
         @include desktop-size {
           max-width: 250px;
-          max-height: 175px;
         }
         @include large-desktop-size {
           max-width: 275px;
-          max-height: 150px;
         }
         @include extra-large-desktop-size {
           max-width: 325px;
-          max-height: 175px;
         }
       }
       .fa-map-marker-alt {

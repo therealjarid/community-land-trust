@@ -76,15 +76,17 @@
         }
       }
     }
-    #map-canvas {
-      border-top: 4px solid #4da7cd;
-      @include desktop-size {
-        border-top: none;
-        width: 326px;
-        height: 178px;
-        padding-left: 3rem;
-        padding-top: 1rem;
-        border-left: 4px solid #4da7cd;
+    .map-container {
+      height: 500px;
+      width: 1000px; 
+      #map-canvas {
+        @include desktop-size {
+          border-top: none;
+          width: 50%;
+          height: 25%;
+          padding-left: 3rem;
+          padding-top: 1rem;
+        }
       }
     }
   }

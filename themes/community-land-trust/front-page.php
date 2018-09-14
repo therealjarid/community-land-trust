@@ -78,7 +78,7 @@ get_header(); ?>
 
                         <img class="lower" src="<?php echo $timeline_field['achievements_icon']; ?>">
 
-                        <p class="timeline-growth-numbers">
+                        <p class="timeline-growth-numbers counter">
                             <?php echo $timeline_field['achievements_numbers']; ?>
                         </p>
 
