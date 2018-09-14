@@ -117,7 +117,7 @@
 
 @mixin page-title {
   margin: 0 auto 10px auto;
-  // display: inline-block;
+  display: inline-block;
   padding: 0;
   border-bottom: 3px $border_color solid;
   font-family: $font__accent;
