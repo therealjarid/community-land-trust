@@ -146,6 +146,14 @@
     @include desktop-size {
       padding-top: 80px;
     }
+    .flickity-page-dots:empty {
+      & + .previous {
+        display: none;
+        & + .next {
+          display: none;
+        }
+      }
+    }
     .carousel-cell {
       padding: 0 25px;
       @include tablet-size {

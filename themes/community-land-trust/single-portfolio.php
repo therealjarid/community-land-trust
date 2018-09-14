@@ -132,6 +132,7 @@ get_header(); ?>
                       <img src='{$image}'>
                       </div>";
               }
+              
           }
           ?>  
         </div>   
