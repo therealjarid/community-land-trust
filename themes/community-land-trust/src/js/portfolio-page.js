@@ -45,7 +45,9 @@ jQuery(document).ready(function($) {
         $('.portfolio-grid-container').append(
           `<a href="${restResult[i].link}">
               <div class="portfolio-grid-item">
-                <img src="${propertyImage}">
+                <div class="img-container" >
+                  <img src="${propertyImage}">
+                </div>
                 <div class="title-container">
                   <p>${restResult[i].title.rendered}</p>
                 </div>
