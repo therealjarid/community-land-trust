@@ -11,12 +11,17 @@ get_header(); ?>
 	<div class="single-portfolio-container">
            
     <div class="hero-container">
+
       <?php if ( has_post_thumbnail() ) : ?>
-      <?php the_post_thumbnail(); ?>
+      
+        <?php the_post_thumbnail(); ?>
+
       <?php endif; ?>
       
       <div class="title-container">
+
         <?php the_title( '<h1 class="portfolio-title">', '</h1>' ); ?>
+
       </div>
       
     </div>
@@ -24,11 +29,13 @@ get_header(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
       <div class="flex-container">
-        
+
         <div class="entry-content">
 
           <?php while ( have_posts() ) : the_post();
+
               the_content();
+              
           endwhile; ?>
 
         </div><!-- .entry-content -->

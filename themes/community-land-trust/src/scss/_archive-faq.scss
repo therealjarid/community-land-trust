@@ -65,6 +65,14 @@
     }
   }
 
+  .faq-all-container {
+    @include large-desktop-size {
+      position: relative;
+      top: -100px;
+      border-bottom: 0.1px solid #11344d;
+    }
+  }
+
   // Faq show & hide answer
   .faq_container {
     .faq_answer_container {
@@ -111,23 +119,50 @@
     } // end .open
   }
 
-  .more-info {
-    border-top: 0.1px solid #11344d;
-    margin: 0;
-    padding-top: 50px;
-    padding-bottom: 20px;
-  }
-
-  .button-container {
-    width: 100%;
+  // don't use mixin here, there's some css magic that is swapping
+  // borders, positions, etc.
+  .more-info-container {
     text-align: center;
-    margin-bottom: 50px;
-
-
-    .mixin-button {
-      @include main-cta;
+    @include large-desktop-size {
+      position: relative;
+      top: -50px;
+    }
+    .contraction {
+      display: none;
+      @include tablet-size {
+        display: inline;
+      }
+    }
+    .more-info {
+      margin: 0;
+      padding-top: 50px;
+      border-top: 0.1px solid #11344d;
+      font-size: 20px;
+      @include tablet-size {
+        font-size: 24px;
+      }
+      @include desktop-size {
+        font-size: 26px;
+      }
+      @include large-desktop-size {
+        border-top: 0;
+        padding: 0;
+        font-size: 28px;
+        display: inline-block;
+      }
     }
 
+    .button-container {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 50px;
+      margin-top: 10px;
+      @include large-desktop-size {
+        margin-bottom: 0;
+      }
+      .mixin-button {
+        @include main-cta;
+      }
+    }
   }
-
 }

@@ -169,6 +169,14 @@
   }
   .navigation-links {
     @include nav-links;
+    font-size: 16px;
+    font-family: $font__main;
+    @include tablet-size {
+      margin-top: 30px;
+    }
+    @include desktop-size {
+      font-size: 18px;
+    }
   }
   .more-info {
     @include more-info;
