@@ -25,7 +25,7 @@ get_header(); ?>
 
               <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                  <img class="logo" src="<?php echo CFS()->get( 'about_page_clt_logo' ); ?>"></img>
+                  <img class="logo" src="<?php echo CFS()->get( 'about_page_clt_logo' ); ?>">
 
                   <div class="entry-content">
 

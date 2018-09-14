@@ -122,8 +122,9 @@ get_header(); ?>
 
           <?php
           $portfolio_gallery = CFS()->get( 'portfolio_gallery' );
+          
 
-          if ( count( $portfolio_gallery ) > 0) {
+          if ( !is_null( $portfolio_gallery ) ) {
 
             foreach ( $portfolio_gallery as $gallery_image ) {
               

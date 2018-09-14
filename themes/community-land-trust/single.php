@@ -35,10 +35,10 @@ get_header(); ?>
 			</article><!-- #post-## -->
 
 			<div class="social-links">
-				<p class="share">Share:<a href="<?php echo $fblink['url']; ?>" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="<?php echo $twlink['url']; ?>" target="_blank"><i class="fab fa-twitter"></i></a><a href="<?php echo $lilink['url']; ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a></p>
 					<?php $fblink = CFS()->get( 'facebook', 36 ); ?>
 					<?php $twlink = CFS()->get( 'twitter', 36 ); ?>
 					<?php $lilink = CFS()->get( 'linkedin', 36 ); ?>
+				<p class="share">Share:<a href="<?php echo $fblink['url']; ?>" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="<?php echo $twlink['url']; ?>" target="_blank"><i class="fab fa-twitter"></i></a><a href="<?php echo $lilink['url']; ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a></p>
 				</div><!-- end of social-links -->
 
 			<div class="email-container">
