@@ -41,7 +41,7 @@ get_header();?>
 						$background_image = $about_us_field['about_page_background_image'];
 						?>
 					<div 	class="carousel-cell" 
-								style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(225, 225, 225, 0.7)), url('<?php echo $background_image; ?>');">
+								style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(225, 225, 225, 0.8)), url('<?php echo $background_image; ?>');">
 
 							<h3 class='about-cfs-years'>
 								<?php echo $about_us_field['about_page_history_year']; ?>

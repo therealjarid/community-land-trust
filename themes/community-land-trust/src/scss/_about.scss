@@ -63,6 +63,11 @@
       margin: 0 auto;
       clear: both;           
       height: 400px;
+
+      @include desktop-size {
+        width: 70vw;
+        height: 500px;
+      }
       
       .carousel-cell {
         display: flex;
@@ -72,6 +77,10 @@
         background-size: cover; 	
         background-position: center;
 
+        @include desktop-size {
+          min-height: 450px;
+        }
+
         .about-cfs-years {
           font-family: $font__accent;
           font-weight: 500;
@@ -79,6 +88,12 @@
           margin-bottom: 0;
           margin-top: 80px;
           color: black;
+
+          @include desktop-size {
+            font-size: 35px;
+            font-weight: bold;
+            margin-top: 10rem;
+          }
         }
 
         p {
@@ -86,6 +101,18 @@
           text-align: center;
           color: black;
           overflow: hidden;
+
+          @include desktop-size {
+            margin-top: 3rem;
+            width: 550px;
+            font-size: 18px;
+
+            &:nth-of-type(2) {
+              margin-top: 0;
+            }
+
+
+          }
         }
       }
 
