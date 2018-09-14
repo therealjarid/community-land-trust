@@ -3,8 +3,22 @@
 --------------------------------------------------------------*/
 
 .single-portfolio-container {
+  font-family: $font__accent;
   .hero-container {
     position: relative;
+    max-width: 1350px;
+    margin: 0 auto;
+    @include large-desktop-size {
+      max-width: 1920px;
+    }
+    img {
+      max-height: 520px;
+      object-fit: cover;
+      width: 100%;
+      @include large-desktop-size {
+        max-height: 550px;
+      }
+    }
     .title-container {
       position: absolute;
       left: 50%;
@@ -16,10 +30,107 @@
       @include tablet-size {
         transform: translate(-50%, 75%);
       }
+      @include desktop-size {
+        left: 0;
+        transform: translate(0%, 0%);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        height: 150px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       .portfolio-title {
+        text-align: center;
         font-size: 22px;
         font-weight: 500;
-        text-align: center;
+        @include desktop-size {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+  article {
+    .flex-container {
+      @include desktop-size {
+        padding-top: 60px;
+        display: flex;
+        justify-content: center;
+        @include texture-background;
+      }
+    }
+    .entry-content {
+      padding: 0 25px;
+      border-bottom: 4px $color__link-hover solid;
+      @include tablet-size {
+        padding: 0 50px;
+      }
+      @include desktop-size {
+        max-height: 360px;
+        width: 67%;
+        border-bottom: 0;
+        border-right: 4px $color__link-hover solid;
+        margin-top: 0;
+        max-width: 650px;
+      }
+      h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        @include tablet-size {
+          font-size: 22px;
+        }
+        @include desktop-size {
+          margin-top: 0;
+          font-size: 24px;
+        }
+      }
+      p {
+        font-size: 18px;
+        margin-top: 0;
+        font-family: $font__main;
+        @include tablet-size {
+          font-size: 20px;
+        }
+      }
+    }
+    .fields-container {
+      font-size: 18px;
+      margin: 0 25px;
+      font-family: $font__main;
+      @include tablet-size {
+        margin: 40px 50px;
+        font-size: 20px;
+      }
+      @include desktop-size {
+        width: 33%;
+        margin: 40px 0 50px 50px;
+        max-width: 400px;
+      }
+      p {
+        margin: 12px 0;
+      }
+      span,
+      .field-title {
+        font-weight: 700;
+        margin-right: 10px;
+      }
+      .field-title-container {
+        display: flex;
+        p {
+          margin-top: 0;
+        }
+      }
+      .field-title {
+        &.link {
+          margin: 0 auto;
+          display: block;
+          text-align: center;
+          text-decoration: underline;
+          @include tablet-size {
+            margin-top: 20px;
+          }
+        }
       }
     }
   }

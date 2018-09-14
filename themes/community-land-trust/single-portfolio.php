@@ -23,77 +23,84 @@ get_header(); ?>
     
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-      <div class="entry-content">
+      <div class="flex-container">
+        
+        <div class="entry-content">
 
-        <?php while ( have_posts() ) : the_post();
-            the_content();
-        endwhile; ?>
+          <?php while ( have_posts() ) : the_post();
+              the_content();
+          endwhile; ?>
 
-      </div><!-- .entry-content -->
+        </div><!-- .entry-content -->
 
-      <div class="fields-container">
+        <div class="fields-container">
 
-          <!-- custom fields only print if they're not empty -->
-          <?php 
-            $year = esc_html(substr(CFS()->get( 'year_completed' ), 0, 4));
-            $size = esc_html(CFS()->get( 'property_size' ));
-            $location = esc_html(CFS()->get( 'location' ));
-            $budget = esc_html(CFS()->get( 'budget' ));
-            $partners = esc_html(CFS()->get( 'partners' ));
-            $link = esc_html(CFS()->get( 'property_link' ));
+            <!-- custom fields only print if they're not empty -->
+            <?php 
+              $year = esc_html(substr(CFS()->get( 'year_completed' ), 0, 4));
+              $size = esc_html(CFS()->get( 'property_size' ));
+              $location = esc_html(CFS()->get( 'location' ));
+              $budget = esc_html(CFS()->get( 'budget' ));
+              $partners = CFS()->get( 'partners' );
+              $link = CFS()->get( 'property_link' );
 
-            if ( !empty( $year ) ) {
-              echo '<p><span class="field-title year">Year Completed:</span> ' . $year . '</p>';
-            }
-            
-            if ( !empty( $size ) ) {
-              echo '<p><span class="field-title size">Property Size:</span> ' . $size . '</p>';
-            }
-
-            if ( !empty( $location ) ) {
-              echo '<p><span class="field-title location">Location:</span> ' . $location . '</p>';
-            }
-
-            if ( !empty( $budget ) ) {
-              echo '<p><span class="field-title budget">Budget:</span> ' . $budget . '</p>';
-            }
-
-            // check if any partners have been entered, if they have we print field-title
-            if ( !empty( $partners ) ) {
-
-              // if more than one term print the plural
-              if (count( $partners ) > 1) {
-                $last_partner = end($partners);
-                echo '<p><span class="field-title partners partner">Partners:</span> ';
+              if ( !empty( $year ) ) {
+                echo '<p><span class="field-title year">Year Completed:</span> ' . $year . '</p>';
+              }
               
-                foreach ($partners as $partner) {
-                    echo $partner['partner'];
-                    if ($partner !== $last_partner) {
-                      echo ', ';
-                    }
+              if ( !empty( $size ) ) {
+                echo '<p><span class="field-title size">Property Size:</span> ' . $size . '</p>';
+              }
+
+              if ( !empty( $location ) ) {
+                echo '<p><span class="field-title location">Location:</span> ' . $location . '</p>';
+              }
+
+              if ( !empty( $budget ) ) {
+                echo '<p><span class="field-title budget">Budget:</span> ' . $budget . '</p>';
+              }
+
+              // check if any partners have been entered, if they have we print field-title
+              if ( !empty( $partners ) ) {
+
+                echo '<div class="field-title-container" >';
+
+                // if more than one term print the plural
+                if (count( $partners ) > 1) {
+                  $last_partner = end($partners);
+                  echo '<p class="field-title partners partner">Partners:</p><p> ';
+                
+                  foreach ($partners as $partner) {
+                      echo $partner['partner'];
+                      if ($partner !== $last_partner) {
+                        echo ', ';
+                      }
+                  }
+
+                  echo '</p>';
+
+                // otherwise print singular
+                } else {
+                  // each partner gets pushed onto an array in the database, 
+                  // even if the user deletes that field, its position in the
+                  // array will continue to grow,
+                  // so we have to grab the last element of this array even
+                  // if the length is 1
+                  $partner = end( $partners );
+                  echo '<p class="field-title partners partner">Partner:</p><p> ' . $partner[ 'partner' ] . '</p>';
                 }
 
-                echo '</p>';
-
-              // otherwise print singular
-              } else {
-                // each partner gets pushed onto an array in the database, 
-                // even if the user deletes that field, its position in the
-                // array will continue to grow,
-                // so we have to grab the last element of this array even
-                // if the length is 1
-                $partner = end( $partners );
-                echo '<p><span class="field-title partner">Partner:</span> ' . $partner[ 'partner' ] . '</p>';
+                echo '</div>';
+              }   
+              
+              if ( !empty( $link ) ) {
+                echo '<a href="' . esc_url($link[ 'url' ]) . '" class="field-title link" >';
+                echo the_title('Visit ', '') . '\'s Site' ;
+                echo '</a>';
               }
-            }   
-            
-            if ( !empty( $link ) ) {
-              echo '<a href="' . esc_url($link[ 'url' ]) . '" >';
-              echo the_title('<p><span class="field-title link">Visit ', '') . '\'s Site' ;
-              echo '</p></a>';
-            }
-          ?>
+            ?>
 
+        </div>
       </div>
 
 

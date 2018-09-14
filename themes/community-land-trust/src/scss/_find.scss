@@ -290,6 +290,7 @@
       }
       .gfield_radio {
         margin: 0;
+        color: black;
         input[type='radio'] {
           display: none;
           &:checked + label {

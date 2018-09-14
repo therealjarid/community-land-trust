@@ -144,12 +144,12 @@
     background-image: url(../../assets/images/logo-banner.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    height: 380px;
+    height: 400px;
     margin-bottom: 0;
   }
 
   @include large-desktop-size {
-    height: 420px;
+    height: 500px;
   }
 
   @include extra-large-desktop-size {
