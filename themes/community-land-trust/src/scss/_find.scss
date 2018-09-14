@@ -244,9 +244,35 @@
       .gform_button,
       .gform_next_button,
       .gform_previous_button {
-        @include main-cta;
-        margin: 0 8px;
-        display: block;
+        // this button, since its pulled in with a plugin,
+        // shouldn't be used with mixins
+        border-radius: 10px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+        background-color: $color_button;
+        border: 0;
+        height: 40px;
+        margin: 8px;
+        width: 125px;
+        font-size: 16px;
+        &:hover {
+          background-color: #a8be39;
+          transition: 0.5s;
+          cursor: pointer;
+          color: $color__link-hover;
+        }
+        &:focus {
+          outline: 0;
+        }
+        @include tablet-size {
+          height: 45px;
+          width: 175px;
+        }
+        @include desktop-size {
+          height: 50px;
+          width: 225px;
+          font-size: 18px;
+          font-weight: 500;
+        }
       }
       .gform_fields input {
         height: 40px;

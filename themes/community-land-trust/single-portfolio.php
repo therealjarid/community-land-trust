@@ -107,7 +107,7 @@ get_header(); ?>
         <div class="main-carousel">
 
           <?php
-          $portfolio_gallery = esc_html(CFS()->get( 'portfolio_gallery' ));
+          $portfolio_gallery = CFS()->get( 'portfolio_gallery' );
 
             foreach ( $portfolio_gallery as $gallery_image ) {
               
