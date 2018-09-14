@@ -234,7 +234,8 @@ function slug_get_zipcode( $object, $field_name, $request ) {
 }
 
 /**
- * Dynamically populate "Find a Home" buttons for "What area do you want to live?" and "What type of home?"
+ * dynamically populate "Find a Home" buttons for "What area do you want to live?" and "What type of home?"
+ * hook is added conditionally above
  */
 
 function populate_radio( $form ) {
@@ -273,3 +274,13 @@ function populate_radio( $form ) {
 
 	return $form;
 }
+
+// the following will disable the archive page for standard taxonomy
+function clt_remove_wp_archives(){
+	if( is_category() || is_tag() || is_date() || is_author() ) {
+		global $wp_query;
+		$wp_query->set_404(); //set to 404 not found page
+	}
+}
+add_action('template_redirect', 'clt_remove_wp_archives');
+
