@@ -43,15 +43,19 @@ get_header(); ?>
 			<?php foreach ( $press_posts as $post ) : setup_postdata( $post );?> 
 			
 				<div class="carousel-cell">
-						<?php 
-							$press_id = $post->ID;
-							echo get_the_post_thumbnail($press_id);
-						?>
+							<?php 
+								$press_id = $post->ID;
+								echo get_the_post_thumbnail($press_id);
+							?>
 
-						<?php echo clt_posted_on();?>
-						<a href="<?php echo get_permalink() ?>">
-							<?php 	echo $post->post_title; ?>
-						</a>
+						<div class="media-page-info">
+								<p class="media-posted-on"><?php echo clt_posted_on();?></p>
+								<p>
+									<a href="<?php echo get_permalink() ?>">
+										<?php 	echo $post->post_title; ?>
+									</a>
+								</p>
+						</div>		
 				</div>
 			<?php endforeach; wp_reset_postdata();?>
 		</div> 
@@ -81,11 +85,14 @@ get_header(); ?>
 						$press_id = $post->ID;
 						echo get_the_post_thumbnail($press_id);
 					?>
-
-					<?php echo clt_posted_on();?>
-					<a href="<?php echo get_permalink() ?>">
-						<?php 	echo $post->post_title; ?>
-					</a>
+					<div class="media-page-info">
+							<p class="media-posted-on"><?php echo clt_posted_on();?></p>
+							<p>
+								<a href="<?php echo get_permalink() ?>">
+									<?php 	echo $post->post_title; ?>
+								</a>
+							</p>
+					</div>		
 			</div>
 		<?php endforeach; wp_reset_postdata();?>
 	</div> 
@@ -97,7 +104,7 @@ get_header(); ?>
 			For Media Inquiries regarding
 			Community Land Trust, Please Contact:
 		</span>
-		<span><?php echo CFS()->get( 'email', 36 ); ?></span>
+		<span class="media-inquiries-email"><?php echo CFS()->get( 'email', 36 ); ?></span>
 </div>
 
 

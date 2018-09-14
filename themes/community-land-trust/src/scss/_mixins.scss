@@ -117,7 +117,7 @@
 
 @mixin page-title {
   margin: 0 auto 10px auto;
-  display: inline-block;
+  // display: inline-block;
   padding: 0;
   border-bottom: 3px $border_color solid;
   font-family: $font__accent;
@@ -127,7 +127,7 @@
     margin: 20px 10px 0 10px;
     font-weight: 500;
     font-size: 1rem;
-    text-align: center;
+    // text-align: center;
 
     @include desktop-size {
       font-size: 1.5rem;
