@@ -1,17 +1,17 @@
-// Rem output with px fallback
+// rem output with px fallback
 @mixin font-size($sizeValue: 1) {
   font-size: ($sizeValue * 16) * 1px;
   font-size: $sizeValue * 1rem;
 }
 
-// Center block
+// center block
 @mixin center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-//Media queries
+// media queries
 @mixin phone-size {
   @media screen and (min-width: $mobile-min-width) {
     @content;
@@ -60,7 +60,7 @@
   }
 }
 
-// Green button mixin
+// green cta button mixin
 @mixin main-cta {
   border-radius: 10px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
@@ -68,9 +68,6 @@
   font-family: 'Roboto';
   color: black;
   border: 0;
-  width: 120px;
-  font-size: 14px;
-  padding: 5px 0;
   margin-top: 12px;
   height: 40px;
   &:hover {
@@ -81,12 +78,23 @@
   &:focus {
     outline: 0;
   }
-
   @include desktop-size {
     height: 50px;
-    width: 230px;
-    font-size: 18px;
-    font-weight: 500;
+  }
+  a {
+    width: 120px;
+    display: inline-block;
+    padding: 7px 18px;
+    font-size: 14px;
+    @include tablet-size {
+      font-size: 16px;
+      width: 170px;
+    }
+    @include desktop-size {
+      width: 220px;
+      font-size: 18px;
+      font-weight: 500;
+    }
   }
 }
 
@@ -113,14 +121,13 @@
   padding: 0;
   border-bottom: 3px $border_color solid;
   font-family: $font__accent;
-  
+
   h1,
   h2 {
     margin: 20px 10px 0 10px;
     font-weight: 500;
     font-size: 1rem;
     text-align: center;
-    
 
     @include desktop-size {
       font-size: 1.5rem;
@@ -157,6 +164,7 @@
   }
 }
 
+// used for failed js ajax requests
 @mixin error-message {
   color: red;
   text-align: center;
@@ -168,6 +176,9 @@
   }
 }
 
+// do not change margins in the 'more-info' mixin,
+// instead, change margins after your @include statement
+// to override, each page with this mixin will be different
 @mixin more-info {
   margin: 30px 0;
   text-align: center;
@@ -190,6 +201,7 @@
   }
 }
 
+// used for 'single' post views with navigation at the bottom
 @mixin nav-links {
   display: flex;
   align-items: center;
@@ -207,14 +219,9 @@
     @include button-hover;
     text-align: center;
     background-color: $color_button;
-    padding: 8px 0;
+
     width: 30%;
-    @include tablet-size {
-      padding: 12px 0;
-    }
-    @include desktop-size {
-      padding: 15px 0;
-    }
+
     &:first-child {
       border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
@@ -228,6 +235,17 @@
     &:empty {
       background-color: white;
       box-shadow: none;
+    }
+    a {
+      width: 100%;
+      display: inline-block;
+      padding: 8px 0;
+      @include tablet-size {
+        padding: 12px 0;
+      }
+      @include desktop-size {
+        padding: 15px 0;
+      }
     }
   }
 }

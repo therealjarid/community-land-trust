@@ -35,12 +35,12 @@ get_header(); ?>
 
           <!-- custom fields only print if they're not empty -->
           <?php 
-            $year = substr(CFS()->get( 'year_completed' ), 0, 4);
-            $size = CFS()->get( 'property_size' );
-            $location = CFS()->get( 'location' );
-            $budget = CFS()->get( 'budget' );
-            $partners = CFS()->get( 'partners' );
-            $link = CFS()->get( 'property_link' );
+            $year = esc_html(substr(CFS()->get( 'year_completed' ), 0, 4));
+            $size = esc_html(CFS()->get( 'property_size' ));
+            $location = esc_html(CFS()->get( 'location' ));
+            $budget = esc_html(CFS()->get( 'budget' ));
+            $partners = esc_html(CFS()->get( 'partners' ));
+            $link = esc_html(CFS()->get( 'property_link' ));
 
             if ( !empty( $year ) ) {
               echo '<p><span class="field-title year">Year Completed:</span> ' . $year . '</p>';
@@ -88,7 +88,7 @@ get_header(); ?>
             }   
             
             if ( !empty( $link ) ) {
-              echo '<a href="' . $link[ 'url' ] . '" >';
+              echo '<a href="' . esc_url($link[ 'url' ]) . '" >';
               echo the_title('<p><span class="field-title link">Visit ', '') . '\'s Site' ;
               echo '</p></a>';
             }
@@ -123,7 +123,7 @@ get_header(); ?>
         <div class="navigation-links">
 
             <div class="left"><?php previous_post_link( '%link', '<i class="fas fa-arrow-left"></i>' ); ?></div>
-            <div class="middle"><a href="<?php echo get_permalink( get_page_by_title( 'Portfolio' ) ) ?>">Portfolio</a></div>
+            <div class="middle"><a href="<?php echo esc_url(get_permalink( get_page_by_title( 'Portfolio' ) )) ?>">Portfolio</a></div>
             <div class="right"><?php next_post_link( '%link', '<i class="fas fa-arrow-right"></i>' ); ?></div>
           
         </div>
