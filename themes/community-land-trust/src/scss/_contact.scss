@@ -6,7 +6,15 @@
   text-align: center;
   .entry-header {
     @include page-title;
-    margin: 0 auto 1rem;
+    text-align: center;
+    width: 150px;
+    margin-bottom: 1rem;
+    @include desktop-size {
+      width: 200px;
+    }
+    .entry-title{
+      display: inline-block;
+    }
     @include desktop-size {
       @include page-title;
       margin: 0 auto 4rem;
