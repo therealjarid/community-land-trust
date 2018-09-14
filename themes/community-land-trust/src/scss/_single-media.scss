@@ -111,6 +111,18 @@
       color: $color__background-body;
     }
   }
+  .email-container {
+    background-color: #E0F1F7;
+    padding: 2.5rem 2.3rem;
+    font-size: 12px;
+    @include desktop-size {
+      display: none;
+    }
+    a {
+      text-decoration: underline;
+      font-weight: 500;
+    }
+  }
 }
 .navigation-links {
   @include nav-links;
