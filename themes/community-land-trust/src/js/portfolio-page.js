@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
       if (termId != '0') {
         queryString = `?portfolio_type=${termId}&_embed`;
       } else {
-        queryString = `?_embed`;
+        queryString = '?_embed';
       }
 
       // clear the grid container from previous call

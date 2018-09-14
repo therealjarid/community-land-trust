@@ -60,7 +60,7 @@
   }
 }
 
-// Green button mixin
+// green cta button mixin
 @mixin main-cta {
   border-radius: 10px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
@@ -153,6 +153,7 @@
   }
 }
 
+// used for failed js ajax requests
 @mixin error-message {
   color: red;
   text-align: center;
@@ -164,6 +165,9 @@
   }
 }
 
+// do not change margins in the 'more-info' mixin,
+// instead, change margins after your @include statement
+// to override, each page with this mixin will be different
 @mixin more-info {
   margin: 30px 0;
   text-align: center;
@@ -186,6 +190,7 @@
   }
 }
 
+// used for 'single' post views with navigation at the bottom
 @mixin nav-links {
   display: flex;
   align-items: center;
