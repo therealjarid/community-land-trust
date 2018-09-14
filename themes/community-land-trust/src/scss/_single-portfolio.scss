@@ -54,29 +54,32 @@
   article {
     .flex-container {
       @include desktop-size {
-        padding-top: 60px;
+        padding: 60px 0 0 60px;
         display: flex;
         justify-content: center;
         @include texture-background;
+        height: 510px !important;
       }
     }
     .entry-content {
       padding: 0 25px;
       border-bottom: 4px $color__link-hover solid;
+      margin-top: 5px;
       @include tablet-size {
-        padding: 0 50px;
+        padding: 0 50px 50px;
       }
       @include desktop-size {
-        max-height: 360px;
         width: 67%;
         border-bottom: 0;
         border-right: 4px $color__link-hover solid;
         margin-top: 0;
-        max-width: 650px;
+        max-width: 500px;
+        max-height: 400px;
       }
       h2 {
         font-size: 20px;
         margin-bottom: 15px;
+
         @include tablet-size {
           font-size: 22px;
         }
@@ -104,8 +107,8 @@
       }
       @include desktop-size {
         width: 33%;
-        margin: 40px 0 50px 50px;
-        max-width: 400px;
+        margin: 40px 0 0 50px;
+        max-width: 375px;
       }
       p {
         margin: 12px 0;
@@ -130,6 +133,36 @@
           @include tablet-size {
             margin-top: 20px;
           }
+        }
+      }
+    }
+  }
+  .main-carousel {
+    max-width: 900px;
+    margin: 0 auto;
+    @include tablet-size {
+      padding-top: 0;
+    }
+    @include desktop-size {
+      padding-top: 80px;
+    }
+    .carousel-cell {
+      padding: 0 25px;
+      @include tablet-size {
+        padding: 0 50px;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        @include tablet-size {
+          height: 300px;
+        }
+        @include desktop-size {
+          height: 400px;
+        }
+        @include large-desktop-size {
+          height: 500px;
         }
       }
     }
