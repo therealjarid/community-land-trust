@@ -87,12 +87,23 @@ object {
 	display: block;
 }
 
+//Media page styles
 .blog {
 
-	.media-page-headings {
-		@include page-title;
+	img {
+		object-fit: cover;
+		height: 300px;
 
+		@include tablet-size {
+			@include banner-img;
+		}
 	}
+
+	.media-heading-box {
+		@include page-title;
+		display: block;
+	}
+
 
 	.carousel-cell {
 		display: flex;

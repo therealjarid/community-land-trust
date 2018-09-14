@@ -23,14 +23,16 @@ get_header(); ?>
 								?>-->
 
 		<!-- "Press Releases" category title, and Loop through posts only from this category -->	
-		<h1 class="media-page-headings">
-				<?php
-					$categories = get_categories();
-					if ( ! empty( $categories ) ) {
-						echo esc_html( $categories[1]->name );
-					}
-				?>
-		</h1>
+		<div class="media-heading-box">
+				<h1 class="media-page-headings">
+						<?php
+							$categories = get_categories();
+							if ( ! empty( $categories ) ) {
+								echo esc_html( $categories[1]->name );
+							}
+						?>
+				</h1>
+		</div>
 
 		<?php 
 		// Never use query_posts( 'cat=2' ); 
@@ -56,14 +58,16 @@ get_header(); ?>
 			
 
 	<!-- "CLT in the News" category title, and Loop through posts only from this category -->
-	<h1 class="media-page-headings">
-			<?php
-				$categories = get_categories();
-				if ( ! empty( $categories ) ) {
-					echo esc_html( $categories[0]->name );
-				}
-			?>
-	</h1>
+	<div class="media-heading-box">
+			<h1 class="media-page-headings">
+					<?php
+						$categories = get_categories();
+						if ( ! empty( $categories ) ) {
+							echo esc_html( $categories[0]->name );
+						}
+					?>
+			</h1>
+	</div>
 
 	<?php 
 		$press_args = array( 'cat' => '1' );
