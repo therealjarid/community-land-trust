@@ -40,6 +40,12 @@ get_header(); ?>
 					<?php $twlink = CFS()->get( 'twitter', 36 ); ?>
 					<?php $lilink = CFS()->get( 'linkedin', 36 ); ?>
 				</div><!-- end of social-links -->
+
+			<div class="email-container">
+				<div class="email">
+					<p>For Media Inquiries regarding Community Land Trust, Please Contact: <?php echo CFS()->get( 'email' ); ?></p>
+				</div>
+			</div> <!-- end of email-container --> 
 				
 			</div> <!-- end of media-container --> 
 			<div class="navigation-links">
