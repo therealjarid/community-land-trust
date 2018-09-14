@@ -39,6 +39,7 @@ get_header(); ?>
           endwhile; ?>
 
         </div><!-- .entry-content -->
+
         <div class="fields-container">
 
             <!-- custom fields only print if they're not empty -->
