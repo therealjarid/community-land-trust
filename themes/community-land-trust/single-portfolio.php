@@ -123,8 +123,8 @@ get_header(); ?>
           <?php
           $portfolio_gallery = CFS()->get( 'portfolio_gallery' );
 
-          if (count( $portfolio_gallery ) > 0) {
-            
+          if ( count( $portfolio_gallery ) > 0) {
+
             foreach ( $portfolio_gallery as $gallery_image ) {
               
               $image = $gallery_image['portfolio_gallery_image'];
@@ -132,7 +132,7 @@ get_header(); ?>
                       <img src='{$image}'>
                       </div>";
               }
-            }
+          }
           ?>  
         </div>   
 
