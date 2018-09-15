@@ -26,13 +26,19 @@ get_header();
                             ) );      
 
         if ( $query->have_posts() ) :
-          while ( $query->have_posts() ) : $query->the_post(); ?>
+          while ( $query->have_posts() ) : $query->the_post();?>
 
             <div class="carousel-cell">
+              <div class="partner-info">
                     <?php the_post_thumbnail();
-                      the_content(); ?>      
-            </div>
+                      the_content();?> 
+              </div>     
+              <div class="partner-meta">
+                <p><?php echo esc_html( CFS()->get( 'partner_info', false ) ); ?></p>
+                <p><?php echo esc_html( CFS()->get( 'partner_completion', false ) ); ?></p>
+              </div>
 
+            </div>
           <?php endwhile;
         endif ?>
 
