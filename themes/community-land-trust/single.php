@@ -44,7 +44,7 @@ get_header(); ?>
  <li><script type="IN/Share" data-counter="top" data-url="<?php the_permalink() ?>"></script></li>
 
  <!-- facebook like -->
- <li><div class="fb-like" data-send="false" data-layout="box_count" data-width="50" data-show-faces="false" data-href="<?php echo $fblink['url']; ?>"></div></li>
+ <li><div class="fb-like" data-send="false" data-layout="box_count" data-width="50" data-show-faces="false" data-href="<?php the_permalink() ?>"></div></li>
 
 </ul>
 					<?php $fblink = CFS()->get( 'facebook', 36 ); ?>
