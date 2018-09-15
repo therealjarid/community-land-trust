@@ -42,10 +42,7 @@ get_header(); ?>
 				</div><!-- end of social-links -->
 			
 				<!-- custom field only print if there is a value inputted --> 
-				<?php
-				if ( !empty( $fblink ) ) {
-					echo '<a href="<?php echo $fblink['url']; ?>" target="_blank">'
-				} ?>
+
 			<div class="email-container">
 				<div class="email">
 					<p>For Media Inquiries regarding Community Land Trust, Please Contact: <?php echo CFS()->get( 'email' ); ?></p>
