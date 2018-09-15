@@ -35,12 +35,24 @@ get_header(); ?>
 			</article><!-- #post-## -->
 
 			<div class="social-links">
+			<ul class="meks_share">
+ 
+ <!-- twitter -->
+ <li><a class="twitter-share-button" data-count="vertical" data-via="mekshq" data-url="<?php the_permalink() ?>"></a></li>
+
+ <!-- LinkedIN -->
+ <li><script type="IN/Share" data-counter="top" data-url="<?php the_permalink() ?>"></script></li>
+
+ <!-- facebook like -->
+ <li><div class="fb-like" data-send="false" data-layout="box_count" data-width="50" data-show-faces="false" data-href="<?php echo $fblink['url']; ?>"></div></li>
+
+</ul>
 					<?php $fblink = CFS()->get( 'facebook', 36 ); ?>
 					<?php $twlink = CFS()->get( 'twitter', 36 ); ?>
 					<?php $lilink = CFS()->get( 'linkedin', 36 ); ?>
-				<p class="share">Share:<a href="<?php echo $fblink['url']; ?>" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="<?php echo $twlink['url']; ?>" target="_blank"><i class="fab fa-twitter"></i></a><a href="<?php echo $lilink['url']; ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a></p>
+				<p class="share">Share:<i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i><i class="fab fa-linkedin-in"></i></p>
 				</div><!-- end of social-links -->
-			
+	
 				<!-- custom field only print if there is a value inputted --> 
 
 			<div class="email-container">
