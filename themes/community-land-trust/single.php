@@ -35,22 +35,20 @@ get_header(); ?>
 			</article><!-- #post-## -->
 
 			<div class="social-links">
-				<ul class="media-share">
- 
-					<!-- twitter -->
-					<li><a class="twitter-share-button" data-count="vertical" data-via="mekshq" data-url="<?php the_permalink() ?>"></a></li>
+				<p class="share">Share:<i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i><i class="fab fa-linkedin-in"></i></p>
+				
+					<ul class="media-share">
+	
+						<!-- twitter -->
+						<li><a class="twitter-share-button" data-count="vertical" data-via="mekshq" data-url="<?php the_permalink() ?>"></a></li>
 
-					<!-- LinkedIN -->
-					<li><script type="IN/Share" data-counter="top" data-url="<?php the_permalink() ?>"></script></li>
+						<!-- LinkedIN -->
+						<li><script type="IN/Share" data-counter="top" data-url="<?php the_permalink() ?>"></script></li>
 
-					<!-- facebook like -->
-					<li><div class="fb-share-button" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-href="<?php the_permalink() ?>"></div></li>
+						<!-- facebook like -->
+						<li><div class="fb-share-button" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-href="<?php the_permalink() ?>"></div></li>
 
 					</ul>
-					<?php $fblink = CFS()->get( 'facebook', 36 ); ?>
-					<?php $twlink = CFS()->get( 'twitter', 36 ); ?>
-					<?php $lilink = CFS()->get( 'linkedin', 36 ); ?>
-				<p class="share">Share:<i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i><i class="fab fa-linkedin-in"></i></p>
 				</div><!-- end of social-links -->
 	
 				<!-- custom field only print if there is a value inputted --> 
