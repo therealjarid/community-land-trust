@@ -35,18 +35,18 @@ get_header(); ?>
 			</article><!-- #post-## -->
 
 			<div class="social-links">
-			<ul class="meks_share">
+				<ul class="media-share">
  
- <!-- twitter -->
- <li><a class="twitter-share-button" data-count="vertical" data-via="mekshq" data-url="<?php the_permalink() ?>"></a></li>
+					<!-- twitter -->
+					<li><a class="twitter-share-button" data-count="vertical" data-via="mekshq" data-url="<?php the_permalink() ?>"></a></li>
 
- <!-- LinkedIN -->
- <li><script type="IN/Share" data-counter="top" data-url="<?php the_permalink() ?>"></script></li>
+					<!-- LinkedIN -->
+					<li><script type="IN/Share" data-counter="top" data-url="<?php the_permalink() ?>"></script></li>
 
- <!-- facebook like -->
- <li><div class="fb-like" data-send="false" data-layout="box_count" data-width="50" data-show-faces="false" data-href="<?php the_permalink() ?>"></div></li>
+					<!-- facebook like -->
+					<li><div class="fb-like" data-send="false" data-layout="box_count" data-width="50" data-show-faces="false" data-href="<?php the_permalink() ?>"></div></li>
 
-</ul>
+					</ul>
 					<?php $fblink = CFS()->get( 'facebook', 36 ); ?>
 					<?php $twlink = CFS()->get( 'twitter', 36 ); ?>
 					<?php $lilink = CFS()->get( 'linkedin', 36 ); ?>

@@ -39,7 +39,7 @@
         top: 0;
         margin-top: 25rem;
         background-color: #ffffff;
-        border-radius: 10px;
+        border-radius: 0 10px 10px 0;
         opacity: 0.75;
         color: #000000;
       }
@@ -78,7 +78,7 @@
       margin: 0 auto;
       width: 55%;
     }
-    .share {
+    .media-share {
       display: flex;
       line-height: 2rem;
       justify-content: space-between;
