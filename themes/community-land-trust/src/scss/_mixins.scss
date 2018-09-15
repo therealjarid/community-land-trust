@@ -116,18 +116,19 @@
 }
 
 @mixin page-title {
-  margin: 0 auto 10px auto;
-  display: inline-block;
+  margin: 50px auto 30px auto;
   padding: 0;
   border-bottom: 3px $border_color solid;
   font-family: $font__accent;
+  text-align: center;
+  width: 170px;
 
   h1,
   h2 {
     margin: 20px 10px 0 10px;
     font-weight: 500;
     font-size: 1rem;
-    // text-align: center;
+    display: inline-block;
 
     @include desktop-size {
       font-size: 1.5rem;
@@ -136,6 +137,7 @@
   }
   @include desktop-size {
     border-bottom: 5px $border_color solid;
+    margin: 80px auto 30px auto;
   }
 }
 

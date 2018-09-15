@@ -22,6 +22,12 @@
     margin-bottom: 50px;
   }
 
+  .flickity-slider:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in;
+   
+  }
+
   .carousel-cell {
     width: 100%;  
   }
@@ -112,10 +118,17 @@
         padding-top: 10px;
         text-align: center;
 
+        @include tablet-size {
+          height: 80px;
+          width: 330px;
+        }
+
         @include desktop-size {
           height: 130px;
-          width: 550px;
-
+          width: 650px;
+          padding-left: 150px;
+          opacity: 0.85;
+          
         }
 
   
@@ -129,12 +142,17 @@
           @include desktop-size {
             font-size: 18px;
             font-weight: 500;
+            width: 100%;
+            
           }
-  
         }
   
         h1 {
           letter-spacing: 1.5px;
+
+          @include tablet-size {
+            font-size: 20px;
+          }
   
           @include desktop-size {
             font-size: 30px;
@@ -149,8 +167,13 @@
         position: relative;
         transform: translate(50%,-50%);
 
+        @include tablet-size {
+          transform: translate(40%,-70%);
+        }
+
         @include desktop-size {
-  
+          transform: translate(120%,-70%);
+          left: 0;
         }
       }
 
@@ -172,18 +195,23 @@
         font-size: 18px;
         text-align: justify;
       }
+
+      @include extra-large-desktop-size { 
+        font-size: 25px;
+        width: 900px;
+      }
     }
 
     .front-page-headings {
-      padding-top: 30px;
-      text-align: center;
-      position: relative;
-      border-bottom: 5px solid $border_color;
-      width: 180px;
-      margin: 0 auto;
-      font-family: 'Raleway', sans-serif;
-      color: black;
-      font-weight: normal;
+      @include page-title;
+
+      @include extra-large-desktop-size {
+        margin: 100px auto 30px auto;
+        font-size: 35px;
+        width: 280px;
+
+      }
+      
     }
 
     //timeline section styles
@@ -244,6 +272,17 @@
             margin-bottom: 0;
      
           }     
+
+          @include extra-large-desktop-size {
+            width: 320px;
+            height: 90px;
+
+            p {
+              font-size: 30px;
+    
+            }
+            
+          }
         }
 
         .year-entry-1 {
@@ -293,6 +332,11 @@
             top: 50%;
             transform: translate(-50%,-50%);
 
+            @include desktop-size {
+              top: 55%;
+              font-size: 25px;
+            }
+
         }
 
         img {
@@ -304,6 +348,11 @@
             width: 180px;
             height: 180px;
             
+          }
+
+          @include extra-large-desktop-size { 
+            width: 210px;
+            height: 210px;
           }
         }
 
@@ -318,6 +367,10 @@
 
           @include desktop-size {
             font-size: 25px;
+          }
+
+          @include extra-large-desktop-size { 
+            font-size: 30px;
           }
         }
       }
@@ -343,6 +396,12 @@
     }
     }
 
+    .timeline-description {
+      @include extra-large-desktop-size { 
+        font-size: 20px;
+      }
+    }
+
   }
 
   .partners-logo-wrapper {
@@ -351,18 +410,20 @@
     justify-content: space-between;
     align-items: center;
 
-    @include desktop-size {
-      justify-content: center;
+    @include tablet-size {
       margin-left: 50px;
+      justify-content: space-around;
+      width: 600px;
+      margin: 0 auto;
     }
 
     img {
       height: auto;
       width: auto;
 
-      @include desktop-size {
-        height: 100px;
-        width:200px;
+      @include tablet-size {
+        max-height: 100px;
+        max-width: auto;
 
       }
     }

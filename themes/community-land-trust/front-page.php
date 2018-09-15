@@ -110,12 +110,15 @@ get_header(); ?>
 			);
             $clt_portfolio_posts = get_posts( $portfolio_args );
             
-            if ( !is_null ( $clt_portfolio_posts ) ) { 
+            if ( !is_null( $clt_portfolio_posts ) ) { 
 
-                foreach ( $clt_portfolio_posts as $clt_portfolio_post ):
-                    echo( get_the_post_thumbnail( $clt_portfolio_post->ID ) );
-
-                endforeach;
+                foreach ( $clt_portfolio_posts as $clt_portfolio_post ): ?>
+                 
+                        <a href=<?php echo get_post_permalink($clt_portfolio_post->ID); ?>>
+                            <?php echo (get_the_post_thumbnail( $clt_portfolio_post->ID )); ?>
+                        </a>
+                  
+                <?php endforeach;
             }
 			wp_reset_postdata();
 			?>
