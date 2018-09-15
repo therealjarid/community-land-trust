@@ -6,50 +6,39 @@
  * @package CLT_Theme
  */
 
-get_header(); ?>
+get_header(); 
 
-    <!-- fetching content from page Partners from the backend -->
-      <?php
-            // query for the partners page
-            $your_query = new WP_Query( 'pagename=partners' );
-            while ( $your_query->have_posts() ) : $your_query->the_post();
-              the_content();
-            endwhile;
-            wp_reset_postdata();
+    while ( have_posts() ) : the_post(); ?>
+    
+      <div class="partner-page-content">
+
+          <?php the_content(); 
+
+            wp_link_pages( array(
+              'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+              'after'  => '</div>',
+            ) );
             ?>
+      </div><!-- .partner-page-content -->
 
-      <?php
-          while ( have_posts() ) : the_post(); ?>
+    <?php endwhile; ?>
 
-            <?php the_post_thumbnail(); ?>
+    <div class="contact-container">
 
-              <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <p><?php 
+        // 175 is the post id for the Partners page
+        echo 'Connect with us to learn how! Contact CLT’s ' . esc_html( CFS()->get( 'partners_contact_position', 175 ) ) . ', ';
+        echo esc_html( CFS()->get( 'partners_contact_name', 175 ) ) . ', at ';
+        echo '<a href="mailto:' . esc_html( CFS()->get( 'partners_contact_email', 175 ) ) . '" >';
+        echo esc_html( CFS()->get( 'partners_contact_email', 175 ) );
+        echo '</a></p></div>';
+      ?>
+    
+    <div class="main-carousel">
 
-                  <img class="logo" src="<?php echo CFS()->get( 'about_page_clt_logo' ); ?>">
+        <!-- @TODO: enqueue flickity script, add cells into here -->
 
-                  <div class="entry-content">
-
-                <?php the_content(); ?>
-
-                <?php
-                wp_link_pages( array(
-                  'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-                  'after'  => '</div>',
-                ) );
-                ?>
-                  </div><!-- .entry-content -->
-              </article><!-- #post-## -->
-
-          <?php endwhile; // End of the loop. ?>
-
-
-    <span>Connect with us to learn how! Contact CLT’s
-		  <?php echo CFS()->get( 'partners_contact_position', 175 ); ?></span>
-    <span>,
-      <?php
-      // 175 is the post id for the Partners page
-      echo CFS()->get( 'partners_contact_name', 175 ); ?><span>
-    <span>, at <?php echo CFS()->get( 'partners_contact_email', 175 ); ?></span>
+    </div>
 
 
 <?php get_footer(); ?>
