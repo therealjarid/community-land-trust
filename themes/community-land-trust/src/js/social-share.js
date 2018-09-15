@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
        fjs.parentNode.insertBefore(js, fjs);
      };
          //Facebook
-     load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk');
+     load('//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0', 'fbjssdk');
          //Twitter
      load('//platform.twitter.com/widgets.js', 'tweetjs');
          //LinedIN
