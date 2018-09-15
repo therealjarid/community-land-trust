@@ -219,7 +219,6 @@
     @include button-hover;
     text-align: center;
     background-color: $color_button;
-
     width: 30%;
 
     &:first-child {
@@ -246,6 +245,19 @@
       @include desktop-size {
         padding: 15px 0;
       }
+    }
+  }
+  .middle a {
+    padding: 2px 0px;
+    line-height: 1.1;
+    @include tablet-size {
+      padding: 7px 0;
+    }
+    @include desktop-size {
+      padding: 9px 0 10px;
+    }
+    .break {
+      display: block;
     }
   }
 }

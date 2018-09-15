@@ -141,7 +141,7 @@ get_header(); ?>
         <div class="navigation-links">
 
             <div class="left"><?php previous_post_link( '%link', '<i class="fas fa-arrow-left"></i>' ); ?></div>
-            <div class="middle"><a href="<?php echo esc_url(get_permalink( get_page_by_title( 'Portfolio' ) )) ?>">Portfolio</a></div>
+            <div class="middle"><a href="<?php echo esc_url(get_permalink( get_page_by_title( 'Portfolio' ) )) ?>"><span class="break">Back to </span>Portfolio</a></div>
             <div class="right"><?php next_post_link( '%link', '<i class="fas fa-arrow-right"></i>' ); ?></div>
           
         </div>
