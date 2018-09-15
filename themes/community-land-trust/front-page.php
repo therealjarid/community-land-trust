@@ -113,10 +113,12 @@ get_header(); ?>
             if ( !is_null( $clt_portfolio_posts ) ) { 
 
                 foreach ( $clt_portfolio_posts as $clt_portfolio_post ): ?>
-                 
-                        <a href=<?php echo get_post_permalink($clt_portfolio_post->ID); ?>>
+                    <div class="carousel-cell">
+
+                        <a href=<?php echo get_post_permalink($clt_portfolio_post->ID); ?>>                  
                             <?php echo (get_the_post_thumbnail( $clt_portfolio_post->ID )); ?>
                         </a>
+                    </div>
                   
                 <?php endforeach;
             }
