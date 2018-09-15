@@ -117,7 +117,7 @@
 
 @mixin page-title {
   margin: 0 auto 10px auto;
-  // display: inline-block;
+  display: inline-block;
   padding: 0;
   border-bottom: 3px $border_color solid;
   font-family: $font__accent;
@@ -219,18 +219,17 @@
     @include button-hover;
     text-align: center;
     background-color: $color_button;
-
     width: 30%;
 
     &:first-child {
       border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
-      margin: 0 4px 0 10px;
+      margin: 0 10px 0 10px;
     }
     &:last-child {
       border-bottom-right-radius: 10px;
       border-top-right-radius: 10px;
-      margin: 0 10px 0 4px;
+      margin: 0 10px 0 10px;
     }
     &:empty {
       background-color: white;
@@ -246,6 +245,19 @@
       @include desktop-size {
         padding: 15px 0;
       }
+    }
+  }
+  .middle a {
+    padding: 2px 0px;
+    line-height: 1.1;
+    @include tablet-size {
+      padding: 7px 0;
+    }
+    @include desktop-size {
+      padding: 9px 0 10px;
+    }
+    .break {
+      display: block;
     }
   }
 }

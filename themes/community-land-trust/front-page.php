@@ -15,14 +15,17 @@ get_header(); ?>
         <div class="header-info-box">
             <div class="company-header-info">
                 <h1 class="company-name">Community Land Trust</h1>
-                <p class="slogan"><?php echo CFS()->get( 'slogan' ); ?></p>
-            </div>
+                <p class="slogan"><?php echo esc_html(CFS()->get( 'slogan' )); ?>
+                </p>
+            </div>    
+          
+            <button class="mixin-button">
 
-            <a href="<?php echo get_permalink( get_page_by_path( 'find' ) ) ?>">
-                <button class="mixin-button">Find a Home</button>
-            </a>
+                <a href="<?php echo get_permalink( get_page_by_path( 'find' ) ) ?>">Find a Home</a>
+
+            </button>
+            
         </div>
-
 
     </section> <!-- end of .hero-banner section -->
 
@@ -76,11 +79,13 @@ get_header(); ?>
 
                         <div class="timeline-line"></div>
 
-                        <img class="lower" src="<?php echo $timeline_field['achievements_icon']; ?>">
+                        <div class="home-timeline-icon-box">
+                             <img class="lower" src="<?php echo $timeline_field['achievements_icon']; ?>">
+                             <p class="timeline-growth-numbers counter">
+                                 <?php echo $timeline_field['achievements_numbers']; ?>
+                             </p>
+                        </div>
 
-                        <p class="timeline-growth-numbers counter">
-                            <?php echo $timeline_field['achievements_numbers']; ?>
-                        </p>
 
                         <h3><?php echo $timeline_field['achievements_title']; ?></h3>
 
@@ -103,12 +108,15 @@ get_header(); ?>
 				'post_type' => 'portfolio',
 				'order'     => 'DSC',
 			);
-			$clt_portfolio_posts = get_posts( $portfolio_args );
+            $clt_portfolio_posts = get_posts( $portfolio_args );
+            
+            if ( !is_null ( $clt_portfolio_posts ) ) { 
 
-			foreach ( $clt_portfolio_posts as $clt_portfolio_post ):
-				echo( get_the_post_thumbnail( $clt_portfolio_post->ID ) );
+                foreach ( $clt_portfolio_posts as $clt_portfolio_post ):
+                    echo( get_the_post_thumbnail( $clt_portfolio_post->ID ) );
 
-			endforeach;
+                endforeach;
+            }
 			wp_reset_postdata();
 			?>
         </div>
@@ -125,15 +133,16 @@ get_header(); ?>
 
 			$clt_partners_thumbnails = get_posts( $arguments ); ?>
 
-                <?php foreach ( $clt_partners_thumbnails as $clt_partners_thumbnail ):?>
+                    <?php foreach ( $clt_partners_thumbnails as $clt_partners_thumbnail ):?>
 
-                    <a href="<?php echo get_permalink( get_page_by_path( 'partners' ) ) ?>">
+                        <a href="<?php echo get_permalink( get_page_by_path( 'partners' ) ) ?>">
 
-                         <?php echo( get_the_post_thumbnail( $clt_partners_thumbnail->ID) );?>
-                
-                    </a>
-
-                <?php endforeach;
+                            <?php echo( get_the_post_thumbnail( $clt_partners_thumbnail->ID) );?>
+                    
+                        </a>
+                    
+                    <?php
+                    endforeach;
 			wp_reset_postdata();
 			?>
         </div>

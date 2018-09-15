@@ -117,7 +117,7 @@
     }
   }
   .email-container {
-    background-color: #E0F1F7;
+    background-color: #e0f1f7;
     padding: 2.5rem 2.3rem;
     font-size: 12px;
     @include tablet-size {
@@ -136,4 +136,15 @@
 }
 .navigation-links {
   @include nav-links;
+  .middle a {
+    line-height: 1;
+    padding-top: 1px;
+    @include tablet-size {
+      line-height: 1.1;
+      padding: 5px 0;
+    }
+    @include desktop-size {
+      padding: 8px 0;
+    }
+  }
 }

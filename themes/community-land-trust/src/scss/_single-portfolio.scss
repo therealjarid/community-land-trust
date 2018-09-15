@@ -29,6 +29,7 @@
       border-radius: 10px;
       @include tablet-size {
         transform: translate(-50%, 75%);
+        width: 325px;
       }
       @include desktop-size {
         left: 0;
@@ -41,10 +42,17 @@
         align-items: center;
         justify-content: center;
       }
+      @include large-desktop-size {
+        width: 475px;
+        height: 175px;
+      }
       .portfolio-title {
         text-align: center;
         font-size: 22px;
         font-weight: 500;
+        @include tablet-size {
+          line-height: 2.5;
+        }
         @include desktop-size {
           font-size: 32px;
         }
