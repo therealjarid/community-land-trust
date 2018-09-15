@@ -12,19 +12,41 @@ get_header();
     
       <div class="partner-page-content">
 
-          <?php the_content(); 
+          <?php the_content(); ?>
 
-            wp_link_pages( array(
-              'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-              'after'  => '</div>',
-            ) );
-            ?>
       </div><!-- .partner-page-content -->
 
     <?php endwhile; ?>
+    
+    <div class="main-carousel">
+
+      <?php
+
+        $query = new WP_Query( array( 'post_type' => 'Partner',
+                            ) );      
+
+        if ( $query->have_posts() ) :
+          while ( $query->have_posts() ) : $query->the_post();?>
+
+            <div class="carousel-cell">
+              <div class="partner-info">
+                    <?php the_post_thumbnail();
+                      the_content();?> 
+              </div>     
+              <div class="partner-meta">
+                <p><?php echo esc_html( CFS()->get( 'partner_info', false ) ); ?></p>
+                <p><?php echo esc_html( CFS()->get( 'partner_completion', false ) ); ?></p>
+              </div>
+
+            </div>
+          <?php endwhile;
+        endif ?>
+
+    </div>
 
     <div class="contact-container">
 
+      <p><?php echo esc_html( CFS()->get( 'contact_copy', 175 ) ); ?></p>
       <p><?php 
         // 175 is the post id for the Partners page
         echo 'Connect with us to learn how! Contact CLT’s ' . esc_html( CFS()->get( 'partners_contact_position', 175 ) ) . ', ';
@@ -33,12 +55,6 @@ get_header();
         echo esc_html( CFS()->get( 'partners_contact_email', 175 ) );
         echo '</a></p></div>';
       ?>
-    
-    <div class="main-carousel">
-
-        <!-- @TODO: enqueue flickity script, add cells into here -->
-
-    </div>
 
 
 <?php get_footer(); ?>

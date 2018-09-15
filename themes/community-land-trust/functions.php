@@ -117,7 +117,7 @@ function clt_scripts() {
 	// adding header functionality 
 	wp_enqueue_script( 'header-toggle', get_template_directory_uri() . '/build/js/header-toggle.min.js', array( 'jquery' ), null, true );
 
-	if ( is_front_page() | is_home() | is_archive( 'partners' ) | is_page( 'about' ) | is_singular ( 'portfolio' )) {
+	if ( is_front_page() | is_home() | is_archive( 'partners' ) | is_page( 'about' ) | is_singular ( 'portfolio' ) | is_page( 'partners' ) ) {
 		//adding flickity styles via CDN
 		wp_enqueue_style( 'clt-flickity', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
 

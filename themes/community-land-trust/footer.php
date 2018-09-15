@@ -31,7 +31,10 @@
 
         <div class="address">
             <a href="https://www.google.ca/maps/place/1651+Commercial+Dr,+Vancouver,+BC+V5L+3Y3/@49.2699305,-123.0720043,17z/data=!3m1!4b1!4m5!3m4!1s0x5486714742e982d1:0x37a9dd95a9230540!8m2!3d49.269927!4d-123.0698156"
-               target="_blank"><img class="footer-image" src="<?php echo CFS()->get( 'footer_map_image', 36 ); ?>"></a>
+               target="_blank">
+               <!-- @TODO: hard code image and delete comment when finished -->
+               <img class="footer-image" src="">
+            </a>
             <p><i class="fas fa-map-marker-alt"></i><?php echo CFS()->get( 'location', 36 ); ?></p>
         </div>
     </div>
