@@ -40,13 +40,13 @@ get_header(); ?>
 				<ul class="media-share">
 	
 						<!-- twitter -->
-						<i class="fab fa-twitter"><li><a class="twitter-share-button" data-count="vertical" data-via="mekshq" data-url="<?php the_permalink() ?>"></a></li></i>
+						<i class="fab fa-twitter"><li><a class="twitter-share-button" data-url="<?php the_permalink() ?>"></a></li></i>
 
 						<!-- LinkedIN -->
-						<i class="fab fa-linkedin-in"><li><script type="IN/Share" data-counter="top" data-url="<?php the_permalink() ?>"></script></li></i>
+						<i class="fab fa-linkedin-in"><li><script type="IN/Share" data-url="<?php the_permalink() ?>"></script></li></i>
 
-						<!-- facebook like -->
-						<i class="fab fa-facebook-f"><li><div class="fb-share-button" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-href="<?php the_permalink() ?>"></div></li></i>
+						<!-- facebook share -->
+						<i class="fab fa-facebook-f"><li><div class="fb-share-button" data-send="false" data-show-faces="false" data-href="<?php the_permalink() ?>"></div></li></i>
 
 					</ul>
 				</div><!-- end of social-links -->
