@@ -1,6 +1,6 @@
 === CLT Theme ===
 
-Contributors: automattic
+Contributors: Jarid Warren, Vanessa Bertoletti, Einer Lim.
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
 Requires at least: 4.0

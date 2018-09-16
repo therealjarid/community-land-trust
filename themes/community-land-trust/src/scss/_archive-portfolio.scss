@@ -17,10 +17,10 @@
         padding-top: 15px;
       }
       @include tablet-size {
-        padding-top: 30px;
+        padding-top: 50px;
       }
       @include desktop-size {
-        padding-top: 50px;
+        padding-top: 75px;
       }
       button {
         background: white;
@@ -62,10 +62,10 @@
   .offset-container {
     @include desktop-size {
       position: relative;
-      top: -250px;
+      top: -195px;
     }
     @include large-desktop-size {
-      top: -345px;
+      top: -300px;
     }
     .portfolio-grid-container {
       padding: 15px;
@@ -149,7 +149,10 @@
     @include desktop-size {
       margin-top: 0;
       position: relative;
-      top: -115px;
+      top: -90px;
+    }
+    @include large-desktop-size {
+      top: -125px;
     }
   }
 }

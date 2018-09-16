@@ -70,6 +70,10 @@
           display: flex;
           align-items: center;
         }
+        // override gloval hover
+        &:hover {
+          opacity: 1;
+        }
         .partner-info {
           @include desktop-size {
             width: 50%;

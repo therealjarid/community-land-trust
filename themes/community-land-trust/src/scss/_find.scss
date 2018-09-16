@@ -35,13 +35,13 @@
       @include large-desktop-size {
         font-size: 20px;
       }
-    }
-    p:first-of-type {
-      margin: 10px 35px 20px 35px;
-    }
-    p:nth-of-type(2) {
-      font-weight: 500;
-      margin: 0 35px;
+      &:first-of-type {
+        margin: 10px 35px 20px 35px;
+      }
+      &:nth-of-type(2) {
+        font-weight: 500;
+        margin: 0 35px;
+      }
     }
   }
   .offset-container {
@@ -206,6 +206,9 @@
       margin: 50px 0;
       font-family: $font__accent;
       position: relative;
+      @include desktop-size {
+        margin-top: 120px;
+      }
       @include large-desktop-size {
         max-width: 1260px;
       }
@@ -388,6 +391,9 @@
     .more-info {
       @include more-info;
       margin-top: 0;
+      @include desktop-size {
+        margin: 60px 0;
+      }
     }
   }
 }
