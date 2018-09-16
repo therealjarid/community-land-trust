@@ -138,10 +138,6 @@ function clt_scripts() {
 		), null, false );
 	}
 
-	if ( is_single() ) {
-		wp_enqueue_script( 'social-share', get_template_directory_uri() . '/build/js/social-share.min.js', array( 'jquery' ), false );
-	}
-
 	// adding FAQ functionality 
 	if ( is_archive( 'faqs' ) | is_page( 'faqs' ) ) {
 		wp_enqueue_script( 'faq-page', get_template_directory_uri() . '/build/js/faq-page.min.js', array( 'jquery' ), null, false );
