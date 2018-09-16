@@ -4,9 +4,6 @@
 
 .contact-us {
   text-align: center;
-  .banner-container {
-    @include texture-background;
-  }
   .entry-header {
     @include page-title;
     text-align: center;

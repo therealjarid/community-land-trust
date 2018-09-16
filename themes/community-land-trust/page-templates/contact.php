@@ -13,7 +13,7 @@ get_header(); ?>
     <div class="entry-header">
         <h1 class="entry-title"><?php the_title(); ?></h1>
     </div><!-- .entry-header -->
-    
+    <div class="offset-container">
     <section class="upper-content">
     <!-- @TODO: these should all pull in dynamic hyperlinks for each  -->
         <div class="contact-info">
@@ -52,6 +52,7 @@ get_header(); ?>
             <p class="featured-person-title"><?php echo CFS()->get( 'title' ); ?></p>
             <p><?php echo CFS()->get( 'description' ); ?></p>
         </div>
+    </div>
     </div>
     </div>
 </section><!-- #primary -->
