@@ -140,7 +140,7 @@ get_header(); ?>
 
                     <?php foreach ( $clt_partners_thumbnails as $clt_partners_thumbnail ):?>
 
-                        <a href="<?php echo get_permalink( get_page_by_path( 'partners' ) ) ?>">
+                        <a href="<?php echo get_permalink( get_page_by_path( 'about/partners' ) ) ?>">
 
                             <?php echo( get_the_post_thumbnail( $clt_partners_thumbnail->ID) );?>
                     

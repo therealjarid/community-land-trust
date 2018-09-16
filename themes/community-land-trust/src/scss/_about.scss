@@ -53,13 +53,13 @@
 
       @include desktop-size {
         &:nth-of-type(1) {
-          margin-right: 360px;
+          margin-right: 340px;
         }
       }
 
       @include extra-large-desktop-size {
         &:nth-of-type(1) {
-          margin-right: 650px;
+          margin-right: 630px;
         }
         
       }
