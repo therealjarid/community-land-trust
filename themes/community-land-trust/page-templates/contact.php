@@ -46,7 +46,7 @@ get_header(); ?>
         </div>
         <div class="featured-person-content">
         <!-- @TODO - mailto: link should be pulled dynamically -->
-            <a href="mailto:info@cltrust.ca">
+            <a href="<?php echo CFS()->get( 'email' ); ?>">
                 <h2 class="featured-person-name"><?php echo CFS()->get( 'name' ); ?></h2>
             </a>
             <p class="featured-person-title"><?php echo CFS()->get( 'title' ); ?></p>
