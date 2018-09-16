@@ -100,7 +100,7 @@ get_header(); ?>
 			For Media Inquiries regarding
 			Community Land Trust, Please Contact:
 		</span>
-		<span class="media-inquiries-email"><?php echo CFS()->get( 'email', 36 ); ?></span>
+		<?php echo CFS()->get( 'email', 36 ); ?>
 </div>
 
 
