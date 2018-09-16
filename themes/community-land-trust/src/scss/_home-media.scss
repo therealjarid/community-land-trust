@@ -63,7 +63,8 @@
 		@include desktop-size {
 			position: relative;
       top: -350px;
-      margin-bottom: 2rem;
+			margin-bottom: 2rem;
+			width: 85%;
     }
     
     @include extra-large-desktop-size {
@@ -82,7 +83,7 @@
 			flex-direction: column;
 
 			@include desktop-size {
-				width:  33.33% !important;
+				width:  32%;
 				margin: 1rem;
 	
 			}
@@ -128,7 +129,7 @@
           margin-right: 10px;
 
 					@include desktop-size {
-						width:  80%;
+						width:  90%;
 						font-size: 12px;
 			
 					}
