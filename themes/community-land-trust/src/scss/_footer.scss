@@ -47,15 +47,14 @@
       p {
         margin: 0;
         text-align: left;
-        line-height: 1rem;
+        line-height: 1.5rem;
         @include tablet-size {
           text-align: left;
           margin: 0.5rem 0;
         }
-        .text {
-          padding-left: 0.5rem;
-          font-size: 0.9rem;
-        }
+      }
+      a {
+        padding-left: 0.3rem;
       }
       .fa-phone {
         font-size: 0.8rem;
@@ -81,6 +80,7 @@
       @include phablet-size {
         max-width: 60%;
         margin: 0 auto;
+        justify-content: center;
       }
       @include tablet-size {
         justify-content: space-between;
@@ -106,7 +106,7 @@
         text-align: center;
         border: 1px solid $color__background-body;
         border-radius: 50%;
-        font-size: 1rem;
+        font-size: 1.3rem;
         background-color: $color__background-body;
         color: $footer_lighter_color;
         @include desktop-size {
@@ -130,7 +130,7 @@
         margin: 0;
         max-width: 85%;
         padding-left: 2rem;
-        line-height: 1.3rem;
+        line-height: 1.5rem;
         text-indent: -0.1rem;
         font-size: 0.8rem;
         @include phablet-size {
@@ -176,7 +176,7 @@
         display: none;
         @include desktop-size {
           display: block;
-          max-width: 220px;
+          max-width: 230px;
         }
         @include large-desktop-size {
           max-width: 280px;
