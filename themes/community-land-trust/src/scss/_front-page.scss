@@ -85,7 +85,7 @@
   .home-background-box {
     @include desktop-size {
       @include texture-background;
-  	}
+    }
   }
   .hero-banner {
     position: relative;
@@ -184,8 +184,6 @@
     width: 90vw;
     margin: 0 auto;
 
-
-
     .post-58 {
       color: black;
 
@@ -254,7 +252,6 @@
         position: relative;
         top: -350px;
         margin-bottom: 8rem;
-        
       }
 
       .timeline-block {
@@ -418,6 +415,10 @@
   }
 
   .timeline-description {
+    @include tablet-size {
+      width: 230px;
+      margin: 10px auto 30px auto;
+    }
     @include extra-large-desktop-size {
       font-size: 20px;
     }
