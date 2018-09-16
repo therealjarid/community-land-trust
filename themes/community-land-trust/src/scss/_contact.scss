@@ -185,6 +185,9 @@
       text-align: center;
       .gform_button {
         @include main-cta;
+        width: 220px;
+        font-size: 18px;
+        font-weight: 500;
       }
     }
   }

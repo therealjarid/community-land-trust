@@ -33,20 +33,20 @@ get_header(); ?>
 				?>
 					</div><!-- end single-content-container -->
 			</article><!-- #post-## -->
-
+			
 			<div class="social-links">
-				<p class="share">Share:<i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i><i class="fab fa-linkedin-in"></i></p>
+					<p class="share">Share:</p>
 				
-					<ul class="media-share">
+				<ul class="media-share">
 	
 						<!-- twitter -->
-						<li><a class="twitter-share-button" data-count="vertical" data-via="mekshq" data-url="<?php the_permalink() ?>"></a></li>
+						<i class="fab fa-twitter"><li><a class="twitter-share-button" data-count="vertical" data-via="mekshq" data-url="<?php the_permalink() ?>"></a></li></i>
 
 						<!-- LinkedIN -->
-						<li><script type="IN/Share" data-counter="top" data-url="<?php the_permalink() ?>"></script></li>
+						<i class="fab fa-linkedin-in"><li><script type="IN/Share" data-counter="top" data-url="<?php the_permalink() ?>"></script></li></i>
 
 						<!-- facebook like -->
-						<li><div class="fb-share-button" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-href="<?php the_permalink() ?>"></div></li>
+						<i class="fab fa-facebook-f"><li><div class="fb-share-button" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-href="<?php the_permalink() ?>"></div></li></i>
 
 					</ul>
 				</div><!-- end of social-links -->
