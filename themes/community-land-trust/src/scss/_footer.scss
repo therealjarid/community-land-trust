@@ -6,7 +6,6 @@
     text-decoration: none;
     color: $color__background-body;
     font-size: 0.8rem;
-    height: 2rem;
   }
   p {
     color: $color__background-body;
@@ -40,10 +39,10 @@
         max-width: 55%;
       }
       @include large-desktop-size {
-        padding-top: 2rem;
+        padding-top: 3rem;
       }
       @include extra-large-desktop-size {
-        padding-top: 2rem;
+        padding-top: 3rem;
       }
       p {
         margin: 0;
@@ -95,6 +94,7 @@
       }
       @include large-desktop-size {
         max-width: 80%;
+        padding-top: 4rem;
       }
       @include extra-large-desktop-size {
         max-width: 70%;
@@ -122,7 +122,7 @@
     }
     .address {
       grid-area: address;
-      @include tablet-size {
+      @include desktop-size {
         display: flex;
       }
       p {
@@ -130,8 +130,9 @@
         margin: 0;
         max-width: 85%;
         padding-left: 2rem;
-        line-height: 1rem;
-        text-indent: -0.5rem;
+        line-height: 1.3rem;
+        text-indent: -0.1rem;
+        font-size: 0.8rem;
         @include phablet-size {
           max-width: 80%;
           padding-left: 4rem;
@@ -147,15 +148,20 @@
         }
         @include desktop-size {
           max-width: 28%;
-          padding-top: 2rem;
+          padding-top: 2rem; 
+          padding-left: 0.4rem;
         }
         @include large-desktop-size {
-          max-width: 30%;
+          max-width: 28%;
           padding-top: 3.5rem;
         }
         @include extra-large-desktop-size {
-          max-width: 17%;
+          max-width: 50%;
           padding-top: 4.5rem;
+        }
+        i {
+          padding-right: 0.2rem;
+          text-indent: -1rem;
         }
         .text {
           padding-left: 0.5rem;
@@ -173,7 +179,7 @@
           max-width: 220px;
         }
         @include large-desktop-size {
-          max-width: 275px;
+          max-width: 280px;
         }
         @include extra-large-desktop-size {
           max-width: 325px;
