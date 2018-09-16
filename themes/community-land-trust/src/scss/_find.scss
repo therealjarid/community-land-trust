@@ -9,8 +9,9 @@
   img {
     @include banner-img;
   }
-  .find-header-container {
+  h1 {
     @include page-title;
+    font-size: 28px;
   }
   p {
     font-size: 14px;
