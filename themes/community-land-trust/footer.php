@@ -42,7 +42,8 @@ $phone_link = 'tel:+1' . str_replace( [ '-', ' ', '(', ')', '+1', '+' ], '', $ph
                target="_blank">
                <img class="footer-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-map.jpg"/>
             </a>
-            <p><i class="fas fa-map-marker-alt"></i><?php echo $address; ?></p>
+            <p><a href="<?php echo $google_url ?>"><i class="fas fa-map-marker-alt"></i><?php echo $address; ?></a></p>
+            
         </div>
     </div>
     <div class="sub-footer">
