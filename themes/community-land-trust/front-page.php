@@ -32,9 +32,9 @@ get_header(); ?>
 
 
     <!-- COMPANY MISSION SECTION BEGINS -->
-
-    <main class="home-page">
-        <div class="home-background-box"></div>  
+    <div class="home-background-box"></div>  
+    
+        <main class="home-page">    
             <h2 class="front-page-headings">Our Mission</h2>
 
             <?php while ( have_posts() ) : the_post(); ?>

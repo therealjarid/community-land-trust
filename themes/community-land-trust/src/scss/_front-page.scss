@@ -2,7 +2,7 @@
 # Front Page
 --------------------------------------------------------------*/
 
-.page-id-58, 
+.page-id-58,
 .blog {
   .carousel-cell:hover {
     @include desktop-size {
@@ -12,7 +12,7 @@
   }
 }
 
-// flickity carousel global to all partials 
+// flickity carousel global to all partials
 .main-carousel {
   padding-top: 30px;
   margin-bottom: 30px;
@@ -33,7 +33,7 @@
   }
 
   .carousel-cell {
-    width: 100%;  
+    width: 100%;
   }
 
   .flickity-prev-next-button {
@@ -52,71 +52,62 @@
 
       .arrow {
         fill: $border_color;
-        height: 500px;      
+        height: 500px;
       }
     }
   }
-  
-  img {
-      object-fit: cover;
-      overflow: hidden;
-      height: 250px;
 
-      @include desktop-size {
+  img {
+    object-fit: cover;
+    overflow: hidden;
+    height: 250px;
+
+    @include desktop-size {
       height: auto;
-      }
+    }
   }
 
-  .flickity-page-dots  {
+  .flickity-page-dots {
     .dot {
       background: transparent;
       border: 2px solid $border_color;
     }
     .is-selected {
       background: $border_color;
-
     }
   }
 }
 
-
 // styles applied only to front-page.php
 .home {
-  
   //header styles begin
 
-  // .home-background-box {
-  //   @include desktop-size {
-  //     @include texture-background;
-  //     height: 400px;
-  //     width: 100vw;
-  //     background-size: cover;
-
-	// 	}
-  // }
+  .home-background-box {
+    @include desktop-size {
+      @include texture-background;
+  	}
+  }
   .hero-banner {
     position: relative;
     width: 100%;
 
     img {
-			object-fit: cover;
+      object-fit: cover;
       height: 200px;
     }
-    
-    @include desktop-size {  
 
+    @include desktop-size {
       img {
         width: 100%;
         height: 400px;
       }
     }
-   
 
     .header-info-box {
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate(-50%,-20%);
+      transform: translate(-50%, -20%);
 
       @include desktop-size {
         left: 15%;
@@ -142,75 +133,79 @@
           width: 650px;
           padding-left: 150px;
           opacity: 0.85;
-          
         }
 
-  
         h1,
         p {
           margin: 0;
           color: #000;
-          font-family: 'Raleway', sans-serif;  
+          font-family: 'Raleway', sans-serif;
           font-size: 16px;
-  
+
           @include desktop-size {
             font-size: 18px;
             font-weight: 500;
             width: 100%;
-            
           }
         }
-  
+
         h1 {
           letter-spacing: 1.5px;
 
           @include tablet-size {
             font-size: 20px;
           }
-  
+
           @include desktop-size {
             font-size: 30px;
             font-weight: 600;
           }
-  
         }
       }
-  
+
       .mixin-button {
         @include main-cta;
         position: relative;
-        transform: translate(50%,-50%);
+        transform: translate(50%, -50%);
 
         @include tablet-size {
-          transform: translate(40%,-70%);
+          transform: translate(40%, -70%);
         }
 
         @include desktop-size {
-          transform: translate(120%,-70%);
+          transform: translate(120%, -70%);
           left: 0;
         }
       }
-
     }
-
-
   }
 
   .home-page {
     width: 90vw;
     margin: 0 auto;
 
+
+
     .post-58 {
       color: black;
+
+      @include tablet-size {
+        width: 70vw;
+        margin: 0 auto;
+        text-align: justify;
+      }
 
       @include desktop-size {
         width: 800px;
         margin: 0 auto;
         font-size: 18px;
         text-align: justify;
+        position: relative;
+        top: -350px;
+        margin-bottom: 10rem;
       }
 
-      @include extra-large-desktop-size { 
+      @include extra-large-desktop-size {
         font-size: 25px;
         width: 900px;
       }
@@ -219,34 +214,47 @@
     .front-page-headings {
       @include page-title;
 
+      @include desktop-size {
+        position: relative;
+        top: -350px;
+      }
+
       @include extra-large-desktop-size {
         margin: 100px auto 30px auto;
         font-size: 35px;
         width: 280px;
-
       }
-      
+    }
+
+    .main-carousel {
+      @include desktop-size {
+        position: relative;
+        top: -350px;
+        margin-bottom: 8rem;
+      }
     }
 
     //timeline section styles
 
     .timeline-section-wrapper {
       padding-top: 30px;
-      width: 100%;   
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
       text-align: center;
 
       @include tablet-size {
-        justify-content: center;
-  
+        justify-content: space-around;
       }
-  
 
       @include desktop-size {
         width: 80vw;
         margin: 0 auto;
         flex-wrap: no-wrap;
+        position: relative;
+        top: -350px;
+        margin-bottom: 8rem;
+        
       }
 
       .timeline-block {
@@ -254,7 +262,6 @@
         flex-direction: column;
         align-items: center;
         width: 50%;
-  
 
         &:last-of-type {
           width: 100%;
@@ -297,8 +304,7 @@
             height: 70px;
             font-size: 25px;
             margin-bottom: 0;
-     
-          }     
+          }
 
           @include extra-large-desktop-size {
             width: 320px;
@@ -306,85 +312,73 @@
 
             p {
               font-size: 30px;
-    
             }
-            
           }
         }
 
         .year-entry-1 {
           background-color: #dcf2f8;
-          
-        }
-      
-        .year-entry-2 {
-          background-color: #c3ecf8;
-          
-        }
-      
-        .year-entry-3 {
-          background-color: #9ce0f3;
-          
-        }
-      
-        .year-entry-4 {
-          background-color: #74d1eb;
-          
-        }
-      
-        .year-entry-5 {
-          background-color: #56bfdc;
-          
         }
 
-        .timeline-line{
+        .year-entry-2 {
+          background-color: #c3ecf8;
+        }
+
+        .year-entry-3 {
+          background-color: #9ce0f3;
+        }
+
+        .year-entry-4 {
+          background-color: #74d1eb;
+        }
+
+        .year-entry-5 {
+          background-color: #56bfdc;
+        }
+
+        .timeline-line {
           content: '';
           width: 3px;
           height: 50px;
-          background-color:#56BFDC;;
-
+          background-color: #56bfdc;
         }
 
         .home-timeline-icon-box {
           position: relative;
 
           .timeline-growth-numbers {
-            position: absolute;  
+            position: absolute;
             color: #ffffff;
             font-family: $font__accent;
             font-size: 20px;
             font-weight: 500;
-            bottom:30px;
+            bottom: 30px;
             left: 50%;
             top: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
 
             @include desktop-size {
               top: 55%;
               font-size: 25px;
             }
-
-        }
-
-        img {
-          width: 150px;
-          height: 150px;
-          
-
-          @include desktop-size {
-            width: 180px;
-            height: 180px;
-            
           }
 
-          @include extra-large-desktop-size { 
-            width: 210px;
-            height: 210px;
+          img {
+            width: 150px;
+            height: 150px;
+
+            @include desktop-size {
+              width: 180px;
+              height: 180px;
+            }
+
+            @include extra-large-desktop-size {
+              width: 210px;
+              height: 210px;
+            }
           }
         }
 
-      }
-        
         h3 {
           color: $timeline_bg_numbers;
           font-family: $font__accent;
@@ -396,7 +390,7 @@
             font-size: 25px;
           }
 
-          @include extra-large-desktop-size { 
+          @include extra-large-desktop-size {
             font-size: 30px;
           }
         }
@@ -404,10 +398,10 @@
 
       .timeline-block:nth-of-type(2),
       .timeline-block:nth-of-type(4) {
-      .timeline-line {
+        .timeline-line {
           @include desktop-size {
             height: 2rem;
-          }    
+          }
         }
       }
 
@@ -417,56 +411,59 @@
         .timeline-line {
           @include desktop-size {
             height: 8rem;
-          }    
+          }
         }
       }
     }
-    }
-
-    .timeline-description {
-      @include extra-large-desktop-size { 
-        font-size: 20px;
-      }
-    }
-
   }
 
-  .partners-logo-wrapper {
-    padding-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .timeline-description {
+    @include extra-large-desktop-size {
+      font-size: 20px;
+    }
+  }
+}
+
+.partners-logo-wrapper {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet-size {
+    margin-left: 50px;
+    justify-content: space-around;
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  @include desktop-size {
+    position: relative;
+    top: -350px;
+  }
+
+  img {
+    height: auto;
+    width: auto;
 
     @include tablet-size {
-      margin-left: 50px;
-      justify-content: space-around;
-      width: 600px;
-      margin: 0 auto;
+      max-height: 100px;
+      max-width: auto;
     }
-
-    img {
-      height: auto;
-      width: auto;
-
-      @include tablet-size {
-        max-height: 100px;
-        max-width: auto;
-
-      }
-    }
-
   }
-  
-  .button-container {
-    @include more-info;
-    margin-top: 5rem;
+}
+
+.button-container {
+  @include more-info;
+  margin-top: 5rem;
+
+  @include desktop-size {
+    position: relative;
+    top: -200px;
+    margin: 0;
   }
-  
-  a {
-    text-decoration: none;
-  }
+}
 
-
-
-
-
+a {
+  text-decoration: none;
+}
