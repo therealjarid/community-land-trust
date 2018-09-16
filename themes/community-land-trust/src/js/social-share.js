@@ -1,6 +1,6 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function($) { 
   (function(w, d, s) {
- 
+ // code for asynchronous loading 
     function go(){
      var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
      if (d.getElementById(id)) {return;}

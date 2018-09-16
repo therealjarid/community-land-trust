@@ -24,20 +24,10 @@ get_header(); ?>
 					<div class="single-content-container">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php the_content(); ?>
-				<?php endwhile; // End of the loop. ?>
-				<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-					'after'  => '</div>',
-				) );
-				?>
-					</div><!-- end single-content-container -->
-			</article><!-- #post-## -->
-			
-			<div class="social-links">
+					<div class="social-links"> 
 					<p class="share">Share:</p>
 				
-				<ul class="media-share">
+				<ul class="media-share"> <!-- html to call share links from social-share.js -->
 	
 						<!-- twitter -->
 						<i class="fab fa-twitter"><li><a class="twitter-share-button" data-url="<?php the_permalink() ?>"></a></li></i>
@@ -50,6 +40,17 @@ get_header(); ?>
 
 					</ul>
 				</div><!-- end of social-links -->
+				<?php endwhile; // End of the loop. ?>
+				<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+					'after'  => '</div>',
+				) );
+				?>
+					</div><!-- end single-content-container -->
+			</article><!-- #post-## -->
+			
+	
 	
 				<!-- custom field only print if there is a value inputted --> 
 
