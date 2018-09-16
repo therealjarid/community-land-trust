@@ -74,46 +74,48 @@
   }
   .social-links {
     padding: 1rem;
+    display: flex;
+    align-items: center;
     @include desktop-size {
       margin: 0 auto;
       width: 55%;
     }
+    .share {
+      display: block;
+      margin: 0 15px 0 0;
+    }
     .media-share {
       display: flex;
-      line-height: 2rem;
-      justify-content: space-between;
-      max-width: 55%;
-      width: 160px;
-      font-weight: 700;
-      @include phablet-size {
-        width: 175px;
-        max-width: 40%;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      li {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: $footer_darker_color;
+        margin: 8px;
+        display: block;
+        text-align: center;
+        a {
+          width: 100%;
+          height: 100%;
+          display: block;
+          &:hover {
+            cursor: pointer;
+            & > .fab {
+              color: $color__link-hover;
+            }
+          }
+        }
+        .fab {
+          font-size: 20px;
+          color: white;
+          position: relative;
+          top: 50%;
+          transform: translateY(-75%);
+        }
       }
-      @include tablet-size {
-        max-width: 30%;
-        width: 200px;
-      }
-      @include desktop-size {
-        width: 480px;
-        max-width: 30%;
-      }
-      @include large-desktop-size {
-        width: 660px;
-        max-width: 22%;
-      }
-      @include extra-large-desktop-size {
-        width: 15%;
-      }
-    }
-    i {
-      height: 2rem;
-      width: 2rem;
-      padding: 0.4rem;
-      text-align: center;
-      border: 1px solid #000;
-      border-radius: 50%;
-      background-color: #000;
-      color: $color__background-body;
     }
   }
   .email-container {

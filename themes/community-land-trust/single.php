@@ -9,66 +9,76 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 
-		<div class="media-container">
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header">
+    <div class="media-container">
+            <div class="entry-header">
 				<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( 'large' ); ?>
 				<?php endif; ?>
-				<div class="title-date">
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-				<?php clt_posted_on(); ?>
-				</div>
-					</header><!-- .entry-header -->
+                <div class="title-date">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					<?php clt_posted_on(); ?>
+                </div>
+			</div><!-- .entry-header -->
 
-					<div class="single-content-container">
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php the_content(); ?>
-					<div class="social-links"> 
-					<p class="share">Share:</p>
-				
-				<ul class="media-share"> <!-- html to call share links from social-share.js -->
-	
-						<!-- twitter -->
-						<i class="fab fa-twitter"><li><a class="twitter-share-button" data-url="<?php the_permalink() ?>"></a></li></i>
-
-						<!-- LinkedIN -->
-						<i class="fab fa-linkedin-in"><li><script type="IN/Share" data-url="<?php the_permalink() ?>"></script></li></i>
-
-						<!-- facebook share -->
-						<i class="fab fa-facebook-f"><li><div class="fb-share-button" data-send="false" data-show-faces="false" data-href="<?php the_permalink() ?>"></div></li></i>
-
-					</ul>
-				</div><!-- end of social-links -->
-				<?php endwhile; // End of the loop. ?>
-				<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-					'after'  => '</div>',
-				) );
+            <div class="single-content-container">
+				<?php while ( have_posts() ) : the_post();
+					the_content(); 
 				?>
-					</div><!-- end single-content-container -->
-			</article><!-- #post-## -->
-			
-	
-	
-				<!-- custom field only print if there is a value inputted --> 
+                    <div class="social-links">
+                        <p class="share">Share:</p>
 
-			<div class="email-container">
-				<div class="email">
-					<p>For Media Inquiries regarding Community Land Trust, Please Contact: <?php echo CFS()->get( 'email' ); ?></p>
-				</div>
-			</div> <!-- end of email-container -->
+						<!-- html to call share links from social-share.js -->
+                        <ul class="media-share"> 
+
+							<!-- facebook share -->                           
+							<li class="facebook">
+								<a href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&amp;t=<?php the_title(); ?>" target="_blank" >
+									<i class="fab fa-facebook-f"></i>
+								</a>
+                            </li>
+
+                            <!-- twitter share -->
+                            <li class="twitter">
+								<a href="http://twitter.com/intent/tweet?text=Currently reading from @<?php echo esc_html( CFS()->get( 'twitter_user' ) );?>: '<?php the_title(); ?>'&amp;url=<?php the_permalink(); ?>&amp;hashtags=<?php echo esc_html( CFS()->get( 'twitter_hashtag' ) ); ?>" title="Click to share this post on Twitter" target="_blank" >
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+                            
+                            <!-- linkedin share -->
+                            
+							<li class="linkedin">
+								<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink() ?>&title=<?php the_title(); ?>&summary=&source=<?php bloginfo('name'); ?>" target="_blank" >
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+                            </li>
+
+                        </ul>
+					</div><!-- end of social-links -->
+					
+				<?php endwhile; // End of the loop. ?>
 				
-			</div> <!-- end of media-container --> 
-			<div class="navigation-links">
-				<div class="left"><?php previous_post_link( '%link', '<i class="fas fa-arrow-left"></i>' ); ?></div>
-				<div class="middle"><a href="<?php echo get_permalink( get_page_by_title( 'Media' ) ) ?>"><span class="break">Back to </span>Media</a></div>
-				<div class="right"><?php next_post_link( '%link', '<i class="fas fa-arrow-right"></i>' ); ?></div>
-			</div><!-- end of navigation-links -->
-			
-		</div><!-- #primary -->
-		
-		
-		<?php get_footer(); ?>
+            </div><!-- end single-content-container -->
+
+
+        <!-- custom field only print if there is a value inputted -->
+
+        <div class="email-container">
+            <div class="email">
+                <p>For Media Inquiries regarding Community Land Trust, Please
+                    Contact: <?php echo CFS()->get( 'email' ); ?></p>
+            </div>
+        </div> <!-- end of email-container -->
+
+    </div> <!-- end of media-container -->
+    <div class="navigation-links">
+        <div class="left"><?php previous_post_link( '%link', '<i class="fas fa-arrow-left"></i>' ); ?></div>
+        <div class="middle"><a href="<?php echo get_permalink( get_page_by_title( 'Media' ) ) ?>"><span class="break">Back to </span>Media</a>
+        </div>
+        <div class="right"><?php next_post_link( '%link', '<i class="fas fa-arrow-right"></i>' ); ?></div>
+    </div><!-- end of navigation-links -->
+
+</div><!-- #primary -->
+
+
+<?php get_footer(); ?>
 
