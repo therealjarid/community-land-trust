@@ -12,22 +12,25 @@ get_header(); ?>
 	) );
 	?>
 
-    <div class="button-container">
+    <div class="banner-container">
+        <div class="button-container">
 
-        <button id="0" class="selected">All</button>
+            <button id="0" class="selected">All</button>
 
-		<?php foreach ( $terms as $term ) {
-			echo '<button id="' . $term->term_id . '" >' . $term->name . '</button>';
-		} ?>
+            <?php foreach ( $terms as $term ) {
+                echo '<button id="' . $term->term_id . '" >' . $term->name . '</button>';
+            } ?>
 
+        </div>    
+        <p class="error-message">Please refresh the page and try again.</p>
     </div>
 
-    <p class="error-message">Please refresh the page and try again.</p>
+    <div class="offset-container">
+        <div class="portfolio-grid-container">
 
-    <div class="portfolio-grid-container">
+            <?php // js fills in containers here ?>
 
-		<?php // fill in containers here ?>
-
+        </div>
     </div>
 
     <div class="more-info">
