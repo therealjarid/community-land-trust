@@ -5,7 +5,16 @@
  * @package CLT_Theme
  */
 
-$google_url = 'https://www.google.ca/maps/place/1651+Commercial+Dr,+Vancouver,+BC+V5L+3Y3/@49.2699305,-123.0720043,17z/data=!3m1!4b1!4m5!3m4!1s0x5486714742e982d1:0x37a9dd95a9230540!8m2!3d49.269927!4d-123.0698156';
+$google_url = 'https://goo.gl/maps/CWEVh3JhZ7q';
+$address = '220-1651 Commercial Dr Vancouver, BC V5L 3Y3';
+
+$facebook_url = 'https://www.facebook.com/pages/Community-Land-Trust/144302426226897';
+$twitter_url = 'https://twitter.com/CLTrust/media?lang=en';
+$linkedin_url = 'https://www.linkedin.com/company/community-land-trust/';
+
+$email = 'info@cltrust.ca';
+$phone = '604-879-5111';
+$phone_link = 'tel:+1' . str_replace( [ '-', ' ', '(', ')', '+1', '+' ], '', $phone);
 
 ?>
 
@@ -15,25 +24,25 @@ $google_url = 'https://www.google.ca/maps/place/1651+Commercial+Dr,+Vancouver,+B
         <div class="contact-info">
             <p class="contact-number">
                 <i class="fas fa-phone"></i>
-				<a href="tel:+16048795111">604-879-5111</a> 
+				<a href="<?php echo $phone_link ?>"><?php echo $phone; ?></a> 
             </p>
             <p class="email-address">
                 <i class="fas fa-envelope"></i>
-				<a href="mailto:info@cltrust.ca">info@cltrust.ca</a>
+				<a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
             </p>
         </div>
         <div class="social-media">
-            <a href="https://www.facebook.com/pages/Community-Land-Trust/144302426226897" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/CLTrust/media?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/company/community-land-trust/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="<?php echo $facebook_url; ?>" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="<?php echo $twitter_url; ?>" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="<?php echo $linkedin_url; ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
 
         <div class="address">
             <a href="<?php echo $google_url ?>"
                target="_blank">
                <img class="footer-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-map.jpg"/>
+               <p><i class="fas fa-map-marker-alt"></i><?php echo $address; ?></p>
             </a>
-            <p><i class="fas fa-map-marker-alt"></i>220-1651 Commercial Dr Vancouver, BC V5L 3Y3</p>
         </div>
     </div>
     <div class="sub-footer">
