@@ -81,8 +81,18 @@
 
 // styles applied only to front-page.php
 .home {
-
+  
   //header styles begin
+
+  // .home-background-box {
+  //   @include desktop-size {
+  //     @include texture-background;
+  //     height: 400px;
+  //     width: 100vw;
+  //     background-size: cover;
+
+	// 	}
+  // }
   .hero-banner {
     position: relative;
     width: 100%;

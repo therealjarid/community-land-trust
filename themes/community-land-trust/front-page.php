@@ -33,27 +33,24 @@ get_header(); ?>
     <!-- COMPANY MISSION SECTION BEGINS -->
 
     <main class="home-page">
+        <div class="home-background-box"></div>  
+            <h2 class="front-page-headings">Our Mission</h2>
 
+            <?php while ( have_posts() ) : the_post(); ?>
 
-        <h2 class="front-page-headings">Our Mission</h2>
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+                    <?php the_content(); ?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+                    <?php
+                    wp_link_pages( array(
+                        'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+                        'after'  => '</div>',
+                    ) );
+                    ?>
 
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-				<?php the_content(); ?>
-
-				<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-					'after'  => '</div>',
-				) );
-				?>
-
-            </article>
-
-		<?php endwhile; ?>
+                </article> 
+            <?php endwhile; ?>     
         <!-- end of company mission section -->
 
 
