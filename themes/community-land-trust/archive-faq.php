@@ -31,7 +31,7 @@
                     <div class="faq">
 
                         <?php the_title( '<h2 class="faq_question">', '</h2>' ); ?>
-                        <img class="faq-arrow-right"
+                        <img alt="Arrow icon pointing to the right" class="faq-arrow-right"
                             src="<?php echo get_template_directory_uri() ?>/assets/images/icons/arrow-right.svg">
 
                         <div class="faq_answer_container">
@@ -60,11 +60,11 @@
         <h2 class="more-info">Need More Info<span class="contraction" >rmation</span>?</h2>
 
         <div class="button-container">              
-            <button class="mixin-button">
-                <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
-                    Contact Us
-                </a>
-            </button>
+          
+            <a class="mixin-button" href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
+                Contact Us
+            </a>
+   
         </div>
 
     </div>

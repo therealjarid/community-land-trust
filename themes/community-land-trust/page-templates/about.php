@@ -21,7 +21,7 @@ get_header();?>
 						<div class="about-page-box">
 
 							<div class="about-clt-logo">
-									<img src="<?php echo CFS()->get('about_page_clt_logo'); ?>"></img>
+									<img alt="Community Land Trust logo" src="<?php echo CFS()->get('about_page_clt_logo'); ?>">
 							</div>
 
 							<?php the_content();?>
@@ -65,12 +65,11 @@ endforeach;
 
     <div class="button-container">
          <h2 class="more-info">Need More Information?</h2>
-
-        <button class="mixin-button cta-button">
-            <a href="<?php echo get_permalink(get_page_by_path('contact')) . "#contact-container"; ?>">
-                Contact Us
-            </a>
-        </button>
+     
+         <a class="mixin-button cta-button" href="<?php echo get_permalink(get_page_by_path('contact')) . "#contact-container"; ?>">
+            Contact Us
+        </a>
+  
     </div>
 
 

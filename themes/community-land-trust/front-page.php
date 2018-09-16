@@ -13,17 +13,16 @@ get_header(); ?>
 		<?php the_post_thumbnail(); ?>
         
         <div class="header-info-box">
+
             <div class="company-header-info">
                 <h1 class="company-name">Community Land Trust</h1>
                 <p class="slogan"><?php echo esc_html(CFS()->get( 'slogan' )); ?>
                 </p>
             </div>    
           
-            <button class="mixin-button">
-
-                <a href="<?php echo get_permalink( get_page_by_path( 'find' ) ) ?>">Find a Home</a>
-
-            </button>
+            <a class="mixin-button cta-button" href="<?php echo get_permalink( get_page_by_path( 'find' ) ) ?>">
+                Find a Home
+            </a>
             
         </div>
 
@@ -77,7 +76,7 @@ get_header(); ?>
                         <div class="timeline-line"></div>
 
                         <div class="home-timeline-icon-box">
-                             <img class="lower" src="<?php echo $timeline_field['achievements_icon']; ?>">
+                             <img class="lower" alt="Icons representing growth whithin a company" src="<?php echo $timeline_field['achievements_icon']; ?>">
                              <p class="timeline-growth-numbers counter">
                                  <?php echo $timeline_field['achievements_numbers']; ?>
                              </p>
@@ -148,16 +147,14 @@ get_header(); ?>
 			wp_reset_postdata();
 			?>
         </div>
-
-    
+   
     <div class="button-container">
         <h2 class="more-info">Need More Info<span class="contraction">rmation</span>?</h2>
-
-        <button class="mixin-button cta-button">
-            <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
-                Contact Us
-            </a>
-        </button>
+     
+        <a class="mixin-button cta-button" href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
+            Contact Us
+        </a>
+ 
     </div>
         
     </main> <!-- end of .home-page main -->
