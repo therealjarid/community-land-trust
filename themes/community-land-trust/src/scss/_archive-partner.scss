@@ -3,6 +3,49 @@
 --------------------------------------------------------------*/
 
 .partner-page-content {
+  margin: 0 30px;
+  h2 {
+    @include page-title;
+    width: 190px;
+    margin-top: 30px;
+  }
+  p {
+    line-height: 1.5;
+  }
+}
+.main-carousel {
+  margin: 0 30px 60px;
+  .carousel-cell {
+    border: 1px solid $footer_darker_color;
+    // max-height: 735px;
+    img {
+      width: 45%;
+      height: auto;
+      display: block;
+      margin: 30px auto 0;
+    }
+    p {
+      margin: 30px;
+    }
+    .partner-meta {
+      padding: 30px 0 0;
+      border-top: 4px $border_color solid;
+      p {
+        margin: 0 30px 30px;
+        &:first-of-type {
+          font-weight: 700;
+        }
+      }
+    }
+  }
 }
 .contact-container {
+  padding: 20px 40px;
+  background-color: #e0f1f7;
+  a {
+    text-decoration: underline;
+  }
+  p:last-of-type {
+    font-weight: 500;
+  }
 }
