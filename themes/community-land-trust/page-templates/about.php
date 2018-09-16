@@ -65,11 +65,12 @@ endforeach;
 
     <div class="button-container">
          <h2 class="more-info">Need More Information?</h2>
-     
-         <a class="mixin-button cta-button" href="<?php echo get_permalink(get_page_by_path('contact')) . "#contact-container"; ?>">
-            Contact Us
-        </a>
-  
+
+				 <button class="mixin-button cta-button">
+					<a href="<?php echo get_permalink(get_page_by_path('contact')) . "#contact-container"; ?>">
+							Contact Us
+					</a>
+				</button>
     </div>
 
 
