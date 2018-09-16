@@ -144,20 +144,21 @@
       max-width: 1000px;
       top: -110px;
     }
-  }
-  p {
-    margin: 20px auto 30px;
-    @include tablet-size {
-      max-width: 730px;
+
+    p {
+      margin: 20px auto 30px;
+      @include tablet-size {
+        max-width: 730px;
+      }
     }
-  }
-  a {
-    text-decoration: underline;
-  }
-  p:last-of-type {
-    font-weight: 500;
-    @include desktop-size {
-      font-size: 20px;
+    a {
+      text-decoration: underline;
+    }
+    p:last-of-type {
+      font-weight: 500;
+      @include desktop-size {
+        font-size: 20px;
+      }
     }
   }
 }
