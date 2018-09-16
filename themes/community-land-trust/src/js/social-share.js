@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) { 
   (function(w, d, s) {
- // code for asynchronous loading 
+ // code for asynchronous loading of share buttons
     function go(){
      var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
      if (d.getElementById(id)) {return;}
