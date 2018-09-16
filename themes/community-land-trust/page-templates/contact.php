@@ -5,7 +5,9 @@
  * @package CLT_Theme
  */
 
-get_header(); ?>
+ $email = 'info@cltrust.ca';
+
+ get_header(); ?>
 
 <section class="contact-us">
     <div class="banner-container">
@@ -45,7 +47,7 @@ get_header(); ?>
         </div>
         <div class="featured-person-content">
         <!-- @TODO - mailto: link should be pulled dynamically -->
-            <a href="<?php echo CFS()->get( 'email' ); ?>">
+            <a href="mailto:<?php echo $email; ?>">
                 <h2 class="featured-person-name"><?php echo CFS()->get( 'name' ); ?></h2>
             </a>
             <p class="featured-person-title"><?php echo CFS()->get( 'title' ); ?></p>
