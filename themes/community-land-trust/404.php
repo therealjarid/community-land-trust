@@ -22,7 +22,7 @@ get_header(); ?>
                     <div class="page-content">
                         <p><?php echo esc_html( "We're not sure what you're looking for, but we'll get you home safely!" ); ?></p>
                     </div><!-- .page-content -->
-                    <a href="<?php echo get_home_url(); ?>">
+                    <a href="<?php echo esc_url(get_permalink( get_page_by_title( 'Find a Home' ) )); ?>">
                         <button class="mixin-button-404">Back Home</button>
                     </a>
                 </div>

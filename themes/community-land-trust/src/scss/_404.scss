@@ -41,6 +41,7 @@
     }
   }
   .mixin-button-404 {
-    @include main-cta 
+    @include main-cta; 
+    width: 220px;
   }
 }
