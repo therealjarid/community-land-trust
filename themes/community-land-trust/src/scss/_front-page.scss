@@ -236,6 +236,11 @@
       display: flex;
       flex-wrap: wrap;
       text-align: center;
+
+      @include tablet-size {
+        justify-content: center;
+  
+      }
   
 
       @include desktop-size {
@@ -254,9 +259,17 @@
         &:last-of-type {
           width: 100%;
 
+          @include tablet-size {
+            width: 33%;
+          }
+
           @include desktop-size {
             width: 20%;
           }
+        }
+
+        @include tablet-size {
+          width: 33%;
         }
 
         @include desktop-size {
