@@ -15,7 +15,6 @@ get_header(); ?>
     </div><!-- .entry-header -->
     <div class="offset-container">
     <section class="upper-content">
-    <!-- @TODO: these should all pull in dynamic hyperlinks for each  -->
         <div class="contact-info">
             <p class="contact-number">
                 <i class="fas fa-phone fa-rotate-180"></i>
