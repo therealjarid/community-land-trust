@@ -2,6 +2,16 @@
 # Front Page
 --------------------------------------------------------------*/
 
+.page-id-58, 
+.blog {
+  .carousel-cell:hover {
+    @include desktop-size {
+      opacity: 0.7;
+      transition: opacity 0.2s ease-in;
+    }
+  }
+}
+
 // flickity carousel global to all partials 
 .main-carousel {
   padding-top: 30px;
@@ -24,15 +34,6 @@
 
   .carousel-cell {
     width: 100%;  
-
-    &:hover {
-      @include desktop-size {
-        opacity: 0.7;
-        transition: opacity 0.2s ease-in;
-
-      }
-  
-    }
   }
 
   .flickity-prev-next-button {
