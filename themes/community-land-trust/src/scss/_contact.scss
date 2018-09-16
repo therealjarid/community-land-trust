@@ -1,7 +1,6 @@
 /*--------------------------------------------------------------
 # Contact Us Page
 --------------------------------------------------------------*/
-
 .contact-us {
   text-align: center;
   .entry-header {
@@ -25,13 +24,13 @@
     margin: 0 auto;
     @include desktop-size {
       display: flex;
-      max-width: 92%;
+      max-width: 993.6px;
       margin: 0 auto;
       padding-bottom: 5rem;
     }
     @include large-desktop-size {
       margin: 0 auto;
-      max-width: 68%;
+      max-width: 993.6px;
     }
     @include extra-large-desktop-size {
       margin: 0 auto;
@@ -196,16 +195,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 68%;
+      width: 734.4px;
       margin: 0 auto;
       padding: 2rem 0;
     }
     @include large-desktop-size {
-      width: 50%;
+      width: 720px;
       margin: 0 auto;
     }
     @include extra-large-desktop-size {
-      width: 38%;
+      width: 729.6px;
       margin: 0 auto;
     }
     .featured-person-photo {

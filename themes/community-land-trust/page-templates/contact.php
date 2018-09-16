@@ -9,7 +9,7 @@
 
  get_header(); ?>
 
-<section class="contact-us">
+<section class="contact-us container">
     <div class="banner-container">
         
     <div class="entry-header">
