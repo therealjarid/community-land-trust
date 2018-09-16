@@ -5,7 +5,7 @@
   a {
     text-decoration: none;
     color: $color__background-body;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   p {
     color: $color__background-body;
@@ -48,6 +48,7 @@
         margin: 0;
         text-align: left;
         line-height: 1.5rem;
+        padding-left: 1rem;
         @include tablet-size {
           text-align: left;
           margin: 0.5rem 0;
@@ -57,13 +58,13 @@
         padding-left: 0.3rem;
       }
       .fa-phone {
-        font-size: 0.8rem;
+        font-size: 1rem;
         @include tablet-size {
           font-size: 1.3rem;
         }
       }
       .fa-envelope {
-        font-size: 0.8rem;
+        font-size: 1rem;
         @include tablet-size {
           font-size: 1.3rem;
         }
@@ -121,22 +122,22 @@
         }
       }
       a {
-        padding: 0 0.5rem;
+        padding: 0 0.4rem;
       }
     }
     .address {
       grid-area: address;
+      padding-left: 0.5rem;
       @include desktop-size {
         display: flex;
       }
       p {
         color: $color__background-body;
         margin: 0;
-        max-width: 85%;
+        max-width: 90%;
         padding-left: 2rem;
         line-height: 1.5rem;
         text-indent: -0.1rem;
-        font-size: 0.8rem;
         @include phablet-size {
           max-width: 80%;
           padding-left: 4rem;
@@ -190,7 +191,7 @@
         }
       }
       .fa-map-marker-alt {
-        font-size: 0.8rem;
+        font-size: 1rem;
         @include tablet-size {
           display: none;
         }
