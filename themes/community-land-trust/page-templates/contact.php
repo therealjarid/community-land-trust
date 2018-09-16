@@ -7,7 +7,8 @@
 
 get_header(); ?>
 
-<div class="contact-us">
+<section class="contact-us">
+    <div class="banner-container">
         
     <div class="entry-header">
         <h1 class="entry-title"><?php the_title(); ?></h1>
@@ -52,7 +53,7 @@ get_header(); ?>
             <p><?php echo CFS()->get( 'description' ); ?></p>
         </div>
     </div>
-
-</div><!-- #primary -->
+    </div>
+</section><!-- #primary -->
 
 <?php get_footer(); ?>
