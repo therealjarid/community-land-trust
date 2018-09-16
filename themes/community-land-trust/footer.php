@@ -5,6 +5,8 @@
  * @package CLT_Theme
  */
 
+$google_url = 'https://www.google.ca/maps/place/1651+Commercial+Dr,+Vancouver,+BC+V5L+3Y3/@49.2699305,-123.0720043,17z/data=!3m1!4b1!4m5!3m4!1s0x5486714742e982d1:0x37a9dd95a9230540!8m2!3d49.269927!4d-123.0698156';
+
 ?>
 
 </div><!-- #content -->
@@ -27,9 +29,9 @@
         </div>
 
         <div class="address">
-            <a href="https://www.google.ca/maps/place/1651+Commercial+Dr,+Vancouver,+BC+V5L+3Y3/@49.2699305,-123.0720043,17z/data=!3m1!4b1!4m5!3m4!1s0x5486714742e982d1:0x37a9dd95a9230540!8m2!3d49.269927!4d-123.0698156"
+            <a href="<?php echo $google_url ?>"
                target="_blank">
-               <img class="footer-image" src="<?php echo get_stylesheet_directory_uri(); ?>/Assets/images/footer-map.jpg"/>
+               <img class="footer-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-map.jpg"/>
             </a>
             <p><i class="fas fa-map-marker-alt"></i>220-1651 Commercial Dr Vancouver, BC V5L 3Y3</p>
         </div>
