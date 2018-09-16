@@ -22,8 +22,16 @@
 
     .header-container {
       @include page-title;
+      width: 250px;
+
+      @include desktop-size {
+        width: 400px;
+
+      }
+      
       h1 {
         margin: 0;
+        
       }
     }
   }
