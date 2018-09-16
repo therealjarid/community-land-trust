@@ -423,6 +423,17 @@
       font-size: 20px;
     }
   }
+
+  .button-container {
+    @include more-info;
+    margin-top: 5rem;
+  
+    @include desktop-size {
+      position: relative;
+      top: -200px;
+      margin: 0;
+    }
+  }
 }
 
 .partners-logo-wrapper {
@@ -454,16 +465,7 @@
   }
 }
 
-.button-container {
-  @include more-info;
-  margin-top: 5rem;
 
-  @include desktop-size {
-    position: relative;
-    top: -200px;
-    margin: 0;
-  }
-}
 
 a {
   text-decoration: none;
