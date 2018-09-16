@@ -13,6 +13,7 @@ get_header(); ?>
 		<?php the_post_thumbnail(); ?>
         
         <div class="header-info-box">
+            
             <div class="company-header-info">
                 <h1 class="company-name">Community Land Trust</h1>
                 <p class="slogan"><?php echo esc_html(CFS()->get( 'slogan' )); ?>

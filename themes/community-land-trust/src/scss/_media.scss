@@ -90,6 +90,13 @@ object {
 //Media page styles
 .blog {
 
+	.media-background {
+		@include desktop-size {
+			@include texture-background;
+
+		}
+	}
+
 	.page-header {
 
 		img {
@@ -108,50 +115,108 @@ object {
 		text-align: center;
 		width: 200px;
 		font-size: 20px;
-
+	
 		h1 {
 			display: inline-block;
 			font-weight: bold;
 			letter-spacing: 1px;
 			font-size: 20px;
+
+			@include desktop-size {
+				font-size: 25px;
+	
+			}
+		}
+
+		@include desktop-size {
+			position: relative;
+			top: -500px;
+			width:  230px;
+			margin-bottom: 0;
+
 		}
 		
 
 	}
 
 	.main-carousel {
-		width: 80vw;
+		width: 80%;
 		margin: 0 auto;
-		margin-bottom: 4rem;
+		margin-bottom: 2rem;
 
-	}
-
-	.carousel-cell {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.media-page-info {
-		height: 130px;
-		background: $media_lighter_bg;
-
-
-		p {
-			width: 70vw;
-			margin: 10px auto;		
-			font-size: 16px;
-			line-height: 25px;
-
+		@include desktop-size {
+			position: relative;
+			top: -500px;
 		}
 
-		.media-posted-on {
-			text-align: right;
-			font-family: $font__accent;
-			letter-spacing: 2px;
-			font-size: 14px;
+		.flickity-page-dots {
+			@include desktop-size {
+				display: none;
+			}
+			
+		}
+
+		.carousel-cell {
+			@include desktop-size {
+				width:  33.33% !important;
+				margin: 1rem;
+				display: flex;
+				flex-direction: column;
+	
+			}
+
+			img {
+				@include desktop-size {
+					height: 300px;
+				}		
+			}
+
+			.media-page-info {
+				height: 130px;
+				background: $media_lighter_bg;
+		
+				@include desktop-size {
+					height: 170px;
+		
+				}
+		
+		
+				.media-carousel-title {
+					width: 70vw;
+					margin: 10px auto;		
+					font-size: 16px;
+					line-height: 25px;
+		
+		
+					@include desktop-size {
+						width:  90%;
+						margin: 0 auto;		
+						letter-spacing: 1px;
+						overflow: hidden;
+			
+					}
+		
+				}
+		
+				.media-posted-on {
+					text-align: right;
+					font-family: $font__accent;
+					letter-spacing: 2px;
+					font-size: 14px;
+		
+					@include desktop-size {
+						width:  80%;
+						font-size: 12px;
+			
+					}
+				}
+		
+			}
 		}
 
 	}
+
+	
 
 	.media-inquiries {
 		height: 150px;
@@ -159,15 +224,42 @@ object {
 		background: $timeline_bg;
 		text-align: center;
 		padding: 50px 50px;
+
+		@include desktop-size {
+			width: 80vw;
+			margin: 5rem auto;
+			height: 400px;
+			background: #F0FAFC;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+		}
 		
 		span {
 			width: 90vw;
 			font-size: 14px;
+			font-family: $font__accent;
+			color: black;
+
+			@include desktop-size {
+				font-size: 25px;
+				font-weight: bold;
+				display: block;
+				width: 45%;
+			}
 		}
 
 		.media-inquiries-email {
 			font-weight: 500;
 			text-decoration: underline;
+			font-family: $font__accent;
+
+			@include desktop-size {
+				font-weight: normal;
+			}
+			
 		}
 	}
 

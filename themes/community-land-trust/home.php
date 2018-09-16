@@ -15,52 +15,48 @@ get_header(); ?>
 				<img src="<?php echo get_the_post_thumbnail_url(34); ?>"/>
 
 		</header><!-- .page-header -->
-	
-								<!-- checking all the categories and their array positions
-										<?php
-										$categories = get_categories();
-										var_dump( $categories );
-								?>-->
 
-		<!-- "Press Releases" category title, and Loop through posts only from this category -->	
-		<div class="media-heading-box">
-				<h1 class="media-page-headings">
-						<?php
-							$categories = get_categories();
-							if ( ! empty( $categories ) ) {
-								echo esc_html( $categories[1]->name );
-							}
-						?>
-				</h1>
-		</div>
+		<section class="media-background"></section>
 
-		<?php 
-		// Never use query_posts( 'cat=2' ); 
-		$press_args = array( 'cat' => '2' );
-		$press_posts = get_posts( $press_args );?> 
-		
-		<div class="main-carousel">
-			<?php foreach ( $press_posts as $post ) : setup_postdata( $post );?> 
-			
-				<div class="carousel-cell">
-							<?php 
-								$press_id = $post->ID;
-								echo get_the_post_thumbnail($press_id);
-							?>
-
-						<div class="media-page-info">
-								<p class="media-posted-on"><?php echo clt_posted_on();?></p>
-								<p>
-									<a href="<?php echo get_permalink() ?>">
-										<?php 	echo $post->post_title; ?>
-									</a>
-								</p>
-						</div>		
+			<!-- "Press Releases" category title, and Loop through posts only from this category -->	
+				<div class="media-heading-box">
+						<h1 class="media-page-headings">
+								<?php
+									$categories = get_categories();
+									if ( ! empty( $categories ) ) {
+										echo esc_html( $categories[1]->name );
+									}
+								?>
+						</h1>
 				</div>
-			<?php endforeach; wp_reset_postdata();?>
-		</div> 
-			
 
+				<?php 
+				// Never use query_posts( 'cat=2' ); 
+				$press_args = array( 'cat' => '2' );
+				$press_posts = get_posts( $press_args );?> 
+				
+				<div class="main-carousel">
+					<?php foreach ( $press_posts as $post ) : setup_postdata( $post );?> 
+					
+						<div class="carousel-cell">
+									<?php 
+										$press_id = $post->ID;
+										echo get_the_post_thumbnail($press_id);
+									?>
+
+								<div class="media-page-info">
+										<p class="media-posted-on"><?php echo clt_posted_on();?></p>
+										<p class="media-carousel-title">
+											<a href="<?php echo get_permalink() ?>">
+												<?php 	echo $post->post_title; ?>
+											</a>
+										</p>
+								</div>		
+						</div>
+					<?php endforeach; wp_reset_postdata();?>
+				</div> 
+					
+			
 	<!-- "CLT in the News" category title, and Loop through posts only from this category -->
 	<div class="media-heading-box">
 			<h1 class="media-page-headings">
@@ -87,7 +83,7 @@ get_header(); ?>
 					?>
 					<div class="media-page-info">
 							<p class="media-posted-on"><?php echo clt_posted_on();?></p>
-							<p>
+							<p class="media-carousel-title">
 								<a href="<?php echo get_permalink() ?>">
 									<?php 	echo $post->post_title; ?>
 								</a>
