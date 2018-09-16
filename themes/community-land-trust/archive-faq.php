@@ -60,11 +60,11 @@
         <h2 class="more-info">Need More Info<span class="contraction" >rmation</span>?</h2>
 
         <div class="button-container">              
-          
-            <a class="mixin-button" href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
-                Contact Us
-            </a>
-   
+            <button class="mixin-button">
+                <a  href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
+                    Contact Us
+                </a>
+            </button>
         </div>
 
     </div>

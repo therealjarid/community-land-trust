@@ -19,10 +19,12 @@ get_header(); ?>
                 <p class="slogan"><?php echo esc_html(CFS()->get( 'slogan' )); ?>
                 </p>
             </div>    
-          
-            <a class="mixin-button cta-button" href="<?php echo get_permalink( get_page_by_path( 'find' ) ) ?>">
-                Find a Home
-            </a>
+
+            <button class="mixin-button">
+                <a  href="<?php echo get_permalink( get_page_by_path( 'find' ) ) ?>">
+                    Find a Home
+                </a>
+            </button>
             
         </div>
 
@@ -151,9 +153,11 @@ get_header(); ?>
     <div class="button-container">
         <h2 class="more-info">Need More Info<span class="contraction">rmation</span>?</h2>
      
-        <a class="mixin-button cta-button" href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
-            Contact Us
-        </a>
+        <button class="mixin-button cta-button">
+            <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
+                Contact Us
+            </a>
+        </button>
  
     </div>
         
