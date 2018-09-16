@@ -200,6 +200,9 @@
   }
   .cta-button {
     @include main-cta;
+    @include desktop-size {
+      margin-top: 40px;
+    }
   }
 }
 
