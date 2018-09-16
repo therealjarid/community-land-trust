@@ -31,7 +31,8 @@
 			display: inline-block;
 			font-weight: bold;
 			letter-spacing: 1px;
-			font-size: 20px;
+      font-size: 20px;
+      margin: 0;
 
 			@include desktop-size {
 				font-size: 25px;
@@ -45,7 +46,11 @@
 			width:  230px;
 			margin-bottom: 0;
 
-		}
+    }
+    
+    @include extra-large-desktop-size {
+      top: -430px;
+    }
 		
 
 	}
@@ -53,12 +58,17 @@
 	.main-carousel {
 		width: 80%;
 		margin: 0 auto;
-		margin-bottom: 2rem;
+		margin-bottom: 5rem;
 
 		@include desktop-size {
 			position: relative;
-			top: -350px;
-		}
+      top: -350px;
+      margin-bottom: 2rem;
+    }
+    
+    @include extra-large-desktop-size {
+      top: -400px;
+    }
 
 		.flickity-page-dots {
 			@include desktop-size {
@@ -95,17 +105,17 @@
 		
 				.media-carousel-title {
 					width: 70vw;
-					margin: 10px auto;		
+          margin: 10px auto;		
 					font-size: 16px;
-					line-height: 25px;
+          line-height: 25px;
+          overflow: hidden;
 		
 		
 					@include desktop-size {
 						width:  90%;
 						margin: 0 auto;		
 						letter-spacing: 1px;
-						overflow: hidden;
-			
+						
 					}
 		
 				}
@@ -115,7 +125,8 @@
 					font-family: $font__accent;
 					letter-spacing: 2px;
 					font-size: 14px;
-		
+          margin-right: 10px;
+
 					@include desktop-size {
 						width:  80%;
 						font-size: 12px;
@@ -127,8 +138,6 @@
 		}
 
 	}
-
-	
 
 	.media-inquiries {
 		height: 150px;
