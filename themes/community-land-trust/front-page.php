@@ -107,18 +107,21 @@ get_header(); ?>
 				'order'     => 'DSC',
 			);
             $clt_portfolio_posts = get_posts( $portfolio_args );
-            
-            if ( !is_null( $clt_portfolio_posts ) && !is_null(has_post_thumbnail($clt_portfolio_posts)) ) { 
+           
+            if ( !is_null( $clt_portfolio_posts ) ) { 
 
                 foreach ( $clt_portfolio_posts as $clt_portfolio_post ): ?>
+                
+                    <?php if ( has_post_thumbnail( $clt_portfolio_post ) ) { ?>
+                        <div class="carousel-cell">
+                            <a href=<?php echo get_post_permalink($clt_portfolio_post->ID); ?>>                  
+                                <?php echo (get_the_post_thumbnail( $clt_portfolio_post->ID )); ?>
+                            </a>
+                        </div>
 
-                    <div class="carousel-cell">
-                        <a href=<?php echo get_post_permalink($clt_portfolio_post->ID); ?>>                  
-                            <?php echo (get_the_post_thumbnail( $clt_portfolio_post->ID )); ?>
-                        </a>
-                    </div>
-                  
-                <?php endforeach;
+
+                    <?php }
+                    endforeach;
             }
 			wp_reset_postdata();
 			?>
