@@ -42,7 +42,7 @@
       text-align: left;
       margin: 0 auto;
       max-width: 208px;
-      font-family: Raleway, serif;
+      font-family: $font__accent;
       font-weight: 500;
       padding-bottom: 1rem;
       @include phablet-size {
@@ -121,7 +121,7 @@
       border-radius: 5%;
     }
     .gform_title {
-      font-family: Raleway, serif;
+      font-family: $font__accent;
       font-weight: 550;
       text-align: center;
       padding-bottom: 1.5rem;
@@ -235,7 +235,7 @@
       .featured-person-name {
         font-size: 1rem;
         letter-spacing: 1px;
-        font-family: Raleway, serif;
+        font-family: $font__accent;
         line-height: 1px;
         margin-bottom: 0;
         margin-top: 1rem;

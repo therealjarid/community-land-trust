@@ -109,7 +109,7 @@ function clt_scripts() {
 	wp_enqueue_script( 'clt-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
 	//adding Google Fonts
-	wp_enqueue_style( 'clt-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,500,700' );
+	wp_enqueue_style( 'clt-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,500,600,700|Roboto:400,500,600,700' );
 
 	// add font awesome via CDN 
 	wp_enqueue_style( 'clt-font-awesome-icons', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css' );
@@ -141,6 +141,10 @@ function clt_scripts() {
 	// adding FAQ functionality 
 	if ( is_archive( 'faqs' ) | is_page( 'faqs' ) ) {
 		wp_enqueue_script( 'faq-page', get_template_directory_uri() . '/build/js/faq-page.min.js', array( 'jquery' ), null, false );
+	}
+
+	if ( is_single() ) {
+		wp_enqueue_script( 'read-more', get_template_directory_uri() . '/build/js/read-more.min.js', array( 'jquery' ), null, false );
 	}
 
 	// adding Portfolio page functionality 
@@ -220,6 +224,15 @@ function slug_register_zipcode() {
 }
 
 add_action( 'rest_api_init', 'slug_register_zipcode' );
+
+/** 
+ * Modify the excerpt dots
+ */
+
+function new_excerpt_more( $more ) {
+	return ' ...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 /**
  * Get the value of the "portfolio_zip" field
