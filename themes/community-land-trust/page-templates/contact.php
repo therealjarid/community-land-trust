@@ -43,15 +43,15 @@
 
     <div class="featured-person">
         <div class="featured-person-photo">
-            <img src="<?php echo CFS()->get( 'photo' ); ?>"/>
+            <img src="<?php echo esc_html( CFS()->get( 'photo' )); ?>"/>
         </div>
         <div class="featured-person-content">
         <!-- @TODO - mailto: link should be pulled dynamically -->
             <a href="mailto:<?php echo $email; ?>">
-                <h2 class="featured-person-name"><?php echo CFS()->get( 'name' ); ?></h2>
+                <h2 class="featured-person-name"><?php echo esc_html( CFS()->get( 'name' )); ?></h2>
             </a>
-            <p class="featured-person-title"><?php echo CFS()->get( 'title' ); ?></p>
-            <p><?php echo CFS()->get( 'description' ); ?></p>
+            <p class="featured-person-title"><?php echo esc_html( CFS()->get( 'title' )); ?></p>
+            <p><?php echo esc_html( CFS()->get( 'description' )); ?></p>
         </div>
     </div>
     </div>
