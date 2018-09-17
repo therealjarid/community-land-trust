@@ -165,15 +165,17 @@
       .mixin-button {
         @include main-cta;
         position: relative;
-        transform: translate(50%, -50%);
+        top: -10px;
+        margin: 0 auto;
+        display: block;
 
         @include tablet-size {
-          transform: translate(40%, -70%);
+          top: 15px;
+          margin: 0;
         }
 
         @include desktop-size {
-          transform: translate(120%, -70%);
-          left: 0;
+     
         }
       }
     }
