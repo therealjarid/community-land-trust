@@ -65,7 +65,7 @@ get_header(); ?>
         <div class="email-container">
             <div class="email">
                 <p>For Media Inquiries regarding Community Land Trust, Please
-                    Contact: <?php echo esc_html( CFS()->get( 'email' )); ?></p>
+                    Contact: <?php echo CFS()->get( 'email' ); ?></p>
             </div>
         </div> <!-- end of email-container -->
 
