@@ -20,15 +20,15 @@
         <div class="contact-info">
             <p class="contact-number">
                 <i class="fas fa-phone fa-rotate-180"></i>
-                <?php echo esc_html( CFS()->get( 'contact_number' )); ?>
+                <?php echo CFS()->get( 'contact_number' ); ?>
             </p>
             <p class="email-address">
                 <i class="fas fa-envelope"></i>
-                <?php echo esc_html( CFS()->get( 'email' )); ?>
+                <?php echo CFS()->get( 'email' ); ?>
             </p>
             <p class="address">
                 <i class="fas fa-map-marker-alt"></i>
-                <?php echo esc_html( CFS()->get( 'location' )); ?>
+                <?php echo CFS()->get( 'location' ); ?>
             </p>
         </div>
         <div class="map-container">
