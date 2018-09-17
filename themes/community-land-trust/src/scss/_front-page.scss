@@ -81,7 +81,6 @@
 // styles applied only to front-page.php
 .home {
   //header styles begin
-
   .home-background-box {
     @include desktop-size {
       @include texture-background;
@@ -415,6 +414,9 @@
   }
 
   .timeline-description {
+    width: 100%;
+    max-width: 100%;
+    
     @include tablet-size {
       width: 230px;
       margin: 10px auto 30px auto;
