@@ -25,7 +25,7 @@
   .entry-header {
     @include page-title;
     text-align: center;
-    width: 120px;
+    width: 150px;
     margin-bottom: 2rem;
     @include desktop-size {
       width: 200px;
@@ -33,6 +33,7 @@
     .entry-title{
       display: inline-block;
       font-weight: 700;
+      font-size: 24px;
       @include desktop-size {
         margin-top: 3rem;
       }
