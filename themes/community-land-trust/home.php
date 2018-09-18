@@ -39,19 +39,21 @@ get_header(); ?>
 					<?php foreach ( $press_posts as $post ) : setup_postdata( $post );?> 
 					
 						<div class="carousel-cell">
-									<?php 
-										$press_id = $post->ID;
-										echo get_the_post_thumbnail($press_id);
-									?>
+							<a href="<?php echo get_permalink() ?>">
+									<div class="media-thumbnail-box">
+										<?php 
+											$press_id = $post->ID;
+											echo get_the_post_thumbnail($press_id);
+										?>
+									</div>
 
 								<div class="media-page-info">
 										<p class="media-posted-on"><?php echo clt_posted_on();?></p>
 										<p class="media-carousel-title">
-											<a href="<?php echo get_permalink() ?>">
-												<?php 	echo $post->post_title; ?>
-											</a>
+											<?php 	echo $post->post_title; ?>			
 										</p>
-								</div>		
+								</div>			
+							</a>	
 						</div>
 					<?php endforeach; wp_reset_postdata();?>
 				</div> 
@@ -77,19 +79,24 @@ get_header(); ?>
 		<?php foreach ( $press_posts as $post ) : setup_postdata( $post );?> 
 		
 			<div class="carousel-cell">
-					<?php 
-						$press_id = $post->ID;
-						echo get_the_post_thumbnail($press_id);
-					?>
+				<a href="<?php echo get_permalink() ?>">
+					<div class="media-thumbnail-box">
+							<?php 
+								$press_id = $post->ID;
+								echo get_the_post_thumbnail($press_id);
+							?>
+					</div>
 					<div class="media-page-info">
 							<p class="media-posted-on"><?php echo clt_posted_on();?></p>
 							<p class="media-carousel-title">
-								<a href="<?php echo get_permalink() ?>">
+								
 									<?php 	echo $post->post_title; ?>
-								</a>
+								
 							</p>
+					
 					</div>		
-			</div>
+				</div>
+			</a>
 		<?php endforeach; wp_reset_postdata();?>
 	</div> 
 
@@ -100,7 +107,7 @@ get_header(); ?>
 			For Media Inquiries regarding
 			Community Land Trust, Please Contact:
 		</span>
-		<a href="<?php echo CFS()->get( 'email', 36 )['url']; ?>"><?php echo CFS()->get( 'email', 36 )['text']?></a>
+		<a class="cfs-hyperlink" href="<?php echo CFS()->get( 'email', 36 )['url']; ?>"><?php echo CFS()->get( 'email', 36 )['text']?></a>
 </div>
 
 
