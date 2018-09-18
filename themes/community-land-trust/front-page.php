@@ -114,15 +114,18 @@ get_header(); ?>
 
                     <?php if ( has_post_thumbnail( $clt_portfolio_post ) ) { ?>
                         <div class="carousel-cell">
-                            <a class="anchor-carousel-cell" href=<?php echo get_post_permalink($clt_portfolio_post->ID); ?>>       
+                            <a class="anchor-carousel-cell" href=<?php echo get_post_permalink($clt_portfolio_post->ID); ?>> 
                                 <?php echo (get_the_post_thumbnail( $clt_portfolio_post->ID )); ?>
                                 <div class="home-flickity-portfolio-info">
-                                    <?php echo get_the_title($clt_portfolio_post->post_title) ?>
-                                    <?php echo CFS()->get( 'portfolio_heading', $clt_portfolio_post->ID  ); ?>
+                                    <h4 class="home-portfolio-heading">
+                                        <?php echo the_title($clt_portfolio_post->post_title) ?>
+                                    </h4>
+                                    <p class="home-portfolio-description">
+                                        <?php echo CFS()->get( 'portfolio_heading', $clt_portfolio_post->ID  ); ?>
+                                    <p>
                                 </div>
                             </a>
                         </div>
-
                     <?php }
                     endforeach;
             }

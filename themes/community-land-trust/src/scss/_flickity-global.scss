@@ -1,0 +1,65 @@
+// flickity carousel global to all partials
+.main-carousel {
+  padding-top: 30px;
+  margin-bottom: 30px;
+
+  .flickity-page-dots:empty {
+    & + .previous {
+      display: none;
+      & + .next {
+        display: none;
+      }
+    }
+  }
+
+  @include desktop-size {
+    width: 70vw;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .carousel-cell {
+    width: 100%;
+  }
+
+  .flickity-prev-next-button {
+    position: absolute;
+  }
+
+  button {
+    display: none;
+
+    @include desktop-size {
+      display: inline;
+      background: transparent;
+      border: 0;
+      margin: 0 -5rem;
+      width: 70px;
+
+      .arrow {
+        fill: $border_color;
+        height: 500px;
+      }
+    }
+  }
+
+  img {
+    object-fit: cover;
+    overflow: hidden;
+    height: 250px;
+
+    @include desktop-size {
+      height: auto;
+    }
+  }
+
+  .flickity-page-dots {
+    .dot {
+      background: transparent;
+      border: 2px solid $border_color;
+    }
+    .is-selected {
+      background: $border_color;
+    }
+  }
+}
