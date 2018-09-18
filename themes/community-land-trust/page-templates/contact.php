@@ -16,7 +16,7 @@
         <h2 class="entry-title"><?php the_title(); ?></h2>
     </div><!-- .entry-header -->
   
-    <section class="upper-content">
+    <section class="contact-email-address">
         <div class="contact-info">
             <p class="contact-number">
                 <i class="fas fa-phone fa-rotate-180"></i>
@@ -36,7 +36,7 @@
         </div>
     </section>
     </div> <!-- end of banner container -->
-    
+
     <div class="offset-container">
     <div class="contact-container">
         <a id="contact-container"></a>
