@@ -2,24 +2,27 @@
 # 404 Page
 --------------------------------------------------------------*/
 .error404 {
-  @include texture-background; 
+  @include texture-background;
   text-align: center;
   .container {
     width: 80%;
+    max-width: 700px;
     margin: 5rem auto;
-    background-color: #E0F1F7;
-    padding: 1.5rem;
+    background-color: #e0f1f7;
+    padding: 3rem 1rem;
     @include desktop-size {
-      width: 60%; 
-      background-color: #F2FAFC;
+      width: 70%;
+      background-color: #f2fafc;
+      max-width: 1000px;
     }
   }
   .text-wrap {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include desktop-size {
-      width: 50%;
-      margin: 7rem auto;
     }
   }
   .page-title {
@@ -27,21 +30,36 @@
     text-align: center;
     font-family: Raleway, serif;
     font-weight: 500;
+    margin: 0;
+    font-size: 40px;
+    @include tablet-size {
+      font-size: 50px;
+    }
     @include desktop-size {
-      font-size: 5rem;
+      font-size: 60px;
       font-weight: 700;
     }
   }
   .page-content {
-    text-align: left;
-    font-size: 0.8rem;
+    text-align: center;
+    font-size: 16px;
+    @include tablet-size {
+      font-size: 18px;
+      p {
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+    }
     @include desktop-size {
-      text-align: center; 
+      text-align: center;
       font-size: 1.5rem;
+      p {
+        margin-left: 75px;
+        margin-right: 75px;
+      }
     }
   }
   .mixin-button-404 {
-    @include main-cta; 
-    width: 220px;
+    @include main-cta;
   }
 }

@@ -4,6 +4,9 @@
 
 .portfolio-page-container {
   .banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include desktop-size {
       @include texture-background;
     }
@@ -58,6 +61,18 @@
     .error-message {
       @include error-message;
     }
+    .loading {
+      width: 150px;
+      margin: 0 auto;
+      padding: 20px 0;
+      display: none;
+      @include tablet-size {
+        width: 190px;
+      }
+      @include desktop-size {
+        width: 220px;
+      }
+    }
   }
   .offset-container {
     @include desktop-size {
@@ -110,10 +125,12 @@
           top: 0;
           left: 0;
           height: 100%;
+          width: 100%;
           img {
             overflow: hidden;
             object-fit: cover;
             height: 100%;
+            width: 100%;
             transition: transform 0.4s;
             &:hover {
               transform: scale(1.25);
