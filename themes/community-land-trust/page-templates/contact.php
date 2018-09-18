@@ -9,24 +9,31 @@ get_header(); ?>
 
 <section class="contact-us container">
     <div class="banner-container">
-            <?php
-                if ( !empty( $phone ) ) {
-                    echo '<p class="contact-number"><i class="fas fa-phone fa-rotate-180">' . $phone . '</i></p>';
-                }
-
-                if ( !empty( $email ) ) {
-                    echo '<p class="email-address"><i class="fas fa-envelope"><a href="' . $email['url'] . '">' . $email['text'] . '</a></i></p>';
-                }
-
-                if ( !empty( $address) ) {
-                    echo '<p class="address"><i class="fas fa-map-marker-alt">' . $address . '</i></p>';
-                }
-            ?>
-        </div>
-        <div class="map-container">
-            <div id="map-canvas"></div>
-        </div>
-    </section>
+    <div class="entry-header">
+            <h2 class="entry-title"><?php the_title(); ?></h2>
+        </div><!-- .entry-header -->
+         <section class="upper-content">
+            <div class="contact-info">
+                <!-- custom fields only print if they're not empty -->
+				<?php
+				$phone   = CFS()->get( 'contact_number' );
+				$email   = CFS()->get( 'email' );
+				$address = CFS()->get( 'location' );
+ 				if ( ! empty( $phone ) ) {
+					echo '<p class="contact-number"><i class="fas fa-phone fa-rotate-180"></i> ' . $phone . '</p>';
+				}
+ 				if ( ! empty( $email ) ) {
+					echo '<p class="email-address"><i class="fas fa-envelope"></i><a href="' . $email['url'] . '">' . $email['text'] . '</a></p>';
+				}
+ 				if ( ! empty( $address ) ) {
+					echo '<p class="address"><i class="fas fa-map-marker-alt"></i> ' . $address . '</p>';
+				}
+				?>
+            </div>
+            <div class="map-container">
+                <div id="map-canvas"></div>
+            </div>
+        </section>
     </div> <!-- end of banner container -->
     <div class="offset-container">
         <div class="contact-container">
