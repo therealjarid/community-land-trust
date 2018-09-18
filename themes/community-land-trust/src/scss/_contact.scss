@@ -6,7 +6,10 @@
   .banner-container {
     @include desktop-size {
       @include texture-background; 
-      position: relative; 
+      position: relative;
+      top: -80px;
+    }
+    @include large-desktop-size {
       top: -80px;
     }
   }
@@ -16,7 +19,7 @@
       top: -15px;
     }
     @include large-desktop-size {
-      top: -80px;
+      top: 60px;
     }
   }
   .entry-header {
@@ -38,9 +41,9 @@
     margin: 0 auto;
     @include desktop-size {
       display: flex;
-      max-width: 993.6px;
+      max-width: 960px;
       margin: 0 auto;
-      padding-bottom: 5rem;
+      margin-top: 7rem;
     }
     @include large-desktop-size {
       margin: 0 auto;
