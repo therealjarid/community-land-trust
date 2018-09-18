@@ -73,6 +73,10 @@ function calculateZoom(bounds) {
 
 - [Download Wordpress](https://wordpress.org/latest.zip) and place directory at root of server (you'll need a tool like [MAMP](https://www.mamp.info/en/) if you wish to host locally)
 - Replace `themes`, `plugins` and `uploads` folders from install with ones in this repo
+- Install the following plugins to ensure full site functionality:
+  * Gutenberg
+  * Custom Field Suite
+  * Gravity Forms
 
 The following should be done in `themes/community-land-trust/`
 
