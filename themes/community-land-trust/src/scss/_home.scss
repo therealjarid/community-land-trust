@@ -37,7 +37,7 @@
 
     @include desktop-size {
       position: relative;
-      top: -450px;
+      top: -400px;
       width: 230px;
       margin-bottom: 0;
     }
@@ -58,7 +58,7 @@
 
     @include desktop-size {
       position: relative;
-      top: -450px;
+      top: -400px;
       margin-bottom: 2rem;
       width: 85%;
     }
@@ -165,7 +165,7 @@
       justify-content: center;
       align-items: center;
       position: relative;
-      top: -200px;
+      top: -250px;
     }
 
     span {
