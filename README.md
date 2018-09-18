@@ -1,6 +1,6 @@
 # Community Land Trust
 
-#### Authors: Jarid Warren [ <jaridwarren@gmail.com> ], Vanessa Bertoletti [ <vanessabertoletti@gmail.com> ], Einer Lim [ <> ]
+#### Authors: Jarid Warren [ <jaridwarren@gmail.com> ], Vanessa Bertoletti [ <vanessabertoletti@gmail.com> ], Einer Lim [ <einer.lim322@gmail.com> ]
 
 ## Motivation
 
