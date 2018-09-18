@@ -1,9 +1,12 @@
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
+a {
+  text-decoration: none;
+}
 
 //header styles begin
-.home { 
+.home {
   .home-background-box {
     @include desktop-size {
       @include texture-background;
@@ -65,7 +68,7 @@
         p {
           margin: 0;
           color: #000;
-          font-family: 'Raleway', sans-serif;
+          font-family: $font__accent;
           font-size: 16px;
 
           @include desktop-size {
@@ -112,7 +115,7 @@
     }
   }
 
-  //main body styles 
+  //main body styles
   .home-page {
     width: 90vw;
     margin: 0 auto;
@@ -153,11 +156,14 @@
         margin: 100px auto 30px auto;
         font-size: 35px;
         width: 280px;
-
       }
     }
 
     .main-carousel {
+      @include tablet-size {
+        width: 650px;
+        margin: 0 auto;
+      }
       @include desktop-size {
         position: relative;
         top: -450px;
@@ -186,31 +192,35 @@
               transform: translate(-50%, -50%);
               text-align: center;
               color: black;
-  
+
+              &:hover {
+                transition: color 0.3s ease-in;
+                color: white;
+                text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+              }
+
               .home-portfolio-heading {
                 font-family: $font__accent;
                 font-size: 35px;
               }
-  
+
               .home-portfolio-description {
                 font-family: $font__main;
                 font-size: 20px;
                 line-height: 20px;
               }
             }
-
           }
-         
         }
 
         img {
           @include desktop-size {
-            filter: brightness(80%);
+            filter: brightness(75%);
             width: 900px;
             height: 550px;
 
             &:hover {
-              opacity: 0.2;
+              opacity: 0.3;
               transition: opacity 0.3s ease-in;
             }
           }
@@ -272,7 +282,7 @@
         .year {
           color: $timeline_font_color;
           font-family: $font__accent;
-          font-weight: 600;     
+          font-weight: 600;
           font-size: 18px;
           width: 10rem;
           height: auto;
@@ -335,8 +345,8 @@
             transform: translate(-50%, -50%);
 
             @include desktop-size {
-              top: 55%;
-              font-size: 25px;
+              top: 50%;
+              font-size: 28px;
             }
           }
 
@@ -402,7 +412,6 @@
     @include tablet-size {
       width: 80%;
       font-size: 16px;
-      
     }
     @include extra-large-desktop-size {
       font-size: 20px;
@@ -422,34 +431,31 @@
 }
 
 .partners-logo-wrapper {
-  padding-top: 30px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 3rem;
+  justify-content: space-around;
 
   @include tablet-size {
     margin-left: 50px;
-    justify-content: space-around;
-    width: 600px;
     margin: 0 auto;
   }
 
   @include desktop-size {
     position: relative;
-    top: -450px;
+    top: -420px;
+    width: 50vw;
   }
 
   img {
-    height: auto;
+    height: 80px;
     width: auto;
 
     @include tablet-size {
-      max-height: 100px;
-      max-width: auto;
+      height: 100px;
+    }
+
+    @include desktop-size {
+      height: 120px;
     }
   }
-}
-
-a {
-  text-decoration: none;
 }
