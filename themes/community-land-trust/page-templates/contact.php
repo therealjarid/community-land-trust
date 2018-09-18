@@ -9,28 +9,23 @@ get_header(); ?>
 
 <section class="contact-us container">
     <div class="banner-container">
-
-        <div class="entry-header">
+    <div class="entry-header">
             <h2 class="entry-title"><?php the_title(); ?></h2>
         </div><!-- .entry-header -->
-
-        <section class="upper-content">
+         <section class="upper-content">
             <div class="contact-info">
                 <!-- custom fields only print if they're not empty -->
 				<?php
 				$phone   = CFS()->get( 'contact_number' );
 				$email   = CFS()->get( 'email' );
 				$address = CFS()->get( 'location' );
-
-				if ( ! empty( $phone ) ) {
+ 				if ( ! empty( $phone ) ) {
 					echo '<p class="contact-number"><i class="fas fa-phone fa-rotate-180"></i> ' . $phone . '</p>';
 				}
-
-				if ( ! empty( $email ) ) {
+ 				if ( ! empty( $email ) ) {
 					echo '<p class="email-address"><i class="fas fa-envelope"></i><a href="' . $email['url'] . '">' . $email['text'] . '</a></p>';
 				}
-
-				if ( ! empty( $address ) ) {
+ 				if ( ! empty( $address ) ) {
 					echo '<p class="address"><i class="fas fa-map-marker-alt"></i> ' . $address . '</p>';
 				}
 				?>

@@ -93,17 +93,32 @@
       }
       p {
         margin: 0 auto;
-        max-width: 200px;
+        max-width: 133px;
         width: 100%;
         padding-bottom: 0.8rem;
-        padding-left: 2rem;
-        text-indent: -2rem;
+        text-indent: -1.7rem;
         font-size: 1rem;
         line-height: 1.5rem;
+        @include desktop-size {
+          width: 80%;
+        }
+      }
+      .text {
+        font-family: Raleway;
+        font-size: 1rem;
+        font-weight: 400;
+        @include desktop-size {
+          font-weight: 500;
+        }
+        @include large-desktop-size {
+          font-size: 20px;
+        }
       }
       a {
         padding-left: 1rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: Raleway;
         @include tablet-size {
           font-size: 1rem;
         }
@@ -153,7 +168,7 @@
     background-color: #f2fafc;
     @include desktop-size {
       margin: 0 auto;
-      width: 70%;
+      width: 50%;
       border-radius: 10px;
     }
     .gform_title {
