@@ -13,9 +13,9 @@ get_header(); ?>
 	?>
 
     <div class="banner-container">
-        <div class="button-container">
+        <div class="button-container" >
 
-            <button id="0" class="selected">All</button>
+            <button id="0" class="selected all" data-url="<?php echo get_template_directory_uri() ?>" >All</button>
 
             <?php foreach ( $terms as $term ) {
                 echo '<button id="' . $term->term_id . '" >' . $term->name . '</button>';

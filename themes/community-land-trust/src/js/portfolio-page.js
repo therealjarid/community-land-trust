@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
   // get all posts, id="0", on start; the 'All' button has class 'selected' by default
+  let templateUrl = String($('.all').attr('data-url'));
   getPosts(0);
 
   $('.button-container button').click(async function() {
@@ -11,6 +12,7 @@ jQuery(document).ready(function($) {
 
     // id from button will let us filter the taxonomy in the REST call
     let termId = String($(this).attr('id'));
+
     getPosts(termId);
   });
 
@@ -34,14 +36,18 @@ jQuery(document).ready(function($) {
         method: 'GET'
       });
 
-      let propertyImage = '';
+      let propertyImage = `${templateUrl}/assets/images/icons/home-solid.svg`;
 
       for (let i = 0; i < restResult.length; i++) {
         // check if property has image
-        if (typeof restResult[i]._embedded['wp:featuredmedia'] != 'undefined') {
-          propertyImage =
-            restResult[i]._embedded['wp:featuredmedia'][0].media_details.sizes
-              .medium_large.source_url;
+        if (typeof restResult[i]._embedded !== 'undefined') {
+          if (
+            typeof restResult[i]._embedded['wp:featuredmedia'] !== 'undefined'
+          ) {
+            propertyImage =
+              restResult[i]._embedded['wp:featuredmedia'][0].media_details.sizes
+                .medium_large.source_url;
+          }
         }
 
         $('.portfolio-grid-container').append(

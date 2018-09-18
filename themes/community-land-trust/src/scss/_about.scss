@@ -4,19 +4,10 @@
 
 .about-us {
   width: 100%;
-  @include desktop-size {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      clear: none;
-    }
     p {
       margin-bottom: 4rem;
     }
-  }
+  
   .about-header {
     @include banner-img;
   }
@@ -119,6 +110,10 @@
     margin: 0 auto;
     clear: both;
     height: 400px;
+
+    @include tablet-size {
+      height: 450px;
+    }
     @include desktop-size {
       width: 70vw;
       height: 500px;
@@ -127,23 +122,28 @@
     }
     @include large-desktop-size {
       top: -250px;
+      height: 600px;
     }
     .carousel-cell {
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 350px;
+      height: 350px;
       background-size: cover;
       background-position: center;
+
       @include tablet-size {
-        min-height: 450px;
+        height: 400px;
       }
+
       @include desktop-size {
-        min-height: 500px;
+        height: 450px;
       }
+
       @include large-desktop-size {
-        min-height: 600px;
+        height: 550px;
       }
+
       .about-cfs-years {
         font-family: $font__accent;
         font-weight: 500;
