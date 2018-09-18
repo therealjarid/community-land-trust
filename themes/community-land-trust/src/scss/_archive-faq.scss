@@ -151,7 +151,7 @@
       }
       @include desktop-size {
         font-size: 26px;
-        padding-top: 150px;
+        padding-top: 125px;
         margin-bottom: 25px;
       }
       @include large-desktop-size {
@@ -167,7 +167,7 @@
       margin-bottom: 50px;
       margin-top: 10px;
       @include desktop-size {
-        margin-bottom: 175px;
+        margin-bottom: 150px;
       }
       @include large-desktop-size {
         margin-bottom: 0;
