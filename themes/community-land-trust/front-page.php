@@ -107,7 +107,7 @@ get_header(); ?>
 		$portfolio_args      = array(
 			'post_type'   => 'portfolio',
 			'order'       => 'DSC',
-			'numberposts' => 10
+			'numberposts' => 15
 		);
 		$clt_portfolio_posts = get_posts( $portfolio_args );
 
@@ -117,18 +117,18 @@ get_header(); ?>
 
 				<?php if ( has_post_thumbnail( $clt_portfolio_post ) ) { ?>
                     <div class="carousel-cell">
-                        <a href=<?php echo get_post_permalink( $clt_portfolio_post->ID ); ?>>
-							<?php echo( get_the_post_thumbnail( $clt_portfolio_post->ID ) ); ?>
+                        <a href=<?php echo get_post_permalink( $clt_portfolio_post->ID ); ?>>				
                             <div class="home-flickity-portfolio-info">
                                 <h4 class="home-portfolio-heading">
 									<?php echo $clt_portfolio_post->post_title ?>
                                 </h4>
                                 <p class="home-portfolio-description">
 									<?php echo CFS()->get( 'portfolio_heading', $clt_portfolio_post->ID ); ?>
-                                <p>
+                                <p>                               
                             </div>
-                        </a>
-                    </div>
+                            <?php echo( get_the_post_thumbnail( $clt_portfolio_post->ID ) ); ?>
+                        </a>                      
+                   </div>
 				<?php }
 			endforeach;
 		}
