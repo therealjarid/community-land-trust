@@ -23,15 +23,15 @@
                 $address = CFS()->get( 'location' );
 
                 if ( !empty( $phone ) ) {
-                    echo '<p class="contact-number"><i class="fas fa-phone fa-rotate-180"></i> ' . $phone . '</p>';
+                    echo '<p class="contact-number"><i class="fas fa-phone fa-rotate-180">' . $phone . '</i></p>';
                 }
 
                 if ( !empty( $email ) ) {
-                    echo '<p class="email-address"><i class="fas fa-envelope"></i><a href="' . $email['url'] . '">' . $email['text'] . '</a></p>';
+                    echo '<p class="email-address"><i class="fas fa-envelope"><a href="' . $email['url'] . '">' . $email['text'] . '</a></i></p>';
                 }
 
                 if ( !empty( $address) ) {
-                    echo '<p class="address"><i class="fas fa-map-marker-alt"></i> ' . $address . '</p>';
+                    echo '<p class="address"><i class="fas fa-map-marker-alt">' . $address . '</i></p>';
                 }
             ?>
         </div>
