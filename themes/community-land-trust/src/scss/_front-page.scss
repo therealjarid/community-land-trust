@@ -1,17 +1,6 @@
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
-
-.page-id-58,
-.blog {
-  .carousel-cell:hover {
-    @include desktop-size {
-      opacity: 0.7;
-      transition: opacity 0.2s ease-in;
-    }
-  }
-}
-
 // flickity carousel global to all partials
 .main-carousel {
   padding-top: 30px;
@@ -34,6 +23,16 @@
 
   .carousel-cell {
     width: 100%;
+      .home-flickity-portfolio-info {
+        @include desktop-size {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+      }
+   
   }
 
   .flickity-prev-next-button {
@@ -170,12 +169,11 @@
         display: block;
 
         @include tablet-size {
-          top: 15px;
-          margin: 0;
+          top: -15px;
         }
 
         @include desktop-size {
-     
+          
         }
       }
     }
@@ -230,7 +228,46 @@
         position: relative;
         top: -350px;
         margin-bottom: 8rem;
+        width: 900px;
+        height: 600px;
       }
+
+      @include extra-large-desktop-size {
+        width: 1100px;
+        
+      }
+
+      .carousel-cell {
+        @include desktop-size {
+          
+        }
+
+        // &:hover {
+        //   img {
+        //     @include desktop-size {
+        //       opacity: 0.7;
+        //       transition: opacity 0.2s ease-in;
+        //     }
+      
+        //   }
+      
+        //   a, h2 {
+        //     opacity: 1;
+        //   }
+          
+        // }
+
+        img {
+          @include desktop-size {
+            filter: brightness(80%);
+            width: 900px;
+            height: 550px;
+          }
+          @include extra-large-desktop-size {
+            width: 1100px;
+          }
+      }
+    }
     }
 
     //timeline section styles
