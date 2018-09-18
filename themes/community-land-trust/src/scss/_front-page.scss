@@ -145,17 +145,24 @@ a {
 
     .front-page-headings {
       @include page-title;
-
       @include desktop-size {
         position: relative;
         top: -450px;
       }
-
       @include extra-large-desktop-size {
         margin: 100px auto 30px auto;
         font-size: 35px;
         width: 280px;
       }
+    }
+    .first-heading {
+      @include desktop-size {
+        margin-top: 175px;
+      }
+    }
+    .partners {
+      margin-top: 100px;
+      width: 200px;
     }
 
     .main-carousel {

@@ -4,6 +4,11 @@
   * Jarid Warren [ <jaridwarren@gmail.com> ]
   * Vanessa Bertoletti [ <vanessabertoletti@gmail.com> ]
   * Einer Lim [ <einer.lim322@gmail.com> ]
+  <br />
+  <img src="./themes/community-land-trust/assets/images/readme-images/home-demo.gif" width="525"><img src="./themes/community-land-trust/assets/images/readme-images/mobile-home-demo.gif" width="225">
+  <br />
+  <br />
+  <img src="./themes/community-land-trust/assets/images/readme-images/map-demo.gif" width="525"><img src="./themes/community-land-trust/assets/images/readme-images/mobile-map-demo.gif" width="225">
 
 ## Motivation
 

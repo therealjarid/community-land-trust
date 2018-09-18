@@ -35,7 +35,7 @@ get_header(); ?>
 <div class="home-background-box"></div>
 
 <main class="home-page">
-    <h2 class="front-page-headings">Our Mission</h2>
+    <h2 class="front-page-headings first-heading">Our Mission</h2>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
@@ -136,7 +136,7 @@ get_header(); ?>
 		?>
     </div>
 
-    <h2 class="front-page-headings">Our Partners</h2>
+    <h2 class="front-page-headings partners">Our Partners</h2>
 
     <div class="partners-logo-wrapper">
 
