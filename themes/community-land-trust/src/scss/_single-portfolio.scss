@@ -206,5 +206,8 @@
   }
   .more-info {
     @include more-info;
+    @include desktop-size {
+      margin: 150px auto 175px;
+    }
   }
 }
