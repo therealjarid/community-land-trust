@@ -104,7 +104,8 @@ get_header(); ?>
 			<?php
 			$portfolio_args      = array(
 				'post_type' => 'portfolio',
-				'order'     => 'DSC',
+                'order'     => 'DSC',
+                'numberposts' => 10
 			);
             $clt_portfolio_posts = get_posts( $portfolio_args );
            
