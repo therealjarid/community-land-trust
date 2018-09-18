@@ -117,11 +117,10 @@ a {
 
   //main body styles
   .home-page {
-    width: 90vw;
-    margin: 0 auto;
-
     .post-58 {
       color: black;
+      width: 90vw;
+      margin: 0 auto;
 
       @include tablet-size {
         width: 70vw;
@@ -160,6 +159,9 @@ a {
     }
 
     .main-carousel {
+      width: 90vw;
+      margin: 0 auto;
+
       @include tablet-size {
         width: 650px;
         margin: 0 auto;
@@ -285,7 +287,6 @@ a {
           font-weight: 600;
           font-size: 18px;
           width: 10rem;
-          height: auto;
 
           @include tablet-size {
             width: 70%;
@@ -434,10 +435,11 @@ a {
   display: flex;
   margin-top: 3rem;
   justify-content: space-around;
+  width: 90vw;
+  margin: 0 auto;
 
   @include tablet-size {
-    margin-left: 50px;
-    margin: 0 auto;
+    width: 70vw;
   }
 
   @include desktop-size {
@@ -447,8 +449,12 @@ a {
   }
 
   img {
-    height: 80px;
+    height: 60px;
     width: auto;
+
+    @include phablet-size {
+      height: 80px;
+    }
 
     @include tablet-size {
       height: 100px;
