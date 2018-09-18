@@ -102,6 +102,9 @@
         @include desktop-size {
           width: 80%;
         }
+        @include large-desktop-size {
+          max-width: 150px;
+        }
       }
       .text {
         font-family: Raleway;
@@ -252,7 +255,7 @@
       padding: 2rem 0;
     }
     @include large-desktop-size {
-      width: 720px;
+      width: 700px;
       margin: 0 auto;
       padding-bottom: 5rem;
     }
@@ -306,7 +309,7 @@
         text-align: left;
         line-height: 1.5rem;
         @include desktop-size {
-          font-size: 1rem;
+          font-size: 15px;
           width: 100%;
           text-align: left;
         }
