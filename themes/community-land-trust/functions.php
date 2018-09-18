@@ -5,8 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package CLT_Theme
- * 
- * 
+ *
+ *
  */
 
 // @TODO: hand off API to client, remove key from git repo
@@ -117,7 +117,7 @@ function clt_scripts() {
 	// adding header functionality 
 	wp_enqueue_script( 'header-toggle', get_template_directory_uri() . '/build/js/header-toggle.min.js', array( 'jquery' ), null, true );
 
-	if ( is_front_page() | is_home() | is_archive( 'partners' ) | is_page( 'about' ) | is_singular ( 'portfolio' ) | is_page( 'partners' ) ) {
+	if ( is_front_page() | is_home() | is_archive( 'partners' ) | is_page( 'about' ) | is_singular( 'portfolio' ) | is_page( 'partners' ) ) {
 		//adding flickity styles via CDN
 		wp_enqueue_style( 'clt-flickity', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
 
@@ -130,7 +130,7 @@ function clt_scripts() {
 
 	// contact page map
 	if ( is_page( 'contact' ) ) {
-		wp_enqueue_script( 'google-map-cdn', "https://maps.googleapis.com/maps/api/js?v=3.exp&key={$google_key}" , array(), null, true );
+		wp_enqueue_script( 'google-map-cdn', "https://maps.googleapis.com/maps/api/js?v=3.exp&key={$google_key}", array(), null, true );
 
 		wp_enqueue_script( 'contact-map', get_template_directory_uri() . '/build/js/contact-map.min.js', array(
 			'jquery',
@@ -166,7 +166,7 @@ function clt_scripts() {
 	// adding Google Map script via CDN
 	if ( is_page( 'find' ) ) {
 
-		wp_enqueue_script( 'google-map-cdn', "https://maps.googleapis.com/maps/api/js?v=3.exp&key={$google_key}" , array(), null, true );
+		wp_enqueue_script( 'google-map-cdn', "https://maps.googleapis.com/maps/api/js?v=3.exp&key={$google_key}", array(), null, true );
 
 		wp_enqueue_script( 'polyfill-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.0.0/polyfill.min.js', array(), null, true );
 
@@ -225,14 +225,15 @@ function slug_register_zipcode() {
 
 add_action( 'rest_api_init', 'slug_register_zipcode' );
 
-/** 
+/**
  * Modify the excerpt dots
  */
 
 function new_excerpt_more( $more ) {
 	return ' ...';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+
+add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 /**
  * Get the value of the "portfolio_zip" field
@@ -290,11 +291,44 @@ function populate_radio( $form ) {
 }
 
 // the following will disable the archive page for standard taxonomy
-function clt_remove_wp_archives(){
-	if( is_category() || is_tag() || is_date() || is_author() ) {
+function clt_remove_wp_archives() {
+	if ( is_category() || is_tag() || is_date() || is_author() ) {
 		global $wp_query;
 		$wp_query->set_404(); //set to 404 not found page
 	}
 }
-add_action('template_redirect', 'clt_remove_wp_archives');
+
+add_action( 'template_redirect', 'clt_remove_wp_archives' );
+
+// add the OG data in the Language Attributes
+function add_opengraph_doctype( $output ) {
+	return $output . ' xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"';
+}
+
+add_filter( 'language_attributes', 'add_opengraph_doctype' );
+
+// add OG meta info
+
+function insert_fb_in_head() {
+	global $post;
+	if ( ! is_singular() ) // if it is not a post or a page
+	{
+		return;
+	}
+	echo '<meta property="fb:admins" content="https://www.facebook.com/pages/Community-Land-Trust/144302426226897"/>';
+	echo '<meta property="og:title" content="' . get_the_title() . '"/>';
+	echo '<meta property="og:type" content="article"/>';
+	echo '<meta property="og:url" content="' . get_permalink() . '"/>';
+	echo '<meta property="og:site_name" content="Community Land Trust"/>';
+	if ( ! has_post_thumbnail( $post->ID ) ) { // the post does not have featured image, use a default image
+		$default_image = get_template_directory_uri() . "/assets/images/logos/logo-main.png";
+		echo '<meta property="og:image" content="' . $default_image . '"/>';
+	} else {
+		$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+		echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
+	}
+	echo "";
+}
+
+add_action( 'wp_head', 'insert_fb_in_head', 5 );
 

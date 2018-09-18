@@ -62,7 +62,7 @@ function clt_register_post_types() {
 			'has_archive'         => strtolower( $post_type ) . 's',
 			'exclude_from_search' => false,
 			// this logic disables single post views for FAQ/partners
-			'publicly_queryable'  => ($post_type == 'Portfolio' ? true : false),
+			'publicly_queryable'  => ( $post_type == 'Portfolio' ? true : false ),
 			'capability_type'     => 'post',
 			'show_in_rest'        => true,
 			// 'template_lock'       => 'all',
