@@ -276,6 +276,8 @@
         padding: 1rem;
         max-width: 320px;
         height: auto;
+        object-fit: cover; 
+        overflow: hidden;
         @include desktop-size {
           height: 300px;
           object-fit: cover; 
