@@ -274,8 +274,9 @@
         max-width: 320px;
         height: auto;
         @include desktop-size {
-          max-width: 356px;
-          height: auto;
+          height: 300px;
+          object-fit: cover; 
+          overflow: hidden;
           padding-left: 0;
           padding-bottom: 2rem;
           padding-right: 4rem;
