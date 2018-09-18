@@ -16,6 +16,7 @@
   
     <section class="upper-content">
         <div class="contact-info">
+            <!-- custom fields only print if they're not empty -->
             <?php 
                 $phone = CFS()->get( 'contact_number' );
                 $email = CFS()->get( 'email' );
