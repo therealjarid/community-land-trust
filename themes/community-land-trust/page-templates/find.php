@@ -9,17 +9,17 @@ get_header(); ?>
 		<?php the_post_thumbnail(); ?>
 
         <div class="banner-container">
-			<h1><?php the_title(); ?></h1>
+            <h1><?php the_title(); ?></h1>
 
 			<?php echo get_post_field( 'post_content', $post->ID ) ?>
-		</div>
+        </div>
 
-		<div class="offset-container">
-			<div class="map-and-buttons">
+        <div class="offset-container">
+            <div class="map-and-buttons">
 
-				<div id="map-canvas"></div>
+                <div id="map-canvas"></div>
 
-				<ul class="locations-menu">
+                <ul class="locations-menu">
 					<?php
 					$terms = get_terms( array(
 						'taxonomy' => 'Portfolio Location',
@@ -35,32 +35,33 @@ get_header(); ?>
 						echo '<li><button class="fetch-property" id="' . $term->term_id . '" >' . $term->name . '</button></li>';
 						echo ' ';
 					} ?>
-				</ul>
+                </ul>
 
-				<p class="error-message">Please refresh the page and try again.</p>
+                <p class="error-message">Please refresh the page and try again.</p>
 
-			</div>
+            </div>
 
-			<div class="find-form-container">
+            <div class="find-form-container">
 
 				<?php
-				echo '<h2>' . esc_html(CFS()->get( 'sign_up_cta' )) . '</h2>';
-				echo '<p>' . esc_html(CFS()->get( 'sign_up_copy' )) . '</p>';
+				echo '<h2>' . esc_html( CFS()->get( 'sign_up_cta' ) ) . '</h2>';
+				echo '<p>' . esc_html( CFS()->get( 'sign_up_copy' ) ) . '</p>';
 				?>
 
 				<?php gravity_form( 2, false, false, false, null, false, null, true ); ?>
 
-			</div>
+            </div>
 
-			<div class="more-info">
-				<h2>Need More Info<span class="contraction">rmation</span>?</h2>
+            <div class="more-info">
+                <h2>Need More Info<span class="contraction">rmation</span>?</h2>
 
-				<button class="cta-button">
-					<a href="<?php echo esc_url(get_permalink( get_page_by_title( 'Contact Us' ) )) . "#contact-container" ?>">Contact Us</a>
-				</button>
+                <button class="cta-button">
+                    <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contact Us' ) ) ) . "#contact-container" ?>">Contact
+                        Us</a>
+                </button>
 
-			</div>
-		</div>
+            </div>
+        </div>
 
     </section>
 

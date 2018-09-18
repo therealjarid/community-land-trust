@@ -6,170 +6,172 @@
 
 get_header(); ?>
 
-    <!-- HEADER/HERO BANNER SECTION BEGINS -->
+<!-- HEADER/HERO BANNER SECTION BEGINS -->
 
-    <section class="hero-banner">
+<section class="hero-banner">
 
-		<?php the_post_thumbnail(); ?>
-        
-        <div class="header-info-box">
+	<?php the_post_thumbnail(); ?>
 
-            <div class="company-header-info">
-                <h1 class="company-name">Community Land Trust</h1>
-                <p class="slogan"><?php echo esc_html(CFS()->get( 'slogan' )); ?>
-                </p>
-            </div>    
+    <div class="header-info-box">
 
-            <button class="mixin-button">
-                <a  href="<?php echo get_permalink( get_page_by_path( 'find' ) ) ?>">
-                    Find a Home
-                </a>
-            </button>
-            
+        <div class="company-header-info">
+            <h1 class="company-name">Community Land Trust</h1>
+            <p class="slogan"><?php echo esc_html( CFS()->get( 'slogan' ) ); ?>
+            </p>
         </div>
 
-    </section> <!-- end of .hero-banner section -->
+        <button class="mixin-button">
+            <a href="<?php echo get_permalink( get_page_by_path( 'find' ) ) ?>">
+                Find a Home
+            </a>
+        </button>
+
+    </div>
+
+</section> <!-- end of .hero-banner section -->
 
 
-    <!-- COMPANY MISSION SECTION BEGINS -->
-    <div class="home-background-box"></div>  
+<!-- COMPANY MISSION SECTION BEGINS -->
+<div class="home-background-box"></div>
 
-        <main class="home-page">    
-            <h2 class="front-page-headings">Our Mission</h2>
+<main class="home-page">
+    <h2 class="front-page-headings">Our Mission</h2>
 
-            <?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                    <?php the_content(); ?>
+			<?php the_content(); ?>
 
-                    <?php
-                    wp_link_pages( array(
-                        'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-                        'after'  => '</div>',
-                    ) );
-                    ?>
+			<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+				'after'  => '</div>',
+			) );
+			?>
 
-                </article> 
-            <?php endwhile; ?>     
-        <!-- end of company mission section -->
+        </article>
+	<?php endwhile; ?>
+    <!-- end of company mission section -->
 
 
-        <!-- TIMELINE SECTION BEGINS -->
+    <!-- TIMELINE SECTION BEGINS -->
 
-        <h2 class="front-page-headings">Timeline</h2>
+    <h2 class="front-page-headings">Timeline</h2>
 
     <section class="timeline-section-wrapper">
 
-        <!-- foreach loop over the achievement numbers entered on the wp backend through CFS -->      
-        <?php $timeline_fields = CFS()->get( 'achievements_loop' ); 
-    
-                $i = 1;
+        <!-- foreach loop over the achievement numbers entered on the wp backend through CFS -->
+		<?php $timeline_fields = CFS()->get( 'achievements_loop' );
 
-				foreach ( $timeline_fields as $timeline_field ) : ?>
-                    <div class="timeline-block">
-                    
-                        <div class="year year-entry-<?php echo $i; $i++; ?>">
-                            <p>
-                              <?php echo $timeline_field['achievements_year'];?>
-                            </p>
-                        </div>
+		$i = 1;
 
-                        <div class="timeline-line"></div>
+		foreach ( $timeline_fields as $timeline_field ) : ?>
+            <div class="timeline-block">
 
-                        <div class="home-timeline-icon-box">
-                             <img class="lower" alt="Icons representing growth whithin a company" src="<?php echo $timeline_field['achievements_icon']; ?>">
-                             <p class="timeline-growth-numbers counter">
-                                 <?php echo $timeline_field['achievements_numbers']; ?>
-                             </p>
-                        </div>
+                <div class="year year-entry-<?php echo $i;
+				$i ++; ?>">
+                    <p>
+						<?php echo $timeline_field['achievements_year']; ?>
+                    </p>
+                </div>
+
+                <div class="timeline-line"></div>
+
+                <div class="home-timeline-icon-box">
+                    <img class="lower" alt="Icons representing growth whithin a company"
+                         src="<?php echo $timeline_field['achievements_icon']; ?>">
+                    <p class="timeline-growth-numbers counter">
+						<?php echo $timeline_field['achievements_numbers']; ?>
+                    </p>
+                </div>
 
 
-                        <h3><?php echo $timeline_field['achievements_title']; ?></h3>
+                <h3><?php echo $timeline_field['achievements_title']; ?></h3>
 
-                        <p class="timeline-description">
-                            <?php echo $timeline_field['achievements_description']; ?>
-                        </p>
+                <p class="timeline-description">
+					<?php echo $timeline_field['achievements_description']; ?>
+                </p>
 
-                    </div>
-                <?php
-                endforeach;
-                ?>
-    
-                </section>
+            </div>
+		<?php
+		endforeach;
+		?>
 
-        <h2 class="front-page-headings">Our Work</h2>
+    </section>
 
-        <div class="main-carousel">
-			<?php
-			$portfolio_args      = array(
-				'post_type' => 'portfolio',
-                'order'     => 'DSC',
-                'numberposts' => 10
-			);
-            $clt_portfolio_posts = get_posts( $portfolio_args );
-           
-            if ( !is_null( $clt_portfolio_posts ) ) { 
+    <h2 class="front-page-headings">Our Work</h2>
 
-                foreach ( $clt_portfolio_posts as $clt_portfolio_post ): ?>
+    <div class="main-carousel">
+		<?php
+		$portfolio_args      = array(
+			'post_type'   => 'portfolio',
+			'order'       => 'DSC',
+			'numberposts' => 15
+		);
+		$clt_portfolio_posts = get_posts( $portfolio_args );
 
-                    <?php if ( has_post_thumbnail( $clt_portfolio_post ) ) { ?>
-                        <div class="carousel-cell">
-                            <a href=<?php echo get_post_permalink($clt_portfolio_post->ID); ?>> 
-                                <?php echo (get_the_post_thumbnail( $clt_portfolio_post->ID )); ?>
-                                <div class="home-flickity-portfolio-info">
-                                    <h4 class="home-portfolio-heading">
-                                        <?php echo $clt_portfolio_post->post_title ?>
-                                    </h4>
-                                    <p class="home-portfolio-description">
-                                        <?php echo CFS()->get( 'portfolio_heading', $clt_portfolio_post->ID  ); ?>
-                                    <p>
-                                </div>
-                            </a>
-                        </div>
-                    <?php }
-                    endforeach;
-            }
-			wp_reset_postdata();
-			?>
-        </div>
+		if ( ! is_null( $clt_portfolio_posts ) ) {
 
-        <h2 class="front-page-headings">Our Partners</h2>
+			foreach ( $clt_portfolio_posts as $clt_portfolio_post ): ?>
 
-        <div class="partners-logo-wrapper">
+				<?php if ( has_post_thumbnail( $clt_portfolio_post ) ) { ?>
+                    <div class="carousel-cell">
+                        <a href=<?php echo get_post_permalink( $clt_portfolio_post->ID ); ?>>				
+                            <div class="home-flickity-portfolio-info">
+                                <h4 class="home-portfolio-heading">
+									<?php echo $clt_portfolio_post->post_title ?>
+                                </h4>
+                                <p class="home-portfolio-description">
+									<?php echo CFS()->get( 'portfolio_heading', $clt_portfolio_post->ID ); ?>
+                                <p>                               
+                            </div>
+                            <?php echo( get_the_post_thumbnail( $clt_portfolio_post->ID ) ); ?>
+                        </a>                      
+                   </div>
+				<?php }
+			endforeach;
+		}
+		wp_reset_postdata();
+		?>
+    </div>
 
-			<?php
-			$arguments = array(
-				'post_type' => 'partner',
-				'order'     => 'DSC'
-			);
+    <h2 class="front-page-headings">Our Partners</h2>
 
-			$clt_partners_thumbnails = get_posts( $arguments ); ?>
-            
-                    <?php foreach ( $clt_partners_thumbnails as $clt_partners_thumbnail ):?>
+    <div class="partners-logo-wrapper">
 
-                        <a href="<?php echo get_permalink( get_page_by_path( 'about/partners' ) ) ?>">
-                            <?php echo( get_the_post_thumbnail( $clt_partners_thumbnail->ID) );?>
-                        </a>
-                    
-                    <?php
-                    endforeach;
-			wp_reset_postdata();
-			?>
-        </div>
-   
+		<?php
+		$arguments = array(
+			'post_type' => 'partner',
+			'order'     => 'DSC'
+		);
+
+		$clt_partners_thumbnails = get_posts( $arguments ); ?>
+
+		<?php foreach ( $clt_partners_thumbnails as $clt_partners_thumbnail ): ?>
+
+            <a href="<?php echo get_permalink( get_page_by_path( 'about/partners' ) ) ?>">
+				<?php echo( get_the_post_thumbnail( $clt_partners_thumbnail->ID ) ); ?>
+            </a>
+
+		<?php
+		endforeach;
+		wp_reset_postdata();
+		?>
+    </div>
+
     <div class="button-container">
         <h2 class="more-info">Need More Info<span class="contraction">rmation</span>?</h2>
-     
+
         <button class="mixin-button cta-button">
             <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) . "#contact-container"; ?>">
                 Contact Us
             </a>
         </button>
- 
+
     </div>
-        
-    </main> <!-- end of .home-page main -->
+
+</main> <!-- end of .home-page main -->
 
 <?php get_footer() ?>
 

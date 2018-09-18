@@ -13,23 +13,23 @@ get_header(); ?>
 	?>
 
     <div class="banner-container">
-        <div class="button-container" >
+        <div class="button-container">
 
-            <button id="0" class="selected all" data-url="<?php echo get_template_directory_uri() ?>" >All</button>
+            <button id="0" class="selected all" data-url="<?php echo get_template_directory_uri() ?>">All</button>
 
-            <?php foreach ( $terms as $term ) {
-                echo '<button id="' . $term->term_id . '" >' . $term->name . '</button>';
-            } ?>
+			<?php foreach ( $terms as $term ) {
+				echo '<button id="' . $term->term_id . '" >' . $term->name . '</button>';
+			} ?>
 
         </div>
-        <img class="loading" src="<?php echo get_template_directory_uri() . '/assets/images/loading.gif' ?>">    
+        <img class="loading" src="<?php echo get_template_directory_uri() . '/assets/images/loading.gif' ?>">
         <p class="error-message">Please refresh the page and try again.</p>
     </div>
 
     <div class="offset-container">
         <div class="portfolio-grid-container">
 
-            <?php // js fills in containers here ?>
+			<?php // js fills in containers here ?>
 
         </div>
     </div>
@@ -39,7 +39,7 @@ get_header(); ?>
         <h2>Need More Info<span class="contraction">rmation</span>?</h2>
 
         <button class="cta-button">
-            <a href="<?php echo esc_url(get_permalink( get_page_by_title( 'Contact Us' ) )) . "#contact-container" ?>">Contact
+            <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contact Us' ) ) ) . "#contact-container" ?>">Contact
                 Us</a>
         </button>
 
