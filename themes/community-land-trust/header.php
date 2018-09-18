@@ -31,7 +31,11 @@
         </div><!-- .site-branding -->
 
         <div class="menu-wrapper">
-            <i class="fas fa-bars"></i>
+        <div class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
             <nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
             </nav><!-- #site-navigation -->
