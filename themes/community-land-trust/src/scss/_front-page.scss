@@ -2,9 +2,8 @@
 # Front Page
 --------------------------------------------------------------*/
 
-// styles applied only to front-page.php
-.home {
-  //header styles begin
+//header styles begin
+.home { 
   .home-background-box {
     @include desktop-size {
       @include texture-background;
@@ -113,6 +112,7 @@
     }
   }
 
+  //main body styles 
   .home-page {
     width: 90vw;
     margin: 0 auto;
@@ -128,17 +128,16 @@
 
       @include desktop-size {
         width: 800px;
-        margin: 0 auto;
         font-size: 18px;
-        text-align: justify;
         position: relative;
-        top: -350px;
+        top: -450px;
         margin-bottom: 10rem;
       }
 
       @include extra-large-desktop-size {
         font-size: 25px;
-        width: 900px;
+        width: 1100px;
+        margin-bottom: 15rem;
       }
     }
 
@@ -147,20 +146,21 @@
 
       @include desktop-size {
         position: relative;
-        top: -350px;
+        top: -450px;
       }
 
       @include extra-large-desktop-size {
         margin: 100px auto 30px auto;
         font-size: 35px;
         width: 280px;
+
       }
     }
 
     .main-carousel {
       @include desktop-size {
         position: relative;
-        top: -350px;
+        top: -450px;
         margin-bottom: 8rem;
         width: 900px;
         height: 600px;
@@ -168,6 +168,7 @@
 
       @include extra-large-desktop-size {
         width: 1100px;
+        margin-bottom: 15rem;
       }
 
       .carousel-cell {
@@ -176,26 +177,30 @@
         }
 
         &:hover {
-          .home-flickity-portfolio-info {
-            display: block;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: black;
-
-            .home-portfolio-heading {
-              font-family: $font__accent;
-              font-size: 35px;
+          @include desktop-size {
+            .home-flickity-portfolio-info {
+              display: block;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+              color: black;
+  
+              .home-portfolio-heading {
+                font-family: $font__accent;
+                font-size: 35px;
+              }
+  
+              .home-portfolio-description {
+                font-family: $font__main;
+                font-size: 20px;
+                line-height: 20px;
+              }
             }
 
-            .home-portfolio-description {
-              font-family: $font__main;
-              font-size: 20px;
-              line-height: 20px;
-            }
           }
+         
         }
 
         img {
@@ -234,7 +239,7 @@
         margin: 0 auto;
         flex-wrap: no-wrap;
         position: relative;
-        top: -350px;
+        top: -450px;
         margin-bottom: 8rem;
       }
 
@@ -267,30 +272,21 @@
         .year {
           color: $timeline_font_color;
           font-family: $font__accent;
-          font-weight: 600;
-          width: 150px;
-          height: 50px;
+          font-weight: 600;     
+          font-size: 18px;
+          width: 10rem;
+          height: auto;
 
-          p {
-            margin: 0;
-            padding-top: 15px;
-
-            @include desktop-size {
-              padding-top: 20px;
-            }
+          @include tablet-size {
+            width: 70%;
           }
 
           @include desktop-size {
-            width: 250px;
-            height: 70px;
+            width: 100%;
             font-size: 25px;
-            margin-bottom: 0;
           }
 
           @include extra-large-desktop-size {
-            width: 320px;
-            height: 90px;
-
             p {
               font-size: 30px;
             }
@@ -331,7 +327,7 @@
             position: absolute;
             color: #ffffff;
             font-family: $font__accent;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 500;
             bottom: 30px;
             left: 50%;
@@ -399,12 +395,14 @@
   }
 
   .timeline-description {
-    width: 100%;
-    max-width: 100%;
+    width: 90%;
+    margin: 10px auto 30px auto;
+    font-size: 14px;
 
     @include tablet-size {
-      width: 230px;
-      margin: 10px auto 30px auto;
+      width: 80%;
+      font-size: 16px;
+      
     }
     @include extra-large-desktop-size {
       font-size: 20px;
@@ -438,7 +436,7 @@
 
   @include desktop-size {
     position: relative;
-    top: -350px;
+    top: -450px;
   }
 
   img {
