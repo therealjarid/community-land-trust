@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
         method: 'GET'
       });
 
-      let propertyImage = `${templateUrl}/assets/images/home-solid.svg`;
+      let propertyImage = `${templateUrl}/assets/images/icons/home-solid.svg`;
 
       for (let i = 0; i < restResult.length; i++) {
         // check if property has image
