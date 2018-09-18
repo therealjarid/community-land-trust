@@ -58,15 +58,14 @@ get_header();?>
 
 	</div>
 
-    <div class="button-container">
-         <h2 class="more-info">Need More Information?</h2>
+    <div class="more-info">
+		<h2>Need More Info<span class="contraction">rmation</span>?</h2>
 
-			<button class="mixin-button cta-button">
-				<a href="<?php echo get_permalink(get_page_by_path('contact')) . "#contact-container"; ?>">
-					Contact Us
-				</a>
-			</button>
-    </div>
+		<button class="cta-button">
+			<a href="<?php echo esc_url(get_permalink( get_page_by_title( 'Contact Us' ) )) . "#contact-container" ?>">Contact Us</a>
+		</button>
+
+	</div>
 
 </section><!-- .about-us -->
 

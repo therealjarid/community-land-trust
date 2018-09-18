@@ -176,9 +176,8 @@
       }
     }
   }
-  .button-container {
+  .more-info {
     @include more-info;
-    text-align: center;
     margin: 100px 0 40px;
     @include desktop-size {
       margin: 100px 0 300px;

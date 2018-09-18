@@ -20,12 +20,21 @@
     .header-container {
       @include page-title;
       margin-top: 0 !important;
-      width: 250px;
+      width: 290px;
+      @include tablet-size {
+        width: 350px;
+      }
       @include desktop-size {
-        width: 400px;
+        width: 450px;
       }
       h1 {
         margin: 0;
+        @include tablet-size {
+          font-size: 26px;
+        }
+        @include desktop-size {
+          font-size: 32px;
+        }
       }
     }
   }
@@ -49,6 +58,9 @@
       width: 80%;
       padding: 20px 20px;
       margin-top: 0;
+      @include tablet-size {
+        padding: 40px 40px;
+      }
       @include desktop-size {
         width: 70%;
         font-size: 20px;
@@ -56,6 +68,7 @@
         padding-top: 50px;
         height: 140px;
         margin-bottom: 0;
+        max-width: 900px;
       }
     }
     .faq-arrow-right {
@@ -117,6 +130,7 @@
   // borders, positions, etc.
   .more-info-container {
     text-align: center;
+    font-family: $font__accent;
     @include large-desktop-size {
       position: relative;
       top: -50px;
@@ -137,6 +151,8 @@
       }
       @include desktop-size {
         font-size: 26px;
+        padding-top: 150px;
+        margin-bottom: 25px;
       }
       @include large-desktop-size {
         border-top: 0;
@@ -150,6 +166,9 @@
       text-align: center;
       margin-bottom: 50px;
       margin-top: 10px;
+      @include desktop-size {
+        margin-bottom: 175px;
+      }
       @include large-desktop-size {
         margin-bottom: 0;
       }

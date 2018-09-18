@@ -56,8 +56,7 @@ get_header(); ?>
 				<h2>Need More Info<span class="contraction">rmation</span>?</h2>
 
 				<button class="cta-button">
-					<a href="<?php echo esc_url(get_permalink( get_page_by_title( 'Contact Us' ) )) . "#contact-container" ?>">Contact
-						Us</a>
+					<a href="<?php echo esc_url(get_permalink( get_page_by_title( 'Contact Us' ) )) . "#contact-container" ?>">Contact Us</a>
 				</button>
 
 			</div>
