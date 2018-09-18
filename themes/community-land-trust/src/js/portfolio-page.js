@@ -84,7 +84,6 @@ jQuery(document).ready(function($) {
       }
     } catch (e) {
       ajaxFail();
-      console.log(e);
     }
   }
 

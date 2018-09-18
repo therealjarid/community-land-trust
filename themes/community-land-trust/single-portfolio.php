@@ -32,7 +32,14 @@ get_header(); ?>
 
         <div class="entry-content">
 
-          <?php while ( have_posts() ) : the_post();
+          <?php 
+            $sub_heading = esc_html(CFS()->get( 'portfolio_heading' ));
+
+            if ( !empty( $sub_heading ) ) {
+              echo '<h2 class="sub_heading">' . $sub_heading . '</h2>';
+            }
+          
+          while ( have_posts() ) : the_post();
 
               the_content();
               
@@ -132,8 +139,7 @@ get_header(); ?>
                 echo "<div class='carousel-cell'>
                       <img src='{$image}'>
                       </div>";
-              }
-              
+              }            
           }
           ?>  
         </div>   
