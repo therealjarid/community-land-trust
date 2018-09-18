@@ -6,6 +6,9 @@
     text-decoration: none;
     color: $color__background-body;
     font-size: 0.9rem;
+    &:hover {
+      color: $color__link-hover;
+    }
   }
   p {
     color: $color__background-body;
@@ -110,6 +113,7 @@
         font-size: 1.3rem;
         background-color: $color__background-body;
         color: $footer_lighter_color;
+        transition: all 0.5s;
         @include phablet-size {
           height: 2.6rem;
           width: 2.6rem;
@@ -123,6 +127,24 @@
       }
       a {
         padding: 0 0.4rem;
+        &:hover > * {
+          transition: all 0.5s;
+        }
+        &:hover > .fa-facebook-f {
+          background-color: #3b5998;
+          border-color: #3b5998;
+          color: white;
+        }
+        &:hover > .fa-twitter {
+          background-color: #1da1f2;
+          border-color: #1da1f2;
+          color: white;
+        }
+        &:hover > .fa-linkedin-in {
+          background-color: #0077b5;
+          border-color: #0077b5;
+          color: white;
+        }
       }
     }
     .address {
@@ -153,7 +175,7 @@
         }
         @include desktop-size {
           max-width: 28%;
-          padding-top: 2rem; 
+          padding-top: 2rem;
           padding-left: 0.4rem;
         }
         @include large-desktop-size {

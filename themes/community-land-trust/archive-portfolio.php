@@ -21,7 +21,8 @@ get_header(); ?>
                 echo '<button id="' . $term->term_id . '" >' . $term->name . '</button>';
             } ?>
 
-        </div>    
+        </div>
+        <img class="loading" src="<?php echo get_template_directory_uri() . '/assets/images/loading.gif' ?>">    
         <p class="error-message">Please refresh the page and try again.</p>
     </div>
 

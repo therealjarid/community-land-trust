@@ -28,6 +28,7 @@ jQuery(document).ready(function($) {
 
       // clear the grid container from previous call
       $('.portfolio-grid-container').empty();
+      $('.loading').show();
 
       // get portfolio posts from REST api
       const restResult = await $.ajax({
@@ -37,17 +38,35 @@ jQuery(document).ready(function($) {
       });
 
       let propertyImage = `${templateUrl}/assets/images/icons/home-solid.svg`;
+      $('.loading').hide();
 
       for (let i = 0; i < restResult.length; i++) {
         // check if property has image
-        if (typeof restResult[i]._embedded !== 'undefined') {
+        if (typeof restResult[i]._embedded != 'undefined') {
           if (
-            typeof restResult[i]._embedded['wp:featuredmedia'] !== 'undefined'
+            typeof restResult[i]._embedded['wp:featuredmedia'] != 'undefined'
           ) {
-            propertyImage =
-              restResult[i]._embedded['wp:featuredmedia'][0].media_details.sizes
-                .medium_large.source_url;
+            if (
+              typeof restResult[i]._embedded['wp:featuredmedia'][0]
+                .media_details.sizes.medium_large != 'undefined'
+            ) {
+              console.log('hey');
+              propertyImage =
+                restResult[i]._embedded['wp:featuredmedia'][0].media_details
+                  .sizes.medium_large.source_url;
+            } else if (
+              typeof restResult[i]._embedded['wp:featuredmedia'][0]
+                .media_details.sizes.medium != 'undefined'
+            ) {
+              propertyImage =
+                restResult[i]._embedded['wp:featuredmedia'][0].media_details
+                  .sizes.medium.source_url;
+            } else {
+              propertyImage = '';
+            }
           }
+        } else {
+          propertyImage = '';
         }
 
         $('.portfolio-grid-container').append(
@@ -65,10 +84,12 @@ jQuery(document).ready(function($) {
       }
     } catch (e) {
       ajaxFail();
+      console.log(e);
     }
   }
 
   function ajaxFail() {
     $('.error-message').addClass('ajax-error');
+    $('.loading').hide();
   }
 });
