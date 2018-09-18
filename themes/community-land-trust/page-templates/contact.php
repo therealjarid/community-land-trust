@@ -13,9 +13,9 @@
     <div class="banner-container">
         
     <div class="entry-header">
-        <h1 class="entry-title"><?php the_title(); ?></h1>
+        <h2 class="entry-title"><?php the_title(); ?></h2>
     </div><!-- .entry-header -->
-    <div class="offset-container">
+  
     <section class="upper-content">
         <div class="contact-info">
             <p class="contact-number">
@@ -35,7 +35,8 @@
             <div id="map-canvas"></div>
         </div>
     </section>
-
+    </div> <!-- end of banner container -->
+    <div class="offset-container">
     <div class="contact-container">
         <a id="contact-container"></a>
 		<?php gravity_form( 1, true, true, false, null, false, null, true ); ?>
@@ -46,16 +47,15 @@
             <img src="<?php echo esc_html( CFS()->get( 'photo' )); ?>"/>
         </div>
         <div class="featured-person-content">
-        <!-- @TODO - mailto: link should be pulled dynamically -->
             <a href="mailto:<?php echo $email; ?>">
                 <h2 class="featured-person-name"><?php echo esc_html( CFS()->get( 'name' )); ?></h2>
             </a>
             <p class="featured-person-title"><?php echo esc_html( CFS()->get( 'title' )); ?></p>
             <p><?php echo esc_html( CFS()->get( 'description' )); ?></p>
         </div>
-    </div>
-    </div>
-    </div>
+    </div> <!-- end of featured-person -->
+
+    </div> <!-- end of offset -->
 </section><!-- #primary -->
 
 <?php get_footer(); ?>

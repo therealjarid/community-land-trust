@@ -3,105 +3,140 @@
 --------------------------------------------------------------*/
 .contact-us {
   text-align: center;
+  .banner-container {
+    @include desktop-size {
+      @include texture-background; 
+      position: relative;
+      top: -80px;
+    }
+    @include large-desktop-size {
+      top: -80px;
+    }
+  }
+  .offset-container {
+    @include desktop-size {
+      position: relative; 
+      top: -15px;
+    }
+    @include large-desktop-size {
+      top: 60px;
+    }
+  }
   .entry-header {
     @include page-title;
     text-align: center;
     width: 150px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     @include desktop-size {
       width: 200px;
     }
     .entry-title{
       display: inline-block;
-    }
-    @include desktop-size {
-      @include page-title;
-      margin: 0 auto 4rem;
+      font-weight: 700;
+      font-size: 24px;
+      @include desktop-size {
+        margin-top: 3rem;
+      }
+      @include large-desktop-size {
+        margin-top: 8rem;
+      }
     }
   }
   .upper-content {
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     @include desktop-size {
       display: flex;
-      max-width: 993.6px;
+      max-width: 960px;
       margin: 0 auto;
-      padding-bottom: 5rem;
+      margin-top: 5rem;
     }
     @include large-desktop-size {
       margin: 0 auto;
       max-width: 993.6px;
+      margin-top: 6rem;
     }
     @include extra-large-desktop-size {
       margin: 0 auto;
       max-width: 52%;
+      margin-top: 7rem;
     }
     .contact-info {
       display: flex;
       flex-direction: column;
       text-align: left;
       margin: 0 auto;
-      max-width: 208px;
+      width: 100%;
       font-family: $font__accent;
       font-weight: 500;
       padding-bottom: 1rem;
-      @include phablet-size {
-        max-width: 202.5px;
-      }
-      @include tablet-size {
-        max-width: 214.5px;
-      }
       @include desktop-size {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
         text-align: left;
-        max-width: 25%;
+        max-width: 15%;
       }
       @include large-desktop-size {
         max-width: 25%;
       }
       i {
         display: inline;
-        font-size: 1.5rem;
+        font-size: 0.9rem;
+        @include tablet-size {
+          font-size: 1rem;
+        }
         @include desktop-size {
-          font-size: 2rem;
+          font-size: 1rem;
         }
       }
       p {
-        margin: 0 1rem;
+        margin: 0 auto;
+        max-width: 200px;
+        width: 100%;
         padding-bottom: 0.8rem;
         padding-left: 2rem;
-        text-indent: -2.3rem;
-        font-size: 1.3rem;
+        text-indent: -2rem;
+        font-size: 1rem;
         line-height: 1.5rem;
       }
       a {
         padding-left: 1rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        @include tablet-size {
+          font-size: 1rem;
+        }
         @include desktop-size {
-          font-size: 1.4rem;
+          font-size: 1rem;
           font-weight: 500;
+        }
+        @include large-desktop-size {
+          font-size: 20px;
         }
       }
     }
     .map-container {
       border-top: 4px solid $border_color;
-      height: 200px;
+      height: 50vh;
       width: 100%; 
+      padding-bottom: 1.5rem;
       @include desktop-size {
         border-top: none;
         height: 250px;
         width: 500px; 
         border-left: 4px solid $border_color;
-        padding-left: 6rem;
+        padding-left: 3rem;
       }
       #map-canvas {
         width: 100%;
         height: 100%;
         @include desktop-size {
           width: 75%;
+          height: 100%;
+        }
+        @include large-desktop-size {
+          width: 100%;
           height: 100%;
         }
       }
@@ -112,21 +147,23 @@
     // Leave "position: relative;"
     position: relative;
     border: 1px solid #f2fafc;
-    border-radius: 10%;
+    border-radius: 10px;
     padding: 0 1rem;
+    margin-bottom: 2rem;
     background-color: #f2fafc;
     @include desktop-size {
       margin: 0 auto;
       width: 70%;
-      border-radius: 5%;
+      border-radius: 10px;
     }
     .gform_title {
       font-family: $font__accent;
-      font-weight: 550;
+      font-weight: 600;
       text-align: center;
       padding-bottom: 1.5rem;
+      font-size: 1rem;
       @include desktop-size {
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
     }
     .gform_wrapper label.gfield_label {
@@ -202,10 +239,12 @@
     @include large-desktop-size {
       width: 720px;
       margin: 0 auto;
+      padding-bottom: 5rem;
     }
     @include extra-large-desktop-size {
       width: 729.6px;
       margin: 0 auto;
+      padding-bottom: 5rem;
     }
     .featured-person-photo {
       border-bottom: 4px solid #4da7cd;
