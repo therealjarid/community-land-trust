@@ -129,7 +129,6 @@
     font-weight: 500;
     font-size: 1rem;
     display: inline-block;
-
     @include desktop-size {
       font-size: 1.5rem;
       font-weight: 600;
@@ -149,11 +148,9 @@
     height: 400px;
     margin-bottom: 0;
   }
-
   @include large-desktop-size {
     height: 500px;
   }
-
   @include extra-large-desktop-size {
     height: 580px;
   }

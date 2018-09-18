@@ -13,8 +13,12 @@
     }
     img {
       max-height: 520px;
+      min-height: 200px;
       object-fit: cover;
       width: 100%;
+      @include tablet-size {
+        min-height: 250px;
+      }
       @include large-desktop-size {
         max-height: 550px;
       }
@@ -50,9 +54,9 @@
         font-size: 22px;
         font-weight: 500;
         margin: 0;
-        margin: 35px 20px;
+        margin: 30px 15px;
         @include tablet-size {
-          margin: 45px 30px;
+          margin: 40px 25px;
         }
         @include desktop-size {
           font-size: 32px;

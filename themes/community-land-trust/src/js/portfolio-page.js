@@ -3,6 +3,8 @@ jQuery(document).ready(function($) {
   getPosts(0);
 
   $('.button-container button').click(async function() {
+    // remove error if previous ajax call created one
+    $('.error-message').removeClass('ajax-error');
     // clear all buttons of 'selected' class then add to current one pressed
     $('.button-container button').removeClass('selected');
     $(this).addClass('selected');
