@@ -54,9 +54,9 @@
         font-size: 22px;
         font-weight: 500;
         margin: 0;
-        margin: 30px 15px;
+        margin: 25px 15px;
         @include tablet-size {
-          margin: 40px 25px;
+          margin: 35px 25px;
         }
         @include desktop-size {
           font-size: 32px;
@@ -116,7 +116,7 @@
     }
     .fields-container {
       font-size: 18px;
-      margin: 0 25px;
+      margin: 25px 25px 0;
       font-family: $font__main;
       @include tablet-size {
         margin: 40px 50px;
@@ -194,6 +194,7 @@
   }
   .navigation-links {
     @include nav-links;
+    padding-top: 75px;
     @include tablet-size {
       margin-top: 30px;
     }

@@ -23,12 +23,14 @@ $phone_link = 'tel:+1' . str_replace( [ '-', ' ', '(', ')', '+1', '+' ], '', $ph
     <div class="main-footer">
         <div class="contact-info">
             <p class="contact-number">
-                <i class="fas fa-phone"></i>
-                <a href="<?php echo $phone_link ?>"><?php echo $phone; ?></a>
+                <a href="<?php echo $phone_link ?>">
+                    <i class="fas fa-phone"></i><?php echo $phone; ?>
+                </a>
             </p>
             <p class="email-address">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+                <a href="mailto:<?php echo $email; ?>">
+                    <i class="fas fa-envelope"></i><?php echo $email; ?>
+                </a>
             </p>
         </div>
         <div class="social-media">
