@@ -50,7 +50,6 @@ jQuery(document).ready(function($) {
               typeof restResult[i]._embedded['wp:featuredmedia'][0]
                 .media_details.sizes.medium_large != 'undefined'
             ) {
-              console.log('hey');
               propertyImage =
                 restResult[i]._embedded['wp:featuredmedia'][0].media_details
                   .sizes.medium_large.source_url;

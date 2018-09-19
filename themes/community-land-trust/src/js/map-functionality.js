@@ -66,11 +66,28 @@ jQuery(document).ready(function($) {
       for (let i = 0; i < restResult.length; i++) {
         // get image of property
         let propertyImage = '';
-        if (typeof restResult[i]._embedded['wp:featuredmedia'] != 'undefined') {
-          propertyImage = `<img src="${
-            restResult[i]._embedded['wp:featuredmedia'][0].media_details.sizes
-              .medium_large.source_url
-          }" ></img>`;
+        if (typeof restResult[i]._embedded != 'undefined') {
+          if (
+            typeof restResult[i]._embedded['wp:featuredmedia'] != 'undefined'
+          ) {
+            if (
+              typeof restResult[i]._embedded['wp:featuredmedia'][0]
+                .media_details.sizes.medium_large != 'undefined'
+            ) {
+              propertyImage = `<img src="${
+                restResult[i]._embedded['wp:featuredmedia'][0].media_details
+                  .sizes.medium_large.source_url
+              }" ></img>`;
+            } else if (
+              typeof restResult[i]._embedded['wp:featuredmedia'][0]
+                .media_details.sizes.medium != 'undefined'
+            ) {
+              propertyImage = `<img src="${
+                restResult[i]._embedded['wp:featuredmedia'][0].media_details
+                  .sizes.medium.source_url
+              }" ></img>`;
+            }
+          }
         }
 
         let zipCode = restResult[i].portfolio_zip.replace(/\s+/g, '');
