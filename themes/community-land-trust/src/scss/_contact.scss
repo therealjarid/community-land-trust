@@ -5,7 +5,7 @@
   text-align: center;
   .banner-container {
     @include desktop-size {
-      @include texture-background; 
+      @include texture-background;
       position: relative;
       top: -80px;
     }
@@ -15,7 +15,7 @@
   }
   .offset-container {
     @include desktop-size {
-      position: relative; 
+      position: relative;
       top: -15px;
     }
     @include large-desktop-size {
@@ -30,7 +30,7 @@
     @include desktop-size {
       width: 150px;
     }
-    .entry-title{
+    .entry-title {
       display: inline-block;
       font-weight: 700;
       font-size: 24px;
@@ -137,16 +137,16 @@
     .map-container {
       border-top: 4px solid $border_color;
       height: 50vh;
-      width: 100%; 
+      width: 100%;
       padding-bottom: 1.5rem;
       @include desktop-size {
         border-top: none;
         height: 250px;
-        width: 500px; 
+        width: 500px;
         border-left: 4px solid $border_color;
         padding-left: 3rem;
       }
-      #map-canvas {
+      .map-canvas {
         width: 100%;
         height: 100%;
         @include desktop-size {
@@ -195,7 +195,7 @@
       }
     }
     .gform_wrapper {
-      display: flex; 
+      display: flex;
       justify-content: center;
       .validation_error {
         display: none;
@@ -278,11 +278,11 @@
         padding: 1rem;
         max-width: 320px;
         height: auto;
-        object-fit: cover; 
+        object-fit: cover;
         overflow: hidden;
         @include desktop-size {
           height: 300px;
-          object-fit: cover; 
+          object-fit: cover;
           overflow: hidden;
           padding-left: 0;
           padding-bottom: 2rem;

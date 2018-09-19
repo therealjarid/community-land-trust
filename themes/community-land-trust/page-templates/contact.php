@@ -31,7 +31,7 @@ get_header(); ?>
 				?>
             </div>
             <div class="map-container">
-                <div id="map-canvas"></div>
+                <iframe class='map-canvas' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.3414459373917!2d-123.07200428431096!3d49.26992697932999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486714742e982d1%3A0x37a9dd95a9230540!2s1651+Commercial+Dr%2C+Vancouver%2C+BC+V5L+3Y3!5e0!3m2!1sen!2sca!4v1537329033399" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </section>
     </div> <!-- end of banner container -->

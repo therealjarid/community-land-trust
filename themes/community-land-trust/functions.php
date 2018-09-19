@@ -128,16 +128,6 @@ function clt_scripts() {
 		wp_enqueue_script( 'flickity', '//cdnjs.cloudflare.com/ajax/libs/flickity/1.1.1/flickity.pkgd.min.js', array( 'jquery' ), null, true );
 	}
 
-	// contact page map
-	if ( is_page( 'contact' ) ) {
-		wp_enqueue_script( 'google-map-cdn', "https://maps.googleapis.com/maps/api/js?v=3.exp&key={$google_key}", array(), null, true );
-
-		wp_enqueue_script( 'contact-map', get_template_directory_uri() . '/build/js/contact-map.min.js', array(
-			'jquery',
-			'google-map-cdn'
-		), null, false );
-	}
-
 	// adding FAQ functionality 
 	if ( is_archive( 'faqs' ) | is_page( 'faqs' ) ) {
 		wp_enqueue_script( 'faq-page', get_template_directory_uri() . '/build/js/faq-page.min.js', array( 'jquery' ), null, false );
