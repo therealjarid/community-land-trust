@@ -154,7 +154,8 @@
       width: 70vw;
       height: 500px;
       position: relative;
-      top: -200px;
+      top: -250px;
+      padding-top: 0;
     }
     @include large-desktop-size {
       top: -250px;
