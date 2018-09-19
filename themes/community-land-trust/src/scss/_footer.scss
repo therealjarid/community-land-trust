@@ -182,14 +182,14 @@
           max-width: 28%;
           padding-top: 2rem;
           padding-left: 0.4rem;
+          align-self: center;
+          justify-self: center;
         }
         @include large-desktop-size {
-          max-width: 28%;
-          padding-top: 3.5rem;
+          max-width: 25%;
         }
         @include extra-large-desktop-size {
           max-width: 50%;
-          padding-top: 4.5rem;
         }
         i {
           padding-right: 0.2rem;
