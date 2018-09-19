@@ -37,18 +37,12 @@
       max-width: 100%;
       margin: 0 auto;
       @include desktop-size {
-        padding-top: 2rem;
         margin: 0 auto;
         max-width: 55%;
         display: flex;
         flex-direction: column;
-        align-items: center;
-      }
-      @include large-desktop-size {
-        padding-top: 3rem;
-      }
-      @include extra-large-desktop-size {
-        padding-top: 3rem;
+        padding: 0;
+        align-self: center;
       }
       p {
         margin: 0;
@@ -64,15 +58,19 @@
         padding-left: 0.3rem;
       }
       .fa-phone {
-        font-size: 1rem;
-        @include tablet-size {
-          font-size: 1.3rem;
+        font-size: 18px;
+        margin-right: 10px;
+        @include desktop-size {
+          font-size: 24px;
         }
       }
       .fa-envelope {
-        font-size: 1rem;
-        @include tablet-size {
-          font-size: 1.3rem;
+        font-size: 18px;
+        margin-right: 10px;
+        @include desktop-size {
+          font-size: 24px;
+          position: relative;
+          bottom: -3px;
         }
       }
     }
@@ -97,12 +95,11 @@
       @include desktop-size {
         max-width: 80%;
         margin: 0 auto;
-        padding-top: 3rem;
+        padding: 0;
         align-items: center;
       }
       @include large-desktop-size {
         max-width: 80%;
-        padding-top: 4rem;
       }
       @include extra-large-desktop-size {
         max-width: 70%;
@@ -121,12 +118,6 @@
         @include phablet-size {
           height: 2.6rem;
           width: 2.6rem;
-        }
-        @include desktop-size {
-          height: 2.5rem;
-          width: 2.5rem;
-          padding: 0.6rem;
-          font-size: 1.3rem;
         }
       }
       a {
@@ -156,7 +147,6 @@
       padding-left: 0.5rem;
       @include desktop-size {
         display: flex;
-        align-items: center;
       }
       p {
         color: $color__background-body;
@@ -180,8 +170,7 @@
         }
         @include desktop-size {
           max-width: 28%;
-          padding-top: 2rem;
-          padding-left: 0.4rem;
+          padding: 0;
           align-self: center;
           justify-self: center;
         }
