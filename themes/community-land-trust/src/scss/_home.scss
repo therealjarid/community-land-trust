@@ -72,7 +72,6 @@
         display: none;
       }
     }
-
     .carousel-cell {
       display: flex;
       flex-direction: column;
@@ -146,6 +145,7 @@
 
           @include desktop-size {
             font-size: 12px;
+            padding-right: 20px;
           }
         }
       }
