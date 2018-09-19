@@ -102,6 +102,7 @@
         }
 
         img {
+          filter: brightness(75%);
           @include desktop-size {
             height: 300px;
             position: absolute;
