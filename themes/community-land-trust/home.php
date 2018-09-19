@@ -96,8 +96,8 @@ get_header(); ?>
                         </p>
 
                     </div>
-            </div>
-            </a>
+                </a>
+            </div>           
 		<?php endforeach;
 		wp_reset_postdata(); ?>
     </div>
