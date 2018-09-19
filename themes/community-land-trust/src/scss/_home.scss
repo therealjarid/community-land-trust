@@ -9,7 +9,7 @@
   .page-header {
     img {
       object-fit: cover;
-			height: 300px;
+      height: 300px;
 
       @include tablet-size {
         @include banner-img;
@@ -75,13 +75,7 @@
 
     .carousel-cell {
       display: flex;
-			flex-direction: column;
-			
-			&:hover {
-				@include desktop-size {
-					transform: scale(1.10);
-				}		
-			}
+      flex-direction: column;
 
       @include tablet-size {
         width: 48%;
@@ -90,42 +84,52 @@
 
       @include desktop-size {
         width: 32%;
-				margin: 1rem;
-				transition: transform 0.4s;
+        margin: 1rem;
+
+        &:hover {
+          .media-thumbnail-box img {
+            transform: scale(1.1);
+          }
+        }
       }
 
-      img {
-				overflow: hidden;
-
+      .media-thumbnail-box {
         @include desktop-size {
+          position: relative;
+          overflow: hidden;
           height: 300px;
+          width: 100%;
+          transition: transform 0.4s;
+        }
+
+        img {
+          @include desktop-size {
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 0.4s ease;
+          }
         }
       }
 
       .media-page-info {
         height: 130px;
-				background: $media_lighter_bg;
-	
+        background: $media_lighter_bg;
+        width: 100%;
 
         @include desktop-size {
           height: 170px;
         }
 
         .media-carousel-title {
-          width: 70vw;
+          width: 90%;
           margin: 10px auto;
           font-size: 16px;
           line-height: 25px;
           overflow: hidden;
-
-          @include tablet-size {
-            width: 90%;
-            margin: 10px 10px;
-          }
-
+    
           @include desktop-size {
-            width: 90%;
-            margin: 0 auto;
             letter-spacing: 1px;
           }
         }
@@ -135,12 +139,12 @@
           font-family: $font__accent;
           letter-spacing: 2px;
           font-size: 14px;
-					padding-right: 10px;
-					margin-top: 0;
-					width: 100%;
+          padding-right: 10px;
+          padding: 10px 10px;
+          margin: 0;
+          width: 100%;
 
           @include desktop-size {
-            width: 90%;
             font-size: 12px;
           }
         }
@@ -187,10 +191,10 @@
       text-decoration: underline;
       font-family: $font__accent;
 
-      @include desktop-size {  
-          font-weight: 500;
-          font-size: 20px;
-          margin-top: 20px;
+      @include desktop-size {
+        font-weight: 500;
+        font-size: 20px;
+        margin-top: 20px;
       }
     }
   }
