@@ -4,10 +4,10 @@
 
 .about-us {
   width: 100%;
-    p {
-      margin-bottom: 4rem;
-    }
-  
+  p {
+    margin-bottom: 4rem;
+  }
+
   .about-header {
     @include banner-img;
   }
@@ -56,11 +56,27 @@
           align-self: start;
           margin: 10px 0 0 50px;
         }
-        &:last-of-type {
+        &:nth-of-type(2) {
           grid-column-start: 1;
           grid-column-end: 3;
           grid-row-start: 2;
           grid-row-end: 3;
+          align-self: start;
+          margin: 80px auto 0;
+        }
+        &:nth-of-type(3) {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 3;
+          grid-row-end: 4;
+          align-self: start;
+          margin: 80px auto 0;
+        }
+        &:nth-of-type(4) {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 4;
+          grid-row-end: 5;
           align-self: start;
           margin: 80px auto 0;
         }
@@ -89,11 +105,31 @@
           margin: 90px 0 0 50px;
           max-width: 420px;
         }
-        &:last-of-type {
+        &:nth-of-type(2) {
           grid-column-start: 1;
           grid-column-end: 3;
           grid-row-start: 2;
           grid-row-end: 3;
+          margin: 160px 50px 0;
+          padding-left: 30px;
+          justify-self: center;
+          max-width: 800px;
+        }
+        &:nth-of-type(3) {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 3;
+          grid-row-end: 4;
+          margin: 160px 50px 0;
+          padding-left: 30px;
+          justify-self: center;
+          max-width: 800px;
+        }
+        &:nth-of-type(4) {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 4;
+          grid-row-end: 5;
           margin: 160px 50px 0;
           padding-left: 30px;
           justify-self: center;
