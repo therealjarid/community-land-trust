@@ -5,14 +5,12 @@
   a {
     text-decoration: none;
     color: $color__background-body;
-    font-size: 0.9rem;
     &:hover {
       color: $color__link-hover;
     }
   }
   p {
     color: $color__background-body;
-    font-size: 1.2rem;
   }
   .widget {
     margin: 0;
@@ -48,25 +46,37 @@
         margin: 0;
         text-align: left;
         line-height: 1.5rem;
-        padding-left: 1rem;
         @include tablet-size {
           text-align: left;
           margin: 0.5rem 0;
         }
       }
       a {
-        padding-left: 0.3rem;
+        align-self: center;
+        font-size: 14px; 
+        @include tablet-size {
+          font-size: 16px;
+        }
+        @include desktop-size {
+          font-size: 18px;
+        }
       }
       .fa-phone {
-        font-size: 18px;
+        font-size: 14px;
         margin-right: 10px;
+        @include tablet-size {
+          font-size: 18px;
+        }
         @include desktop-size {
           font-size: 24px;
         }
       }
       .fa-envelope {
-        font-size: 18px;
+        font-size: 14px;
         margin-right: 10px;
+        @include tablet-size {
+          font-size: 18px;
+        }
         @include desktop-size {
           font-size: 24px;
           position: relative;
@@ -90,7 +100,7 @@
       @include tablet-size {
         justify-content: space-between;
         max-width: 100%;
-        padding-top: 1rem;
+        align-self: center;
       }
       @include desktop-size {
         max-width: 80%;
@@ -105,9 +115,11 @@
         max-width: 70%;
       }
       i {
-        height: 2.5rem;
-        width: 2.5rem;
-        padding: 0.5rem;
+        max-height: 2.5rem;
+        max-width: 2.5rem;
+        width: 2rem;
+        height: 2rem;
+        padding: 0.3rem;
         text-align: center;
         border: 1px solid $color__background-body;
         border-radius: 50%;
@@ -118,6 +130,7 @@
         @include phablet-size {
           height: 2.6rem;
           width: 2.6rem;
+          padding: 0.4rem;
         }
       }
       a {
@@ -147,32 +160,31 @@
       padding-left: 0.5rem;
       @include desktop-size {
         display: flex;
+        padding: 0;
       }
       p {
         color: $color__background-body;
-        margin: 0;
+        margin: 0 auto;
         max-width: 90%;
-        padding-left: 2rem;
+        width: 80%;
         line-height: 1.5rem;
         text-indent: -0.1rem;
         @include phablet-size {
-          max-width: 80%;
-          padding-left: 4rem;
+          max-width: 50%;
         }
         @include tablet-size {
           max-width: 60%;
           line-height: 1rem;
-          padding-top: 1rem;
           text-indent: 0.1rem;
           text-align: left;
-          padding-left: 0;
           margin: 0 auto;
         }
         @include desktop-size {
-          max-width: 28%;
-          padding: 0;
+          max-width: 30%;
+          margin: 0 auto;
           align-self: center;
           justify-self: center;
+          font-size: 16px;
         }
         @include large-desktop-size {
           max-width: 25%;
@@ -197,7 +209,7 @@
         display: none;
         @include desktop-size {
           display: block;
-          max-width: 230px;
+          max-width: 210px;
         }
         @include large-desktop-size {
           max-width: 280px;
@@ -207,7 +219,7 @@
         }
       }
       .fa-map-marker-alt {
-        font-size: 1rem;
+        font-size: 14px;
         @include tablet-size {
           display: none;
         }
