@@ -132,6 +132,12 @@
           width: 2.6rem;
           padding: 0.4rem;
         }
+        @include tablet-size {
+          padding: 0.5rem;
+        }
+        @include desktop-size {
+          padding: 0.6rem;
+        }
       }
       a {
         padding: 0 0.4rem;
@@ -175,22 +181,24 @@
         @include tablet-size {
           max-width: 60%;
           line-height: 1rem;
-          text-indent: 0.1rem;
           text-align: left;
           margin: 0 auto;
         }
         @include desktop-size {
-          max-width: 30%;
+          max-width: 29%;
           margin: 0 auto;
           align-self: center;
           justify-self: center;
           font-size: 16px;
+          line-height: 20px;
+          text-indent: 0.1rem;
         }
         @include large-desktop-size {
-          max-width: 25%;
+          max-width: 21%;
+          margin: 0;
         }
         @include extra-large-desktop-size {
-          max-width: 50%;
+          max-width: 21%;
         }
         i {
           padding-right: 0.2rem;
@@ -209,10 +217,12 @@
         display: none;
         @include desktop-size {
           display: block;
-          max-width: 210px;
+          max-width: 260px;
+          width: 95%;
         }
         @include large-desktop-size {
-          max-width: 280px;
+          max-width: 350px;
+          width: 95%;
         }
         @include extra-large-desktop-size {
           max-width: 325px;
@@ -220,7 +230,7 @@
       }
       .fa-map-marker-alt {
         font-size: 14px;
-        @include tablet-size {
+        @include desktop-size {
           display: none;
         }
       }
