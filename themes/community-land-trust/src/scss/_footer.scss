@@ -119,18 +119,19 @@
         max-width: 2.5rem;
         width: 2rem;
         height: 2rem;
-        padding: 0.3rem;
+        padding: 0.4rem;
         text-align: center;
         border: 1px solid $color__background-body;
         border-radius: 50%;
-        font-size: 1.3rem;
+        font-size: 16px;
         background-color: $color__background-body;
         color: $footer_lighter_color;
         transition: all 0.5s;
         @include phablet-size {
           height: 2.6rem;
           width: 2.6rem;
-          padding: 0.4rem;
+          padding: 0.5rem;
+          font-size: 20px;
         }
         @include tablet-size {
           padding: 0.5rem;
