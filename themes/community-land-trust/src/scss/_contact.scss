@@ -28,7 +28,7 @@
     width: 150px;
     margin-bottom: 2rem;
     @include desktop-size {
-      width: 200px;
+      width: 150px;
     }
     .entry-title{
       display: inline-block;
@@ -152,6 +152,7 @@
         @include desktop-size {
           width: 75%;
           height: 100%;
+          margin-top: 0.5rem;
         }
         @include large-desktop-size {
           width: 100%;
@@ -239,6 +240,7 @@
       text-align: center;
       .gform_button {
         @include main-cta;
+        margin: 12px 0;
         width: 220px;
         font-size: 18px;
         font-weight: 500;
