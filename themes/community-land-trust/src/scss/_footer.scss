@@ -167,6 +167,7 @@
       padding-left: 0.5rem;
       @include desktop-size {
         display: flex;
+        justify-content: center;
         padding: 0;
       }
       p {
@@ -226,7 +227,7 @@
           width: 95%;
         }
         @include extra-large-desktop-size {
-          max-width: 325px;
+          max-width: 400px;
         }
       }
       .fa-map-marker-alt {
