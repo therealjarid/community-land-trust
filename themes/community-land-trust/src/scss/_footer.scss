@@ -53,12 +53,12 @@
       }
       a {
         align-self: center;
-        font-size: 14px; 
+        font-size: 16px;
         @include tablet-size {
-          font-size: 16px;
+          font-size: 18px;
         }
         @include desktop-size {
-          font-size: 18px;
+          font-size: 20px;
         }
       }
       .fa-phone {
@@ -98,9 +98,11 @@
         justify-content: center;
       }
       @include tablet-size {
-        justify-content: space-between;
+        // justify-content: space-around;
         max-width: 100%;
         align-self: center;
+        padding: 0;
+        // justify-self: center;
       }
       @include desktop-size {
         max-width: 80%;
@@ -119,19 +121,19 @@
         max-width: 2.5rem;
         width: 2rem;
         height: 2rem;
-        padding: 0.4rem;
+        padding: 8px 10px 10px;
         text-align: center;
         border: 1px solid $color__background-body;
         border-radius: 50%;
-        font-size: 16px;
+        font-size: 18px;
         background-color: $color__background-body;
         color: $footer_lighter_color;
         transition: all 0.5s;
         @include phablet-size {
           height: 2.6rem;
           width: 2.6rem;
-          padding: 0.5rem;
-          font-size: 20px;
+          padding: 10px;
+          font-size: 24px;
         }
         @include tablet-size {
           padding: 0.5rem;
@@ -141,7 +143,16 @@
         }
       }
       a {
-        padding: 0 0.4rem;
+        padding: 0 5px;
+        @include phablet-size {
+          padding: 0 12px;
+        }
+        @include tablet-size {
+          padding: 0 10px;
+        }
+        @include desktop-size {
+          padding: 0 14px;
+        }
         &:hover > * {
           transition: all 0.5s;
         }
@@ -164,7 +175,11 @@
     }
     .address {
       grid-area: address;
-      padding-left: 0.5rem;
+      // padding-left: 0.5rem;
+      justify-self: center;
+      @include tablet-size {
+        align-self: center;
+      }
       @include desktop-size {
         display: flex;
         justify-content: center;
@@ -172,31 +187,35 @@
       }
       p {
         color: $color__background-body;
-        margin: 0 auto;
-        max-width: 90%;
-        width: 80%;
-        line-height: 1.5rem;
-        text-indent: -0.1rem;
+        margin: 5px 0 0 30px;
+        max-width: 130px;
+        // width: 80%;
+        font-size: 16px;
+        // line-height: 1.5rem;
+        // text-indent: -0.1rem;
         @include phablet-size {
-          max-width: 50%;
+          // max-width: 50%;
+          // margin: 0 auto;
         }
         @include tablet-size {
-          max-width: 60%;
-          line-height: 1rem;
+          // max-width: 60%;
+          // align-self: center;
+          line-height: 1.1rem;
           text-align: left;
-          margin: 0 auto;
+          font-size: 18px;
+          // margin: 0 auto;
         }
         @include desktop-size {
-          max-width: 29%;
+          max-width: 140px;
           margin: 0 auto;
           align-self: center;
-          justify-self: center;
-          font-size: 16px;
-          line-height: 20px;
-          text-indent: 0.1rem;
+          // justify-self: center;
+          font-size: 20px;
+          line-height: 1.2rem;
+          // text-indent: 0.1rem;
         }
         @include large-desktop-size {
-          max-width: 21%;
+          // max-width: 21%;
           margin: 0;
         }
         @include extra-large-desktop-size {
@@ -227,7 +246,7 @@
           width: 95%;
         }
         @include extra-large-desktop-size {
-          max-width: 400px;
+          // max-width: 380px;
         }
       }
       .fa-map-marker-alt {
@@ -255,6 +274,7 @@
       font-weight: 200;
       @include tablet-size {
         padding-top: 0.7rem;
+        font-size: 16px;
       }
       @include desktop-size {
         font-size: 0.9rem;
