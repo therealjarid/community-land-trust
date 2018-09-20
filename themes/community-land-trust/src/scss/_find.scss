@@ -8,6 +8,7 @@
   align-items: center;
   img {
     @include banner-img;
+    width: 100%;
   }
   .banner-container {
     @include desktop-size {
