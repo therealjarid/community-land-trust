@@ -126,6 +126,9 @@
         background-color: $color__background-body;
         color: $footer_lighter_color;
         transition: all 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @include phablet-size {
           height: 2.6rem;
           width: 2.6rem;
