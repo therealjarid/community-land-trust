@@ -16,29 +16,24 @@
   .offset-container {
     @include desktop-size {
       position: relative;
-      top: -15px;
+      top: 75px;
     }
     @include large-desktop-size {
-      top: 60px;
+      top: 0;
     }
   }
   .entry-header {
     @include page-title;
+    margin-top: 20px;
     text-align: center;
-    width: 150px;
+    width: 170px;
     margin-bottom: 2rem;
-    @include desktop-size {
-      width: 150px;
-    }
     .entry-title {
       display: inline-block;
       font-weight: 700;
-      font-size: 24px;
+      font-size: 28px;
       @include desktop-size {
         margin-top: 3rem;
-      }
-      @include large-desktop-size {
-        margin-top: 8rem;
       }
     }
   }
@@ -49,12 +44,12 @@
       display: flex;
       max-width: 960px;
       margin: 0 auto;
-      margin-top: 5rem;
+      margin-top: 3rem;
     }
     @include large-desktop-size {
       margin: 0 auto;
       max-width: 993.6px;
-      margin-top: 6rem;
+      margin-top: 4rem;
     }
     @include extra-large-desktop-size {
       margin: 0 auto;
@@ -70,13 +65,17 @@
       font-family: $font__accent;
       font-weight: 500;
       padding-bottom: 1rem;
+      border-bottom: 4px solid $border_color;
+      max-width: 600px;
       @include desktop-size {
+        border-bottom: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
         text-align: left;
         max-width: 15%;
+        margin-right: 60px;
       }
       @include large-desktop-size {
         max-width: 25%;
@@ -93,16 +92,13 @@
       }
       p {
         margin: 0 auto;
-        max-width: 133px;
+        max-width: 140px;
         width: 100%;
         padding-bottom: 0.8rem;
         text-indent: -1.7rem;
         font-size: 1rem;
         line-height: 1.5rem;
         @include desktop-size {
-          width: 80%;
-        }
-        @include large-desktop-size {
           max-width: 150px;
         }
       }
@@ -135,16 +131,25 @@
       }
     }
     .map-container {
-      border-top: 4px solid $border_color;
       height: 50vh;
       width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
       padding-bottom: 1.5rem;
+      @include tablet-size {
+        padding-top: 1.5rem;
+      }
       @include desktop-size {
         border-top: none;
-        height: 250px;
+        height: 300px;
         width: 500px;
         border-left: 4px solid $border_color;
         padding-left: 3rem;
+        padding: 40px 0 50px 3rem;
+        margin: 0 0 10px 0;
+      }
+      @include large-desktop-size {
+        padding: 15px 0 0 5rem;
       }
       .map-canvas {
         width: 100%;
@@ -156,8 +161,8 @@
           margin-top: 0.5rem;
         }
         @include large-desktop-size {
-          width: 100%;
-          height: 100%;
+          width: 550px;
+          height: 250px;
         }
       }
     }
@@ -171,10 +176,14 @@
     padding: 0 1rem;
     margin-bottom: 2rem;
     background-color: #f2fafc;
+    max-width: 600px;
+    margin: 0 auto;
     @include desktop-size {
-      margin: 0 auto;
-      width: 50%;
+      max-width: 900px;
       border-radius: 10px;
+    }
+    @include large-desktop-size {
+      max-width: 1200px;
     }
     .gform_title {
       font-family: $font__accent;
@@ -269,6 +278,8 @@
     }
     .featured-person-photo {
       border-bottom: 4px solid #4da7cd;
+      max-width: 600px;
+      margin: 0 auto;
       @include desktop-size {
         border-bottom: none;
         border-right: 4px solid #4da7cd;
@@ -293,6 +304,7 @@
     }
     .featured-person-content {
       width: 90%;
+      max-width: 600px;
       margin: 0 auto;
       padding: 2rem 0;
       .featured-person-name {

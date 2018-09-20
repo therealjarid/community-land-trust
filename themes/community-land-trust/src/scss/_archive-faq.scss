@@ -20,7 +20,7 @@
     .header-container {
       @include page-title;
       margin-top: 0 !important;
-      width: 290px;
+      width: 318px;
       @include tablet-size {
         width: 350px;
       }
@@ -29,6 +29,7 @@
       }
       h1 {
         margin: 0;
+        font-size: 24px;
         @include tablet-size {
           font-size: 26px;
         }
@@ -134,6 +135,7 @@
     @include large-desktop-size {
       position: relative;
       top: -50px;
+      margin: 80px 0;
     }
     .contraction {
       display: none;
