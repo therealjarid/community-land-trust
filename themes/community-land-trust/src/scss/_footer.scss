@@ -119,7 +119,7 @@
         max-width: 2.5rem;
         width: 2rem;
         height: 2rem;
-        padding: 8px 10px 10px;
+        padding: 10px 0 0;
         text-align: center;
         border: 1px solid $color__background-body;
         border-radius: 50%;
@@ -130,14 +130,7 @@
         @include phablet-size {
           height: 2.6rem;
           width: 2.6rem;
-          padding: 10px;
           font-size: 24px;
-        }
-        @include tablet-size {
-          padding: 0.5rem;
-        }
-        @include desktop-size {
-          padding: 0.6rem;
         }
       }
       a {
@@ -184,11 +177,9 @@
       }
       p {
         color: $color__background-body;
-        margin: 5px 0 0 30px;
+        margin: 0 0 0 30px;
         max-width: 130px;
         font-size: 16px;
-        @include phablet-size {
-        }
         @include tablet-size {
           line-height: 1.1rem;
           text-align: left;
