@@ -26,15 +26,12 @@
     @include page-title;
     margin-top: 20px;
     text-align: center;
-    width: 150px;
+    width: 170px;
     margin-bottom: 2rem;
-    @include desktop-size {
-      width: 150px;
-    }
     .entry-title {
       display: inline-block;
       font-weight: 700;
-      font-size: 24px;
+      font-size: 28px;
       @include desktop-size {
         margin-top: 3rem;
       }
