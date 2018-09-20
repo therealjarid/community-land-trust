@@ -104,12 +104,13 @@ get_header(); ?>
 
 
     <div class="media-inquiries">
-		<span>
+		<p>
 			For Media Inquiries regarding
 			Community Land Trust, Please Contact:
-		</span>
+        
         <a class="cfs-hyperlink"
            href="<?php echo CFS()->get( 'email', 36 )['url']; ?>"><?php echo CFS()->get( 'email', 36 )['text'] ?></a>
+        </p>
     </div>
 
 

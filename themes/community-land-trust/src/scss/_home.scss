@@ -158,7 +158,6 @@
     width: 100vw;
     background: $timeline_bg;
     text-align: center;
-    padding: 50px 50px;
 
     @include desktop-size {
       width: 80vw;
@@ -173,8 +172,10 @@
       top: -250px;
     }
 
-    span {
-      width: 90vw;
+    p {
+      width: 300px;
+      padding: 50px 0;
+      margin: 0 auto;
       font-size: 14px;
       font-family: $font__accent;
       color: black;
