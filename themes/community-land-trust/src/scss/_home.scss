@@ -148,10 +148,11 @@
   }
 
   .media-inquiries {
-    height: 150px;
+    height: inherit;
     width: 100vw;
     background: $timeline_bg;
     text-align: center;
+    padding: 50px 0;
 
     @include desktop-size {
       width: 80vw;
@@ -167,8 +168,7 @@
     }
 
     p {
-      width: 300px;
-      padding: 50px 0;
+      width: 300px;    
       margin: 0 auto;
       font-size: 14px;
       font-family: $font__accent;
