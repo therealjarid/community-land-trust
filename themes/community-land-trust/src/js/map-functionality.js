@@ -3,8 +3,8 @@
 // <jaridwarren@gmail.com>
 
 jQuery(document).ready(function($) {
-  // @TODO: hand off API to client, remove key from git repo
-  let googleKey = 'AIzaSyDhvBO_mzcQWohzRiHKmgdfzPrOw3Bu6mE';
+  // @TODO: add googleKey
+  let googleKey = '';
 
   let map = {};
 

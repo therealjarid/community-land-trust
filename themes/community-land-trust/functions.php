@@ -9,9 +9,9 @@
  *
  */
 
-// @TODO: hand off API to client, remove key from git repo
+// @TODO: add google_key
 global $google_key;
-$google_key = 'AIzaSyDhvBO_mzcQWohzRiHKmgdfzPrOw3Bu6mE';
+$google_key = '';
 
 if ( ! function_exists( 'clt_setup' ) ) :
 	/**
