@@ -33,7 +33,7 @@ Custom WordPress theme for 'Community Land Trust', a non-profit society serving 
 
 - <img src="./themes/community-land-trust/assets/images/readme-images/js.svg" width="15"> JavaScript ES6 / <img src="./themes/community-land-trust/assets/images/readme-images/jquery.svg" width="40"> jQuery
 - <img src="./themes/community-land-trust/assets/images/readme-images/wordpress.svg" width="18"> WordPress / <img src="./themes/community-land-trust/assets/images/readme-images/php.svg" width="23"> PHP
-- <img src="./themes/community-land-trust/assets/images/readme-images/npm.svg" width="20"> NPM / <img src="./themes/community-land-trust/assets/images/readme-images/gulp.svg" width="10"> Gulp / <img src="./themes/community-land-trust/assets/images/readme-images/babel.svg" width="30"> Babel
+- <img src="./themes/community-land-trust/assets/images/readme-images/npm.svg" width="20"> npm / <img src="./themes/community-land-trust/assets/images/readme-images/gulp.svg" width="10"> Gulp / <img src="./themes/community-land-trust/assets/images/readme-images/babel.svg" width="30"> Babel
 - <img src="./themes/community-land-trust/assets/images/readme-images/sass.svg" width="20"> Sass / <img src="./themes/community-land-trust/assets/images/readme-images/css3.svg" width="12"> CSS3
 
 ## Code Sample
