@@ -3,7 +3,7 @@
 Custom WordPress theme for 'Community Land Trust', a non-profit society serving as the real estate development arm of the Co-operative Housing Federation of BC. Their mission is to acquire, create and preserve affordable housing for future generations with a focus on development and redevelopment of co-operative and non-profit housing.
 
 * #### Authors:
-  * Jarid Warren [ <jaridwarren@gmail.com> ]
+  * Jarid [ <jarid@hey.com> ]
   * Vanessa Bertoletti [ <vanessabertoletti@gmail.com> ]
   * Einer Lim [ <einer.lim322@gmail.com> ]
   <br />
